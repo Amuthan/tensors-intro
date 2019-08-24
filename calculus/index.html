@@ -610,11 +610,11 @@ presented in the single variable case. The general case of a function of
 many variables is considered subsequently.</p>
 <h3 id="continuity_1">Continuity</h3>
 <p>The function <script type="math/tex">f:R \subseteq \mathbb{R}^2 \to \mathbb{R}</script>, where <script type="math/tex">R</script>
-is an <strong>open rectangle</strong>
+is the <strong>open rectangle</strong>
 <script type="math/tex">(x_1,x_2) \times (y_1,y_2) \subseteq \mathbb{R}^2</script>, is said to be
 <strong>continuous</strong> at <script type="math/tex">(x,y) \in R</script> if, for every <script type="math/tex">\epsilon > 0</script>, there
 exists a <script type="math/tex">\delta > 0</script> such that
-<script type="math/tex; mode=display">\sqrt{(\bar{x} - x)^2 + (\bar{y} - y)^2} < \delta \quad\Rightarrow\quad |f(\bar{x},\bar{y} - f(x,y)| \le \epsilon.</script>
+<script type="math/tex; mode=display">\sqrt{(\bar{x} - x)^2 + (\bar{y} - y)^2} < \delta \quad\Rightarrow\quad |f(\bar{x},\bar{y}) - f(x,y)| \le \epsilon.</script>
 Notice how the Euclidean distance figures in this definition. As before,
 the definition of continuity can be equivalently restated as
 <script type="math/tex; mode=display">\lim_{(\bar{x},\bar{y}) \to (x,y)} f(\bar{x},\bar{y}) = f(x,y).</script> The
@@ -625,10 +625,10 @@ to <script type="math/tex">f(x,y)</script>. In other words, there are no <em>gap
 <script type="math/tex">f</script>.</p>
 <p>The function <script type="math/tex">f</script> is said to be continuous on <script type="math/tex">R</script> if it is continuous
 at every <script type="math/tex">(x,y) \in R</script>. In this case, the set of all continuous
-functions on <script type="math/tex">\mathbb{R}</script> is written as <script type="math/tex">C^0(R,\mathbb{R}^2)</script>.</p>
+functions on <script type="math/tex">\mathbb{R}</script> is written as <script type="math/tex">C^0(R,\mathbb{R})</script>.</p>
 <h3 id="differentiability">Differentiability</h3>
 <p>Let us now study the differentiability of the function
-<script type="math/tex">f:R \to \mathbb{R}^2</script>. Rather than develop the general theory (this
+<script type="math/tex">f:R \to \mathbb{R}</script>. Rather than develop the general theory (this
 is presented in the main part of these notes), the presentation here
 provides an elementary account of the partial derivatives of <script type="math/tex">f</script>.</p>
 <p>The function <script type="math/tex">f:R \to \mathbb{R}</script> takes two real arguments and returns
@@ -640,7 +640,7 @@ different limits:
 <script type="math/tex; mode=display">\lim_{h \to 0} \frac{f(x + h,y) - f(x,y)}{h}, \qquad \lim_{h \to 0} \frac{f(x,y + h) - f(x,y)}{h},</script>
 where <script type="math/tex">(x,y) \in R</script> and <script type="math/tex">h \in \mathbb{R}</script>. When these limits exist,
 they are called the <strong>partial derivatives</strong> of <script type="math/tex">f</script>. Specifically, the
-partial derivatives of <script type="math/tex">f:R \to \mathbb{R}^2</script> at
+partial derivatives of <script type="math/tex">f:R \to \mathbb{R}</script> at
 <script type="math/tex">(x,y) \in \mathbb{R}</script> are defined as <script type="math/tex; mode=display">\begin{split}
 \frac{\partial f(x,y)}{\partial x} &= \lim_{h \to 0} \frac{f(x + h,y) - f(x,y)}{h},\\
 \frac{\partial f(x,y)}{\partial y} &= \lim_{h \to 0} \frac{f(x,y + h) - f(x,y)}{h}.
@@ -650,6 +650,15 @@ partial derivatives: <script type="math/tex; mode=display">\begin{split}
 \frac{\partial f(x,y)}{\partial y} &= \partial_y f(x,y) = \partial_2 f(x,y) = D_y f(x,y) = D_2 f(x,y).
 \end{split}</script>
 </p>
+<p>The foregoing discussion can be generalized to functions of the form <script type="math/tex">\mathsf{f}:\mathbb{R}^n \to \mathbb{R}^m</script>. Note that the function <script type="math/tex">\mathsf{f}</script> can be written as a collection of <script type="math/tex">m</script> functions
+<script type="math/tex; mode=display"> \mathsf{f} = (f_1, \ldots, f_m),</script>
+where each <script type="math/tex">f_i:\mathbb{R}^n \to \mathbb{R}</script>, <script type="math/tex">i = 1, \ldots, m</script> is a function that takes an <script type="math/tex">m</script>-tuple of real numbers and returns a real number. The partial derivaties of <script type="math/tex">\mathsf{f}</script> at <script type="math/tex">\mathsf{x} = (x_1, \ldots, x_m) \in \mathbb{R}^m</script>can be arranged in the form of the <script type="math/tex">m \times n</script> matrix
+<script type="math/tex; mode=display">\begin{bmatrix}
+\partial_1 f_1(\mathsf{x}) & \ldots & \partial_n f_1(\mathsf{x})\\
+\vdots & \ddots & \vdots\\
+\partial_1 f_m(\mathsf{x}) & \ldots & \partial_n f_m(\mathsf{x})
+\end{bmatrix},</script>
+called the <strong>Jacobian</strong> of <script type="math/tex">\mathsf{f}</script> at <script type="math/tex">\mathsf{x}</script>.</p>
 <div class="admonition danger">
 <p class="admonition-title">TO DO</p>
 <p>...</p>
