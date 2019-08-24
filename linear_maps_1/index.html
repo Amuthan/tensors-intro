@@ -1,0 +1,1071 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Notes on Euclidean Tensor Analysis.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Linear Maps - I - Euclidean Tensor Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#basic-definitions" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Euclidean Tensor Analysis" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Euclidean Tensor Analysis
+            </span>
+            <span class="md-header-nav__topic">
+              Linear Maps - I
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Euclidean Tensor Analysis" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Euclidean Tensor Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../inner_product_spaces/" title="Inner Product Spaces" class="md-nav__link">
+      Inner Product Spaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Linear Maps - I
+      </label>
+    
+    <a href="./" title="Linear Maps - I" class="md-nav__link md-nav__link--active">
+      Linear Maps - I
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-definitions" title="Basic definitions" class="md-nav__link">
+    Basic definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representation-of-linear-maps" title="Representation of linear maps" class="md-nav__link">
+    Representation of linear maps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-of-basis-for-linear-maps" title="Change of basis for linear maps" class="md-nav__link">
+    Change of basis for linear maps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-product-basis-for-lvw" title="Tensor product basis for L(V,W)" class="md-nav__link">
+    Tensor product basis for L(V,W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transpose-of-a-linear-map" title="Transpose of a linear map" class="md-nav__link">
+    Transpose of a linear map
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_algebra/" title="Tensor Algebra" class="md-nav__link">
+      Tensor Algebra
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_2/" title="Linear Maps - II" class="md-nav__link">
+      Linear Maps - II
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-nav__link">
+      Linearization of Nonlinear Maps
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_analysis_R3/" title="Euclidean Tensor Analysis" class="md-nav__link">
+      Euclidean Tensor Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-nav__link">
+      Curvilinear Coordinates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../set_theory/" title="Appendix - Set Theory" class="md-nav__link">
+      Appendix - Set Theory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Appendix - Matrices" class="md-nav__link">
+      Appendix - Matrices
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../calculus/" title="Appendix - Calculus" class="md-nav__link">
+      Appendix - Calculus
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-definitions" title="Basic definitions" class="md-nav__link">
+    Basic definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representation-of-linear-maps" title="Representation of linear maps" class="md-nav__link">
+    Representation of linear maps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-of-basis-for-linear-maps" title="Change of basis for linear maps" class="md-nav__link">
+    Change of basis for linear maps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-product-basis-for-lvw" title="Tensor product basis for L(V,W)" class="md-nav__link">
+    Tensor product basis for L(V,W)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transpose-of-a-linear-map" title="Transpose of a linear map" class="md-nav__link">
+    Transpose of a linear map
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Linear Maps - I</h1>
+                
+                <p>An important technique to study <em>structured sets</em> is to study functions
+between such sets that preserve their structure. In the current context,
+the structure inherent to vector spaces is linearity. Maps between
+vector spaces that preserve this linear structure, called <em>linear maps</em>
+are studied now. Throughout this section, <script type="math/tex">V</script> and <script type="math/tex">W</script> represent
+finite dimensional inner product spaces of dimension <script type="math/tex">n</script> and <script type="math/tex">m</script>,
+respectively.</p>
+<h2 id="basic-definitions">Basic definitions</h2>
+<p>Let us first consider the case when <script type="math/tex">V</script> and <script type="math/tex">W</script> are real vector
+spaces, not necessarily endowed with an inner product. We call a map of
+the form <script type="math/tex">\mathsf{T}:V \to W</script> a <strong>vector space homomorphism</strong>, or more
+simply a <strong>linear map</strong>, if, for any <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>,
+and for any <script type="math/tex">a, b \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">\mathsf{T}(a\mathsf{u} + b\mathsf{v}) = a\mathsf{T}(\mathsf{u}) + b \mathsf{T}(\mathsf{v}).</script>
+It is conventional to write <script type="math/tex">\mathsf{T}(\mathsf{v})</script> as just
+<script type="math/tex">\mathsf{T}\mathsf{v}</script> when <script type="math/tex">\mathsf{T}</script> is a linear map. Notice how
+linear maps preserve the <em>linear</em> structure: the action of a linear map
+on a linear combination of vectors is the linear combination of the
+action of the linear map on the individual vectors.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that, in the definition above, the vector addition and
+scalar multiplication in the term <script type="math/tex">(a\mathsf{u} + b\mathsf{v})</script> are
+those defined in <script type="math/tex">V</script>, while the ones in the term
+<script type="math/tex">a\mathsf{T}(\mathsf{u}) + b\mathsf{T}(\mathsf{v})</script> are those in
+<script type="math/tex">W</script>. The same notation is used just to keep the notation simple.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the map
+<script type="math/tex">\mathsf\pi:\mathbb{R}^3 \to \mathbb{R}^2</script> defined as follows: for any
+<script type="math/tex">(x_1, x_2, x_3) \in \mathbb{R}^3</script>,
+<script type="math/tex; mode=display">\mathsf\pi(x_1, x_2, x_3) = (x_1, x_2).</script> It is easy to verify that
+<script type="math/tex">\mathsf\pi:\mathbb{R}^3 \to \mathbb{R}^2</script> is a linear map.</p>
+</div>
+<p>We will now present a few definitions associated with linear maps that
+are useful in practice. The <strong>kernel</strong> of the linear map
+<script type="math/tex">\mathsf{T}:V \to W</script> is the set of all elements in <script type="math/tex">V</script> that are
+mapped to <script type="math/tex">\mathsf{0} \in W</script> by <script type="math/tex">\mathsf{T}</script>:
+<script type="math/tex; mode=display">\text{ker}(\mathsf{T}) = \{\mathsf{v}\in V \,|\, \mathsf{T}\mathsf{v} = \mathsf{0}\}.</script>
+<script type="math/tex">\text{ker}(\mathsf{T})</script> is also called the <strong>null space</strong> of
+<script type="math/tex">\mathsf{T}</script>, and is a linear subspace of <script type="math/tex">V</script>. Note that the kernel
+<script type="math/tex">\mathsf{T}</script> is always non-empty since
+<script type="math/tex">\mathsf{0} \in \text{ker}(T)</script>.</p>
+<p>The <strong>image</strong> of the linear map <script type="math/tex">\mathsf{T}:V \to W</script> between two
+vector spaces <script type="math/tex">V</script> and <script type="math/tex">W</script>, written as <script type="math/tex">\text{img}(\mathsf{T})</script> is
+defined as the set of all those elements in <script type="math/tex">W</script> which are obtained by
+the action of <script type="math/tex">\mathsf{T}</script> on some element of <script type="math/tex">V</script>:
+<script type="math/tex; mode=display">\text{img}(\mathsf{T}) = \{\mathsf{w} \in W \,|\,\text{for some }\mathsf{v} \in V,\,\mathsf{T}\mathsf{v} = \mathsf{w}\}.</script>
+The image of a linear map is a linear subspace of its codomain. The
+dimension of the image of the linear map <script type="math/tex">\mathsf{T}:V \to W</script> is
+called the <strong>rank</strong> of <script type="math/tex">\mathsf{T}</script>.</p>
+<p>The following result holds for all linear maps <script type="math/tex">\mathsf{T}:V \to W</script>
+between finite dimensional vector spaces:
+<script type="math/tex; mode=display">\text{dim}(V) = \text{dim}(\text{ker}(\mathsf{T})) + \text{dim}(\text{img}(\mathsf{T})).</script>
+This is known as the <strong>rank-nullity theorem</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the map
+<script type="math/tex">\mathsf\pi:\mathbb{R}^3 \to \mathbb{R}^2</script> that was defined earlier as
+<script type="math/tex">\mathsf\pi(x_1, x_2, x_3) = (x_1, x_2)</script> for any
+<script type="math/tex">(x_1, x_2, x_3) \in \mathbb{R}^3</script>. In this case the null space of
+<script type="math/tex">\pi</script> is seen to be
+<script type="math/tex; mode=display">\text{ker}(\mathsf\pi) = \{(0,0,a)\,|\,a \in \mathbb{R}\}.</script> Note that
+<script type="math/tex">\text{dim}(\text{ker}(\mathsf\pi)) = 1</script>. The range of <script type="math/tex">\mathsf\pi</script>
+is easily seen to be the whole of <script type="math/tex">\mathbb{R}^2</script>. We therefore obtain
+the relation <script type="math/tex">\text{dim}(\text{img}(\mathsf\pi)) = 2</script>. From these
+results, we see that
+<script type="math/tex; mode=display">\text{dim}(\mathbb{R}^3) = \text{dim}(\text{ker}(\mathsf\pi)) + \text{dim}(\text{ker}(\mathsf\pi)) = 3,</script>
+thereby verifying the rank-nullity theorem.</p>
+</div>
+<p>If a linear map <script type="math/tex">\mathsf{T}:V \to W</script> is a bijection, then
+<script type="math/tex">\mathsf{T}</script> is called a <strong>vector space isomorphism</strong>, or just an
+<strong>isomorphism</strong>. In this case <script type="math/tex">V</script> and <script type="math/tex">W</script> are said to be
+<strong>isomorphic</strong> - written as <script type="math/tex">V \cong W</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The map <script type="math/tex">\mathsf{S}:\mathbb{R}^2 \to \mathbb{R}^2</script> defined
+as <script type="math/tex; mode=display">\mathsf{S}(x_1, x_2) = (x_2, x_1),</script> for any
+<script type="math/tex">(x_1, x_2) \in \mathbb{R}^2</script>, is easily seen to be an isomorphism on
+<script type="math/tex">\mathbb{R}^2</script>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the set <script type="math/tex">\mathcal{P}_2(\mathbb{R},\mathbb{R})</script> of
+all real-valued polynomials of one real variable of degree less than or
+equal to two:
+<script type="math/tex; mode=display">\mathcal{P}_2(\mathbb{R},\mathbb{R}) = \{p:\mathbb{R}\to\mathbb{R}\,|\,\text{for any }x \in \mathbb{R},\;p(x) = a_0 + a_1 x + a_2 x^2 \text{ for some }a_0, a_1, a_2 \in \mathbb{R}\}.</script>
+It is easy to check that <script type="math/tex">\mathcal{P}_2(\mathbb{R},\mathbb{R})</script> is a
+real vector space with addition and scalar multiplication defined as
+follows: given <script type="math/tex">p(x) = a_0 + a_1x + a_2x^2</script>,
+<script type="math/tex">q(x) = b_0 + b_1x + b_2x^2</script>, and <script type="math/tex">c \in \mathbb{R}</script>,
+<script type="math/tex">(p + c\cdot q) \in P_2(\mathbb{R},\mathbb{R})</script> is defined as
+<script type="math/tex; mode=display">(p + cq)(x) = p(x) + c\cdot q(x) = (a_0 + b_0) + (a_1 + b_1)x + (a_2 + b_2)x^2.</script>
+Consider now the following map
+<script type="math/tex">\iota:\mathcal{P}_2(\mathbb{R},\mathbb{R}) \to \mathbb{R}^3</script> defined
+as follows: for any <script type="math/tex">p \in \mathcal{P}_2(\mathbb{R},\mathbb{R})</script> such
+that for any <script type="math/tex">x \in \mathbb{R}</script>, <script type="math/tex">p(x) = a_0 + a_1x + a_2x^2</script>,
+<script type="math/tex; mode=display">\iota(p) = (a_0, a_1, a_2).</script> It is easy to check that
+<script type="math/tex">\iota:\mathcal{P}_2(\mathbb{R},\mathbb{R}) \to \mathbb{R}^3</script> is
+indeed an isomorphism.</p>
+</div>
+<p>Finally, if <script type="math/tex">\mathsf{T}:V \to W</script> is a vector space isomorphism, then
+<script type="math/tex">\mathsf{T}^{-1}:W \to V</script> is also a linear map. To show this note that
+for any <script type="math/tex">\mathsf{u}, \mathsf{v} \in W</script>, and <script type="math/tex">a, b \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{T}^{-1}(a\mathsf{u} + b\mathsf{v}) &= \mathsf{T}^{-1}(a\mathsf{T}\tilde{\mathsf{u}} + b\mathsf{T}\tilde{\mathsf{v}})\\
+ &= \mathsf{T}^{-1}(\mathsf{T}(a\tilde{\mathsf{u}} + b\tilde{\mathsf{v}}))\\
+ &= a\tilde{\mathsf{u}} + b\tilde{\mathsf{v}}\\
+ &= a \mathsf{T}^{-1}\mathsf{u} + b \mathsf{T}^{-1}\mathsf{v}.
+\end{split}</script> Here, <script type="math/tex">\tilde{\mathsf{u}}, \tilde{\mathsf{v}} \in V</script> are
+the unique elements of <script type="math/tex">V</script> such that
+<script type="math/tex">\mathsf{T}\tilde{\mathsf{u}} = \mathsf{u}</script> and
+<script type="math/tex">\mathsf{T}\tilde{\mathsf{v}} = \mathsf{v}</script>. Note that the existence
+and uniqueness of these vectors follows from the fact that
+<script type="math/tex">\mathsf{T}</script> is invertible.</p>
+<h2 id="representation-of-linear-maps">Representation of linear maps</h2>
+<p>Let us now specialize the discussion to the case when <script type="math/tex">V</script> and <script type="math/tex">W</script>
+are finite dimensional inner product spaces of dimension <script type="math/tex">m</script> and
+<script type="math/tex">n</script>, respectively. For notational simplicity, we will denote the inner
+products in both <script type="math/tex">V</script> and <script type="math/tex">W</script> with the same symbol <script type="math/tex">\cdot</script>, with
+the meaning assumed to be evident from the context. Let
+<script type="math/tex">\mathsf{T}:V \to W</script> be a linear map from <script type="math/tex">V</script> into <script type="math/tex">W</script>, and let
+<script type="math/tex">(\mathsf{e}_1, \ldots, \mathsf{e}_m)</script> and
+<script type="math/tex">(\mathsf{f}_1, \ldots, \mathsf{f}_n)</script> be orthonormal bases of <script type="math/tex">V</script>
+and <script type="math/tex">W</script>, respectively. Then, for any <script type="math/tex">\mathsf{v} \in V</script>, we see from
+the linearity of <script type="math/tex">\mathsf{T}</script> that
+<script type="math/tex; mode=display">\mathsf{T}\mathsf{v} = \mathsf{T}\left(\sum_{i=1}^m v_i \mathsf{e}_i\right) = \sum_{i=1}^m v_i \,\mathsf{T}\mathsf{e}_i.</script>
+Since <script type="math/tex">\mathsf{T}\mathsf{e}_i \in W</script>, we can express it in terms of
+the basis <script type="math/tex">(\mathsf{f}_1, \ldots, \mathsf{f}_n)</script> of <script type="math/tex">W</script> as
+<script type="math/tex; mode=display">\mathsf{T}\mathsf{e}_i = \sum_{j=1}^n T_{ji} \mathsf{f}_j,</script> for some
+constants <script type="math/tex">T_{ji} \in \mathbb{R}</script> for every <script type="math/tex">1 \le i \le m</script> and
+<script type="math/tex">1 \le j \le n</script>. Note the order in which the indices are placed! We
+can now exploit the availability of an inner product in both <script type="math/tex">V</script> and
+<script type="math/tex">W</script> to see that
+<script type="math/tex; mode=display">T_{ij} = \mathsf{f}_i \cdot \mathsf{T}\mathsf{e}_j, \quad 1 \le i \le n, \; 1 \le j \le m.</script>
+We now collect together all the constants <script type="math/tex">T_{ij}</script> as an
+<script type="math/tex">n \times m</script> matrix <script type="math/tex">[\mathsf{T}]</script> whose <script type="math/tex">(i,j)^{\text{th}}</script> entry
+is <script type="math/tex">[\mathsf{T}]_{ij} = T_{ij}</script>. The elements <script type="math/tex">T_{ij}</script> are called
+the <strong>components</strong> of <script type="math/tex">\mathsf{T}</script> with respect to the chosen bases.
+The matrix <script type="math/tex">[\mathsf{T}]</script> is called the <strong>matrix representation</strong> of
+<script type="math/tex">\mathsf{T}:V \to W</script> with respect to the bases <script type="math/tex">(\mathsf{e}_i)</script> of
+<script type="math/tex">V</script> and <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">W</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Occasionally, the notation
+<script type="math/tex">[\mathsf{T}]_{(\mathsf{e}_i)}^{(\mathsf{f}_i)}</script> will be used to
+denote the matrix corresponding to a given linear map
+<script type="math/tex">\mathsf{T}:V \to W</script> with respect to bases <script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">V</script>
+and <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">W</script>. When the choice of bases is evident
+from the context, the simpler notation <script type="math/tex">[\mathsf{T}]</script> will also be
+used.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us revisit the linear map
+<script type="math/tex">\mathsf\pi:\mathbb{R}^3 \to \mathbb{R}^2</script>. With respect to the
+standard basis of <script type="math/tex">\mathbb{R}^3</script> and <script type="math/tex">\mathbb{R}^2</script>, <script type="math/tex">\mathsf\pi</script>
+has the following matrix representation: <script type="math/tex; mode=display">= \begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0
+\end{bmatrix},</script> as can be checked easily with a simple calculation.</p>
+</div>
+<p>To see the advantage of representing a linear map as a matrix, let
+<script type="math/tex">\mathsf{w} = \mathsf{T}\mathsf{v} \in W</script> be the effect of the action
+of <script type="math/tex">\mathsf{T}:V \to W</script> on <script type="math/tex">\mathsf{v} \in V</script>. We can write this
+equation in <strong>component form</strong>, with respect to the orthonormal bases
+<script type="math/tex">(\mathsf{e}_1, \ldots, \mathsf{e}_m)</script> and
+<script type="math/tex">(\mathsf{f}_1, \ldots, \mathsf{f}_n)</script> of <script type="math/tex">V</script> and <script type="math/tex">W</script>,
+respectively, as
+<script type="math/tex; mode=display">\sum w_i \mathsf{f}_i = \mathsf{w} = \mathsf{T}\mathsf{v} = \sum v_j \mathsf{T}\mathsf{e}_j = \sum T_{ij} v_j \mathsf{f}_i \quad\Rightarrow\quad w_i = \sum T_{ij}v_j.</script>
+In matrix notation, the component form of the equation
+<script type="math/tex">\mathsf{w} = \mathsf{T}\mathsf{v}</script> reads <script type="math/tex; mode=display">\begin{bmatrix}
+w_1\\
+\vdots\\
+w_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+T_{11} & \ldots & T_{1m}\\
+\vdots & \ddots & \vdots\\
+T_{n1} & \ldots & T_{nm}
+\end{bmatrix}
+\begin{bmatrix}
+v_1\\
+\vdots\\
+v_m
+\end{bmatrix}.</script> We thus see that
+<script type="math/tex; mode=display">\mathsf{w} = \mathsf{T}\mathsf{v} \quad\Rightarrow\quad [\mathsf{w}] = [\mathsf{T}][\mathsf{v}].</script>
+The special choice of the placements of indices for <script type="math/tex">T_{ij}</script> is done
+so as to ensure a neat matrix equation of the form
+<script type="math/tex">[\mathsf{w}] = [\mathsf{T}][\mathsf{v}]</script> for the <em>components</em> of the
+various quantities with respect to chosen bases.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The foregoing discussion can be summarized through the following <strong>commutative
+diagram</strong>, </p>
+<p><img alt="Representation of linear maps" src="../figures/lin_map_repr_comm_diag.png" />[:style="width:150px"]
+<em>Commutative diagram illustrating the basis representation of linear maps</em></p>
+<p>Notice how we have interpreted the matrix <script type="math/tex">[\mathsf{T}]</script> as a map
+of the form <script type="math/tex">[\mathsf{T}]:\mathbb{R}^m \to \mathbb{R}^n</script> that acts on
+a column vector of size <script type="math/tex">m</script> to produce a column vector of size <script type="math/tex">n</script>.
+This map is called the <strong>representation</strong> of <script type="math/tex">\mathsf{T}</script> with respect
+to the chosen bases.</p>
+</div>
+<p>Let us now consider the case when <script type="math/tex">V</script> and <script type="math/tex">W</script> are equipped with
+general bases. Given two general bases <script type="math/tex">(\mathsf{f}_i)</script> and
+<script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script> and <script type="math/tex">W</script>, respectively, the linear map
+<script type="math/tex">\mathsf{T}:V \to W</script> can be represented as follows: fo any
+<script type="math/tex">\mathsf{u} \in V</script>, note that
+<script type="math/tex; mode=display">\mathsf{T}\mathsf{u} = \mathsf{T}\left(\sum_{i=1}^n u_i \mathsf{f}_i\right) = \sum u_i \mathsf{T}\mathsf{f}_i.</script>
+Since <script type="math/tex">\mathsf{T}\mathsf{f}_i \in W</script>, it can be expressed in terms of
+the basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">W</script> as
+<script type="math/tex; mode=display">\mathsf{T}\mathsf{f}_j = \sum_{j=1}^m T_{ij} \mathsf{g}_i \quad\Rightarrow\quad T_{ij} = \mathsf{g}^i \cdot \mathsf{T}\mathsf{f}_j.</script>
+Defining <script type="math/tex">\mathsf{v} = \mathsf{T}\mathsf{u}</script>, it follows that
+<script type="math/tex; mode=display">\mathsf{v} = \mathsf{T}\mathsf{u} = \sum T_{ij} u_j \mathsf{g}_i \qquad\Rightarrow\quad v_i = \sum T_{ij} u_j,</script>
+where <script type="math/tex">\mathsf{v} = \sum v_i \mathsf{g}_i</script>. Notice the similarity and
+difference with the corresponding expression for the components of
+<script type="math/tex">[\mathsf{T}]</script> with respect to orthonormal bases in <script type="math/tex">V</script> and <script type="math/tex">W</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let <script type="math/tex">\mathcal{P}_2([-1,1],\mathbb{R})</script> and
+<script type="math/tex">\mathcal{P}_1([-1,1],\mathbb{R})</script> represent real-valued polynomials
+of orders <script type="math/tex">2</script> and <script type="math/tex">1</script>, respectively, defined on the closed interval
+<script type="math/tex">[-1,1]\subseteq\mathbb{R}</script>. Given any
+<script type="math/tex">p, q \in \mathcal{P}_2([-1,1],\mathbb{R})</script>, define their inner
+product as <script type="math/tex; mode=display">p \cdot q = \int_{-1}^1 p(x)q(x) \,dx.</script> The inner product
+on <script type="math/tex">\mathcal{P}_1([-1,1],\mathbb{R})</script> is similarly defined. Consider
+the bases <script type="math/tex">(e_1, e_2, e_3)</script> and <script type="math/tex">(f_1, f_2)</script> of
+<script type="math/tex">\mathcal{P}_2([-1,1],\mathbb{R})</script> and
+<script type="math/tex">\mathcal{P}_1([-1,1],\mathbb{R})</script>, respectively, defined as follows:
+for any <script type="math/tex">x \in [-1,1]</script>,
+<script type="math/tex; mode=display">e_1(x) = f_1(x) = \frac{1}{\sqrt{2}}, \quad e_2(x) = f_2(x) = \sqrt{\frac{3}{2}}x, \quad e_3(x) = \frac{\sqrt{5}}{2\sqrt{2}}(3x^2 - 1).</script>
+It is not hard to check that <script type="math/tex">(e_i)</script> and <script type="math/tex">(f_i)</script> are orthonormal
+bases of <script type="math/tex">\mathcal{P}_2([-1,1],\mathbb{R})</script> and
+<script type="math/tex">\mathcal{P}_1([-1,1],\mathbb{R})</script>, respectively.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The basis <script type="math/tex">(e_1, e_2, e_3)</script> is obtained by applying the
+Gram-Schmidt orthogonalization procedure to the basis
+<script type="math/tex">(\tilde{e}_1, \tilde{e}_2, \tilde{e}_3)</script> defined as follows: for any
+<script type="math/tex">x \in [-1,1]</script>, <script type="math/tex">\tilde{e}_1(x) = 1</script>, <script type="math/tex">\tilde{e}_2(x) = x</script>, and
+<script type="math/tex">\tilde{e}_3(x) = x^2</script>. The reader is invited to verify this.</p>
+</div>
+<p>Let us now consider the map
+<script type="math/tex">D:\mathcal{P}_2(\mathbb{R},\mathbb{R}) \to \mathcal{P}_1(\mathbb{R},\mathbb{R})</script>
+as follows: for any <script type="math/tex">p \in \mathcal{P}_2(\mathbb{R},\mathbb{R})</script>
+defined as <script type="math/tex">x \in \mathbb{R} \mapsto p(x) = a_0 + a_1x + a_2x^2</script>,
+<script type="math/tex; mode=display">Dp(x) = \frac{dp(x)}{dx} = a_1 + 2a_2x.</script> It is left as an easy
+exercise to verify that
+<script type="math/tex">D:\mathcal{P}_2(\mathbb{R},\mathbb{R}) \to \mathcal{P}_1(\mathbb{R},\mathbb{R})</script>
+is a linear map.</p>
+<p>We can work out the representation <script type="math/tex">[D]</script> of <script type="math/tex">D</script> with respect to the
+orthonormal bases defined earlier as follows:
+<script type="math/tex">[D]_{ij} = f_i \cdot De_j</script>, for <script type="math/tex">i = 1,2</script> and <script type="math/tex">j = 1,2,3</script>. Doing
+the computation, we see that <script type="math/tex; mode=display">= \begin{bmatrix}
+0 & \sqrt{3} & 0\\
+0 & 0 & \sqrt{15}
+\end{bmatrix}</script> As an illustration, the computation of <script type="math/tex">[D]_{22}</script> and
+<script type="math/tex">[D]_{23}</script> are shown below: <script type="math/tex; mode=display">\begin{split}
+[D]_{22} &= \int_{-1}^1 f_2(x) De_2(x)\,dx = \int_{-1}^1 \frac{3}{2}x \, dx = 0,\\
+[D]_{23} &= \int_{-1}^1 f_2(x) De_3(x)\,dx = \int_{-1}^1 \frac{3}{2}\sqrt{15}\,x^2\,dx = \sqrt{15}.
+\end{split}</script> The other components are computed similarly.</p>
+<p>To check that this representation is valid, let us verify that if
+<script type="math/tex">p \in \mathcal{P}_2([-1,1],\mathbb{R})</script> and
+<script type="math/tex">q = Dp \in \mathcal{P}_1([-1,1],\mathbb{R})</script>, then <script type="math/tex">[q] = [D][p]</script>.
+Suppose, without loss of generality, that for any <script type="math/tex">x \in [-1,1]</script>,
+<script type="math/tex">p(x) = a_0 + a_1 x + a_2 x^2</script>, for some
+<script type="math/tex">a_0, a_1, a_2 \in \mathbb{R}</script>. We can compute the representation of
+<script type="math/tex">p</script> with respect to the orthonormal basis <script type="math/tex">(e_i)</script> of
+<script type="math/tex">\mathcal{P}_2([-1,1],\mathbb{R})</script> as follows:
+<script type="math/tex; mode=display">p = \sum b_i e_i, \quad b_i = p \cdot e_i.</script> A straightforward
+calculation shows that
+<script type="math/tex; mode=display">p = \left(\sqrt{2}a_0 + \frac{2}{3\sqrt{2}}a_2\right) e_1 + \sqrt{\frac{2}{3}}a_1 e_2+ \frac{4}{3\sqrt{10}}a_2 e_3, \quad\Rightarrow\quad [p] = \begin{bmatrix}\left(\sqrt{2}a_0 + \frac{2}{3\sqrt{2}}a_2\right)\\ \sqrt{\frac{2}{3}}a_1\\ \frac{4}{3\sqrt{10}}a_2\end{bmatrix}.</script>
+It is likewise easy to compute the representation of <script type="math/tex">Dp</script> with respect
+to the basis <script type="math/tex">(f_1, f_2)</script> of <script type="math/tex">\mathcal{P}_1([-1,1],\mathbb{R})</script> as
+<script type="math/tex; mode=display">Dp = \sum c_i f_i, \;\; c_i = Dp \cdot f_i, \quad\Rightarrow\quad [Dp] = \begin{bmatrix}\sqrt{2}a_1\\ \frac{2\sqrt{2}}{\sqrt{3}}a_2 \end{bmatrix}.</script>
+We therefore verify by simple matrix multiplication that
+<script type="math/tex">[Dp] = [D][p]</script>:
+<script type="math/tex; mode=display">\begin{bmatrix}\sqrt{2}a_1\\ \frac{2\sqrt{2}}{\sqrt{3}}a_2 \end{bmatrix} = \begin{bmatrix}
+0 & \sqrt{3} & 0\\
+0 & 0 & \sqrt{15}
+\end{bmatrix} \begin{bmatrix}\left(\sqrt{2}a_0 + \frac{2}{3\sqrt{2}}a_2\right)\\ \sqrt{\frac{2}{3}}a_1\\ \frac{4}{3\sqrt{10}}a_2\end{bmatrix}.</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>When learning linear algebra for the first time, it is
+strongly recommended to work out all the details of this example step by
+step since it covers many of the concepts introduced earlier.</p>
+</div>
+<p>Given three vector spaces <script type="math/tex">U, V, W</script>, let us consider the successive
+action of two linear maps <script type="math/tex">\mathsf{T}:U \to V</script> and
+<script type="math/tex">\mathsf{S}:V \to W</script> on a vector <script type="math/tex">\mathsf{u} \in U</script>. We define the
+<strong>product map</strong> <script type="math/tex">\mathsf{ST}:U \to W</script> as
+<script type="math/tex">(\mathsf{ST})(\mathsf{u}) = \mathsf{S}(\mathsf{T}\mathsf{u})</script>. It can
+be shown that this translates to <script type="math/tex; mode=display">= [\mathsf{S}][\mathsf{T}]</script> in
+matrix notation, with respect to any choice of bases in <script type="math/tex">U, V, W</script>. To
+see this, let <script type="math/tex">(\mathsf{e}_i), (\mathsf{f}_i), (\mathsf{g}_i)</script> be
+general bases of <script type="math/tex">U, V, W</script>, respectively. Then, for any
+<script type="math/tex">\mathsf{u} \in U</script>, we see that <script type="math/tex; mode=display">\begin{split}
+\mathsf{ST}\mathsf{u} &= \mathsf{S}\left(\mathsf{T}\left(\sum u_i \mathsf{e}_i\right)\right)\\
+ &= \mathsf{S}\left(\sum T_{ij} u_j \mathsf{f}_i\right)\\
+ &= \sum S_{ij} T_{jk} u_k \mathsf{g}_i.
+\end{split}</script> The matrix product in the right hand side of this equation
+thus corresponds to the familiar matrix multiplication. Combining the
+expression just derived with the definition
+<script type="math/tex">[\mathsf{ST}]_{ij} = \mathsf{g}_i \cdot \mathsf{ST}\mathsf{e}_j</script>, we
+see that
+<script type="math/tex; mode=display">_{ij} = \sum S_{ik}T_{kj} = ([\mathsf{S}][\mathsf{T}])_{ij} \quad\Rightarrow\quad [\mathsf{ST}] = [\mathsf{S}][\mathsf{T}].</script>
+In fact, the rationale for defining matrix multiplication in the
+specific way it is defined is to ensure that the matrix representation
+of the product map is the product of the matrix representations of the
+individual maps.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Some authors write <script type="math/tex">\mathsf{S} \cdot \mathsf{T}</script> for the
+product map which we denote as
+<script type="math/tex">\mathsf{ST} \equiv \mathsf{S} \circ \mathsf{T}</script>. We will reserve the
+<script type="math/tex">\cdot</script> symbol almost exclusively for the inner product, and hence
+will write the product of <script type="math/tex">\mathsf{S}</script> and <script type="math/tex">\mathsf{T}</script> as
+<script type="math/tex">\mathsf{ST}</script>. It’s a good idea to be conscious of the specific
+notational choices whenever you consult other references.</p>
+</div>
+<h2 id="change-of-basis-for-linear-maps">Change of basis for linear maps</h2>
+<p>The representation of a linear map <script type="math/tex">\mathsf{T}:V \to W</script> between finite
+dimensional inner product spaces <script type="math/tex">V</script> and <script type="math/tex">W</script>, of dimension <script type="math/tex">m</script> and
+<script type="math/tex">n</script>, respectively, as a map
+<script type="math/tex">[\mathsf{T}]:\mathbb{R}^m \to \mathbb{R}^n</script> depends on the choice of
+bases for both <script type="math/tex">V</script> and <script type="math/tex">W</script>. Specifically, recall that if
+<script type="math/tex">(\mathsf{f}_i)</script> and <script type="math/tex">(\mathsf{g}_i)</script> are general bases of <script type="math/tex">V</script> and
+<script type="math/tex">W</script>, respectively, then the matrix representation of <script type="math/tex">\mathsf{T}</script> is
+computed using the relation
+<script type="math/tex; mode=display">T_{ij} = \mathsf{g}^i \cdot \mathsf{T} \mathsf{f}_j.</script> Suppose now
+that <script type="math/tex">(\tilde{\mathsf{f}}_i)</script> and <script type="math/tex">(\tilde{\mathsf{g}}_i)</script> are
+another choice of general bases for <script type="math/tex">V</script> and <script type="math/tex">W</script>, respectively. Then
+the components of the matrix representation of <script type="math/tex">\mathsf{T}</script>, written
+<script type="math/tex">\tilde{T}_{ij}</script>, are computed as
+<script type="math/tex; mode=display">\tilde{T}_{ij} = \tilde{\mathsf{g}}^i \cdot \mathsf{T}\tilde{\mathsf{f}}_j.</script>
+The equations relating <script type="math/tex">\tilde{T}_ij</script> and <script type="math/tex">T_{ij}</script> are now worked.
+Though these calculations take a much simpler form with respect to a
+choice of orthonormal bases for both <script type="math/tex">V</script> and <script type="math/tex">W</script>, the slightly more
+involved case involving general bases is presented below as a good
+algebraic exercise. Let the new bases <script type="math/tex">(\tilde{\mathsf{f}}_i)</script> of
+<script type="math/tex">V</script> and <script type="math/tex">(\tilde{\mathsf{g}}_i)</script> of <script type="math/tex">W</script> depend on the old bases
+<script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> and <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">W</script> as
+<script type="math/tex; mode=display">\tilde{\mathsf{f}}_i = \sum A_{ji}\mathsf{f}_j, \qquad \tilde{\mathsf{g}}_i = \sum B_{ji} \mathsf{g}_j,</script>
+where <script type="math/tex">A_{ij} = \mathsf{f}^i \cdot \tilde{\mathsf{f}}_j</script> and
+<script type="math/tex">B_{ij} = \mathsf{g}^i \cdot \tilde{\mathsf{g}}_j</script>. It follows then
+from an easy computation that <script type="math/tex; mode=display">\begin{split}
+\tilde{T}_{ij} &= \tilde{\mathsf{g}}^i \cdot \mathsf{T}\tilde{\mathsf{f}}_j\\
+ &= \sum \tilde{g}^{ik}\tilde{\mathsf{g}}_k \cdot \mathsf{T}\tilde{\mathsf{f}}_j\\
+ &= \sum \tilde{g}^{ik}B_{ck}\,\mathsf{g}_c \cdot \mathsf{T}\mathsf{f}_b \,A_{bj}\\
+ &= \sum \tilde{g}^{ik}B_{ck}g_{ca}\,\mathsf{g}^a \cdot \mathsf{T}\mathsf{f}_b \,A_{bj}\\
+ &= \sum \tilde{g}^{ik}B_{ck}g_{ca}T_{ab}A_{bj},
+\end{split}</script> where <script type="math/tex">g_{ij} = \mathsf{g}_i \cdot \mathsf{g}_j</script> and
+<script type="math/tex">\tilde{g}^{ij} = \tilde{\mathsf{g}}^i \cdot \tilde{\mathsf{g}}^j</script>.
+Noting that <script type="math/tex; mode=display">\begin{split}
+\sum \tilde{g}^{ik}B_{ck}g_{ca} &= \sum g_{ac}B_{ck}\tilde{g}^{ki}\\
+ &= \sum g_{ac} \mathsf{g}^c \cdot \tilde{\mathsf{g}}_k \tilde{g}^{ki}\\
+ &= \mathsf{g}_a \cdot \tilde{\mathsf{g}}^i,
+\end{split}</script> and that
+<script type="math/tex; mode=display">\tilde{\mathsf{g}}_i = \sum B_{ji}\mathsf{g}_j \quad\Rightarrow\quad \mathsf{g}_i = \sum B^{-1}_{ji}\tilde{\mathsf{g}}_j \quad\Rightarrow\quad B^{-1}_{ij} = \mathsf{g}_j \cdot \tilde{\mathsf{g}}^i,</script>
+it follows at once that
+<script type="math/tex; mode=display">\tilde{T}_{ij} = \sum B^{-1}_{ia} T_{ab} A_{bj}.</script> Using matrix
+notation, we can write the foregoing equation in matrix form as
+<script type="math/tex; mode=display">_{(\tilde{\mathsf{f}}_i)}^{(\tilde{\mathsf{g}}_i)} = \mathsf{B}^{-1}\;[\mathsf{T}]_{(\mathsf{f}_i)}^{(\mathsf{g}_i)}\;\mathsf{A},</script>
+where <script type="math/tex">\mathsf{A}</script> and <script type="math/tex">\mathsf{B}</script> are the matrices whose
+<script type="math/tex">(i,j)^{\text{th}}</script> component is <script type="math/tex">A_{ij}</script> and <script type="math/tex">B_{ij}</script>,
+respectively. </p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The foregoing discussion is summarized in the following commutative diagram:</p>
+<p><img alt="Change of basis for linear maps" src="../figures/lin_map_change_of_basis_cd.png" />
+<em>Commutative diagram illustrating change of basis rules for linear maps</em></p>
+<p>Notice how the commutative diagram neatly summarizes the change in
+the representation of a linear map upon change of bases in the domain
+and codomain vector spaces.</p>
+<p>In the special case when all the bases are orthonormal, the
+transformation matrices are orthogonal. In this case, we can write the
+transformation rule as follows:
+<script type="math/tex; mode=display">[\mathsf{T}]_{(\tilde{\mathsf{f}}_i)}^{(\tilde{\mathsf{g}}_i)} = \mathsf{B}^T\;[\mathsf{T}]_{(\mathsf{f}_i)}^{(\mathsf{g}_i)} \; \mathsf{A}.</script>
+This special case will turn out to be very useful in later applications.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="admonition danger">
+<p class="admonition-title">TO DO</p>
+<p>Change of basis for linear maps. WS 1. Problem 2.</p>
+</div>
+</div>
+<h2 id="tensor-product-basis-for-lvw">Tensor product basis for <script type="math/tex">L(V,W)</script>
+</h2>
+<p>Suppose that <script type="math/tex">V</script> and <script type="math/tex">W</script> are inner product spaces of dimension <script type="math/tex">m</script>
+and <script type="math/tex">n</script>, respectively. Let us focus on the set <script type="math/tex">L(V,W)</script>,
+<script type="math/tex; mode=display">L(V,W) = \{\mathsf{T}:V \to W \,|\, \mathsf{T} \text{ is linear }\},</script>
+of all linear maps from <script type="math/tex">V</script> into <script type="math/tex">W</script>. We will now show that the set
+of all linear maps <script type="math/tex">L(V,W)</script> from <script type="math/tex">V</script> into <script type="math/tex">W</script> is also a vector
+space, and study a particularly useful basis called the <em>tensor product
+basis</em> for <script type="math/tex">L(V,W)</script>.</p>
+<p>Defining addition <script type="math/tex">+:L(V,W) \times L(V,W) \to L(V,W)</script> and scalar
+multiplication <script type="math/tex">\cdot:\mathbb{R} \times L(V,W) \to L(V,W)</script> as
+<script type="math/tex; mode=display">(\mathsf{S} + \mathsf{T})(\mathsf{u}) = \mathsf{S}\mathsf{u} + \mathsf{T}\mathsf{u}, \quad (a\mathsf{T})(\mathsf{u}) = a \, \mathsf{T}\mathsf{u},</script>
+for any <script type="math/tex">\mathsf{S}, \mathsf{T} \in L(V,W)</script> and <script type="math/tex">\mathsf{u} \in V</script>,
+it is easy to check that the set <script type="math/tex">L(V,W)</script> has the structure of a real
+vector space - the two operations introduced above satisfy all the
+axioms of a real vector space listed earlier.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is possible to define a norm on <script type="math/tex">L(V,W)</script> as
+<script type="math/tex">\lVert \mathsf{T} \rVert = \text{sup}_{\lVert \mathsf{v} \rVert = 1} \lVert \mathsf{T}\mathsf{v} \rVert</script>,
+for any <script type="math/tex">\mathsf{T} \in L(V,W)</script> and <script type="math/tex">\mathsf{v} \in V</script>. This is also
+called the <strong>sup norm</strong>. It is easy to show that
+<script type="math/tex">\lVert \mathsf{T}\mathsf{v} \rVert \le \lVert \mathsf{T} \rVert \lVert \mathsf{v} \rVert</script>
+for any <script type="math/tex">\mathsf{T} \in L(V,W)</script> and <script type="math/tex">\mathsf{v} \in V</script>. An inner
+product for <script type="math/tex">L(V,W)</script> will be introduced later using the <em>trace</em> of a
+linear map.</p>
+</div>
+<p>What is the dimension of <script type="math/tex">L(V,W)</script>? To answer this question, it is
+helpful to introduce the notion of a <em>tensor product map</em>. Given vectors
+<script type="math/tex">\mathsf{v} \in V</script> and <script type="math/tex">\mathsf{w} \in W</script>, the <strong>tensor product
+map</strong> <script type="math/tex">\mathsf{w} \otimes \mathsf{v} \in L(V,W)</script> is defined as
+follows: for any <script type="math/tex">\mathsf{u} \in V</script>,
+<script type="math/tex; mode=display">(\mathsf{w} \otimes \mathsf{v})(\mathsf{u}) = (\mathsf{v} \cdot \mathsf{u}) \mathsf{w}.</script>
+It is easily checked that this is in fact a linear map. It is convenient
+to consider first the special case when <script type="math/tex">V</script> and <script type="math/tex">W</script> are equipped
+with orthonormal bases. Let <script type="math/tex">(\mathsf{f}_i)_{i=1}^m</script> and
+<script type="math/tex">(\mathsf{g}_i)_{i=1}^n</script> be orthonormal bases of <script type="math/tex">V</script> and <script type="math/tex">W</script>,
+respectively. Let us study the <script type="math/tex">mn</script> linear maps
+<script type="math/tex; mode=display">\mathsf{g}_i \otimes \mathsf{f}_j:V \to W,</script> for every
+<script type="math/tex">1 \le i \le n</script> and <script type="math/tex">1 \le j \le m</script>. Note that for any
+<script type="math/tex">\mathsf{v} = \sum v_i \mathsf{f}_i \in V</script>,
+<script type="math/tex; mode=display">(\mathsf{g}_i \otimes \mathsf{f}_j)(\mathsf{v}) = (\mathsf{v} \cdot \mathsf{f}_j) \mathsf{g}_i = v_j \mathsf{g}_i.</script>
+It is easily checked that the <script type="math/tex">mn</script> maps
+<script type="math/tex">\mathsf{g}_i \otimes \mathsf{f}_j \in L(V,W)</script> are linearly
+independent. Indeed, if for real numbers <script type="math/tex">\{a_{ij}\}</script>, where
+<script type="math/tex">1 \le i \le n</script> and <script type="math/tex">1 \le j \le m</script>, it is the case that
+<script type="math/tex; mode=display">\sum a_{ij} \mathsf{g}_i \otimes \mathsf{f}_j = 0,</script> then, for every
+<script type="math/tex">1 \le k \le m</script>,
+<script type="math/tex; mode=display">\sum a_{ij} (\mathsf{g}_i \otimes \mathsf{f}_j)(\mathsf{f}_k) = 0 \quad\Rightarrow\quad \sum a_{ik} \mathsf{g}_i = 0 \quad\Rightarrow\quad a_{ik} = 0.</script>
+This shows that the <script type="math/tex">mn</script> linear maps
+<script type="math/tex">\{\mathsf{g}_i \otimes \mathsf{f}_j\}</script> are linearly independent.
+Notice how the orthonormality of the basis <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script>
+and the linear independence of the basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">W</script> is
+used in proving this.</p>
+<p>Suppose now that <script type="math/tex">\mathsf{T} \in L(V,W)</script> is any linear map. Then for
+any <script type="math/tex">\mathsf{v} = \sum v_i \mathsf{f}_i \in V</script>, we have
+<script type="math/tex; mode=display">\mathsf{T}\mathsf{v} = \sum T_{ij} v_j \mathsf{g}_i = \sum T_{ij} (\mathsf{g}_i \otimes \mathsf{f}_j)(\mathsf{v}) = \left(\sum T_{ij} \mathsf{g}_i \otimes \mathsf{f}_j\right)\mathsf{v}.</script>
+Since this is true for any <script type="math/tex">\mathsf{v} \in V</script>, we get the following
+identity:
+<script type="math/tex; mode=display">\mathsf{T} = \sum T_{ij} \mathsf{g}_i \otimes \mathsf{f}_j.</script> This
+informs us that
+<script type="math/tex">\text{span}(\{\mathsf{g}_i \otimes \mathsf{f}_j\}) = L(V,W)</script>.</p>
+<p>The preceding two facts show that the <script type="math/tex">mn</script> maps
+<script type="math/tex">(\mathsf{g}_i \otimes \mathsf{f}_j)</script> indeed form a basis of
+<script type="math/tex">L(V,W)</script>, called the <strong>tensor product basis</strong> of <script type="math/tex">L(V,W)</script>. Since
+there are <script type="math/tex">mn</script> such maps, we see that the dimension of <script type="math/tex">L(V,W)</script> is
+<script type="math/tex">mn</script>: <script type="math/tex; mode=display">\text{dim}(L(V,W)) = \text{dim}(V) \text{dim}(W).</script> Thus,
+<script type="math/tex">L(V,W)</script> is a finite dimensional vector space with dimension equal to
+the product of the dimensions of <script type="math/tex">V</script> and <script type="math/tex">W</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The change of basis rule derived earlier for the components of
+a linear map can also be derived using the tensor product
+representation. It is a simple exercise to verify this.</p>
+</div>
+<p>Let us briefly look at the representation of any
+<script type="math/tex">\mathsf{T} \in L(V,W)</script> with respect to general bases
+<script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> and <script type="math/tex">(\mathsf{g}_i)</script>. Given any any
+<script type="math/tex">\mathsf{v} \in V</script>, <script type="math/tex; mode=display">\begin{split}
+\mathsf{T}\mathsf{v} &= \sum T_{ij} v_j \mathsf{g}_i\\
+ &= \sum T_{ij} (\mathsf{f}^j \cdot \mathsf{v}) \mathsf{g}_i\\
+ &= \sum T_{ij} (\mathsf{g}_i \otimes \mathsf{f}^j)(\mathsf{v}).
+\end{split}</script> Since this is true for any <script type="math/tex">\mathsf{v} \in V</script>, it is
+evident that
+<script type="math/tex; mode=display">\mathsf{T} = \sum T_{ij} \mathsf{g}_i \otimes \mathsf{f}^j.</script> Notice
+how the reciprocal basis shows up when using general bases.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that the linear map <script type="math/tex">\mathsf{T}:V \to W</script> can be
+represented in a number of equivalent ways with respect to general bases
+<script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> and <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">W</script> as follows:
+<script type="math/tex; mode=display">\mathsf{T} = \sum T_{ij} \mathsf{g}_i \otimes \mathsf{f}^j = \sum T_{ij}f^{jk} \mathsf{g}_i \otimes \mathsf{f}_k = \sum g_{ki}T_{ij}\mathsf{g}^k \otimes \mathsf{f}^j = \sum g_{ki}T_{ij}f^{jl} \mathsf{g}^k \otimes \mathsf{f}_l.</script>
+The default representation will be chosen in these notes as
+<script type="math/tex">\mathsf{T} = \sum T_{ij} \mathsf{g}_i \otimes \mathsf{f}^j</script>, but this
+is merely a matter of convention.</p>
+</div>
+<h2 id="transpose-of-a-linear-map">Transpose of a linear map</h2>
+<p>Given a linear map <script type="math/tex">\mathsf{T}:V \to W</script> between finite dimensional
+inner product spaces, we will now construct an important linear map,
+<script type="math/tex">\mathsf{T}^T:W \to V</script>, called the <strong>transpose</strong> of <script type="math/tex">\mathsf{T}</script> as
+follows: for any <script type="math/tex">\mathsf{v} \in V</script> and <script type="math/tex">\mathsf{w} \in W</script>,
+<script type="math/tex; mode=display">\mathsf{T}^T\mathsf{w} \cdot \mathsf{v} = \mathsf{w} \cdot \mathsf{T}\mathsf{v}.</script>
+To get a handle on this definition and relate it to the more elementary
+notion of the transpose of a matrix, let us consider the representation
+of <script type="math/tex">\mathsf{T}^T</script> with respect to orthonormal bases of <script type="math/tex">V</script> and
+<script type="math/tex">W</script>. Given an orthonormal basis <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> and
+<script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">W</script>, we can easily compute the representation
+<script type="math/tex">\mathsf{T}^T</script> with respect to these bases as follows: if
+<script type="math/tex">\mathsf{v} = \sum v_i \mathsf{f}_i</script> and
+<script type="math/tex">\mathsf{w} = \sum w_j \mathsf{g}_j</script>, then
+<script type="math/tex; mode=display">\sum T^T_{ij} w_j v_i = T_{ji} w_j v_i \quad\Rightarrow\quad T^T_{ij} = T_{ji}.</script>
+Here <script type="math/tex">T_{ij} = \mathsf{g}_i \cdot \mathsf{T}\mathsf{f}_j</script> and
+<script type="math/tex">T^T_{ij} = \mathsf{f}_i \cdot \mathsf{T}^T\mathsf{g}_j</script>. In matrix
+notation, this amounts to the following equation: <script type="math/tex; mode=display">= [\mathsf{T}]^T.</script>
+We thus recover the familiar expression for the transpose of a matrix.
+The fact that <script type="math/tex">[\mathsf{T}^T]_{ij} = T_{ji}</script> also leads to the
+following representation of <script type="math/tex">\mathsf{T}^T \in L(W,V)</script> with respect to
+the bases <script type="math/tex">(\mathsf{f}_i)</script> and <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script> and <script type="math/tex">W</script>,
+respectively: <script type="math/tex; mode=display">\begin{split}
+\mathsf{T}^T &= \sum T^T_{ij} \mathsf{f}_i \otimes \mathsf{g}_j,\\
+ &= \sum T_{ji} \mathsf{f}_i \otimes \mathsf{g}_j.
+\end{split}</script> In the special case of the linear map
+<script type="math/tex">\mathsf{w} \otimes \mathsf{v} \in L(V,W)</script>, where <script type="math/tex">\mathsf{v} \in V</script>
+and <script type="math/tex">\mathsf{w} \in W</script>, we see from this equation that
+<script type="math/tex; mode=display">(\mathsf{w} \otimes \mathsf{v})^T = \sum [\mathsf{w} \otimes \mathsf{v}]_{ji} \mathsf{f}_i \otimes \mathsf{g}_j = \sum (v_i \mathsf{f}_i) \otimes (w_j \mathsf{g}_j) = \mathsf{v} \otimes \mathsf{w}.</script>
+Note that the equation
+<script type="math/tex">(\mathsf{w} \otimes \mathsf{v})^T = (\mathsf{v} \otimes \mathsf{w})</script>
+is valid in general, even though orthonormal bases were used used to
+prove the fact. The reason is that the bases do not appear in the final
+form of this equation. Alternatively, the fact that
+<script type="math/tex">(\mathsf{w} \otimes \mathsf{v})^T = (\mathsf{v} \otimes \mathsf{w})</script>
+can be directly checked using the definition of the transpose.</p>
+<p>Let us now compute the representation of the transpose of a linear map
+<script type="math/tex">\mathsf{T}:V \to W</script> with respect to general bases <script type="math/tex">(\mathsf{f}_i)</script>
+for <script type="math/tex">V</script> and <script type="math/tex">(\mathsf{g}_i)</script> for <script type="math/tex">W</script>. With respect to these choice
+of basis, we have: <script type="math/tex; mode=display">\begin{split}
+\left(\sum v_i \mathsf{f}_i\right) \cdot \mathsf{T}^T\left(\sum w_j \mathsf{g}_j\right) &= \mathsf{T}\left(\sum v_i \mathsf{f}_i\right) \cdot \left(\sum w_j \mathsf{g}_j\right),\\
+\sum v_i w_j \mathsf{f}_i \cdot \mathsf{T}^T\mathsf{g}_j &= \sum v_i w_j \mathsf{T}\mathsf{f}_i\cdot \mathsf{g}_j,\\
+\sum v_i w_j g_{il} \mathsf{f}^l \cdot \mathsf{T}^T\mathsf{g}_j &= \sum v_i w_j g_{kj} \mathsf{g}^k \cdot \mathsf{T}\mathsf{f}_i,\\
+\sum v_i w_j g_{il} T^T_{lj} = \sum v_i w_j g_{kj} T_{ki}.
+\end{split}</script> Since this equation holds true for any choice of <script type="math/tex">v_i</script>
+and <script type="math/tex">w_j</script>, it follows immediately that
+<script type="math/tex; mode=display">\sum g_{ik} T^T_{kj} = \sum g_{jk}T_{ki}.</script> In the special case when
+the bases <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> and <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">W</script>
+are orthonormal, the use of the relations <script type="math/tex">f_{ij} = \delta_{ij}</script> and
+<script type="math/tex">g_{ij} = \delta_{ij}</script> yields the familiar expression for the
+components of the transpose: <script type="math/tex">T^T_{ij} = T_{ji}</script>.</p>
+<p>The properties of the transpose of a linear map parallel that of the
+transpose of matrices. For instance, if
+<script type="math/tex">\mathsf{S}, \mathsf{T} \in L(V, W)</script>, and <script type="math/tex">a \in \mathbb{R}</script>, then
+<script type="math/tex; mode=display">(\mathsf{S} + \mathsf{T})^T = \mathsf{S}^T + \mathsf{T}^T, \qquad (a\mathsf{S})^T = a\,\mathsf{S}^T.</script>
+Given linear maps <script type="math/tex">\mathsf{S}:V \to W</script> and <script type="math/tex">\mathsf{T}:U \to V</script>, we
+have the following relation:
+<script type="math/tex; mode=display">(\mathsf{S}\mathsf{T})^T = \mathsf{T}^T \mathsf{S}^T.</script> These
+properties are easy consequences of the definition of the transpose - it
+is left as an exercise to verify these claims.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../inner_product_spaces/" title="Inner Product Spaces" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Inner Product Spaces
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../tensor_algebra/" title="Tensor Algebra" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Tensor Algebra
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>

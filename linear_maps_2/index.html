@@ -1,0 +1,973 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Notes on Euclidean Tensor Analysis.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Linear Maps - II - Euclidean Tensor Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#important-invariants-of-linear-maps" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Euclidean Tensor Analysis" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Euclidean Tensor Analysis
+            </span>
+            <span class="md-header-nav__topic">
+              Linear Maps - II
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Euclidean Tensor Analysis" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Euclidean Tensor Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../inner_product_spaces/" title="Inner Product Spaces" class="md-nav__link">
+      Inner Product Spaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_1/" title="Linear Maps - I" class="md-nav__link">
+      Linear Maps - I
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_algebra/" title="Tensor Algebra" class="md-nav__link">
+      Tensor Algebra
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Linear Maps - II
+      </label>
+    
+    <a href="./" title="Linear Maps - II" class="md-nav__link md-nav__link--active">
+      Linear Maps - II
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#important-invariants-of-linear-maps" title="Important invariants of linear maps" class="md-nav__link">
+    Important invariants of linear maps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#determinant" title="Determinant" class="md-nav__link">
+    Determinant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace" title="Trace" class="md-nav__link">
+    Trace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-groups-of-linear-maps" title="Special groups of linear maps" class="md-nav__link">
+    Special groups of linear maps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups" title="Groups" class="md-nav__link">
+    Groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additive-groups-of-linear-maps" title="Additive groups of linear maps" class="md-nav__link">
+    Additive groups of linear maps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutliplicative-groups-of-linear-maps" title="Mutliplicative groups of linear maps" class="md-nav__link">
+    Mutliplicative groups of linear maps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigenvalues-and-eigenvectors-of-linear-maps" title="Eigenvalues and Eigenvectors of linear maps" class="md-nav__link">
+    Eigenvalues and Eigenvectors of linear maps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" title="Definition" class="md-nav__link">
+    Definition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-and-positive-definite-linear-maps" title="Symmetric and positive definite linear maps" class="md-nav__link">
+    Symmetric and positive definite linear maps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invariants-of-a-linear-map" title="Invariants of a linear map" class="md-nav__link">
+    Invariants of a linear map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-nav__link">
+      Linearization of Nonlinear Maps
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_analysis_R3/" title="Euclidean Tensor Analysis" class="md-nav__link">
+      Euclidean Tensor Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-nav__link">
+      Curvilinear Coordinates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../set_theory/" title="Appendix - Set Theory" class="md-nav__link">
+      Appendix - Set Theory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Appendix - Matrices" class="md-nav__link">
+      Appendix - Matrices
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../calculus/" title="Appendix - Calculus" class="md-nav__link">
+      Appendix - Calculus
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#important-invariants-of-linear-maps" title="Important invariants of linear maps" class="md-nav__link">
+    Important invariants of linear maps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#determinant" title="Determinant" class="md-nav__link">
+    Determinant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace" title="Trace" class="md-nav__link">
+    Trace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-groups-of-linear-maps" title="Special groups of linear maps" class="md-nav__link">
+    Special groups of linear maps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups" title="Groups" class="md-nav__link">
+    Groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additive-groups-of-linear-maps" title="Additive groups of linear maps" class="md-nav__link">
+    Additive groups of linear maps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutliplicative-groups-of-linear-maps" title="Mutliplicative groups of linear maps" class="md-nav__link">
+    Mutliplicative groups of linear maps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigenvalues-and-eigenvectors-of-linear-maps" title="Eigenvalues and Eigenvectors of linear maps" class="md-nav__link">
+    Eigenvalues and Eigenvectors of linear maps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" title="Definition" class="md-nav__link">
+    Definition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric-and-positive-definite-linear-maps" title="Symmetric and positive definite linear maps" class="md-nav__link">
+    Symmetric and positive definite linear maps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invariants-of-a-linear-map" title="Invariants of a linear map" class="md-nav__link">
+    Invariants of a linear map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Linear Maps - II</h1>
+                
+                <p>We now discuss certain additional topics related to linear maps that are
+useful in the study of continuum mechanics.</p>
+<h2 id="important-invariants-of-linear-maps">Important invariants of linear maps</h2>
+<p>The fact that the set of all volume forms on a finite dimensional inner
+product space is itself a vector space of dimension <script type="math/tex">1</script> permits a
+basis-independent means to define a variety of useful functions on
+linear maps. Two such functions, the <em>determinant</em> and <em>trace</em> of a
+linear map are discussed now. These functions are called <strong>invariants</strong>
+of linear maps since their definitions are independent of the choice of
+a basis.</p>
+<h3 id="determinant">Determinant</h3>
+<p>Given a linear map <script type="math/tex">\mathsf{T} \in L(V,V)</script>, where <script type="math/tex">V</script> is a finite
+dimensional inner product space of dimension <script type="math/tex">n</script>, the <strong>determinant</strong>
+of <script type="math/tex">\mathsf{T}</script>, written <script type="math/tex">\text{det}(\mathsf{T})</script> is defined as
+follows: for any <script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_n \in V</script>,
+<script type="math/tex; mode=display">\text{det}(\mathsf{T}) = \frac{\mathsf{\epsilon}(\mathsf{T}\mathsf{u}_1, \ldots, \mathsf{T}\mathsf{u}_n)}{\mathsf{\epsilon}(\mathsf{u}_1, \ldots, \mathsf{u}_n)}.</script>
+Here, <script type="math/tex">\mathsf{\epsilon} \in \Omega^n(V)</script> is a chosen volume form on
+<script type="math/tex">V</script>. To see that this definition of the determinant is well-defined,
+note that it is possible to define a volume form
+<script type="math/tex">\mathsf{\epsilon}_{\mathsf{T}} \in \Omega^n(V)</script> on <script type="math/tex">V</script>, given
+<script type="math/tex">\mathsf{\epsilon} \in \Omega^n(V)</script> and <script type="math/tex">\mathsf{T} \in L(V,V)</script>, as
+follows: for any <script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_n \in V</script>,
+<script type="math/tex; mode=display">\mathsf{\epsilon}_{\mathsf{T}}(\mathsf{u}_1, \ldots, \mathsf{u}_n) = \mathsf{\epsilon}(\mathsf{T}\mathsf{u}_1, \ldots, \mathsf{T}\mathsf{u}_n).</script>
+The fact that the set of all volume forms is a vector space of dimension
+<script type="math/tex">1</script> implies that <script type="math/tex">\mathsf{\epsilon}_{\mathsf{T}}</script> is a scalar
+multiple of <script type="math/tex">\mathsf{\epsilon}</script>. This scalar multiple is, in fact,
+defined as the determinant of <script type="math/tex">\mathsf{T}</script>.</p>
+<p>To see how this definition is related to the determinant of a matrix
+encountered in elementary linear algebra, it is helpful to work in
+<script type="math/tex">\mathbb{R}^3</script>. The determinant of a linear map
+<script type="math/tex">\mathsf{T}:\mathbb{R}^3 \to \mathbb{R}^3</script> is computed as follows:
+choosing <script type="math/tex">\mathsf{u}_1, \mathsf{u}_2, \mathsf{u}_3 \in \mathbb{R}^3</script>
+to be the standard basis <script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">\mathbb{R}^3</script>, and
+<script type="math/tex">\mathsf{\epsilon}</script> to be the standard volume form on
+<script type="math/tex">\mathbb{R}^3</script>, <script type="math/tex; mode=display">\begin{split}
+\mathsf{\epsilon}(\mathsf{e}_i, \mathsf{e}_j, \mathsf{e}_k) \text{det}(\mathsf{T}) &= \mathsf{\epsilon}(\mathsf{T}\mathsf{e}_i, \mathsf{T}\mathsf{e}_j, \mathsf{T}\mathsf{e}_k)\\
+\epsilon_{ijk} \text{det}(\mathsf{T}) &= \mathsf{\epsilon}\left(\sum T_{ai}\mathsf{e}_a, \sum T_{bj} \mathsf{e}_b, T_{ck} \mathsf{e}_c\right)\\
+ &= \sum T_{ai}T_{bj}T_{ck}\mathsf{\epsilon}(\mathsf{e}_a, \mathsf{e}_b, \mathsf{e}_c)\\
+ &= \sum \epsilon_{abc} T_{ai} T_{bj} T_{ck}.
+\end{split}</script> Note that the final expression is the familiar expression
+for the determinant of the matrix <script type="math/tex">[\mathsf{T}]</script>. It is a good
+exercise to expand this and check that it indeed reduces to the familiar
+expression for the determinant.</p>
+<p>To see the advantage in the abstract and basis-independent definition of
+the determinant provided here, consider the determinant of the product
+of two linear maps <script type="math/tex">\mathsf{S}, \mathsf{T} \in L(V,V)</script>. Given any
+<script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_n \in V</script>, <script type="math/tex; mode=display">\begin{split}
+\text{det}(\mathsf{S}\mathsf{T}) &= \frac{\mathsf{\epsilon}(\mathsf{S}\mathsf{T}\mathsf{u}_1, \ldots, \mathsf{S}\mathsf{T}\mathsf{u}_n)}{\mathsf{\epsilon}(\mathsf{u}_1, \ldots, \mathsf{u}_n)}\\
+ &= \frac{\mathsf{\epsilon}(\mathsf{S}(\mathsf{T}\mathsf{u}_1), \ldots, \mathsf{S}(\mathsf{T}\mathsf{u}_n))}{\mathsf{\epsilon}(\mathsf{T}\mathsf{u}_1, \ldots, \mathsf{T}\mathsf{u}_n)} \frac{\mathsf{\epsilon}(\mathsf{T}\mathsf{u}_1, \ldots, \mathsf{T}\mathsf{u}_n)}{\mathsf{\epsilon}(\mathsf{u}_1, \ldots, \mathsf{u}_n)}\\
+ &= \text{det}(\mathsf{S})\text{det}(\mathsf{T}).
+\end{split}</script> Notice how this proof of the fact that
+<script type="math/tex">\text{det}(\mathsf{S}\mathsf{T}) = \text{det}(\mathsf{S})\text{det}(\mathsf{T})</script>
+is significantly simpler than the proof in terms of the elementary
+definition of the determinant in terms of the components of a linear map
+with respect to suitable choice of bases.</p>
+<h3 id="trace">Trace</h3>
+<p>The <strong>trace</strong> of the linear map <script type="math/tex">\mathsf{T} \in L(V,V)</script>, written
+<script type="math/tex">\text{tr}(\mathsf{T})</script>, is defined as follows: for any
+<script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_n \in V</script>,
+<script type="math/tex; mode=display">\text{tr}(\mathsf{T}) = \sum_i \frac{\mathsf{\epsilon}(\mathsf{u}_1, \ldots, \mathsf{T}\mathsf{e}_i, \ldots, \mathsf{u}_n)}{\mathsf{\epsilon}(\mathsf{u}_1, \ldots, \mathsf{u}_n)}.</script>
+To understand this definition better, consider the special case of a
+linear map <script type="math/tex">\mathsf{T} \in L(\mathbb{R}^3,\mathbb{R}^3)</script>. In this
+case, it easily follows from the definition that <script type="math/tex; mode=display">\begin{split}
+\epsilon_{ijk}\text{tr}(\mathsf{T}) &= \mathsf{\epsilon}(\mathsf{T}\mathsf{e}_i, \mathsf{e}_j, \mathsf{e}_k) + \mathsf{\epsilon}(\mathsf{e}_i, \mathsf{T}\mathsf{e}_j, \mathsf{e}_k) + \mathsf{\epsilon}(\mathsf{e}_i, \mathsf{e}_j, \mathsf{T}\mathsf{e}_k)\\
+ &= \sum (\epsilon_{ajk} T_{ai} + \epsilon_{iak} T_{aj} + \epsilon_{ija} T_{ak})\\
+ &= \epsilon_{ijk}(T_{ii} + T_{jj} + T_{kk}).
+\end{split}</script> The last expression follows from the fact that
+<script type="math/tex">\epsilon_{ijk}</script> is non-zero only when <script type="math/tex">i,j,k</script> are distinct. Note
+also that there is no summation over the repeated indices in the final
+expression. Choosing <script type="math/tex">(i,j,k) = (1,2,3)</script> the familiar expression for
+the trace of <script type="math/tex">[\mathsf{T}]</script> is recovered:
+<script type="math/tex; mode=display">\text{tr}(\mathsf{T}) = \sum T_{ii}.</script> Despite the cumbersome form of
+the definition of the trace of a linear map adopted here, it will prove
+to be very convenient later on.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is possible to introduce an inner product in the space
+<script type="math/tex">L(V,W)</script> of all linear maps from <script type="math/tex">V</script> into <script type="math/tex">W</script> as follows. Given
+<script type="math/tex">\mathsf{S},\mathsf{T} \in L(V,W)</script>, the <strong>inner product</strong>
+<script type="math/tex">\cdot:L(V,W) \times L(V,W) \to \mathbb{R}</script> is defined as follows: for
+any <script type="math/tex">\mathsf{S},\mathsf{T} \in L(V,W)</script>,
+<script type="math/tex; mode=display">\mathsf{S} \cdot \mathsf{T} = \text{tr}(\mathsf{S}\mathsf{T}^T).</script> It is
+left as an easy exercise to verify that this is indeed an inner product
+on <script type="math/tex">L(V,W)</script>. Note also that <script type="math/tex">\text{tr}(\mathsf{S}\mathsf{T}^T) = \text{tr}(\mathsf{S}^T\mathsf{T})</script>.</p>
+</div>
+<h2 id="special-groups-of-linear-maps">Special groups of linear maps</h2>
+<p>To conclude the current introductory discussion on tensor algebra, a few
+important class of linear maps are considered now. Throughout this
+discussion, <script type="math/tex">V</script> stands for an inner product space of dimension <script type="math/tex">n</script>,
+and attention is focused on certain special subsets of <script type="math/tex">L(V,V)</script>.</p>
+<h3 id="groups">Groups</h3>
+<p>It is useful at this juncture to introduce the notion of a <em>group</em>. A
+set <script type="math/tex">G</script> is said to be a <strong>group</strong> if there exists a map
+<script type="math/tex">\odot:G \times G \to G</script> that satisfies the following properties:</p>
+<ol>
+<li>
+<p><strong>Associativity</strong> of group operation: for any <script type="math/tex">f, g, h \in G</script>,
+    <script type="math/tex">f \odot (g \odot h) = (f \odot g) \odot h</script>,</p>
+</li>
+<li>
+<p>Existence of <strong>group identity</strong>: there exists <script type="math/tex">e \in G</script>, called
+    the group identity, such that for a <script type="math/tex">g \odot e = e \odot g = g</script>,</p>
+</li>
+<li>
+<p>Existence of <strong>inverse</strong>: for every <script type="math/tex">g \in G</script>, there exists
+    <script type="math/tex">g^{-1} \in G</script>, called the inverse of <script type="math/tex">g</script>, such that
+    <script type="math/tex">g \odot g^{-1} = g^{-1} \odot g = e</script>.</p>
+</li>
+</ol>
+<p>If it is further the case that <script type="math/tex">f \odot g = g \odot f</script> for every
+<script type="math/tex">f,g \in G</script>, then <script type="math/tex">G</script> is said to be a <strong>commutative group</strong>, or an
+<strong>Abelian group</strong>. A subset <script type="math/tex">H \subseteq G</script> of <script type="math/tex">G</script> is said to be a
+<strong>sub-group</strong> of <script type="math/tex">G</script> if <script type="math/tex">H</script> is a group by itself, with respect to
+the same group operation.</p>
+<p>As a simple example, note that given any vector space <script type="math/tex">V</script>, <script type="math/tex">V</script>
+itself forms a commutative group with <script type="math/tex">+:V \times V \to V</script> as the
+group operation: for any <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>,
+<script type="math/tex">\mathsf{u} \odot \mathsf{v} = \mathsf{u} + \mathsf{v}</script>. In this case
+<script type="math/tex">\mathsf{0} \in V</script> is the group identity, and for any
+<script type="math/tex">\mathsf{v} \in V</script>, <script type="math/tex">-\mathsf{v}</script> is the inverse of <script type="math/tex">\mathsf{v}</script>.</p>
+<p>As another example more relevant to the current discussion, consider the
+set <script type="math/tex">M_n</script> consisting of all invertible <script type="math/tex">n \times n</script> matrices
+matrices, and define the binary map <script type="math/tex">\odot:M_n \times M_n \to M_n</script> as
+follows: given <script type="math/tex">A,B \in M_n</script>, <script type="math/tex">A \odot B = AB</script>. Here, <script type="math/tex">AB</script> denotes
+the familiar matrix multiplication of the matrices <script type="math/tex">A</script> and <script type="math/tex">B</script>. It
+is easy to check that <script type="math/tex">M_n</script> is a group with respect to this binary
+operation. Note that <script type="math/tex">M_n</script> is <em>not</em> a commutative group.</p>
+<h3 id="additive-groups-of-linear-maps">Additive groups of linear maps</h3>
+<p>A linear map <script type="math/tex">\mathsf{T} \in L(V,V)</script> is said to be <strong>symmetric</strong> if
+<script type="math/tex">\mathsf{T}^T = \mathsf{T}</script>, and is said to be <strong>skew-symmetric</strong> if
+<script type="math/tex">\mathsf{T}^T = -\mathsf{T}</script>. To see the connection with the
+elementary definitions of symmetry and skew-symmetry, let
+<script type="math/tex">(\mathsf{g}_i)</script> be an orthonormal basis of <script type="math/tex">V</script>. If <script type="math/tex">\mathsf{T}</script>
+is symmetric, it follows that
+<script type="math/tex; mode=display">T^T_{ij} = \mathsf{g}_i \cdot \mathsf{T}^T\mathsf{g}_j = \mathsf{T}\mathsf{g}_i \cdot \mathsf{g}_j = T_{ji}.</script>
+It follows from a similar argument that if <script type="math/tex">\mathsf{T}</script> is
+skew-symmetric, then <script type="math/tex">T^{T}_{ij} = -T_{ji}</script>.</p>
+<p>The set of all symmetric linear maps on <script type="math/tex">V</script> is called the <strong>symmetric
+linear group</strong> on <script type="math/tex">V</script>, and written <script type="math/tex">\text{sym}(V)</script>:
+<script type="math/tex; mode=display">\text{sym}(V) = \{ \mathsf{T} \in L(V,V) \,|\, \mathsf{T}^T = \mathsf{T} \}.</script>
+The <strong>skew-symmetric linear group</strong> on <script type="math/tex">V</script>, written <script type="math/tex">\text{skw}(V)</script>,
+is similarly defined as
+<script type="math/tex; mode=display">\text{skw}(V) = \{ \mathsf{T} \in L(V,V) \,|\, \mathsf{T}^T = -\mathsf{T} \}.</script>
+The group operation for both <script type="math/tex">\text{sym}(V)</script> and <script type="math/tex">\text{skw}(V)</script> is
+the addition of linear maps. Note that both <script type="math/tex">\text{sym}(V)</script> and
+<script type="math/tex">\text{skw}(V)</script> are sub-groups of <script type="math/tex">L(V,V)</script> with respect to the group operation being the vector addition in <script type="math/tex">L(V,V)</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>There is an important relationship between skew-symmetric linear maps and the cross product, in the context of the three dimensional Euclidean space <script type="math/tex">\mathbb{R}^3</script>. Given any <script type="math/tex">\mathsf{v} \in \mathbb{R}^3</script>, associate with it the skew-symmetric
+linear map <script type="math/tex">\check{\mathsf{v}} \in \text{skw}(\mathbb{R}^3)</script>, defined
+as follows: for any <script type="math/tex">\mathsf{u} \in \mathbb{R}^3</script>,
+<script type="math/tex; mode=display">\check{\mathsf{v}}\mathsf{u} = \mathsf{v} \times \mathsf{u}.</script> It is
+straightforward to check that <script type="math/tex">\check{\mathsf{v}}</script> is indeed a linear
+map. To verify that it is skew symmetric, note that for any
+<script type="math/tex">\mathsf{u}, \mathsf{w} \in \mathbb{R}^3</script>, <script type="math/tex; mode=display">\begin{split}
+\check{\mathsf{v}}^T\mathsf{u} \cdot \mathsf{w} &= \mathsf{u} \cdot \check{\mathsf{v}}\mathsf{w}\\
+ &= \mathsf{u} \cdot (\mathsf{v} \times \mathsf{w})\\
+ &= \mathsf{\epsilon}(\mathsf{u}, \mathsf{v}, \mathsf{w})\\
+ &= -\mathsf{\epsilon}(\mathsf{w}, \mathsf{v}, \mathsf{u})\\
+ &= -\mathsf{w} \cdot (\mathsf{v} \times \mathsf{u})\\
+ &=  -\check{\mathsf{v}}\mathsf{u} \cdot \mathsf{w}.
+\end{split}</script> Since this is true for any
+<script type="math/tex">\mathsf{u}, \mathsf{w} \in \mathbb{R}^3</script>, it follows that
+<script type="math/tex">\check{\mathsf{v}}^T = -\check{\mathsf{v}}</script>. The vector
+<script type="math/tex">\mathsf{v}</script> is called the <strong>axial vector</strong> of the skew-symmetric
+linear map <script type="math/tex">\check{\mathsf{v}}</script>. In terms of the standard basis of
+<script type="math/tex">\mathbb{R}^3</script>, it can be verified using a simple calculation that,
+for any <script type="math/tex">\mathsf{v} \in \mathbb{R}^3</script>,
+<script type="math/tex; mode=display">\check{v}_{ij} = \epsilon_{ijk}v_k, \qquad v_i = -\frac{1}{2}\epsilon_{ijk}\check{v}_{jk}.</script>
+Using matrix notation, the foregoing equations can be written as
+follows:
+<script type="math/tex; mode=display">= \begin{bmatrix}v_1\\ v_2\\ v_3\end{bmatrix}, \qquad [\check{\mathsf{v}}] = \begin{bmatrix} 0 & -v_3 & v_2\\ v_3 & 0 & -v_1\\ -v_2 & v_1 & 0\end{bmatrix}.</script>
+Note that the matrix representation of the skew-symmetric linear map
+<script type="math/tex">\check{\mathsf{v}}</script> is also skew-symmetric, as expected.</p>
+</div>
+<p>A linear map <script type="math/tex">\mathsf{T} \in L(V,V)</script> is said to be <strong>positive
+definite</strong> if it is true that for any <script type="math/tex">\mathsf{v} \in V</script>,
+<script type="math/tex">\mathsf{v} \cdot \mathsf{T}\mathsf{v} \ge 0</script>, and
+<script type="math/tex">\mathsf{v} \cdot \mathsf{T}\mathsf{v} = \mathsf{0}</script> iff
+<script type="math/tex">\mathsf{v} = 0</script>. An especially important sub-group of <script type="math/tex">L(V,V)</script> is
+the group <script type="math/tex">\text{sym}_+(V)</script>, defined as
+<script type="math/tex; mode=display">\text{sym}_+(V) = \{ \mathsf{T} \in L(V,V) \,|\, \mathsf{T} \text{ is symmetric and positive-definite}\},</script>
+of all symmetric and positive definite linear maps on <script type="math/tex">V</script>. Note that
+the group operation here is again addition in <script type="math/tex">L(V,V)</script>. This sub-group
+will turn out to be very useful in the study of continuum mechanics.</p>
+<h3 id="mutliplicative-groups-of-linear-maps">Mutliplicative groups of linear maps</h3>
+<p>The <strong>general linear group</strong> on <script type="math/tex">V</script>, written <script type="math/tex">\text{GL}(V)</script>, is the
+set of all linear maps on <script type="math/tex">V</script> with non-zero determinant:
+<script type="math/tex; mode=display">\text{GL}(V) = \{\mathsf{T} \in L(V,V) \,|\, \text{det}(\mathsf{T}) \neq 0\}.</script>
+The group operation, in this case, is the product of linear maps: given
+<script type="math/tex">\mathsf{S},\mathsf{T} \in \text{GL}(V)</script>,
+<script type="math/tex">\mathsf{S} \odot \mathsf{T} = \mathsf{S}\mathsf{T}</script>. It is easy to
+check that <script type="math/tex">\text{GL}(V)</script> is indeed a group: indeed, given any
+<script type="math/tex">\mathsf{S},\mathsf{T} \in \text{GL}(V)</script>, note that
+<script type="math/tex">\text{det}(\mathsf{S}\mathsf{T}) = \text{det}(\mathsf{S})\text(\mathsf{T}) \neq 0</script>.
+Note that if <script type="math/tex">\mathsf{T} \in \text{GL}(V)</script>, then <script type="math/tex">\mathsf{T}</script> is
+<strong>invertible</strong>: this means that there exists a linear map
+<script type="math/tex">\mathsf{T}^{-1} \in \text{GL}(V)</script>, called the <strong>inverse</strong> of
+<script type="math/tex">\mathsf{T}</script>, such that
+<script type="math/tex; mode=display">\mathsf{T} \mathsf{T}^{-1} = \mathsf{T}^{-1}\mathsf{T} = \mathsf{I},</script>
+where <script type="math/tex">\mathsf{I} \in L(V,V)</script> is the identity map in <script type="math/tex">V</script>.</p>
+<p>A few important sub-groups of <script type="math/tex">\text{GL}(V)</script> are discussed next. The
+set of all linear maps with determinant <script type="math/tex">1</script> is called the <strong>special
+linear group</strong> on <script type="math/tex">V</script>, and written <script type="math/tex">\text{SL}(V)</script>:
+<script type="math/tex; mode=display">\text{SL}(V) = \{ \mathsf{T} \in \text{GL}(V) \,|\, \text{det}(\mathsf{T}) = 1\}.</script>
+A linear map <script type="math/tex">\mathsf{T} \in \text{GL}(V)</script> is said to be
+<strong>orthogonal</strong> if the inverse of <script type="math/tex">\mathsf{T}</script> is the transpose of
+<script type="math/tex">\mathsf{T}</script>. The set of all orthogonal linear maps, written
+<script type="math/tex">\text{O}(V)</script> is called the <strong>orthogonal group</strong> of <script type="math/tex">V</script>:
+<script type="math/tex; mode=display">\text{O}(V) = \{ \mathsf{T} \in \text{GL}(V) \,|\, \mathsf{T}^{-1} = \mathsf{T}^T \}.</script>
+The determinant of an orthogonal linear map
+<script type="math/tex">\mathsf{T} \in \text{O}(V)</script> is <script type="math/tex">\pm 1</script>. To see this, note that
+<script type="math/tex">1 = \text{det}(I) = \text{det}(\mathsf{T}^{-1}\mathsf{T}) = \text{det}(\mathsf{T}^T\mathsf{T}) = (\text{det}(\mathsf{T}))^2</script>.
+In deriving this result, use has been made of the fact that
+<script type="math/tex">\text{det}(\mathsf{T}^T) = \text{det}(\mathsf{T})</script> for any
+<script type="math/tex">\mathsf{T} \in L(V,V)</script>. The set of all orthogonal maps with
+determinant equal to <script type="math/tex">1</script> is called the <strong>special orthogonal group</strong> on
+<script type="math/tex">V</script>, written <script type="math/tex">\text{SO}(V)</script>:
+<script type="math/tex; mode=display">\text{SO}(V) = \{\mathsf{T} \in \text{GL}(V) \,|\, \mathsf{T}^{-1} = \mathsf{T}^T, \; \text{det}(\mathsf{T}) = 1\}.</script>
+It is straightforward to check that
+<script type="math/tex">\text{SO}(V) \subset \text{O}(V) \subset \text{GL}(V)</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In the special case when <script type="math/tex">V = \mathbb{R}^n</script>, it is customary
+to denote the various groups discussed above as <script type="math/tex">\text{GL}(n)</script>,
+<script type="math/tex">\text{SL}(n)</script>, <script type="math/tex">\text{O}(n)</script>, and <script type="math/tex">\text{SO}(n)</script>.</p>
+</div>
+<h2 id="eigenvalues-and-eigenvectors-of-linear-maps">Eigenvalues and Eigenvectors of linear maps</h2>
+<p>To conclude the discussion of the algebraic preliminaries, a simplified
+introduction to the important ideas of <em>eigenvalues</em> and <em>eigenvectors</em>
+of a linear map are now discussed. Throughout this section, it is
+assumed that <script type="math/tex">V</script> is a finite dimensional inner product space of
+dimension <script type="math/tex">n</script>.</p>
+<h3 id="definition">Definition</h3>
+<p>Given a linear map <script type="math/tex">\mathsf{T}:V \to V</script>, a vector <script type="math/tex">\mathsf{v} \in V</script>
+is called an <strong>eigenvector</strong> of <script type="math/tex">\mathsf{T}</script> with respect to the
+<strong>eigenvalue</strong> <script type="math/tex">\mathsf{a} \in \mathbb{R}</script> if
+<script type="math/tex; mode=display">\mathsf{A}\mathsf{v} = a\mathsf{v}.</script> Note that the zero vector
+<script type="math/tex">\mathsf{0} \in V</script> trivially satisfies this equation. It is implicitly
+assumed that this trivial eigenvector is excluded from the discussion.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is noted that the eigenvalues can, in general be complex,
+and the vector space <script type="math/tex">V</script> is typically taken to be a <em>complex</em> vector
+space. Since only a special class of linear maps which admit only real
+eigenvalues are considered in this section, the more general theory is
+not developed here.</p>
+</div>
+<p>The eigenvectors and eigenvalues of <script type="math/tex">\mathsf{T} \in L(V,V)</script> are
+readily computing by noting that the equation
+<script type="math/tex">\mathsf{T}\mathsf{v} = a\mathsf{v}</script> can be written as
+<script type="math/tex">(\mathsf{T} - a\mathsf{I})\mathsf{v} = \mathsf{0}</script>, where
+<script type="math/tex">\mathsf{I} \in L(V,V)</script> is the identity map on <script type="math/tex">V</script>. The condition
+that this equation admits non-trivial solutions immediately yields the
+following condition: <script type="math/tex; mode=display">\text{det}(\mathsf{T} - a\mathsf{I}) = 0.</script> This
+is a polynomial equation of order <script type="math/tex">n</script> in <script type="math/tex">a</script> that can be solved to
+obtain the <script type="math/tex">n</script> eigenvalues <script type="math/tex">(a_i)</script> of <script type="math/tex">\mathsf{T}</script>. Using these
+eigenvalues in the equations
+<script type="math/tex">\mathsf{A}\mathsf{v}_i = a_i\mathsf{v}_i</script>, where <script type="math/tex">i = 1,\ldots,n</script>,
+and solving them results in the <script type="math/tex">n</script> eigenvectors of <script type="math/tex">\mathsf{T}</script>.</p>
+<h3 id="symmetric-and-positive-definite-linear-maps">Symmetric and positive definite linear maps</h3>
+<p>Of special interest here are linear maps that are both symmetric and
+positive definite; thus, the discussion to follows focuses on linear
+maps <script type="math/tex">\mathsf{T} \in \text{sym}_+(V)</script>. Given any
+<script type="math/tex">\mathsf{T} \in \text{sym}_+(V)</script>, note that if
+<script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script> are eigenvectors of <script type="math/tex">\mathsf{T}</script>
+corresponding to the eigenvalues <script type="math/tex">a,b \in \mathbb{R}</script>, respectively,
+it follows that
+<script type="math/tex; mode=display">b \mathsf{u} \cdot \mathsf{v} = \mathsf{u} \cdot \mathsf{T}\mathsf{v} = \mathsf{T}^T\mathsf{u} \cdot \mathsf{v} = \mathsf{T}\mathsf{u} \cdot \mathsf{v} = a \mathsf{u} \cdot \mathsf{v}.</script>
+Thus, <script type="math/tex">(b - a)\mathsf{u} \cdot \mathsf{v} = 0</script>. This immediately shows
+that <script type="math/tex">a \neq b</script> then <script type="math/tex">\mathsf{u} \cdot \mathsf{v} = 0</script>. In words,
+this expresses the fact that the eigenvectors of a symmetric and
+positive definite map corresponding to distinct eigenvalues are mutually
+orthogonal. Further, it follows from the positive definiteness of
+<script type="math/tex">\mathsf{T}</script> that
+<script type="math/tex; mode=display">b \lVert \mathsf{v} \rVert^2 = \mathsf{v} \cdot \mathsf{T}\mathsf{v} \ge 0 \quad\Rightarrow\quad b \ge 0.</script>
+Thus, the eigenvectors of a symmetric and positive definite linear map
+are real and positive.</p>
+<p>If <script type="math/tex">(\mathsf{v}_i)_{i=1}^n</script> are the eigenvectors of <script type="math/tex">\mathsf{T}</script>
+corresponding to the eigenvalues <script type="math/tex">(a_i)_{i=1}^n</script>, it can be shown that
+the eigenvectors <script type="math/tex">(\mathsf{v}_i)</script> of <script type="math/tex">T</script> constitute a basis of
+<script type="math/tex">V</script>. Further, it can be checked using direct substitution that
+<script type="math/tex">\mathsf{T}</script> admits the representation
+<script type="math/tex; mode=display">\mathsf{T} = \sum a_i \mathsf{v}_i \otimes \mathsf{v}_i.</script> This
+equation, which expresses the linear map <script type="math/tex">\mathsf{T}</script> in terms of the
+basis of <script type="math/tex">V</script> formed by the eigenvectors of <script type="math/tex">\mathsf{T}</script> is called
+the <strong>spectral representation</strong> of <script type="math/tex">\mathsf{T}</script>.</p>
+<p>In the special case of symmetric and positive definite linear maps, the
+fact that its eigenvectors are positive can be used to defined various
+functions of linear maps. Specifically, if
+<script type="math/tex">f:\mathbb{R}_+ \to \mathbb{R}</script> is a function that takes a positive
+real number and returns a real number, it can be <em>extended</em> to the
+linear space <script type="math/tex">\text{sym}_+(V)</script> as follows: for any
+<script type="math/tex">\mathsf{T} \in \text{sym}_+(V)</script>, define
+<script type="math/tex; mode=display">f(\mathsf{T}) = \sum f(a_i) \mathsf{v}_i \otimes \mathsf{v}_i.</script> As
+important examples of such functions, the <strong>logarithm</strong> of a symmetric
+and positive definite linear map <script type="math/tex">\mathsf{T}</script> is defined as
+<script type="math/tex; mode=display">\log \mathsf{T} = \sum \log a_i \mathsf{v}_i \otimes \mathsf{v}_i.</script>
+Similarly, the <strong>square root</strong> of <script type="math/tex">\mathsf{T}</script> is defined as
+<script type="math/tex; mode=display">\sqrt{\mathsf{T}} = \sum \sqrt{a_i} \mathsf{v}_i \otimes \mathsf{v}_i.</script>
+It can be checked with a simple calculation that
+<script type="math/tex">\sqrt{\mathsf{T}}\sqrt{\mathsf{T}} = \mathsf{T}</script>, as expected.</p>
+<h3 id="invariants-of-a-linear-map">Invariants of a linear map</h3>
+<p>Given a linear map <script type="math/tex">\mathsf{T} \in L(V,V)</script>, the equation
+<script type="math/tex">\text{det}(\mathsf{T} - a\mathsf{I}) = \mathsf{0}</script> is called the
+<strong>characteristic equation</strong> of <script type="math/tex">\mathsf{T}</script>. When expanded, the
+characteristic equation takes the form
+<script type="math/tex; mode=display">(-a)^n + I_1(-a)^{n-1} + \ldots + I_n = 0,</script> where the set of
+constants <script type="math/tex">\{I_i\}_{i=1}^n</script> are called the <strong>invariants</strong> of the
+linear map <script type="math/tex">\mathsf{T}</script>. The reason for calling them <em>invariants</em> is
+that their values do not depend on the choice of any basis for <script type="math/tex">V</script>,
+and are hence invariant with respect to the choice of basis.</p>
+<p>The <strong>Cayley-Hamilton theorem</strong> states that the linear map
+<script type="math/tex">\mathsf{T}</script> also satisfies the characteristic equation:
+<script type="math/tex; mode=display">(-\mathsf{T})^n + I_1(-\mathsf{T})^{n-1} + \ldots + I_n\mathsf{I} = \mathsf{0}.</script>
+Here <script type="math/tex">\mathsf{T}^k</script> is to be understood
+<script type="math/tex">\mathsf{T}\mathsf{T}\ldots\mathsf{T}</script> (<script type="math/tex">k</script> factors).</p>
+<p>It is of interest to consider the case when <script type="math/tex">V</script> is a three dimensional
+vector space. In this case, the invariants of an invertible linear map
+<script type="math/tex">\mathsf{T} \in \text{GL}(V)</script> can be shown to be as follows: for any
+<script type="math/tex">\mathsf{u},\mathsf{v},\mathsf{w} \in V</script>, <script type="math/tex; mode=display">\begin{split}
+I_1 &= \text{tr}(\mathsf{T}) = \frac{\mathsf\epsilon(\mathsf{T}\mathsf{u},\mathsf{v},\mathsf{w})}{\mathsf\epsilon(\mathsf{u},\mathsf{v},\mathsf{w})} + \frac{\mathsf\epsilon(\mathsf{u},\mathsf{T}\mathsf{v},\mathsf{w})}{\mathsf\epsilon(\mathsf{u},\mathsf{v},\mathsf{w})} + \frac{\mathsf\epsilon(\mathsf{u},\mathsf{v},\mathsf{T}\mathsf{w})}{\mathsf\epsilon(\mathsf{u},\mathsf{v},\mathsf{w})},\\
+I_2 &= \text{tr}(\mathsf{T}^{-1})\text{det}(\mathsf{T}) = \frac{\mathsf\epsilon(\mathsf{T}\mathsf{u},\mathsf{T}\mathsf{v},\mathsf{w})}{\mathsf\epsilon(\mathsf{u},\mathsf{v},\mathsf{w})} + \frac{\mathsf\epsilon(\mathsf{u},\mathsf{T}\mathsf{v},\mathsf{T}\mathsf{w})}{\mathsf\epsilon(\mathsf{u},\mathsf{v},\mathsf{w})} + \frac{\mathsf\epsilon(\mathsf{T}\mathsf{u},\mathsf{v},\mathsf{T}\mathsf{w})}{\mathsf\epsilon(\mathsf{u},\mathsf{v},\mathsf{w})},\\
+I_3 &= \text{det}(\mathsf{T}) = \frac{\mathsf\epsilon(\mathsf{T}\mathsf{u},\mathsf{T}\mathsf{v},\mathsf{T}\mathsf{w})}{\mathsf\epsilon(\mathsf{u},\mathsf{v},\mathsf{w})}.
+\end{split}</script> An elegant means to prove this is by applying the
+definition of the determinant,
+<script type="math/tex">\text{det}(\mathsf{T})\mathsf\epsilon(\mathsf{u},\mathsf{v},\mathsf{w}) = \mathsf\epsilon(\mathsf{T}\mathsf{u}, \mathsf{T}\mathsf{v},\mathsf{T}\mathsf{w})</script>
+to evaluate the determinant in the characteristic equation of
+<script type="math/tex">\mathsf{T}</script>: <script type="math/tex">\text{det}(\mathsf{T} - a\mathsf{I})</script>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tensor_algebra/" title="Tensor Algebra" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tensor Algebra
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Linearization of Nonlinear Maps
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>

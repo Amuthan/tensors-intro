@@ -1,0 +1,807 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Notes on Euclidean Tensor Analysis.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Linearization of Nonlinear Maps - Euclidean Tensor Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#linear-approximation-of-real-valued-functions-of-a-real-variable" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Euclidean Tensor Analysis" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Euclidean Tensor Analysis
+            </span>
+            <span class="md-header-nav__topic">
+              Linearization of Nonlinear Maps
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Euclidean Tensor Analysis" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Euclidean Tensor Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../inner_product_spaces/" title="Inner Product Spaces" class="md-nav__link">
+      Inner Product Spaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_1/" title="Linear Maps - I" class="md-nav__link">
+      Linear Maps - I
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_algebra/" title="Tensor Algebra" class="md-nav__link">
+      Tensor Algebra
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_2/" title="Linear Maps - II" class="md-nav__link">
+      Linear Maps - II
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Linearization of Nonlinear Maps
+      </label>
+    
+    <a href="./" title="Linearization of Nonlinear Maps" class="md-nav__link md-nav__link--active">
+      Linearization of Nonlinear Maps
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linear-approximation-of-real-valued-functions-of-a-real-variable" title="Linear approximation of real valued functions of a real variable" class="md-nav__link">
+    Linear approximation of real valued functions of a real variable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basis-representation-of-nonlinear-maps" title="Basis representation of nonlinear maps" class="md-nav__link">
+    Basis representation of nonlinear maps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-topological-notions-in-mathbbrn" title="Basic topological notions in $\mathbb{R}^n$" class="md-nav__link">
+    Basic topological notions in $\mathbb{R}^n$
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differentiability-of-nonlinear-maps" title="Differentiability of nonlinear maps" class="md-nav__link">
+    Differentiability of nonlinear maps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties-of-the-frechet-derivative" title="Properties of the Fréchet derivative" class="md-nav__link">
+    Properties of the Fréchet derivative
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directional-derivatives" title="Directional derivatives" class="md-nav__link">
+    Directional derivatives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradient-of-nonlinear-maps" title="Gradient of nonlinear maps" class="md-nav__link">
+    Gradient of nonlinear maps
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_analysis_R3/" title="Euclidean Tensor Analysis" class="md-nav__link">
+      Euclidean Tensor Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-nav__link">
+      Curvilinear Coordinates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../set_theory/" title="Appendix - Set Theory" class="md-nav__link">
+      Appendix - Set Theory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Appendix - Matrices" class="md-nav__link">
+      Appendix - Matrices
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../calculus/" title="Appendix - Calculus" class="md-nav__link">
+      Appendix - Calculus
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linear-approximation-of-real-valued-functions-of-a-real-variable" title="Linear approximation of real valued functions of a real variable" class="md-nav__link">
+    Linear approximation of real valued functions of a real variable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basis-representation-of-nonlinear-maps" title="Basis representation of nonlinear maps" class="md-nav__link">
+    Basis representation of nonlinear maps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-topological-notions-in-mathbbrn" title="Basic topological notions in $\mathbb{R}^n$" class="md-nav__link">
+    Basic topological notions in $\mathbb{R}^n$
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differentiability-of-nonlinear-maps" title="Differentiability of nonlinear maps" class="md-nav__link">
+    Differentiability of nonlinear maps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties-of-the-frechet-derivative" title="Properties of the Fréchet derivative" class="md-nav__link">
+    Properties of the Fréchet derivative
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directional-derivatives" title="Directional derivatives" class="md-nav__link">
+    Directional derivatives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradient-of-nonlinear-maps" title="Gradient of nonlinear maps" class="md-nav__link">
+    Gradient of nonlinear maps
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Linearization of Nonlinear Maps</h1>
+                
+                <p>The foregoing sections dealt with, among other things, the theory of
+linear maps between finite dimensional inner product spaces. A basic
+introduction to the treatment of <em>nonlinear</em> maps is now presented. Only
+certain essential ideas that are needed for the later development of
+tensor analysis are presented here.</p>
+<h2 id="linear-approximation-of-real-valued-functions-of-a-real-variable">Linear approximation of real valued functions of a real variable</h2>
+<p>To begin with, consider the case of a nonlinear function of the form
+<script type="math/tex">f:\mathbb{R} \to\mathbb{R}</script>. It assumed that <script type="math/tex">f</script> is differentiable,
+and that its derivative is continuous. The standard approach to study
+such nonlinear functions is by <em>locally linearizing</em> them. To understand
+what this means, consider the tangent
+<script type="math/tex">L_{x_0}:\mathbb{R}\to\mathbb{R}</script> to <script type="math/tex">f</script> at <script type="math/tex">x_0 \in \mathbb{R}</script>.
+The equation for the tangent is given by
+<script type="math/tex; mode=display">L_{x_0}(x) = f(x_0) + f'(x_0)(x - x_0).</script> Note that the function
+<script type="math/tex">L_{x_0}</script> is not linear on account of the constant term <script type="math/tex">f(x_0)</script>.
+Functions of this form that are linear except for an additive constant
+are said to be <strong>affine</strong>. The affine function <script type="math/tex">L_{x_0}</script> is said to
+<strong>locally linearize</strong> the nonlinear function <script type="math/tex">f</script>. In what follows,
+this notion is generalized to the case of nonlinear maps between finite
+dimensional inner product spaces.</p>
+<h2 id="basis-representation-of-nonlinear-maps">Basis representation of nonlinear maps</h2>
+<p>Let <script type="math/tex">\mathsf{F}:V \to W</script> be a nonlinear map between finite dimensional
+inner product spaces <script type="math/tex">V</script> and <script type="math/tex">W</script> of dimension <script type="math/tex">n</script> and <script type="math/tex">m</script>,
+respectively. Let <script type="math/tex">(\mathsf{g}_i)</script> and <script type="math/tex">(\mathsf{f}_i)</script> be bases of
+<script type="math/tex">V</script> and <script type="math/tex">W</script>, respectively. Define <strong>basis maps</strong>
+<script type="math/tex">\mathsf{\phi}_V:V \to \mathbb{R}^n</script> and
+<script type="math/tex">\mathsf{\phi}_W:W \to \mathbb{R}^m</script> as follows: for any
+<script type="math/tex">\mathsf{v} \in V</script> and <script type="math/tex">\mathsf{w} \in W</script>, <script type="math/tex; mode=display">\begin{split}
+\mathsf\phi_V(\mathsf{v}) &= \mathsf\phi_V\left(\sum v_i \mathsf{g}_i\right) = (v_1, \ldots, v_n),\\
+\mathsf\phi_W(\mathsf{w}) &= \mathsf\phi_W\left(\sum w_i \mathsf{f}_i\right) = (w_1, \ldots, w_m).
+\end{split}</script> The <strong>representation</strong> of <script type="math/tex">\mathsf{F}:V \to W</script> is
+defined as the map
+<script type="math/tex">\mathsf\phi_W \circ \mathsf{F} \circ \mathsf\phi^{-1}_V:\mathbb{R}^n \to \mathbb{R}^m</script>.
+The following relation readily follows from the definition:
+<script type="math/tex; mode=display">(w_1, \ldots, w_m) = \mathsf{F}_{V,W}(v_1, \ldots, v_n),</script> where
+<script type="math/tex">\mathsf{F}_{V,W} = \mathsf\phi_W \circ \mathsf{F} \circ \mathsf\phi^{-1}_V</script>.
+Since <em>any</em> nonlinear map between finite dimensional inner product
+spaces can be represented using a nonlinear map between the
+corresponding Euclidean spaces using the foregoing technique, it
+suffices to study nonlinear maps between Euclidean spaces only.</p>
+<h2 id="basic-topological-notions-in-mathbbrn">Basic topological notions in $\mathbb{R}^n$</h2>
+<p>In the following development, it will be necessary to study how various
+quantities vary as we move from a given point <script type="math/tex">\mathsf{x} \in U \subseteq \mathbb{R}^n</script> to one of its neighboring
+points. Notice how we call elements of <script type="math/tex">\mathbb{R}^n</script> as points here; the reason for this terminology is that the eventual application of these ideas is in the context of <em>tensor fields</em>. To define precisely what a <em>neighboring point</em> means, it is
+helpful to introduce a few definitions. An <strong>open ball</strong> of radius <script type="math/tex">r</script>
+centered at <script type="math/tex">\mathsf{x} \in \mathbb{R}^n</script> is the set
+<script type="math/tex">B_r(\mathsf{x})</script> defined as follows:
+<script type="math/tex; mode=display">B_r(\mathsf{x}) = \{\mathsf{y} \in \mathbb{R}^n \,|\, \lVert \mathsf{y} - \mathsf{x} \rVert < r\}.</script>
+<script type="math/tex">B_r(\mathsf{x})</script> thus contains all points <script type="math/tex">\mathsf{y}</script> within a
+sphere of radius <script type="math/tex">r</script> centered at <script type="math/tex">\mathsf{x}</script>. A set
+<script type="math/tex">U \subseteq \mathbb{R}^n</script> is said to be <strong>open</strong> if for every
+<script type="math/tex">\mathsf{x} \in U</script>, there exists an <script type="math/tex">r \in \mathbb{R}</script> such that
+<script type="math/tex">B_r(\mathsf{x}) \subseteq U</script>. In a loose sense, every point in an
+open set is <em>sufficiently inside</em> the set.</p>
+<p>The reason for why open sets are so useful in practice is the following:
+when <script type="math/tex">U \subseteq \mathbb{R}^n</script> is open, every point
+<script type="math/tex">\mathsf{x} \in U</script> has a neighboring point arbitrarily close to it.
+Indeed, choosing <script type="math/tex">r \in \mathbb{R}</script> such that
+<script type="math/tex">B_r(\mathsf{x}) \subseteq U</script>, the point
+<script type="math/tex">\mathsf{x} + t(\mathsf{y} - \mathsf{x})</script>, where <script type="math/tex">0 < t < 1</script> and
+<script type="math/tex">\mathsf{y} \in B_r(\mathsf{x})</script>, gets arbitrarily close to
+<script type="math/tex">\mathsf{x}</script> as <script type="math/tex">t \to 0</script> and still remains within <script type="math/tex">U</script>.</p>
+<p>Consider now a nonlinear map of the form
+<script type="math/tex">\mathsf{F}:U \to \mathbb{R}^m</script>, where <script type="math/tex">U \subseteq \mathbb{R}^n</script> is
+an open subset of <script type="math/tex">\mathbb{R}^n</script>. The map <script type="math/tex">\mathsf{F}</script> is said to be
+<strong>continuous</strong> at <script type="math/tex">\mathsf{x} \in U</script> if for every scalar
+<script type="math/tex">\epsilon > 0</script>, there exists a scalar <script type="math/tex">\delta > 0</script> such that
+<script type="math/tex; mode=display">\lVert \mathsf{y} - \mathsf{x} \rVert < \delta \quad\Rightarrow\quad \lVert \mathsf{F}(\mathsf{y}) - \mathsf{F}(\mathsf{x}) \rVert < \epsilon.</script>
+What this definition encapsulates is the intuitive idea that if
+<script type="math/tex">\mathsf{F}</script> is continuous at <script type="math/tex">\mathsf{x}</script>, then
+<script type="math/tex">\mathsf{F}(\mathsf{y})</script> gets closer and closer to
+<script type="math/tex">\mathsf{F}(\mathsf{x})</script> as <script type="math/tex">\mathsf{y}</script> gets closer and closer to
+<script type="math/tex">\mathsf{x}</script>. The map <script type="math/tex">\mathsf{F}</script> is said to be <strong>continuous</strong> on
+<script type="math/tex">U</script> if it is continuous at every <script type="math/tex">\mathsf{x} \in U</script>. It is customary
+to denote the set of all continuous maps from <script type="math/tex">U</script> to <script type="math/tex">\mathbb{R}^m</script>
+as <script type="math/tex">C^0(U,\mathbb{R}^m)</script>.</p>
+<h2 id="differentiability-of-nonlinear-maps">Differentiability of nonlinear maps</h2>
+<p>Let <script type="math/tex">\mathsf{F}:U \subseteq\mathbb{R}^n \to \mathbb{R}^m</script> be a
+nonlinear map from an open subset <script type="math/tex">U</script> of <script type="math/tex">\mathbb{R}^n</script> into
+<script type="math/tex">\mathbb{R}^m</script>, as before. The nonlinear map <script type="math/tex">\mathsf{F}</script> is said to
+be <strong>differentiable</strong> at <script type="math/tex">\mathsf{x} \in U</script> if there exists a linear
+map <script type="math/tex">D_{\mathsf{x}}\mathsf{F}:\mathbb{R}^n \to \mathbb{R}^m</script> such
+that, for any <script type="math/tex">\mathsf{h} \in \mathbb{R}^n</script>,
+<script type="math/tex; mode=display">\lim_{\lVert\mathsf{h}\rVert \to 0} \frac{\lVert \mathsf{F}(\mathsf{x} + \mathsf{h}) - \mathsf{F}(\mathsf{x}) - D_{\mathsf{x}}\mathsf{F}(\mathsf{x})\mathsf{h} \rVert}{\lVert \mathsf{h} \rVert} = 0,</script>
+The linear map <script type="math/tex">D_{\mathsf{x}}\mathsf{F}(\mathsf{x})</script> is called the
+<strong>Fréchet derivative</strong> of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}</script>. If
+<script type="math/tex">\mathsf{F}</script> is differentiable at every <script type="math/tex">\mathsf{x} \in U</script> then
+<script type="math/tex">\mathsf{F}</script> is said to be <strong>differentiable</strong> on <script type="math/tex">U</script>. The set of all
+differentiable maps from <script type="math/tex">U \subseteq \mathbb{R}^n</script> into
+<script type="math/tex">\mathbb{R}^m</script> is notated as <script type="math/tex">C^1(U,\mathbb{R}^m)</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It can be shown that
+<script type="math/tex">C^1(U,\mathbb{R}^m) \subset C^0(U,\mathbb{R}^m)</script>: every
+differentiable map is also continuous. The converse is not true.</p>
+</div>
+<p>If <script type="math/tex">\mathsf{F}:U \subseteq \mathbb{R}^n \to \mathbb{R}^m</script> is
+differentiable on <script type="math/tex">U</script>, then it is convenient to introduce the map
+<script type="math/tex">D\mathsf{F}:U \to L(\mathbb{R}^n,\mathbb{R}^m)</script> as follows: for any
+<script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">D\mathsf{F}(\mathsf{x}) = D_{\mathsf{x}}\mathsf{F}.</script> Note that
+<script type="math/tex">D\mathsf{F}</script> is, in general, a nonlinear map.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that given a linear map
+<script type="math/tex">\mathsf{T}:\mathbb{R}^n \to \mathbb{R}^m</script>, it is an easy consequence
+of the definition of the Fréchet derivative that
+<script type="math/tex">D\mathsf{T} = \mathsf{T}</script>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Since <script type="math/tex">L(\mathbb{R}^n,\mathbb{R}^m)</script> is itself a linear
+space, it is possible, therefore, to extend the notion of
+differentiability to <script type="math/tex">D\mathsf{F}</script>, and define the Fréchet derivative
+<script type="math/tex">D^2\mathsf{F}:U \to L(\mathbb{R}^n,L(\mathbb{R}^n,\mathbb{R}^m))</script> of
+<script type="math/tex">D\mathsf{F}</script> as before, after defining a suitable inner product on
+<script type="math/tex">L(\mathbb{R}^n,\mathbb{R}^m)</script>. In this case, <script type="math/tex">\mathsf{F}</script> is said
+to be <strong>twice differentiable</strong>, and it is conventional to denote the set
+of all such twice differentiable maps as <script type="math/tex">C^2(U,\mathbb{R}^m)</script>. Higher
+order derivatives of <script type="math/tex">\mathsf{F}</script> are defined analogously. If the
+Fréchet derivative of <script type="math/tex">\mathsf{F}</script> of <em>any</em> order exists, then
+<script type="math/tex">\mathsf{F}</script> is said to be a <strong>smooth</strong> nonlinear map. The set of all
+smooth maps from <script type="math/tex">U\subseteq\mathbb{R}^n</script> into <script type="math/tex">\mathbb{R}^m</script> is
+denoted as <script type="math/tex">C^\infty(U,\mathbb{R}^m)</script>. All maps considered henceforth
+will be assumed to be smooth unless stated otherwise.</p>
+</div>
+<p>The Fréchet derivative <script type="math/tex">D\mathsf{F}</script> of the nonlinear map
+<script type="math/tex">\mathsf{F}</script> provides a <em>locally linear</em> approximation of
+<script type="math/tex">\mathsf{F}</script>. The <strong>linearization</strong> of <script type="math/tex">\mathsf{F}</script> at
+<script type="math/tex">\mathsf{x}_0 \in U</script> is defined as the map
+<script type="math/tex">\mathsf{L}_{\mathsf{x}_0}:\mathbb{R}^n \to \mathbb{R}^m</script> defined as
+<script type="math/tex; mode=display">\mathsf{L}_{\mathsf{x}_0}(\mathsf{x}) = \mathsf{F}(\mathsf{x}_0) + D_{\mathsf{x}_0}\mathsf{F}\,(\mathsf{x} - \mathsf{x}_0),</script>
+where <script type="math/tex">\mathsf{x} \in \mathbb{R}^n</script>. Notice how this expression
+generalizes the tangent line to a real valued function of a real
+variable discussed earlier.</p>
+<p>To compute the component representation of the Fréchet derivative
+<script type="math/tex">D_{\mathsf{x}_0}\mathsf{F} \in L(\mathbb{R}^n,\mathbb{R}^m)</script> at
+<script type="math/tex">\mathsf{x}_0 \in U \subseteq \mathbb{R}^n</script> with respect to the
+standard bases of <script type="math/tex">\mathbb{R}^n</script> and <script type="math/tex">\mathbb{R}^m</script>, note that
+<script type="math/tex; mode=display">\begin{split}
+[D_{\mathsf{x}_0}\mathsf{F}]_{ij} &= \mathsf{e}_i \cdot D_{\mathsf{x}_0}\mathsf{F} (\mathsf{e}_j)\\
+ &= \partial_j F_i(\mathsf{x}_0).
+\end{split}</script> Here, <script type="math/tex">\mathsf{F} = (F_1, \ldots, F_m)</script>, where each
+<script type="math/tex">F_i:U \to \mathbb{R}</script> is a real valued function of <script type="math/tex">n</script> variables,
+and <script type="math/tex">\partial_j F_i(\mathsf{x}_0)</script> denote the <script type="math/tex">j^{\text{th}}</script>
+partial derivative of <script type="math/tex">F_i</script> evaluated at <script type="math/tex">\mathsf{x}_0</script>. The matrix
+with components <script type="math/tex">\partial_j F_i(\mathsf{x}_0)</script> is called the
+<strong>Jacobian</strong> matrix of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}_0</script>.</p>
+<p>The foregoing argument also shows that the basis representation of
+<script type="math/tex">D_{\mathsf{x}_0}\mathsf{F}</script> with respect to the standard bases of
+<script type="math/tex">\mathbb{R}^n</script> and <script type="math/tex">\mathbb{R}^m</script> is
+<script type="math/tex; mode=display">D_{\mathsf{x}_0}\mathsf{F} = \sum \partial_j F_i(\mathsf{x}_0) \mathsf{e}_i \otimes \mathsf{e}_j.</script>
+The representation of <script type="math/tex">D_{\mathsf{x}_0}\mathsf{F}</script> with respect to
+arbitrary bases of <script type="math/tex">\mathbb{R}^n</script> and <script type="math/tex">\mathbb{R}^m</script> can be computed
+analogously, but is omitted here in the interest of keeping the
+development simple.</p>
+<h2 id="properties-of-the-frechet-derivative">Properties of the Fréchet derivative</h2>
+<p>Two important properties of the Fréchet derivative of nonlinear maps are
+now discussed briefly. The first is known as the <strong>chain rule</strong> of
+differentiation. Given differentiable maps
+<script type="math/tex">\mathsf{F}:\mathbb{R}^m \to \mathbb{R}^k</script> and
+<script type="math/tex">\mathsf{G}:\mathbb{R}^n \to \mathbb{R}^m</script>, it can be shown that
+<script type="math/tex; mode=display">D(\mathsf{F} \circ \mathsf{G}) = (D\mathsf{F} \circ \mathsf{G}) \circ D\mathsf{G}.</script>
+This is a generalization of the chain rule of differentiation in single
+variable calculus. This result can be established easily by working in
+the component representation of the Fréchet derivatives. Choosing the
+standard bases of all the Euclidean spaces involved, it can be shown
+that
+<script type="math/tex; mode=display">_{ij} = \sum \partial_k F_i(\mathsf{G}(\mathsf{x}_0)) \, \partial_j G_k(\mathsf{x}_0),</script>
+for any <script type="math/tex">\mathsf{x}_0 \in \mathbb{R}^n</script>.</p>
+<p>The second property of the Fréchet derivative that is useful in
+applications relates to the local invertibility of nonlinear maps. Let
+<script type="math/tex">\mathsf{F}:U \subseteq \mathbb{R}^n \to \mathbb{R}^n</script> be a given
+differentiable nonlinear map. If
+<script type="math/tex">D_{\mathsf{x}_0}\mathsf{F}:\mathbb{R}^n \to \mathbb{R}^n</script> is
+invertible, where <script type="math/tex">\mathsf{x}_0 \in U</script>, then the <strong>inverse function
+theorem</strong> states that the map <script type="math/tex">\mathsf{F}</script> is locally invertible at
+<script type="math/tex">\mathsf{F}(\mathsf{x}_0) \in \mathbb{R}^n</script>, and further that
+<script type="math/tex; mode=display">D_{\mathsf{F}(\mathsf{x}_0)}\mathsf{F}^{-1} = (D_{\mathsf{x}_0}\mathsf{F})^{-1}.</script>
+The proof of this theorem is non-trivial, and can be found in any good
+book on multivariable calculus.</p>
+<h2 id="directional-derivatives">Directional derivatives</h2>
+<p>Given a nonlinear map
+<script type="math/tex">\mathsf{F}:U \subseteq \mathbb{R}^n \to \mathbb{R}^m</script>, where <script type="math/tex">U</script> is
+open in <script type="math/tex">\mathbb{R}^n</script>, it is convenient to define a <em>weaker</em> notion
+of a derivative than the Fréchet derivative called the <em>directional
+derivative</em> of <script type="math/tex">\mathsf{F}</script>. The basic idea is to study how
+<script type="math/tex">\mathsf{F}</script> varies along a particular direction. The map
+<script type="math/tex">\mathsf{F}:U \to \mathbb{R}^m</script> is said to be <strong>Gâteaux
+differentiable</strong> at <script type="math/tex">\mathsf{x}_0 \in U</script> if there exists a map
+<script type="math/tex">\delta_{\mathsf{x}_0} \mathsf{F}:\mathbb{R}^n \to \mathbb{R}^m</script> such
+that
+<script type="math/tex; mode=display">\delta_{\mathsf{x}_0} \mathsf{F}(\mathsf{h}) = \lim_{t \to 0} \frac{\mathsf{F}(\mathsf{x}_0 + t\mathsf{h}) - \mathsf{F}(\mathsf{x}_0)}{t} = \frac{d}{dt}\bigg\vert_{t=0} \mathsf{F}(\mathsf{x}_0 + t\mathsf{h}),</script>
+for any <script type="math/tex">\mathsf{h} \in \mathbb{R}^n</script>. The map
+<script type="math/tex">\delta_{\mathsf{x}_0}\mathsf{F}</script> is also called the <strong>directional
+derivative</strong> of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}_0</script> along the direction
+<script type="math/tex">\mathsf{h}</script>. If <script type="math/tex">\mathsf{F}</script> is Gâteaux differentiable at every
+<script type="math/tex">\mathsf{x}_0 \in U</script>, then the <strong>Gâteaux differential</strong>
+<script type="math/tex">\delta \mathsf{F}:U \times \mathbb{R}^n \to \mathbb{R}^m</script> of
+<script type="math/tex">\mathsf{F}</script> is defined as
+<script type="math/tex; mode=display">\delta \mathsf{F}(\mathsf{x}_0, \mathsf{h}) = \frac{d}{dt}\bigg\vert_{t=0} \mathsf{F}(\mathsf{x}_0 + t\mathsf{h}),</script>
+where <script type="math/tex">\mathsf{h} \in \mathbb{R}^n</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is to be emphasized that
+<script type="math/tex">\delta_{\mathsf{x}_0} \mathsf{F}:\mathbb{R}^n \to \mathbb{R}^m</script> is
+not necessarily a linear map. If it turns out that the Gâteaux
+differential
+<script type="math/tex">\delta \mathsf{F}:U \times \mathbb{R}^n \to \mathbb{R}^m</script> is linear
+in its second argument, it is usually written using one of the following
+equivalent notations:
+<script type="math/tex; mode=display">\delta \mathsf{F}(\mathsf{x}_0, \mathsf{h}) = \frac{\delta \mathsf{F}}{\delta \mathsf{x}}\bigg\vert_{\mathsf{x}_0}\mathsf{h} = \partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0) \mathsf{h},</script>
+where <script type="math/tex">\mathsf{x}_0 \in U</script> and <script type="math/tex">\mathsf{h} \in \mathbb{R}^n</script>. The
+latter notation will be adopted more frequently in these notes. The
+linear map
+<script type="math/tex">\partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0):\mathbb{R}^n \to \mathbb{R}^m</script>
+is called the <strong>Gâteaux derivative</strong>, or the <strong>functional derivative</strong>,
+of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}_0</script>.</p>
+</div>
+<p>If the map <script type="math/tex">\mathsf{F}:U \subseteq \mathbb{R}^n \to \mathbb{R}^m</script> is
+Fréchet differentiable, then it is necessarily Gâteaux differentiable on
+<script type="math/tex">U</script>. Further, in this case, the Gâteaux differential is linear in its
+second argument, and
+<script type="math/tex; mode=display">(D_{\mathsf{x}_0}\mathsf{F})\mathsf{h} = \delta \mathsf{F}(\mathsf{x}_0, \mathsf{h}) = \partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0) \mathsf{h},</script>
+for any <script type="math/tex">\mathsf{x}_0 \in U</script> and <script type="math/tex">\mathsf{h} \in \mathbb{R}^n</script>. This
+shows, in particular, that under the assumption of Fréchet
+differentiability, the Gâteaux differential can be used to compute the
+Fréchet derivative.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The converse is not true: the existence of the Gâteaux
+differential does not imply Fréchet differntiability, except when the
+Gâteaux differential satisfies additional conditions. In these notes,
+all maps between vector spaces are assumed to be Fréchet differentiable,
+unless stated otherwise.</p>
+</div>
+<h2 id="gradient-of-nonlinear-maps">Gradient of nonlinear maps</h2>
+<p>We will now introduce an important notion called the <em>gradient</em> of a nonlinear map. Suppose that <script type="math/tex">\mathsf{F}:V \to W</script> is a nonlinear map between finite dimensional inner product spaces as before that is differentiable. In this case, the Fr\'echet derivative of <script type="math/tex">\mathsf{F}</script> is equal to its G\^ateaux derivative, as we just discussed. To introduce the notion of the gradient of <script type="math/tex">\mathsf{F}</script>, it is helpful to first introduce the notion of <em>tensor product spaces</em>.</p>
+<p>Given finite dimensional inner product spaces <script type="math/tex">V, W</script>, the <strong>tensor product space</strong> <script type="math/tex">W \otimes V</script> is defined as follows:
+<script type="math/tex; mode=display">W \otimes V = \{\mathsf{T}:W \times V \to \mathbb{R} \,|\, \mathsf{T} \text{ is a multilinear map}\}.</script>
+This is best illustrated with the help of some examples.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="admonition danger">
+<p class="admonition-title">TO DO</p>
+<p>...</p>
+</div>
+</div>
+<p>The <strong>gradient</strong> of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}_0 \in V</script> is defined as the tensor <script type="math/tex">\text{grad }\mathsf{F}(\mathsf{x}_0) \in W \otimes V</script> such that, for any <script type="math/tex">\mathsf{h} \in V</script>, 
+<script type="math/tex; mode=display">\text{grad }\mathsf{F}(\mathsf{x}_0) \cdot \mathsf{h} = \partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0)\mathsf{h}.</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is conventional to denote the gradient of <script type="math/tex">\mathsf{F}</script> using the same symbol as the G\^ateaux derivative of <script type="math/tex">F</script>. Thus, we will often write <script type="math/tex">\partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0)</script> to denote the gradient of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}_0</script>, <script type="math/tex">\text{grad }\mathsf{F}(\mathsf{x}_0)</script>. The meaning of a term like <script type="math/tex">\partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0)</script> should thus be carefully interpreted depending on the context. </p>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../linear_maps_2/" title="Linear Maps - II" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Linear Maps - II
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../tensor_analysis_R3/" title="Euclidean Tensor Analysis" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Euclidean Tensor Analysis
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>

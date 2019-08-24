@@ -1,0 +1,1159 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Notes on Euclidean Tensor Analysis.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Appendix - Matrices - Euclidean Tensor Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#basic-definitions" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Euclidean Tensor Analysis" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Euclidean Tensor Analysis
+            </span>
+            <span class="md-header-nav__topic">
+              Appendix - Matrices
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Euclidean Tensor Analysis" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Euclidean Tensor Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../inner_product_spaces/" title="Inner Product Spaces" class="md-nav__link">
+      Inner Product Spaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_1/" title="Linear Maps - I" class="md-nav__link">
+      Linear Maps - I
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_algebra/" title="Tensor Algebra" class="md-nav__link">
+      Tensor Algebra
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_2/" title="Linear Maps - II" class="md-nav__link">
+      Linear Maps - II
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-nav__link">
+      Linearization of Nonlinear Maps
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_analysis_R3/" title="Euclidean Tensor Analysis" class="md-nav__link">
+      Euclidean Tensor Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-nav__link">
+      Curvilinear Coordinates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../set_theory/" title="Appendix - Set Theory" class="md-nav__link">
+      Appendix - Set Theory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Appendix - Matrices
+      </label>
+    
+    <a href="./" title="Appendix - Matrices" class="md-nav__link md-nav__link--active">
+      Appendix - Matrices
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-definitions" title="Basic definitions" class="md-nav__link">
+    Basic definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebraic-operations-on-matrices" title="Algebraic operations on matrices" class="md-nav__link">
+    Algebraic operations on matrices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trace-and-determinant-of-square-matrices" title="Trace and determinant of square matrices" class="md-nav__link">
+    Trace and determinant of square matrices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inverse-of-a-matrix" title="Inverse of a matrix" class="md-nav__link">
+    Inverse of a matrix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-systems-of-equations" title="Linear systems of equations" class="md-nav__link">
+    Linear systems of equations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigenvalues-and-eigenvectors" title="Eigenvalues and eigenvectors" class="md-nav__link">
+    Eigenvalues and eigenvectors
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../calculus/" title="Appendix - Calculus" class="md-nav__link">
+      Appendix - Calculus
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-definitions" title="Basic definitions" class="md-nav__link">
+    Basic definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebraic-operations-on-matrices" title="Algebraic operations on matrices" class="md-nav__link">
+    Algebraic operations on matrices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trace-and-determinant-of-square-matrices" title="Trace and determinant of square matrices" class="md-nav__link">
+    Trace and determinant of square matrices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inverse-of-a-matrix" title="Inverse of a matrix" class="md-nav__link">
+    Inverse of a matrix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-systems-of-equations" title="Linear systems of equations" class="md-nav__link">
+    Linear systems of equations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigenvalues-and-eigenvectors" title="Eigenvalues and eigenvectors" class="md-nav__link">
+    Eigenvalues and eigenvectors
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Appendix - Matrices</h1>
+                
+                <p>A few elementary facts about matrices with real entries are recalled
+here. The purpose of this appendix is to provide a refresher of key
+concepts in matrix algebra that are needed for the main development of
+linear algebra in the notes. Many proofs are omitted, and the stress is
+on acquiring a <em>working knowledge</em> of matrix algebra.</p>
+<h2 id="basic-definitions">Basic definitions</h2>
+<p>A <strong>matrix</strong> or order <script type="math/tex">m \times n</script> (read "<script type="math/tex">m</script>
+<em>cross</em> <script type="math/tex">n</script>") is a
+rectangular array of real numbers, as shown below: <script type="math/tex; mode=display">\begin{bmatrix}
+A_{11} & A_{12} & \ldots & A_{1n}\\
+A_{21} & A_{22} & \ldots & A_{2n}\\
+\vdots & & \ddots & \vdots\\
+A_{m1} & A_{m2} & \ldots & A_{mn}
+\end{bmatrix}.</script> Here <script type="math/tex">\{A_{ij}\}</script> are real numbers for every
+<script type="math/tex">1 \le i \le m</script> and <script type="math/tex">1 \le j \le m</script>. A horizontal section of the
+matrix is called a <strong>row</strong>, while a vertical section is called a
+<strong>column</strong>. Every <script type="math/tex">m \times n</script> matrix thus has <script type="math/tex">m</script> rows and <script type="math/tex">n</script>
+columns. The element in the <script type="math/tex">i^{\text{th}}</script> row and <script type="math/tex">j^{\text{th}}</script>
+column of this matrix is <script type="math/tex">A_{ij}</script>. It is conventional to call the
+index <script type="math/tex">i</script> in <script type="math/tex">A_{ij}</script> as the <strong>row index</strong> and the index <script type="math/tex">j</script> as
+the <strong>column index</strong>. We will typically use a symbol like <script type="math/tex">\mathsf{A}</script>
+to represent a matrix like the one shown above. The fact that the
+<script type="math/tex">(i,j)^{\text{th}}</script> entry of <script type="math/tex">\mathsf{A}</script> is <script type="math/tex">A_{ij}</script> is written
+as follows: <script type="math/tex">\mathsf{A}_{ij} = A_{ij}</script>. Since the matrix
+<script type="math/tex">\mathsf{A}</script> has <script type="math/tex">mn</script> real numbers <script type="math/tex">\{A_{ij}\}</script> arranged as an
+<script type="math/tex">m \times n</script> rectangular array, we will refer to the set of all
+<script type="math/tex">m \times n</script> matrices using the notation <script type="math/tex">\mathbb{R}^{m \times n}</script>.
+Thus, <script type="math/tex">\mathsf{A} \in \mathbb{R}^{m \times n}</script>. An <script type="math/tex">m \times 1</script>
+matrix is called a <strong>column vector</strong>, or just a <strong>vector</strong>, and a
+<script type="math/tex">1 \times n</script> matrix is called a <strong>row vector</strong>. For row and column
+matrices, it is conventional to use the following shortcut notation: The
+<script type="math/tex">(i,1)^{\text{th}}</script> entry of
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times 1}</script> is written as <script type="math/tex">A_i</script> instead
+of <script type="math/tex">A_{i1}</script>; a similar comment applies for row vectors.</p>
+<p>A matrix of the form <script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> is
+called a <strong>square matrix</strong> of order <script type="math/tex">n</script>. An important example of a
+square matrix is the <strong>identity matrix</strong> of order <script type="math/tex">n</script>, written
+<script type="math/tex">\mathsf{I} \in \mathbb{R}^{n \times n}</script>, defined as follows:
+<script type="math/tex; mode=display">\mathsf{I} = \begin{bmatrix}
+1 & 0 & \ldots & 0\\
+0 & 1 & \ldots & 0\\
+\vdots & & \ddots & \vdots\\
+0 & 0 & \ldots & 1
+\end{bmatrix}.</script> Given a square matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script>, the ordered set of elements
+<script type="math/tex">(A_{11}, A_{22}, \ldots, A_{nn})</script> is called the <strong>leading diagonal</strong>
+of <script type="math/tex">\mathsf{A}</script>. The identity matrix thus has <script type="math/tex">1</script> in each element of
+the leading diagonal and has entries zero everywhere else. An important
+important generalization of this kind of square matrix is a <strong>diagonal
+matrix</strong>, whose entries are all zero except on its leading diagonal. For
+instance, consider the matrix <script type="math/tex">\mathsf{D} \in \mathbb{R}^{n \times n}</script>
+defined as follows: <script type="math/tex; mode=display">\mathsf{D} = \begin{bmatrix}
+d_1 & 0 & \ldots & 0\\
+0 & d_2 & \ldots & 0\\
+\vdots & & \ddots & \vdots\\
+0 & 0 & \ldots & d_n
+\end{bmatrix}.</script> It is conventional to denote the matrix <script type="math/tex">\mathsf{D}</script>
+as <script type="math/tex">\text{diag}(d_1, d_2, \ldots, d_n)</script>. Using this notation, it can
+be see that <script type="math/tex">\mathsf{I} = \text{diag}(1, 1, \ldots, 1)</script>.</p>
+<p>Given an <script type="math/tex">m \times n</script> matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{m \times n}</script>, the <strong>transpose</strong> of
+<script type="math/tex">\mathsf{A}</script> is defined as the <script type="math/tex">n \times m</script> matrix whose
+<script type="math/tex">(i,j)^{\text{th}}</script> entry is the <script type="math/tex">(j,i)^{\text{th}}</script> entry of
+<script type="math/tex">\mathsf{A}</script>. It is conventional to denote the transpose of
+<script type="math/tex">\mathsf{A}\in\mathbb{R}^{m\times n}</script> as
+<script type="math/tex">\mathsf{A}^T \in \mathbb{R}^{n \times m}</script>. Thus,
+<script type="math/tex">\mathsf{A}^T_{ij} = \mathsf{A}_{ji}</script>. An <script type="math/tex">n \times n</script> matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> is said to be <strong>symmetric</strong>
+if <script type="math/tex">\mathsf{A}^T = \mathsf{A}</script>, and <strong>skew-symmetric</strong>, or
+<strong>antisymmetric</strong>, if <script type="math/tex">\mathsf{A}^T = -\mathsf{A}</script>. Here,
+<script type="math/tex">-\mathsf{A} \in \mathbb{R}^{n \times n}</script> is the matrix whose
+<script type="math/tex">(i,j)^{\text{th}}</script> entry is <script type="math/tex">-A_{ij}</script>:
+<script type="math/tex">(-\mathsf{A})_{ij} = -A_{ij}</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Given any matrix <script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script>,
+it is the case that <script type="math/tex">(\mathsf{A}^T)^T = \mathsf{A}</script>. To see this note
+that <script type="math/tex; mode=display">(\mathsf{A}^T)_{ij} = A_{ji},</script> whence it follows that
+<script type="math/tex">((\mathsf{A}^T)^T)_{ij} = A_{ij}</script>, thereby proving the result.</p>
+</div>
+<h2 id="algebraic-operations-on-matrices">Algebraic operations on matrices</h2>
+<p>Given two <script type="math/tex">m \times n</script> matrices
+<script type="math/tex">\mathsf{A},\mathsf{B} \in \mathbb{R}^{m \times n}</script>, their <strong>sum</strong> is
+defined as the matrix
+<script type="math/tex">\mathsf{A} + \mathsf{B} \in \mathbb{R}^{m \times n}</script> such that
+<script type="math/tex; mode=display">(\mathsf{A} + \mathsf{B})_{ij} = A_{ij} + B_{ij}.</script> Similarly, the
+<strong>scalar multiple</strong> of the matrix <script type="math/tex">\mathsf{A}</script> with a real number
+<script type="math/tex">c \in \mathbb{R}</script> is defined as the matrix
+<script type="math/tex">c\mathsf{A} \in \mathbb{R}^{m \times n}</script> such that
+<script type="math/tex; mode=display">(c\mathsf{A})_{ij} = c \, A_{ij}.</script> The <em>product</em> of two matrices is
+defined only under special conditions. Given an <script type="math/tex">m \times n</script> matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{m \times n}</script> and an <script type="math/tex">n \times k</script> matrix
+<script type="math/tex">\mathsf{B} \in \mathsf{R}^{n \times k}</script>, the <strong>matrix product</strong> of
+<script type="math/tex">\mathsf{A}</script> and <script type="math/tex">\mathsf{B}</script> is the <script type="math/tex">m \times k</script> matrix
+<script type="math/tex">\mathsf{AB} \in \mathbb{R}^{m \times k}</script> defined as follows:
+<script type="math/tex; mode=display">(\mathsf{AB})_{ij} = \sum_{a = 1}^n A_{ia} B_{aj}.</script> Note that the
+product of two square matrices of the same order is always defined. Note
+further that for any <script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script>,
+<script type="math/tex">\mathsf{AI} = \mathsf{IA} = \mathsf{A}</script>, where
+<script type="math/tex">\mathsf{I} \in \mathbb{R}^{n \times n}</script> is the identity matrix of
+order <script type="math/tex">n</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that we are given two matrices
+<script type="math/tex">\mathsf{A},\mathsf{B} \in \mathbb{R}^{n \times n}</script> of order <script type="math/tex">n</script>.
+Then, the following equation holds:
+<script type="math/tex; mode=display">(\mathsf{A}\mathsf{B})^T = \mathsf{B}^T \mathsf{A}^T.</script> To see this,
+note that if <script type="math/tex">\mathsf{C} = \mathsf{AB} \in \mathbb{R}^{n \times n}</script>,
+then
+<script type="math/tex; mode=display">(\mathsf{AB})^T_{ij} = \mathsf{C}^T_{ij} = C_{ji} = \sum_{k=1}^n A_{jk}B_{ki}.</script>
+Notice also that
+<script type="math/tex; mode=display">(\mathsf{B}^T\mathsf{A}^T)_{ij} = \sum_{k=1}^n \mathsf{B}^T_{ik}\mathsf{A}^T_{kj} = \sum_{k=1}^n B_{ki}A_{jk} = \sum_{k=1}^n A_{jk}B_{ki}.</script>
+Comparing these two expressions yields the identity
+<script type="math/tex">(\mathsf{AB})^T = \mathsf{B}^T \mathsf{A}^T</script>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Any matrix <script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> can be
+written as the sum of a symmetric and skew-symmetric matrix. To see
+this, note that
+<script type="math/tex; mode=display">A_{ij} = \frac{1}{2}(A_{ij} + A_{ji}) + \frac{1}{2}(A_{ij} - A_{ji}).</script>
+Define the matrices <script type="math/tex">\mathsf{A}_S \in \mathbb{R}^{n \times n}</script> and
+<script type="math/tex">\mathsf{A}_A \in \mathbb{R}^{n \times n}</script> as
+<script type="math/tex; mode=display">(\mathsf{A}_S)_{ij} = \frac{1}{2}(A_{ij} + A_{ji}), \qquad (\mathsf{A}_A)_{ij} = \frac{1}{2}(A_{ij} - A_{ji}).</script>
+Equivalently,
+<script type="math/tex; mode=display">\mathsf{A}_S = \frac{1}{2}(\mathsf{A} + \mathsf{A}^T), \qquad \mathsf{A}_A = \frac{1}{2}(\mathsf{A} - \mathsf{A}^T).</script>
+It follows that <script type="math/tex; mode=display">\mathsf{A} = \mathsf{A}_S + \mathsf{A}_A.</script> It is easy
+to check that <script type="math/tex">\mathsf{A}_S</script> is symmetric and <script type="math/tex">\mathsf{A}_A</script> is
+skew-symmetric.</p>
+</div>
+<h2 id="trace-and-determinant-of-square-matrices">Trace and determinant of square matrices</h2>
+<p>Suppose that <script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> is a square
+matrix of order <script type="math/tex">n</script>. We will now define two important scalars
+associated with <script type="math/tex">\mathsf{A}</script>. The first, called the <strong>trace</strong> of
+<script type="math/tex">\mathsf{A}</script>, written <script type="math/tex">\text{tr}(\mathsf{A}) \in \mathbb{R}</script>, is
+defined as follows: <script type="math/tex; mode=display">\text{tr}(\mathsf{A}) = \sum_{k=1}^n A_{kk}.</script>
+Thus the trace of a given matrix is the sum of the elements on its
+leading diagonal.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that <script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> is a
+symmetric matrix, and <script type="math/tex">\mathsf{B} \in \mathbb{R}^{n \times n}</script> is a
+skew-symmetric matrix. Then <script type="math/tex">\text{tr}(\mathsf{AB}) = 0</script>. To see this
+note that <script type="math/tex; mode=display">\begin{split}
+(\mathsf{AB})_{ij} = \sum_{k=1}^n A_{ik} B_{kj} &= \sum_{k=1}^n \frac{1}{2}(A_{ik} + A_{ki})B_{kj}\\
+ &= \frac{1}{2}\sum_{k=1}^n A_{ik}B_{kj} + \frac{1}{2}\sum_{k=1}^n A_{ki}B_{kj}\\
+ &= \frac{1}{2}\sum_{k=1}^n A_{ik}B_{kj} - \frac{1}{2}\sum_{k=1}^n A_{ki}B_{jk}.
+\end{split}</script> Taking the trace on both sides, it follows that
+<script type="math/tex; mode=display">\sum_{j=1}^n \sum_{k=1}^n A_{jk}B_{kj} = \frac{1}{2}\sum_{j=1}^n\sum_{k=1}^n A_{jk}B_{kj} - \frac{1}{2}\sum_{j=1}^n\sum_{k=1}^n A_{kj}B_{jk} = 0.</script>
+This shows that <script type="math/tex">\text{tr}(\mathsf{AB}) = 0</script>.</p>
+</div>
+<p>The second important scalar associated with a square matrix is its
+<strong>determinant</strong>. It is simpler to define the determinant of an
+<script type="math/tex">n \times n</script> matrix inductively. The determinant of a <script type="math/tex">1 \times 1</script>
+matrix <script type="math/tex">\mathsf{A} = [A_{11}] \in \mathbb{R}^{1 \times 1}</script>, written
+<script type="math/tex">\text{det}(\mathsf{A})</script>, is defined as follows:
+<script type="math/tex">\text{det}(\mathsf{A}) = A_{11}</script>. The determinant of a <script type="math/tex">2 \times 2</script>
+matrix <script type="math/tex">\mathsf{A} \in \mathbb{R}^{2 \times 2}</script> is defined as follows:
+<script type="math/tex; mode=display">\text{det}(\mathsf{A}) = \text{det}\begin{bmatrix} A_{11} & A_{12}\\ A_{21} & A_{22}\end{bmatrix} = A_{11}A_{22} - A_{12}A_{21}.</script>
+For any <script type="math/tex">n > 2</script>, the determinant of an <script type="math/tex">n \times n</script> matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> is defined inductively as
+follows. The <strong><script type="math/tex">(i,j)^{\text{th}}</script> minor</strong> of <script type="math/tex">\mathsf{A}</script> is
+defined as the <script type="math/tex">(n - 1) \times (n - 1)</script> matrix
+<script type="math/tex">M_{(i,j)}(\mathsf{A}) \in \mathbb{R}^{(n-1)\times(n-1)}</script> that is
+obtained by removing the <script type="math/tex">i^{\text{th}}</script> row and <script type="math/tex">j^{\text{th}}</script>
+column of <script type="math/tex">\mathsf{A}</script>. The determinant of <script type="math/tex">\mathsf{A}</script> is defined
+using the determinant of the minor as follows: for any
+<script type="math/tex">i \in \{1, 2, \ldots, n\}</script>,
+<script type="math/tex; mode=display">\text{det}(\mathsf{A}) = \sum_{j=1}^n (-1)^{i + j} A_{ij} \, \text{det}(M_{(i,j)}(\mathsf{A})).</script>
+Note that <script type="math/tex">i</script> in the equation above can be chosen to be <em>any</em> row
+index. The definition of the determinant is best illustrated with a few
+examples.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the following <script type="math/tex">3 \times 3</script> matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{3 \times 3}</script> :
+<script type="math/tex; mode=display">\mathsf{A} = \begin{bmatrix}
+A_{11} & A_{12} & A_{13}\\
+A_{21} & A_{22} & A_{23}\\
+A_{31} & A_{32} & A_{33}
+\end{bmatrix}</script> The determinant of <script type="math/tex">\mathsf{A}</script> is computed as
+follows: <script type="math/tex; mode=display">\begin{split}
+\text{det}(\mathsf{A}) &= \sum_{j=1}^3 (-1)^{1 + j} A_{1j} \text{det}(M_{(1,j)}(\mathsf{A}))\\
+ &= A_{11} \text{det} \begin{bmatrix} A_{22} & A_{23}\\ A_{32} & A_{33}\end{bmatrix} - A_{21} \text{det} \begin{bmatrix} A_{12} & A_{13}\\ A_{31} & A_{33}\end{bmatrix} + A_{13} \text{det} \begin{bmatrix} A_{21} & A_{22}\\ A_{31} & A_{32}\end{bmatrix}\\
+ &= A_{11}(A_{22}A_{33} - A_{23}A_{32}) - A_{22}(A_{21}A_{33} - A_{31}A_{23}) + A_{33}(A_{21}A_{32} - A_{22}A_{31}).
+\end{split}</script> Note that the determinant is expanded using the first row
+here. It is left as a simple exercise to verify that the value of the
+determinant is the same irrespective of which row is chosen.</p>
+</div>
+<h2 id="inverse-of-a-matrix">Inverse of a matrix</h2>
+<p>A matrix <script type="math/tex">\mathsf{A} \in \mathbb{R}^{n\times n}</script> is said to be
+<strong>invertible</strong> if there exists another matrix
+<script type="math/tex">\mathsf{B} \in \mathbb{R}^{n \times n}</script> such that
+<script type="math/tex">\mathsf{A}\mathsf{B} = \mathsf{B}\mathsf{A} = \mathsf{I}</script>. In this
+case, is conventional to write <script type="math/tex">\mathsf{B}</script> as <script type="math/tex">\mathsf{A}^{-1}</script>.</p>
+<p>An explicit formula for the inverse of an invertible square matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> can be provided. Define first
+the <strong>cofactor matrix</strong> of <script type="math/tex">\mathsf{A}</script>, written
+<script type="math/tex">\text{cof}(\mathsf{A}) \in \mathbb{R}^{n \times n}</script> as follows:
+<script type="math/tex; mode=display">\text{cof}(\mathsf{A})_{ij} = (-1)^{i + j} M_{(i,j)}(\mathsf{A}),</script>
+where <script type="math/tex">M_{(i,j)}(\mathsf{A}) \in \mathbb{R}^{(n-1)\times(n -1)}</script> is
+the <script type="math/tex">(i,j)^{\text{th}}</script> minor of <script type="math/tex">\mathsf{A}</script>. The transpose of the
+cofactor matrix of <script type="math/tex">\mathsf{A}</script> is called the <strong>adjoint</strong> of
+<script type="math/tex">\mathsf{A}</script>, written
+<script type="math/tex">\text{adj}(\mathsf{A}) \in \mathbb{R}^{n \times n}</script>:
+<script type="math/tex; mode=display">\text{adj}(\mathsf{A}) = (\text{cof}(\mathsf{A}))^T.</script> With these
+definitions in place, the inverse of an invertible square matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> can be written as
+<script type="math/tex; mode=display">\mathsf{A}^{-1} = \frac{1}{\text{det}(\mathsf{A})}\text{adj}(\mathsf{A}).</script>
+Note that this also informs us that the matrix <script type="math/tex">\mathsf{A}</script> is
+invertible if and only if its determinant is non-zero. This fact is
+frequently used in applications.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that
+<script type="math/tex">\mathsf{A}, \mathsf{B} \in \mathbb{R}^{n \times n}</script> are invertible
+matrices. Then <script type="math/tex">(\mathsf{AB})^{-1} = \mathsf{B}^{-1}\mathsf{A}^{-1}</script>.
+To show this, note that
+<script type="math/tex; mode=display">(\mathsf{B}^{-1}\mathsf{A}^{-1})\mathsf{AB} = \mathsf{B}^{-1}(\mathsf{A}^{-1}\mathsf{A})\mathsf{B} = \mathsf{B}^{-1}\mathsf{B} = \mathsf{I}.</script>
+Similarly, it can be shown that
+<script type="math/tex">\mathsf{AB}(\mathsf{B}^{-1}\mathsf{A}^{-1}) = \mathsf{I}</script>, thereby
+proving the claim.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As an elementary illustration of the computation of the
+inverse, let us now compute the inverse of the matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{2 \times 2}</script>, where
+<script type="math/tex; mode=display">\mathsf{A} = \begin{bmatrix} A_{11} & A_{12}\\ A_{21} & A_{22}\end{bmatrix}.</script>
+The cofactor of <script type="math/tex">\mathsf{A}</script> is easily computed as
+<script type="math/tex; mode=display">\text{cof}(\mathsf{A}) = \begin{bmatrix} A_{22} & -A_{21}\\ -A_{12} & A_{11}\end{bmatrix}.</script>
+The determinant of <script type="math/tex">\mathsf{A}</script> is computed easily as
+<script type="math/tex">(A_{11}A_{22} - A_{12}A_{21})</script>. Putting all this together, it follows
+from a simple computation that
+<script type="math/tex; mode=display">\begin{bmatrix} A_{11} & A_{12}\\ A_{21} & A_{22}\end{bmatrix}^{-1} = \frac{1}{(A_{11}A_{22} - A_{12}A_{21})}\begin{bmatrix} A_{22} & -A_{12}\\ -A_{21} & A_{11}\end{bmatrix}.</script>
+It can be checked by means of a direct substitution that this is indeed
+the inverse of <script type="math/tex">\mathsf{A}</script>.</p>
+</div>
+<h2 id="linear-systems-of-equations">Linear systems of equations</h2>
+<p>An important application where matrices naturally find use is the
+solution of linear systems of equations. To understand what this means,
+suppose that we are given constants <script type="math/tex">\{A_{ij}\}</script> and <script type="math/tex">\{b_i\}</script> where
+<script type="math/tex">i, j = 1, \ldots, n</script>. We are interested in finding real numbers
+<script type="math/tex">(v_i)_{i=1}^n</script> that satisfy the following set of equations:
+<script type="math/tex; mode=display">\begin{split}
+A_{11} v_1 + A_{12} v_2 + \ldots + A_{1n} v_n &= b_1,\\
+A_{21} v_1 + A_{22} v_2 + \ldots + A_{2n} v_n &= b_2,\\
+\ldots & \ldots\\
+A_{n1} v_1 + A_{n2} v_2 + \ldots + A_{nn} v_n &= b_n.
+\end{split}</script> These equations can be succinctly written as follows: for
+every <script type="math/tex">i \in \{1, \ldots, n\}</script>, <script type="math/tex; mode=display">\sum_{j=1}^n A_{ij} v_j = b_i.</script>
+These equations can be written even more succinctly in the matrix form
+<script type="math/tex; mode=display">\mathsf{A}\mathsf{v} = \mathsf{b},</script> where
+<script type="math/tex; mode=display">\mathsf{A} = \begin{bmatrix}
+A_{11} & \ldots & A_{1n}\\
+\vdots & \ddots & \vdots\\
+A_{n1} & \ldots & A_{nn}
+\end{bmatrix}
+\in \mathbb{R}^{n \times n}, \quad
+\mathsf{v} = \begin{bmatrix} v_1\\ \vdots\\ v_n\end{bmatrix} \in \mathbb{R}^{n \times 1}, \quad 
+\mathsf{b} = \begin{bmatrix} b_1\\ \vdots\\ b_n\end{bmatrix} \in \mathbb{R}^{n \times 1}.</script>
+Thus, the system of linear equations has been reduced to an equation
+involving matrices.</p>
+<p>The system of equations <script type="math/tex">\mathsf{Av} = \mathsf{b}</script> does not always
+possess a unique solution. In the special case, however, when
+<script type="math/tex">\text{det}(\mathsf{A}) \neq 0</script>, the matrix <script type="math/tex">\mathsf{A}</script> is
+invertible, and a unique solution for the system of equations
+<script type="math/tex">\mathsf{Av} = \mathsf{b}</script> can be found as
+<script type="math/tex; mode=display">\mathsf{v} = \mathsf{A}^{-1}\mathsf{b},</script> as can be checked with
+direct substitution.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is to be noted that when <script type="math/tex">\mathsf{A}</script> is invertible, it
+is rare in practice to compute the solution of the set of linear
+equations <script type="math/tex">\mathsf{Av} = \mathsf{b}</script> using the relation
+<script type="math/tex">\mathsf{v} = \mathsf{A}^{-1}\mathsf{v}</script>. This is due to the fact that
+calculating the inverse is computationally expensive for large matrices.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Perhaps the simplest method to solve the system of equations
+<script type="math/tex">\mathsf{Av} = \mathsf{b}</script> is the <strong>Gaussian elimination algorithm</strong>.
+The idea behind this algorithm is to systematically reduce the system of
+equations to the successive solution of equations with just one unknown
+variable. Rather than explaining the general approach, it is instructive
+to look at a specific example.</p>
+<p>Suppose that we are interested in solving the following system of
+equations: <script type="math/tex; mode=display">\begin{bmatrix}
+A_{11} & A_{12}\\
+A_{21} & A_{22}
+\end{bmatrix}
+\begin{bmatrix}
+v_1\\ v_2
+\end{bmatrix} 
+=
+\begin{bmatrix}
+b_1\\ b_2
+\end{bmatrix}</script> It is assumed that the matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{2 \times 2}</script> whose <script type="math/tex">(i,j)^{\text{th}}</script>
+entry is <script type="math/tex">A_{ij}</script> is invertible, and, without loss of generality, that
+<script type="math/tex">A_{21} \neq 0</script> Begin by multiplying the second equation in
+<script type="math/tex">\sum_{j=1}^2 A_{ij}v_j = b_j</script> by <script type="math/tex">A_{11}/A_{21}</script>. This yields the
+following modified set of equations <script type="math/tex; mode=display">\begin{split}
+A_{11} v_1 + A_{12} v_2 &= b_1,\\
+A_{11} v_1 + \frac{A_{11}}{A_{21}}A_{22} v_2 &= \frac{A_{11}}{A_{21}}b_2.
+\end{split}</script> Retaining the first equation as is and subtracting the
+first from the second equation, we get <script type="math/tex; mode=display">\begin{split}
+A_{11} v_1 + A_{12} v_2 &= b_1\\
+\left(\frac{A_{11}}{A_{21}}A_{22} - A_{12}\right)v_2 &= \frac{A_{11}}{A_{21}}b_2 - b_1.
+\end{split}</script> Solving the last equation for <script type="math/tex">v_2</script>, we immediately see
+that
+<script type="math/tex; mode=display">v_2 = \frac{1}{A_{11}A_{22} - A_{12}A_{21}}(-A_{21}b_1 + A_{11}b_2).</script>
+Substituting this expression for <script type="math/tex">v_2</script> in the first equation and
+solving for <script type="math/tex">v_1</script>, we get, after some algebraic manipulation that
+<script type="math/tex; mode=display">v_1 = \frac{1}{A_{11}A_{22} - A_{12}A_{21}}(A_{22}b_1 - A_{12}b_2).</script>
+Note that this is exactly the solution obtained by solving the system of
+equations <script type="math/tex">\mathsf{Av} = \mathsf{b}</script> using the formula
+<script type="math/tex">\mathsf{v} = \mathsf{A}^{-1}\mathsf{b}</script>.</p>
+<p>The foregoing calculations can be visualized as follows. Begin by
+collecting together the elements of the matrices <script type="math/tex">\mathsf{A}</script> and
+<script type="math/tex">\mathsf{b}</script> as follows: <script type="math/tex; mode=display">\begin{bmatrix}
+A_{11} & A_{12} & b_1\\
+A_{21} & A_{22} & b_2
+\end{bmatrix}</script> The sequence of transformations carried out earlier can
+be summarized as follows: <script type="math/tex; mode=display">\begin{bmatrix}
+A_{11} & A_{12} & b_1\\
+A_{21} & A_{22} & b_2
+\end{bmatrix} 
+\quad\rightarrow\quad
+\begin{bmatrix}
+A_{11} & A_{12} & b_1\\
+0 & \left(\dfrac{A_{11}}{A_{21}}A_{22} - A_{12}\right) & \left(\dfrac{A_{11}}{A_{21}}b_2 - b_1\right)
+\end{bmatrix}.</script> The matrix in the right hand side of the foregoing
+transformation is said to be in the <strong>upper triangular form</strong> and can be
+solved by back-substitution from the last equation <em>upwards</em>. The
+solution of a general linear system of equations is computed using an
+analogous and straightforward extension of this approach.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As a concrete illustration of the Gaussian elimination
+algorithm, consider the solution of the following set of linear
+equations: <script type="math/tex; mode=display">\begin{bmatrix}
+1 & -2 & 4\\
+2 & -3 & 1\\
+3 & 2 & -1
+\end{bmatrix}
+\begin{bmatrix}
+v_1\\ v_2\\ v_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+9\\ -1\\ 4
+\end{bmatrix}.</script> The Gaussian elimination procedure can be illustrated
+in a sequence of two steps. In the first step, appropriate multiples of
+the first equations are used to eliminate <script type="math/tex">v_1</script> from the second and
+third equations. In the second step, an appropriate multiple of the
+second equation is used to eliminate <script type="math/tex">v_2</script> from the third equation.
+These steps are summarized below: <script type="math/tex; mode=display">\begin{bmatrix}
+1 & -2 & 4 & 9\\
+2 & -3 & 1 & -1\\
+3 & 2 & -1 & 4
+\end{bmatrix}
+\quad\rightarrow\quad
+\begin{bmatrix}
+1 & -2 & 4 & 9\\
+0 & -1 & 7 & 19\\
+0 & -8 & 13 & 23
+\end{bmatrix}
+\quad\rightarrow\quad
+\begin{bmatrix}
+1 & -2 & 4 & 9\\
+0 & -1 & 7 & 19\\
+0 & 0 & 43 & 129
+\end{bmatrix}</script> These equations are solve by back-substitution as
+follows: <script type="math/tex; mode=display">\begin{split}
+43v_3 = 129 &\quad\Rightarrow\quad v_3 = \frac{129}{43} = 3,\\
+-v_2 + 7v_3 = 19 &\quad\Rightarrow\quad v_2 = -(19 - 7\times3) = 2,\\
+v_1 - 2v_2 + 4v_3 = 9 &\quad\Rightarrow\quad v_1 = 9 + 2\times2 - 4\times3 = 1.
+\end{split}</script> We thus obtain the solution of the linear system of
+equations as <script type="math/tex">v_1 = 1</script>, <script type="math/tex">v_2 = 2</script>, and <script type="math/tex">v_3 = 3</script>. The fact that
+this is indeed a solution of the linear system of equations presented
+above can be verified by direct substitution.</p>
+</div>
+<h2 id="eigenvalues-and-eigenvectors">Eigenvalues and eigenvectors</h2>
+<p>To wrap up the discussion of elementary matrix algebra, let us consider
+the <em>eigenvalue problem</em>. Suppose that we are given a matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> of order <script type="math/tex">n</script>. If there
+exists a vector <script type="math/tex">\mathsf{v} \in \mathbb{R}^{n \times 1}</script> and a real
+number <script type="math/tex">a \in \mathbb{R}</script> such that <script type="math/tex; mode=display">\mathsf{Av} = a\mathsf{v},</script>
+then <script type="math/tex">a</script> is called the <strong>eigenvalue</strong> of <script type="math/tex">\mathsf{A}</script> corresponding
+to the <strong>eigenvector</strong> <script type="math/tex">\mathsf{v}</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that the zero vector
+<script type="math/tex">\mathsf{0} \in \mathbb{R}^{n \times 1}</script> trivially satisfies this
+equation for any choice of <script type="math/tex">a \in \mathbb{R}</script>. We will exclude this
+trivial solution and assume henceforth that every eigenvector is
+non-zero.</p>
+</div>
+<p>Note that the equation <script type="math/tex">\mathsf{A}\mathsf{v} = a\mathsf{v}</script> can be
+written as the equation
+<script type="math/tex; mode=display">(\mathsf{A} - a\mathsf{I})\mathsf{v} = \mathsf{0}.</script> For this equation
+to have a non-trivial solution, it follows at once that
+<script type="math/tex; mode=display">\text{det}(\mathsf{A} - a\mathsf{I}) = 0.</script> This a polynomial equation
+in <script type="math/tex">a</script> of degree <script type="math/tex">n</script>, called the <strong>characteristic equation</strong> of
+<script type="math/tex">\mathsf{A}</script>, and has <script type="math/tex">n</script> solutions in general. These solutions
+correspond to the eigenvalues of the matrix <script type="math/tex">\mathsf{A}</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{3 \times 3}</script> given as follows:
+<script type="math/tex; mode=display">\mathsf{A} = \begin{bmatrix}
+-2 & -4 & 2\\
+-2 & 1 & 2\\
+4 & 2 & 5
+\end{bmatrix}.</script> Let us compute the eigenvalues of <script type="math/tex">\mathsf{A}</script> by
+computing its characteristic polynomial. Note first that the matrix
+<script type="math/tex">\mathsf{A} - a\mathsf{I}</script> has the following form:
+<script type="math/tex; mode=display">\mathsf{A} - a\mathsf{I} = \begin{bmatrix}
+-2-a & -4 & 2\\
+-2 & 1-a & 2\\
+4 & 2 & 5-a
+\end{bmatrix}.</script> Computing the determinant of this equation and setting
+it to zero, the characteristic equation
+<script type="math/tex">\text{det}(\mathsf{A} - a\mathsf{I}) = 0</script> is obtained as
+<script type="math/tex; mode=display">-a^3 + 4a^2 + 27a - 90 = 0, \quad\equiv\quad -(a - 3)(a - 6)(a + 5) = 0.</script>
+This shows at once that the eigenvalues of the matrix <script type="math/tex">\mathsf{A}</script> are
+<script type="math/tex">3</script>, <script type="math/tex">6</script>, and <script type="math/tex">-5</script>.</p>
+</div>
+<p>The characteristic equation, when expanded fully, has the following
+structure: <script type="math/tex; mode=display">(-a)^n + I_1 (-a)^{n-1} + \ldots + I_n = 0.</script> The constants
+<script type="math/tex">I_1, I_2, \ldots, I_n</script> are called the <strong>invariants</strong> of
+<script type="math/tex">\mathsf{A}</script>, and can be related to the eigenvalues of <script type="math/tex">\mathsf{A}</script>.
+Notably, the invariants <script type="math/tex">I_1</script> and <script type="math/tex">I_n</script> are computed as
+<script type="math/tex; mode=display">\begin{split}
+I_1 &= \text{tr}(\mathsf{A}) = \sum_{i=1}^n a_i,\\
+I_3 &= \text{det}(\mathsf{A}) = \prod_{i=1}^n a_i.
+\end{split}</script> The other invariants of <script type="math/tex">\mathsf{A}</script> can be similarly
+related to the eigenvalues of <script type="math/tex">\mathsf{A}</script>, but they do not have a
+simple interpretation as <script type="math/tex">I_1</script> and <script type="math/tex">I_n</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>For the matrix <script type="math/tex">\mathsf{A} \in \mathbb{R}^{3 \times 3}</script>
+considered in the previous example, the characteristic equation takes
+the form <script type="math/tex; mode=display">-a^3 + I_1 a_2 - I_2 a + I_3 = 0.</script> It can be checked that
+<script type="math/tex; mode=display">\begin{split}
+I_1 = 4 = 3 + 6 - 5 = a_1 + a_2 + a_3,\\
+I_3 = -90 = 3\times6\times(-5) = a_1 a_2 a_3.
+\end{split}</script> Further more, for matrices of order three, it is true that
+<script type="math/tex; mode=display">I_2 = a_1a_2 + a_2a_3 + a_3a_1,</script> as can be checked with a simple
+calculation.</p>
+</div>
+<p>The <strong>Cayley-Hamilton theorem</strong> states that the matrix <script type="math/tex">\mathsf{A}</script>
+satisfies the characteristic equation:
+<script type="math/tex; mode=display">(-\mathsf{A})^n + I_1 (-\mathsf{A})^{n-1} + \ldots + I_n\mathsf{I} = \mathsf{0}.</script>
+This equation is often used in practice to simplify a variety of
+calculations. The following example provides an elementary illustration
+of the Cayley-Hamilton theorem.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that <script type="math/tex">\mathsf{A} \in \mathbb{R}^{3 \times 3}</script> is
+an invertible matrix. Then, its inverse can be computed using the
+Cayley-Hamilton theorem as follows: <script type="math/tex; mode=display">\begin{split}
+ & -\mathsf{A}^3 + I_1\mathsf{A}^2 - I_2\mathsf{A} + I_3\mathsf{I} = 0\\
+\Rightarrow & I_3\mathsf{I} = \mathsf{A}^3 - I_1\mathsf{A}^2 + I_2\mathsf{A}\\
+\Rightarrow & \mathsf{A}^{-1} = \frac{1}{I_3}\left(\mathsf{A}^2 - I_1\mathsf{A} + I_2\right).
+\end{split}</script> Notice how the fact that
+<script type="math/tex">I_3 = \text{det}(\mathsf{A}) \neq 0</script> is used in the last step of this
+calculation. The Cayley-Hamilton theorem thus provides a convenient
+expression for the inverse of <script type="math/tex">\mathsf{A}</script>; compare this with the
+general expression for the inverse provided earlier.</p>
+</div>
+<p>The eigenvectors of <script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script> can be
+obtained by substituting the eigenvalues, successively in the equation
+<script type="math/tex">\mathsf{A}\mathsf{v} = a\mathsf{v}</script>. Notice that <script type="math/tex">\mathsf{v}</script> is an
+eigenvector of <script type="math/tex">\mathsf{A}</script> corresponding to the eigenvalue <script type="math/tex">a</script>,
+then <script type="math/tex">c\mathsf{v}</script> is also an eigenvector of <script type="math/tex">\mathsf{A}</script>
+corresponding to the same eigenvalue <script type="math/tex">a</script> for any <script type="math/tex">c \in \mathbb{R}</script>.
+This fact is often used to single out a particular value of <script type="math/tex">c</script>, and
+hence a particular eigenvector. This is best illustrated with an
+example.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{3 \times 3}</script> considered earlier:
+<script type="math/tex; mode=display">\mathsf{A} = \begin{bmatrix}
+-2 & -4 & 2\\
+-2 & 1 & 2\\
+4 & 2 & 5
+\end{bmatrix}.</script> The eigenvalues of <script type="math/tex">\mathsf{A}</script> were computed earlier
+as <script type="math/tex">3, 6, -5</script>. Let us now compute the corresponding eigenvectors.</p>
+<p>Consider first the eigenvalue <script type="math/tex">a_1 = 3</script>. Substituting this in the
+equation <script type="math/tex">\mathsf{A}\mathsf{v}_1 = a_1\mathsf{v}_1</script>, we get
+<script type="math/tex; mode=display">\begin{bmatrix}
+-2 & -4 & 2\\
+-2 & 1 & 2\\
+4 & 2 & 5
+\end{bmatrix}
+\begin{bmatrix}
+v_{1,1}\\ v_{1,2}\\ v_{1,3}
+\end{bmatrix}
+=
+3
+\begin{bmatrix}
+v_{1,1}\\ v_{1,2}\\ v_{1,3}
+\end{bmatrix}
+\quad\equiv\quad
+\begin{bmatrix}
+-5 & -4 & 2\\
+-2 & -2 & 2\\
+4 & 2 & 2
+\end{bmatrix}
+\begin{bmatrix}
+v_{1,1}\\ v_{1,2}\\ v_{1,3}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\ 0\\ 0
+\end{bmatrix}.</script> In the equations above, we have used the notation
+<script type="math/tex">(\mathsf{v}_1)_i = v_{1,i}</script>. Notice that this matrix equation does
+not have a unique solution since
+<script type="math/tex">\text{det}(\mathsf{A} - a_1\mathsf{I}) = 0</script>. To compute all possible
+solutions, let us compute the components <script type="math/tex">v_{1,1}</script> and <script type="math/tex">v_{1,2}</script> in
+terms of <script type="math/tex">v_{1,3}</script>. Begin by rewriting the first two equations as
+<script type="math/tex; mode=display">\begin{split}
+5v_{1,1} + 4v_{1,2} &= 2v_{1,3},\\
+2v_{1,1} + 2v_{1,2} &= 2v_{1,3}.
+\end{split}</script> These equations can be readily solved to yield
+<script type="math/tex; mode=display">v_{1,1} = -2v_{1,3}, \qquad v_{2,1} = 3v_{1,3}.</script> Thus, every vector
+of the form <script type="math/tex">[-2a \; 3a \; a]^T \in \mathbb{R}^{3 \times 1}</script>, where
+<script type="math/tex">a \in \mathbb{R}</script>, is an eigenvector of <script type="math/tex">\mathsf{A}</script> corresponding
+to the eigenvalue <script type="math/tex">3</script>. Different choices for <script type="math/tex">a</script> can be chosen
+depending on the context. For instance, choosing <script type="math/tex">a = 1</script>, we obtain
+the eigenvector <script type="math/tex">[-2 \; 3 \; 1]^T</script>. Requiring that the eigenvector has
+unit length, on the other hand yields the eigenvector
+<script type="math/tex">[-2/\sqrt{14} \; 3/\sqrt{14} \; 1/\sqrt{14}]^T</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The <strong>dot product</strong> of two vectors
+<script type="math/tex">\mathsf{u}, \mathsf{v} \in \mathbb{R}^{n \times 1}</script>, written
+<script type="math/tex">\mathsf{u}\cdot\mathsf{v} \in \mathbb{R}</script>, is defined as
+<script type="math/tex">\mathsf{u}^T \mathsf{v}</script>. Note that it follows from the definition
+that <script type="math/tex">\mathsf{u} \cdot \mathsf{v} = \mathsf{v}^T \mathsf{u}</script>. The
+<strong>length</strong> of a vector <script type="math/tex">\mathsf{u} \in \mathbb{R}^{n \times 1}</script> is
+defined as <script type="math/tex">\sqrt{\mathsf{u}^T\mathsf{u}}</script>.</p>
+</div>
+<p>The other eigenvectors of <script type="math/tex">\mathsf{A}</script> can be computed similarly. It
+is left as an exercise to check that <script type="math/tex">[1 \; 6 \; 16]^T</script> and
+<script type="math/tex">[-2 \; -1 \; 1]^T</script> are the eigenvectors of <script type="math/tex">\mathsf{A}</script>
+corresponding to the eigenvalues <script type="math/tex">6</script> and <script type="math/tex">-5</script>, respectively.</p>
+</div>
+<p>Suppose that
+<script type="math/tex">\mathsf{v}_1, \ldots, \mathsf{v}_n \in \mathbb{R}^{n \times 1}</script> are
+the eigenvectors of <script type="math/tex">\mathsf{A} \in \mathbb{R}^{n \times n}</script>
+corresponding to the eigenvalues <script type="math/tex">a_1, \ldots, a_n \in \mathbb{R}</script>,
+respectively. Then the set of equations
+<script type="math/tex">\mathsf{A}\mathsf{v}_i = a\mathsf{v}_i</script>, where <script type="math/tex">i = 1, \ldots, n</script>,
+can be written compactly as
+<script type="math/tex; mode=display">\mathsf{A}\mathsf{V} = \mathsf{V}\mathsf{D},</script> where
+<script type="math/tex; mode=display">\mathsf{V} = \begin{bmatrix}
+v_{1,1} & v_{2,1} & \ldots & v_{n,1}\\
+v_{1,2} & v_{2,2} & \ldots & v_{n,2}\\
+\vdots & & \ddots & \vdots\\
+v_{1,n} & v_{2,n} & \ldots & v_{n,n}
+\end{bmatrix}
+\in \mathbb{R}^{n \times n},
+\qquad
+\mathsf{D} = \text{diag}(a_1, a_2, \ldots, a_n) \in \mathbb{R}^{n \times n}.</script>
+Notice that the first column of <script type="math/tex">\mathsf{V}</script> is the first eigenvector
+of <script type="math/tex">\mathsf{A}</script>, the second column of <script type="math/tex">\mathsf{V}</script> is the second
+eigenvector of <script type="math/tex">\mathsf{A}</script>, and so on. It can be shown that if the
+eigenvectors are <em>linearly independent</em> (A proper definition of this term is provided in these notes in the general context of finite dimensional vector spaces.), then the matrix
+<script type="math/tex">\mathsf{V}</script> is invertible. In this case,
+<script type="math/tex; mode=display">\mathsf{A} = \mathsf{V} \mathsf{D} \mathsf{V}^{-1}.</script> This equation is
+called the <strong>eigendecomposition</strong> of <script type="math/tex">\mathsf{A}</script>, and plays an
+important role in many applications.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the matrix
+<script type="math/tex">\mathsf{A} \in \mathbb{R}^{3 \times 3}</script> considered in the previous
+examples: <script type="math/tex; mode=display">\mathsf{A} = \begin{bmatrix}
+-2 & -4 & 2\\
+-2 & 1 & 2\\
+4 & 2 & 5
+\end{bmatrix}.</script> The matrices <script type="math/tex">\mathsf{V} \in \mathbb{R}^{3 \times 3}</script>
+and <script type="math/tex">\mathsf{D}\in \mathsf{3 \times 3}</script> can be constructed as follows:
+<script type="math/tex; mode=display">\mathsf{V} = \begin{bmatrix}
+-2 & 1 & -2\\
+3 & 6 & -1\\
+1 & 16 & 1 
+\end{bmatrix},
+\qquad
+\mathsf{D} = \text{diag}(3,6,-5).</script> Note that the matrix <script type="math/tex">\mathsf{V}</script>
+is invertible in this case. It is left as a simple exercise to check
+that <script type="math/tex; mode=display">\begin{bmatrix}
+-2 & -4 & 2\\
+-2 & 1 & 2\\
+4 & 2 & 5
+\end{bmatrix}
+= \begin{bmatrix}
+-2 & 1 & -2\\
+3 & 6 & -1\\
+1 & 16 & 1 
+\end{bmatrix}
+\begin{bmatrix}
+3 & 0 & 0\\
+0 & 6 & 0\\
+0 & 0 & -5
+\end{bmatrix}
+\begin{bmatrix}
+-2 & 1 & -2\\
+3 & 6 & -1\\
+1 & 16 & 1 
+\end{bmatrix}^{-1},</script> thereby verifying the eigendecomposition
+<script type="math/tex">\mathsf{A} = \mathsf{V}\mathsf{D}\mathsf{V}^{-1}</script> of <script type="math/tex">\mathsf{A}</script>.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">TO DO</p>
+<p>Degenerate cases</p>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../set_theory/" title="Appendix - Set Theory" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Appendix - Set Theory
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../calculus/" title="Appendix - Calculus" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Appendix - Calculus
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1109 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Notes on Euclidean Tensor Analysis.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Tensor Algebra - Euclidean Tensor Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#multilinear-functions-and-tensors" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Euclidean Tensor Analysis" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Euclidean Tensor Analysis
+            </span>
+            <span class="md-header-nav__topic">
+              Tensor Algebra
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Euclidean Tensor Analysis" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Euclidean Tensor Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../inner_product_spaces/" title="Inner Product Spaces" class="md-nav__link">
+      Inner Product Spaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_1/" title="Linear Maps - I" class="md-nav__link">
+      Linear Maps - I
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tensor Algebra
+      </label>
+    
+    <a href="./" title="Tensor Algebra" class="md-nav__link md-nav__link--active">
+      Tensor Algebra
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multilinear-functions-and-tensors" title="Multilinear functions and tensors" class="md-nav__link">
+    Multilinear functions and tensors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-products" title="Tensor products" class="md-nav__link">
+    Tensor products
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basis-representation" title="Basis representation" class="md-nav__link">
+    Basis representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-of-basis" title="Change of basis" class="md-nav__link">
+    Change of basis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contraction" title="Contraction" class="md-nav__link">
+    Contraction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generalized-dot-product-of-tensors" title="Generalized dot product of tensors" class="md-nav__link">
+    Generalized dot product of tensors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume-forms" title="Volume forms" class="md-nav__link">
+    Volume forms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-product-in-mathbbr3" title="Cross product in $\mathbb{R}^3$" class="md-nav__link">
+    Cross product in $\mathbb{R}^3$
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_2/" title="Linear Maps - II" class="md-nav__link">
+      Linear Maps - II
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-nav__link">
+      Linearization of Nonlinear Maps
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_analysis_R3/" title="Euclidean Tensor Analysis" class="md-nav__link">
+      Euclidean Tensor Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-nav__link">
+      Curvilinear Coordinates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../set_theory/" title="Appendix - Set Theory" class="md-nav__link">
+      Appendix - Set Theory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Appendix - Matrices" class="md-nav__link">
+      Appendix - Matrices
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../calculus/" title="Appendix - Calculus" class="md-nav__link">
+      Appendix - Calculus
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multilinear-functions-and-tensors" title="Multilinear functions and tensors" class="md-nav__link">
+    Multilinear functions and tensors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-products" title="Tensor products" class="md-nav__link">
+    Tensor products
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basis-representation" title="Basis representation" class="md-nav__link">
+    Basis representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-of-basis" title="Change of basis" class="md-nav__link">
+    Change of basis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contraction" title="Contraction" class="md-nav__link">
+    Contraction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generalized-dot-product-of-tensors" title="Generalized dot product of tensors" class="md-nav__link">
+    Generalized dot product of tensors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume-forms" title="Volume forms" class="md-nav__link">
+    Volume forms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-product-in-mathbbr3" title="Cross product in $\mathbb{R}^3$" class="md-nav__link">
+    Cross product in $\mathbb{R}^3$
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Tensor Algebra</h1>
+                
+                <p>This section introduces certain key topics related to the algebra of
+<em>tensors</em>. The choice of topics is not exhaustive, but provides a good
+starting point for the study of Euclidean tensor analysis.</p>
+<h2 id="multilinear-functions-and-tensors">Multilinear functions and tensors</h2>
+<p>Let us extend the definition of bilinear functions introduced in the
+preceding section to <em>multilinear</em> functions. Given inner product spaces
+<script type="math/tex">V_1, \ldots, V_n</script>, consider a map
+<script type="math/tex">\mathsf{T}:V_1 \times \ldots \times V_n \to \mathbb{R}</script> such that for
+any <script type="math/tex">\mathsf{u}_i, \mathsf{v}_i \in V_i</script>, <script type="math/tex">1 \le i \le n</script>, and
+<script type="math/tex">a \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">\mathsf{T}(\mathsf{v}_1, \ldots, \mathsf{u}_i + a\mathsf{v}_i, \ldots, \mathsf{v}_n) = \mathsf{T}(\mathsf{v}_1, \ldots, \mathsf{u}_i, \ldots, \mathsf{v}_n) + a\,\mathsf{T}(\mathsf{v}_1, \ldots, \mathsf{v}_i, \ldots, \mathsf{v}_n).</script>
+Such functions, which are linear separately in each of their arguments,
+are said to be <strong>multilinear</strong>. We will denote the set of all
+multilinear functions of this form as
+<script type="math/tex">\mathcal{T}(V_1 \times \ldots \times V_n,\mathbb{R})</script>.</p>
+<p>Note that multilinearity and linearity are <em>distinct</em> concepts, as the
+following example illustrates.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the functions
+<script type="math/tex">\mathsf{S}, \mathsf{T}:\mathbb{R} \times \mathbb{R} \to \mathbb{R}</script>
+defined as follows: for any <script type="math/tex">x, y \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">\mathsf{S}(x, y) = x + y, \qquad \mathsf{T}(x, y) = xy.</script> It follows
+that given <script type="math/tex">a, u, v \in \mathbb{R}</script>, <script type="math/tex; mode=display">\begin{split}
+\mathsf{S}((x,y) + c(u,v)) &= (x + y) + c(u + v) = \mathsf{S}(x,y) + a\mathsf{S}(u,v),\\
+\mathsf{T}((x,y) + a(u,v)) &= (x + au)(y + av) = xy + a^2uv + axv + ayu \neq \mathsf{T}(x,y) + a\mathsf{T}(u,v).
+\end{split}</script> We thus see that <script type="math/tex">\mathsf{S}</script> is linear, but
+<script type="math/tex">\mathsf{T}</script> is not. On the other hand, note that <script type="math/tex; mode=display">\begin{split}
+\mathsf{S}(x + au, y) &= x + y + au \neq \mathsf{S}(x,y) + a\mathsf{S}(u,y),\\
+\mathsf{T}(x + au, y) &= (x + au)y = xy + auy = \mathsf{T}(x,y) + a\mathsf{T}(u,y).
+\end{split}</script> We thus see that <script type="math/tex">\mathsf{S}</script> is not multilinear, even
+though it is linear, and <script type="math/tex">\mathsf{T}</script> is multilinear and not linear.</p>
+</div>
+<p>Let us now focus attention on a single inner product space <script type="math/tex">V</script> of
+dimension <script type="math/tex">n</script> and multilinear functions defined on finite Cartesian
+products of <script type="math/tex">V</script>. A <strong>tensor</strong> of order <script type="math/tex">k</script> on <script type="math/tex">V</script> is defined as
+multilinear function of the form
+<script type="math/tex; mode=display">\mathsf{A}:\underbrace{V \times \ldots \times V}_{k \text{ terms}} \to \mathbb{R},</script>
+The set of all multilinear maps of the form
+<script type="math/tex">\mathsf{A}:\times^k V \to \mathbb{R}</script> is denoted by
+<script type="math/tex">\mathcal{T}^k(V)</script>. Thus <script type="math/tex">\mathcal{T}^k(V)</script> denotes the set of all
+tensors of order <script type="math/tex">k</script> on <script type="math/tex">V</script>. Defining maps
+<script type="math/tex">+:\mathcal{T}^k(V) \times \mathcal{T}^k(V) \to \mathcal{T}^k(V)</script> and
+<script type="math/tex">\cdot:\mathbb{R} \times \mathcal{T}^k(V) \to \mathcal{T}^k(V)</script> as
+<script type="math/tex; mode=display">\begin{split}
+(\mathsf{A} + \mathsf{B})(\mathsf{u}_1, \ldots, \mathsf{u}_k) &= \mathsf{A}(\mathsf{u}_1, \ldots, \mathsf{u}_k) + \mathsf{B}(\mathsf{u}_1, \ldots, \mathsf{u}_k),\\
+(a\mathsf{A})(\mathsf{u}_1, \ldots, \mathsf{u}_k) &= a \, \mathsf{A}(\mathsf{u}_1, \ldots, \mathsf{u}_k),
+\end{split}</script> for any <script type="math/tex">\mathsf{A},\mathsf{B} \in \mathcal{T}^k(V)</script>,
+<script type="math/tex">a \in \mathbb{R}</script> and <script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_k \in V</script>,
+it is easy to verify that <script type="math/tex">\mathcal{T}^k(V)</script> is a real linear space.</p>
+<p>The set
+<script type="math/tex">\mathcal{T}^1(V) = \{\mathsf{T}:V \to \mathbb{R} \,|\, \mathsf{T} \text{ is linear}\}</script>,
+defined as the set of all linear functions on <script type="math/tex">V</script>, is called the
+<strong>(algebraic) dual space</strong> of <script type="math/tex">V</script>, and is often written as <script type="math/tex">V^*</script>. It
+turns out that if <script type="math/tex">V</script> is a finite dimensional inner product space,
+then <script type="math/tex">V^*</script> is <em>canonically isomorphic</em> to <script type="math/tex">V</script>. This means that <script type="math/tex">V</script>
+and <script type="math/tex">V^*</script> are identical for all practical purposes. For this reason, a
+vector is often called a tensor of order <script type="math/tex">1</script>. Further, in this case,
+the action of any <script type="math/tex">\mathsf{v} \in \mathcal{T}^1(V)</script> on any
+<script type="math/tex">\mathsf{u} \in V</script> is defined as follows:
+<script type="math/tex; mode=display">\mathsf{v}(\mathsf{u}) = \mathsf{v} \cdot \mathsf{u}.</script> This is a
+simple instance of what is known as the <strong>Riesz representation
+theorem</strong>. It is conventional to define
+<script type="math/tex">\mathcal{T}^0(V) = \mathbb{R}</script>. Thus, tensors of order <script type="math/tex">0</script> are
+scalars, tensors of order <script type="math/tex">1</script> are vectors, and tensors of order <script type="math/tex">2</script>
+can be identified with linear maps. The present definition thus unifies
+the various kinds of linear spaces on <script type="math/tex">V</script> studied earlier. The set of
+all <script type="math/tex">\mathcal{T}^k(V)</script> is said to constitute a <strong>tensor algebra</strong> on
+<script type="math/tex">V</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As a simple but important example of tensors, consider the
+second order tensor <script type="math/tex">\hat{\mathsf{I}} \in \mathcal{T}^2(V)</script> on <script type="math/tex">V</script>
+defined as follows: for any <script type="math/tex">\mathsf{u},\mathsf{v} \in V</script>,
+<script type="math/tex; mode=display">\hat{\mathsf{I}}(\mathsf{u},\mathsf{v}) = \mathsf{u} \cdot \mathsf{v}.</script>
+The multilinearity of <script type="math/tex">\hat{\mathsf{I}}</script>, in this case just its
+bilinearity, follows from the bilinearity of the inner product.</p>
+<p>More generally, given any linear map <script type="math/tex">\mathsf{T} \in L(V,V)</script>, we can
+define a second order tensor <script type="math/tex">\hat{\mathsf{T}} \in \mathcal{T}^2(V)</script>
+as follows: for any <script type="math/tex">\mathsf{u},\mathsf{v} \in V</script>,
+<script type="math/tex; mode=display">\hat{\mathsf{T}}(\mathsf{u},\mathsf{v}) = \mathsf{u} \cdot \mathsf{T}\mathsf{v}.</script>
+It is left as a simple exercise to verify that the map
+<script type="math/tex">\hat{\mathsf{T}}</script> is a second order tensor on <script type="math/tex">V</script>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Defining the <strong>identity map</strong> on <script type="math/tex">V</script> as the map
+<script type="math/tex">\mathsf{I} \in L(V,V)</script> such that
+<script type="math/tex">\mathsf{I}\mathsf{v} = \mathsf{v}</script> for any <script type="math/tex">\mathsf{v} \in V</script>, note
+that the corresponding second order tensor is precisely the tensor
+<script type="math/tex">\hat{\mathsf{I}} \in \mathcal{T}^2(V)</script> introduced earlier.</p>
+</div>
+<h2 id="tensor-products">Tensor products</h2>
+<p>Given two tensors <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> and
+<script type="math/tex">\mathsf{B} \in \mathcal{T}^l(V)</script>, it is possible to combine them to
+obtain a tensor of higher order. Specifically, the <strong>tensor product</strong> of
+<script type="math/tex">\mathsf{A}</script> and <script type="math/tex">\mathsf{B}</script> is defined as the tensor
+<script type="math/tex">\mathsf{A}\otimes\mathsf{B} \in \mathcal{T}^{k + l}(V)</script> such that for
+any
+<script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_k, \mathsf{u}_{k+1}, \ldots, \mathsf{u}_{k + l} \in V</script>,
+<script type="math/tex; mode=display">\mathsf{A} \otimes \mathsf{B}(\mathsf{u}_1, \ldots, \mathsf{u}_k, \mathsf{u}_{k+1}, \ldots, \mathsf{u}_{k + l}) = \mathsf{A}(\mathsf{u}_1, \ldots, \mathsf{u}_k)\mathsf{B}(\mathsf{u}_{k+1}, \ldots, \mathsf{u}_{k + l}).</script>
+As a special case given vectors <script type="math/tex">\mathsf{v}, \mathsf{w} \in V</script>, their
+tensor product yields a second order tensor
+<script type="math/tex">\mathsf{v} \otimes \mathsf{w} \in \mathcal{T}^2(V)</script>: for any
+<script type="math/tex">\mathsf{u}_1, \mathsf{u}_2 \in V</script>,
+<script type="math/tex; mode=display">\mathsf{v} \otimes \mathsf{w} (\mathsf{u}_1, \mathsf{u}_2) = (\mathsf{v} \cdot \mathsf{u}_1)(\mathsf{w} \cdot \mathsf{u}_2).</script>
+The foregoing definition can be extended to define the tensor product of
+a <em>finite</em> number of tensors. Suppose that
+<script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_k</script> are <script type="math/tex">k</script> vectors in <script type="math/tex">V</script>. The
+tensor product of these vectors is defined as the multilinear map
+<script type="math/tex; mode=display">\mathsf{u}_1 \otimes \ldots \otimes \mathsf{u}_k: V^k \to \mathbb{R},</script>
+such that for any set of <script type="math/tex">k</script> vectors
+<script type="math/tex">\mathsf{v}_1, \ldots, \mathsf{v}_k</script> in <script type="math/tex">V</script>,
+<script type="math/tex; mode=display">\mathsf{u}_1 \otimes \ldots \otimes \mathsf{u}_k(\mathsf{v}_1, \ldots, \mathsf{v}_k) = (\mathsf{u}_1\cdot \mathsf{v}_1) \ldots (\mathsf{u}_k\cdot \mathsf{v}_k).</script>
+Thus, the tensor product allows us to construct higher order tensors
+from lower order tensors. A higher order tensor that is constructed from
+vectors, like the one shown above, is called a <strong>rank-<script type="math/tex">1</script></strong> tensor.</p>
+<div class="admonition info">
+<p class="admonition-title">Important Note!</p>
+<p>There is an ambiguity in the tensor product notation that
+warrants clarification. Given vectors <script type="math/tex">\mathsf{v}, \mathsf{w} \in V</script>,
+the quantity <script type="math/tex">\mathsf{v}\otimes\mathsf{w}</script> can stand for either a
+linear map, i.e. an element of <script type="math/tex">L(V,V)</script>, or a tensor of order <script type="math/tex">2</script>,
+i.e. an element of <script type="math/tex">\mathcal{T}^2(V)</script>. The vector spaces <script type="math/tex">L(V,V)</script>
+and <script type="math/tex">\mathcal{T}^2(V)</script> are isomorphic - this means that they can be
+naturally identified with each other. Indeed, given any
+<script type="math/tex">\mathsf{T} \in L(V,V)</script>, the bilinear function
+<script type="math/tex">\hat{\mathsf{T}} \in \mathcal{T}^2(V)</script> defined as
+<script type="math/tex; mode=display">\hat{\mathsf{T}}(\mathsf{u}_1,\mathsf{u}_2) = \mathsf{u}_1\cdot\mathsf{T}\mathsf{u}_2,</script>
+for any <script type="math/tex">\mathsf{u}_1,\mathsf{u}_2 \in V</script>, can be used to uniquely
+associate an element of <script type="math/tex">L(V,V)</script> with <script type="math/tex">\mathcal{T}^2(V)</script>, and vice
+versa. This isomorphism is often abused to represent both
+<script type="math/tex">\mathsf{T} \in L(V,V)</script> and <script type="math/tex">\hat{\mathsf{T}} \in \mathcal{T}^2(V)</script>
+using the same symbol. In practice, such an ambiguity is averted by
+specifying the domain and codomain of every function that is used. A
+similar ambiguity arises in the case of tensors of higher order - the
+appropriate meaning is to be inferred from the context.</p>
+</div>
+<h2 id="basis-representation">Basis representation</h2>
+<p>Recall that the set <script type="math/tex">\mathcal{T}^k(V)</script> of all tensors of order <script type="math/tex">k</script>
+on <script type="math/tex">V</script> is a linear space. This means that we can legitimately ask how
+we can construct a basis for it, and represent any <script type="math/tex">k^{\text{th}}</script>
+order tensor in terms of this basis. This question will be explored in
+this section.</p>
+<p>Let us first consider the special case when an orthonormal basis
+<script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">V</script> is provided. Then, the representation of a
+<script type="math/tex">k^{\text{th}}</script> order tensor <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> is
+easily computed by considering the action of <script type="math/tex">\mathsf{A}</script> on <script type="math/tex">k</script>
+vectors <script type="math/tex">\mathsf{v}_i  = \sum v_{ij} \mathsf{e}_j</script> in <script type="math/tex">V</script>, where
+<script type="math/tex">1 \le i \le k</script>: <script type="math/tex; mode=display">\begin{split}
+\mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_k) &= \mathsf{A}\left(\sum v_{1i_1} \mathsf{e}_{i_1}, \ldots, \sum v_{ki_k} \mathsf{e}_{i_k}\right)\\
+ &= \sum \mathsf{A}_{i_1\ldots i_k} v_{1i_1} \ldots v_{ki_k},
+\end{split}</script> where
+<script type="math/tex; mode=display">\mathsf{A}_{i_1\ldots i_k} = \mathsf{A}(\mathsf{e}_{i_1}, \ldots, \mathsf{e}_{i_k}).</script>
+It follows from the orthonormality of <script type="math/tex">(\mathsf{e}_i)</script> that
+<script type="math/tex; mode=display">\mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k}(\mathsf{v}_1, \ldots, \mathsf{v}_k) = v_{1i_1} \ldots v_{ki_k}.</script>
+Putting these together, we get
+<script type="math/tex; mode=display">\mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_k) = \sum A_{i_1\ldots i_k} \mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k}(\mathsf{v}_1, \ldots, \mathsf{v}_k).</script>
+Since this is true for any choice of vectors
+<script type="math/tex">\mathsf{v}_1, \ldots, \mathsf{v}_k \in V</script>, we get the
+<strong>representation</strong> of <script type="math/tex">\mathsf{A}</script> with respect to the orthonormal
+basis <script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">V</script> as
+<script type="math/tex; mode=display">\mathsf{A} = \sum A_{i_1\ldots i_k} \mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k}.</script>
+The constants <script type="math/tex">(A_{i_1\ldots i_k})</script> are called the <strong>components</strong> of
+<script type="math/tex">\mathsf{A}</script> with respect to the basis
+<script type="math/tex">(\mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k})</script> of <script type="math/tex">V</script>.</p>
+<p>The representation of <script type="math/tex">\mathsf{A}</script> just derived also informs us that
+the set of <script type="math/tex">n^k</script> multilinear functions
+<script type="math/tex">\{\mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k} \}</script> spans
+<script type="math/tex">\mathcal{T}^k(V)</script>. By studying the actin of
+<script type="math/tex">\mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k}</script> on a set of
+<script type="math/tex">k</script> basis vectors, it is easy to show that these <script type="math/tex">n^k</script> multilinear
+functions are also linearly independent. This shows us that the set of
+<script type="math/tex">n^k</script> multilinear maps
+<script type="math/tex">\{\mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k} \}</script>
+constitute a basis of <script type="math/tex">\mathcal{T}(V^k,\mathbb{R})</script>, and that
+<script type="math/tex">\text{dim}(\mathcal{T}(V^k,\mathbb{R})) = (\text{dim}(V))^k</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us consider the second order tensor
+<script type="math/tex">\hat{I}\in\mathcal{T}^2(V)</script> defined earlier. Suppose that
+<script type="math/tex">(\mathsf{e}_i)</script> is an orthonormal basis of <script type="math/tex">V</script>. The representation
+of <script type="math/tex">\hat{\mathsf{I}}</script> can be computed easily as follows:
+<script type="math/tex; mode=display">\hat{\mathsf{I}} = \sum \hat{I}_{ij} \mathsf{e}_i \otimes \mathsf{e}_j,</script>
+where
+<script type="math/tex; mode=display">\hat{I}_{ij} = \hat{\mathsf{I}}(\mathsf{e}_i,\mathsf{e}_j) = \mathsf{e}_i\cdot\mathsf{e}_j = \delta_{ij}.</script>
+We thus see that the second order tensor
+<script type="math/tex">\hat{\mathsf{I}} \in \mathcal{T}^2(V)</script> has the following
+representation:
+<script type="math/tex; mode=display">\hat{\mathsf{I}} = \sum \delta_{ij} \mathsf{e}_i \otimes \mathsf{e}_j.</script>
+Notice how the Krönecker delta symbols defined earlier naturally figure
+as the components of the tensor <script type="math/tex">\hat{\mathsf{I}}</script>.</p>
+<p>It is convenient to represent the components of second order tensor as a
+matrix. For instance, the components of <script type="math/tex">\hat{\mathsf{I}}</script> just
+computed can be arranged as follows: <script type="math/tex; mode=display">= \begin{bmatrix}
+1 & 0 & \ldots & 0\\
+0 & 1 & \ldots & 0\\
+\vdots & & \ddots & \vdots\\
+0 & \ldots & \ldots & 1
+\end{bmatrix}.</script> Note that <em>any</em> second order tensor can be represented
+as a matrix, but such a representation is not possible for higher order
+tensors.</p>
+</div>
+<p>Let us quickly consider the representation of
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> with respect to a general basis
+<script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script>. As before, the multilinearity of
+<script type="math/tex">\mathsf{A}</script> can be used to express it in terms of the basis
+<script type="math/tex">(\mathsf{g}_i)</script> as follows: for any
+<script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_k \in V</script>, <script type="math/tex; mode=display">\begin{split}
+\mathsf{A}(\mathsf{u}_1, \ldots, \mathsf{u}_k) &= \mathsf{A}\left(\sum u_{1i_1}\mathsf{g}_{i_1}, \ldots, \sum u_{ki_k}\mathsf{g}_{i_k}\right)\\
+ &= \sum \mathsf{A}(\mathsf{g}_{i_1}, \ldots, \mathsf{g}_{i_k}) u_{1i_1} \ldots u_{ki_k},\\
+ &= \sum A^*_{i_1 \ldots i_k} (\mathsf{g}^{i_1} \otimes \ldots \otimes \mathsf{g}^{i_k})(\mathsf{u}_1, \ldots, \mathsf{u}_k),
+\end{split}</script> where
+<script type="math/tex">A^*_{i_1\ldots i_k} = \mathsf{A}(\mathsf{g}_{i_1}, \ldots, \mathsf{g}_{i_k})</script>.
+Since this holds for any choice of
+<script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_k \in V</script>, it follows that
+<script type="math/tex; mode=display">\mathsf{A} = \sum A^*_{i_1 \ldots i_k} \mathsf{g}^{i_1} \otimes \ldots \otimes \mathsf{g}^{i_k}.</script>
+It is straightforward to check that the set of <script type="math/tex">n^k</script> tensors
+<script type="math/tex">(\mathsf{g}^{i_1} \otimes \ldots \otimes \mathsf{g}^{i_k})</script> form a
+basis of <script type="math/tex">\mathcal{T}^k(V)</script>. This also shows that the dimension of
+<script type="math/tex">\mathcal{T}^k(\mathbb{R}^3)</script> is <script type="math/tex">n^k</script>. The coefficients
+<script type="math/tex">A^*_{i_1\ldots i_k}</script> are called the <span><strong>c</strong>ovariant
+components</span> of <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> with respect to
+the basis <script type="math/tex">(\mathsf{g}^{i_1} \otimes \ldots \mathsf{g}^{i_k})</script> of
+<script type="math/tex">\mathcal{T}^k(V)</script>.</p>
+<p>An alternative means to represent the basis representation of the tensor
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> can be obtained using the relations
+<script type="math/tex">\mathsf{g}^i = \sum g^{ij}\mathsf{g}_j</script> in the basis expansion
+derived earlier. This yields the following representation:
+<script type="math/tex; mode=display">\mathsf{A} = \sum A_{i_1\ldots i_k} \mathsf{g}_{i_1} \otimes \ldots \otimes \mathsf{g}_{i_k},</script>
+where
+<script type="math/tex; mode=display">A_{i_1\ldots i_k} = \sum g^{i_1j_1}\ldots g^{i_kj_k}A^*_{j_1\ldots j_k}.</script>
+It is left as an easy exercise to prove that the set of <script type="math/tex">n^k</script>
+multilinear maps
+<script type="math/tex">(\mathsf{g}_{i_1} \otimes \ldots \otimes \mathsf{g}_{i_k})</script> also form
+a basis of <script type="math/tex">\mathcal{T}^k(V)</script>. The corresponding components of the
+tensor <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> are the constants
+<script type="math/tex">A_{i_1 \ldots i_k}</script>, and are called the <strong>contravariant components</strong>
+of <script type="math/tex">\mathsf{A}</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is also possible to defined <em>mixed components</em> of a given
+tensor by having few of the indices as covariant and the remaining as
+contravariant, but such generalizations are not considered here in the
+interest of simplicity.</p>
+</div>
+<h2 id="change-of-basis">Change of basis</h2>
+<p>Note that the representation of a tensor on <script type="math/tex">V</script> is always with respect
+to some choice of basis on <script type="math/tex">V</script>. Let us now study how this
+representation changes when we change the basis of <script type="math/tex">V</script>. As before, let
+us first consider the simple case of orthonormal bases. Let
+<script type="math/tex">(\mathsf{e}_i)</script> and <script type="math/tex">(\mathsf{f}_i)</script> be two orthonormal bases of
+<script type="math/tex">V</script>. Let the representation of a <script type="math/tex">k^{\text{th}}</script> order tensor
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> with respect to these bases be given
+by <script type="math/tex; mode=display">\begin{split}
+\mathsf{A} &= \sum A_{i_1\ldots i_k} \mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k}, \quad A_{i_1\ldots i_k} = \mathsf{A}(\mathsf{e}_{i_1}, \ldots, \mathsf{e}_{i_k}),\\
+\mathsf{A} &= \sum \tilde{A}_{i_1\ldots i_k} \mathsf{f}_{i_1} \otimes \ldots \otimes \mathsf{f}_{i_k}, \quad \tilde{A}_{i_1\ldots i_k} = \mathsf{A}(\mathsf{f}_{i_1}, \ldots, \mathsf{f}_{i_k}).
+\end{split}</script> If <script type="math/tex">\mathsf{f}_i = \sum Q_{ji}\mathsf{e}_j</script>, then we see
+that <script type="math/tex; mode=display">\begin{split}
+\sum A_{i_1\ldots i_k} \mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k} &= \sum \tilde{A}_{i_1\ldots i_k} \mathsf{f}_{i_1} \otimes \ldots \otimes \mathsf{f}_{i_k}\\
+ &= \sum \tilde{A}_{i_1\ldots i_k} \left(\sum Q_{j_1i_1}\mathsf{e}_{j_1}\right) \otimes \ldots \otimes \left(\sum Q_{j_ki_k}\mathsf{e}_{j_k}\right)\\
+ &= \sum Q_{j_1i_1} \ldots Q_{j_ki_k} \tilde{A}_{i_1\ldots i_k} \mathsf{e}_{j_1} \otimes \ldots \otimes \mathsf{e}_{j_k},
+\end{split}</script> which shows that <script type="math/tex; mode=display">\begin{split}
+A_{j_1\ldots j_k} &= \sum Q_{j_1i_1} \ldots Q_{j_ki_k} \tilde{A}_{i_1\ldots i_k}\\
+\Rightarrow \tilde{A}_{i_1\ldots i_k} &= \sum Q^{-1}_{i_1j_1} \ldots Q^{-1}_{i_kj_k} A_{j_1\ldots j_k}\\
+ &= \sum Q_{j_1i_1} \ldots Q_{j_ki_k} A_{j_1\ldots j_k}.
+\end{split}</script> !!! info "Remark" We can equivalently derive this transformation
+rule as follows <script type="math/tex; mode=display">\begin{split}
+\tilde{A}_{i_1\ldots i_k} &= \mathsf{A}(\mathsf{f}_{i_1}, \ldots, \mathsf{f}_{i_k})\\
+ &= \mathsf{A}\left(\sum Q_{j_1i_1}\mathsf{e}_{j_1}, \ldots, \sum Q_{j_ki_k}\mathsf{e}_{j_k}\right)\\
+ &= \sum Q_{j_1i_1}\ldots Q_{j_1i_1} A_{j_1 \ldots j_k}.
+\end{split}</script> Notice how the orthonormality of the two bases
+<script type="math/tex">(\mathsf{e}_i)</script> and <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> are implicitly used
+in this derivation.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us revisit the second order tensor
+<script type="math/tex">\hat{\mathsf{I}} \in \mathcal{T}^2(V)</script> that we studied earlier.
+Suppose that <script type="math/tex">(\mathsf{e}_i)</script> and <script type="math/tex">(\mathsf{f}_i)</script> are orthonormal
+bases of <script type="math/tex">V</script> such that <script type="math/tex">\mathsf{f}_i = \sum Q_{ji}\mathsf{e}_j</script>.</p>
+</div>
+<p>Let us briefly consider the case when general bases are employed.
+Suppose that the tensor <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> has
+components <script type="math/tex">A^*_{i_1 \ldots i_k}</script> and <script type="math/tex">\tilde{A}^*_{i_1 \ldots i_k}</script>
+with respect to bases
+<script type="math/tex">(\mathsf{g}^{i_1} \otimes \ldots \otimes \mathsf{g}^{i_k})</script> and
+<script type="math/tex">(\tilde{\mathsf{g}}^{i_1} \otimes \ldots \otimes \tilde{\mathsf{g}}^{i_k})</script>,
+respectively. The relationship between these components is easily
+computed as follows: <script type="math/tex; mode=display">\begin{split}
+\tilde{A}^*_{i_1 \ldots i_k} &= \mathsf{A}(\tilde{\mathsf{g}}_{i_1}, \ldots, \tilde{\mathsf{g}}_{i_k})\\
+ &= \mathsf{A}\left(\sum (\tilde{\mathsf{g}}_{i_1}\cdot\mathsf{g}^{j_1})\mathsf{g}_{j_1}, \ldots, \sum (\tilde{\mathsf{g}}_{i_k}\cdot\mathsf{g}^{j_k})\mathsf{g}_{j_k}\right)\\
+ &= \sum (\tilde{\mathsf{g}}_{i_1}\cdot\mathsf{g}^{j_1})\ldots(\tilde{\mathsf{g}}_{i_k}\cdot\mathsf{g}^{j_k}) A^*_{j_1 \ldots j_k}.
+\end{split}</script> The inverse of this relation can also be computed
+similarly.</p>
+<h2 id="contraction">Contraction</h2>
+<p>Let <script type="math/tex">V</script> be a finite dimensional inner product space, and let
+<script type="math/tex">(\mathsf{g}_i)</script> be a general basis of <script type="math/tex">V</script>. Given a tensor
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> of order <script type="math/tex">k</script>, where <script type="math/tex">k \ge 2</script>,
+the <strong><script type="math/tex">(i,j)</script>-contraction</strong> of <script type="math/tex">\mathsf{A}</script> is the tensor
+<script type="math/tex">\mathcal{C}_{i,j}\mathsf{A} \in \mathcal{T}^{k-2}(V)</script> of order
+<script type="math/tex">(k - 2)</script> defined as follows: for any
+<script type="math/tex">\mathsf{v}_1, \ldots, \mathsf{v}_k \in V</script>,
+<script type="math/tex; mode=display">\begin{split} & \mathcal{C}_{i,j}\mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i-1}, \mathsf{v}_{i+1}, \ldots, \mathsf{v}_{j-1},\mathsf{v}_{j+1}, \ldots, \mathsf{v}_k)\\ = & \sum_a \mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i-1}, \mathsf{g}_a, \mathsf{v}_{i+1}, \ldots, \mathsf{v}_{j-1}, \mathsf{g}^a, \mathsf{v}_{j+1}, \ldots, \mathsf{v}_k). \end{split}</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It can be verified that <script type="math/tex">\mathsf{g}_a</script> and <script type="math/tex">\mathsf{g}^a</script>
+in the definition of the contraction can be swapped:
+<script type="math/tex; mode=display">\sum \mathsf{A}(\ldots, \mathsf{g}_a, \ldots, \mathsf{g}^a, \ldots) = \sum \mathsf{A}(\ldots, \mathsf{g}^a, \ldots, \mathsf{g}_a, \ldots).</script>
+Thus, the order in which <script type="math/tex">\mathsf{g}_a</script> and <script type="math/tex">\mathsf{g}^a</script> appears
+is irrelevant.</p>
+</div>
+<p>Unlike the various definitions provided earlier, note that this
+definition seemingly depends on the choice of a basis
+<script type="math/tex">(\mathsf{g}_i)</script>. It is left as a simple exercise to verify that if
+another basis <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> is chosen instead, the
+contraction operation yields the same tensor
+<script type="math/tex">\mathcal{C}_{i,j}\mathsf{A} \in \mathcal{T}^{k-2}(V)</script> as when the
+bases <script type="math/tex">(\mathsf{g}_i)</script> are chosen. The contraction operation is thus
+<em>well-defined</em>.</p>
+<p>The basis representation of the contracted tensor can be easily
+computed. With respect to a basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script>, recall
+that any <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> can be written as
+<script type="math/tex; mode=display">\mathsf{A} = \sum A_{a_1 \ldots a_k} \mathsf{g}_{a_1} \otimes \ldots \otimes \mathsf{g}_{a_k}.</script>
+The <script type="math/tex">(i,j)</script> contraction of <script type="math/tex">\mathsf{A}</script> is easily seen to have the
+following representation:
+<script type="math/tex; mode=display">\begin{split}\mathcal{C}_{i,j}\mathsf{A} &= \sum g_{a_ia_j}A_{a_1\ldots a_{i-1} a_i a_{i+1} \ldots a_{j-1} a_j a_{j+1}\ldots a_k}\\ & \qquad\quad\mathsf{g}_{a_1} \otimes \mathsf{g}_{a_{i-1}} \otimes \mathsf{g}_{a_{i+1}} \otimes \ldots \otimes \mathsf{g}_{a_{j-1}}\otimes\mathsf{g}_{a_{j+1}}\otimes \ldots \otimes \mathsf{g}_{a_k}. \end{split}</script>
+In the special case of a second order tensor
+<script type="math/tex">\mathsf{B} \in \mathcal{T}^2(V)</script>, there is only one possible
+contraction, <script type="math/tex">\mathcal{C}_{1,2}\mathsf{B} \in \mathbb{R}</script>, which is a
+tensor of order <script type="math/tex">0</script>, or just a real number. The contraction operation,
+in this case, is called the <strong>trace</strong>. It is customary to write the
+trace of <script type="math/tex">\mathsf{B}</script> as <script type="math/tex">\text{tr}(\mathsf{B})</script>. With respect to a
+basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script>,
+<script type="math/tex; mode=display">\mathsf{B} = \sum B_{ij} \, \mathsf{g}_i \otimes \mathsf{g}_j \quad\Rightarrow\quad \text{tr}(\mathsf{B}) = \sum g_{ab}B_{ab}.</script>
+It can be easily checked that <script type="math/tex">\mathsf{tr}(\mathsf{B})</script> is independent
+of the choice of basis. Note that in the special case when
+<script type="math/tex">(\mathsf{g}_i)</script> is an orthonormal basis of <script type="math/tex">V</script>, the expression for
+the trace of <script type="math/tex">\mathsf{B}</script> reduces to the familiar form
+<script type="math/tex">\text{tr}(\mathsf{B}) = \sum B_{aa}</script>. An alternative definition of
+the trace of a linear map will be provided in a later section.</p>
+<h2 id="generalized-dot-product-of-tensors">Generalized dot product of tensors</h2>
+<div class="admonition danger">
+<p class="admonition-title">Note!</p>
+<p>This terminology is not standard, but it is adequate for the
+purposes of this course.</p>
+</div>
+<p>Certain special operations called <em>generalized dot products</em>, or
+simply <em>dot products</em>, are now introduced between tensors of different
+orders. These are introduced on account of their prevalence in the
+continuum mechanics literature. Throughout this section, <script type="math/tex">V</script> denotes a
+finite dimensional inner product space.</p>
+<p>To motivate the definition of the generalized dot product of tensors on
+<script type="math/tex">V</script>, it is helpful to first consider a few important special cases. In
+the simplest case, given two vectors <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>,
+note that the inner product of these two vectors can be expressed in
+terms of the contraction operation as follows:
+<script type="math/tex; mode=display">\mathsf{u} \cdot \mathsf{v} = \mathcal{C}_{1,2}(\mathsf{u} \otimes \mathsf{v}).</script>
+This restatement of the inner product in terms of the contraction
+operation will serve as the starting point for its generalization to the
+dot product of two arbitrary tensors.</p>
+<p>Suppose that <script type="math/tex">\mathsf{u}, \mathsf{v}, \mathsf{w} \in V</script> are any three
+vectors in <script type="math/tex">V</script>. Then the vector
+<script type="math/tex">(\mathsf{u} \otimes \mathsf{v}) \cdot \mathsf{w} \in V</script> is defined as
+follows:
+<script type="math/tex; mode=display">(\mathsf{u} \otimes \mathsf{v}) \cdot \mathsf{w} = \mathcal{C}_{2,3}(\mathsf{u} \otimes \mathsf{v} \otimes \mathsf{w}).</script>
+To understand what this means, consider the action of the vector
+<script type="math/tex">\mathcal{C}_{2,3}(\mathsf{u} \otimes \mathsf{v} \otimes \mathsf{w})</script>
+on an arbitrary vector <script type="math/tex">\mathsf{z} \in V</script>: if <script type="math/tex">(\mathsf{g}_i)</script> is a
+general basis of <script type="math/tex">V</script>, then <script type="math/tex; mode=display">\begin{split}
+\mathcal{C}_{2,3}(\mathsf{u} \otimes \mathsf{v} \otimes \mathsf{w})(\mathsf{z}) &= \sum (\mathsf{u} \otimes \mathsf{v} \otimes \mathsf{w})(\mathsf{z}, \mathsf{g}_a, \mathsf{g}^a)\\
+ &= \sum u_i v_j w_k (\mathsf{g}_i \otimes \mathsf{g}_j \otimes \mathsf{g}_k)\left(\sum z_b \mathsf{g}_b, \mathsf{g}_a, \mathsf{g}^a\right)\\
+ &= \sum g_{ib} u_i v_j w_k z_b g_{ja} \delta_{ka}\\
+ &= \sum g_{jk} v_j w_k \, \sum g_{ia} u_a z_a\\
+ &= (\mathsf{v} \cdot \mathsf{w})(\mathsf{u} \cdot \mathsf{z})\\
+ &= (\mathsf{v} \cdot \mathsf{w})\mathsf{u}(\mathsf{z}).
+\end{split}</script> Since this is true for any <script type="math/tex">\mathsf{z} \in V</script>, it
+follows that
+<script type="math/tex; mode=display">(\mathsf{u} \otimes \mathsf{v}) \cdot \mathsf{w} = (\mathsf{v} \cdot \mathsf{w}) \mathsf{u}.</script>
+This result also provides a means to compute the dot product
+<script type="math/tex">\mathsf{A} \cdot \mathsf{v}</script> of a second order tensor
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^2(V)</script> and a vector <script type="math/tex">\mathsf{v} \in V</script>:
+if <script type="math/tex">(\mathsf{g}_i)</script> is any basis of <script type="math/tex">V</script>, then <script type="math/tex; mode=display">\begin{split}
+\mathsf{A} \cdot \mathsf{v} &= \left(\sum A_{ij} \mathsf{g}_i \otimes \mathsf{g}_j\right)\cdot\left(\sum v_k \mathsf{g}_k\right)\\
+ &= \sum A_{ij} v_k g_{jk} \mathsf{g}_i \in V.
+\end{split}</script> Note that <script type="math/tex">\tilde{\mathsf{A}} \in L(V,V)</script> denote the
+linear map corresponding to the second order tensor
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^2(V)</script>, then, for any <script type="math/tex">\mathsf{v} \in V</script>,
+<script type="math/tex">\mathsf{A} \cdot \mathsf{v} = \tilde{\mathsf{A}}\mathsf{v}</script>. This is
+most easily seen by representing both sides this equation with respect
+to an orthonormal basis of <script type="math/tex">V</script>. This shows that the dot product
+defined here is <em>consistent</em> with the theory of linear maps developed
+earlier.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that given an arbitrary second order tensor
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^2(V)</script> and an arbitrary vector
+<script type="math/tex">\mathsf{v} \in V</script>, <script type="math/tex">\mathsf{A} \cdot \mathsf{v} \in V</script> and
+<script type="math/tex">\mathsf{v} \cdot \mathsf{A} \in V</script> are, in general, different
+vectors. The generalized dot product of tensors is thus not necessarily
+symmetric.</p>
+</div>
+<p>As an extension of the foregoing ideas, we now define dot
+products for tensors of second order. Given vectors
+<script type="math/tex">\mathsf{u}, \mathsf{v}, \mathsf{w}, \mathsf{z} \in V</script>, the dot
+product <script type="math/tex">(\mathsf{u} \otimes \mathsf{v}) \cdot (\mathsf{w} \otimes \mathsf{z}) \in \mathbb{R}</script> between the second order tensors
+<script type="math/tex">\mathsf{u} \otimes \mathsf{v} \in \mathcal{T}^2(V)</script> and
+<script type="math/tex">\mathsf{w} \otimes \mathsf{z} \in \mathcal{T}^2(V)</script> is defined as follows: 
+<script type="math/tex; mode=display">
+(\mathsf{u} \otimes \mathsf{v}) \cdot (\mathsf{w} \otimes \mathsf{z}) = \mathcal{C}_{1,2}\left(\mathcal{C}_{1,3}\left(\mathsf{u} \otimes \mathsf{v} \otimes \mathsf{w} \otimes \mathsf{z}\right)\right) = (\mathsf{u} \cdot \mathsf{w})(\mathsf{v} \cdot \mathsf{z}).
+</script> 
+The simplest means to understand this by considering the
+dot products of two second order tensors
+<script type="math/tex">\mathsf{A}, \mathsf{B} \in \mathcal{T}^2(V)</script>. If <script type="math/tex">(\mathsf{g}_i)</script>
+denotes an orthonormal basis of <script type="math/tex">V</script>, and
+<script type="math/tex">\mathsf{A} = \sum A_{ij} \mathsf{g}_i \otimes \mathsf{g}_j</script> and
+<script type="math/tex">\mathsf{B} = \sum B_{ij} \mathsf{g}_i \otimes \mathsf{g}_j</script> are the
+representations of <script type="math/tex">\mathsf{A}</script> and <script type="math/tex">\mathsf{B}</script>, respectively, with respect to
+this basis, then note that <script type="math/tex; mode=display">
+\mathsf{A} \cdot \mathsf{B} = \sum A_{ij} B_{ij}.
+</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is important to note that different authors follow different conventions regarding this. For instance, it common in the Continuum Mechanics literature to use the following notations: for any two second order tensors <script type="math/tex">\mathsf{A},\mathsf{B} \in \mathcal{T}^2(V)</script>,
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{A} \cdot \mathsf{B} &= \sum A_{ij}B_{ji},\\
+\mathsf{A} : \mathsf{B} &= \sum A_{ij}B_{ij},
+\end{split}</script>
+where <script type="math/tex">(A_{ij})</script> and <script type="math/tex">(B_{ij})</script> are the components of <script type="math/tex">\mathsf{A}</script> and <script type="math/tex">\mathsf{B}</script>, respectively, with respect to some orthonormal basis of <script type="math/tex">V</script>. Note that the dot product <script type="math/tex">\mathsf{A} \cdot \mathsf{B}</script>, according to our definition, is <script type="math/tex">\mathsf{A} : \mathsf{B}</script> according to this definition. Care must be therefore exercised when reading the literature to understand the appropriate meaning of a quantity like <script type="math/tex">\mathsf{A} \cdot \mathsf{B}</script>. </p>
+<p>The reason for defining the generalized dot product the way we have done is to ensure a uniform and simple notation for many differential and integral identities that we will encounter later on. It is important, however, to keep in mind that this is essentially a matter of convention.</p>
+</div>
+<p>As a final and useful example, note that if
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> is a tensor of order <script type="math/tex">k</script>, where
+<script type="math/tex">k > 2</script>, and <script type="math/tex">\mathsf{B} \in \mathcal{T}^2(V)</script> is a second order
+tensor, then, with respect to an orthonormal basis <script type="math/tex">(\mathsf{g}_i)</script> of
+<script type="math/tex">V</script>, <script type="math/tex; mode=display">
+\mathsf{A} \cdot \mathsf{B} = \sum A_{i_1 \ldots i_{k-2} a b} B_{ab}.
+</script> The extension of this notion of dot products can be
+similarly extended to tensors of higher orders.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that <script type="math/tex">\mathsf{A}, \mathsf{B} \in \mathcal{T}^2(V)</script> are second order tensors on <script type="math/tex">V</script>. Then, it is true that <script type="math/tex; mode=display">\mathsf{A} \cdot \mathsf{B} = \mathsf{B} \cdot \mathsf{A}.</script> This is most easily seen with the help of the basis representation with respect to an orthonormal basis of <script type="math/tex">V</script>: in this case, <script type="math/tex; mode=display">\mathsf{A} \cdot \mathsf{B} = \sum A_{ij} B_{ij} = \sum B_{ij} A_{ij} = \mathsf{B} \cdot \mathsf{A},</script>
+thereby establishing the claim.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that <script type="math/tex">\mathsf{A} \in \mathcal{T}^2(V)</script> is a second order tensor on <script type="math/tex">V</script> and <script type="math/tex">\mathsf{u},\mathsf{v} \in V</script> are two vectors in <script type="math/tex">V</script>, then <script type="math/tex; mode=display">\mathsf{A} \cdot (\mathsf{u} \otimes \mathsf{v}) = \mathsf{u} \cdot \mathsf{A}\mathsf{v}.</script> This is also easily established by choosing an orthonormal <script type="math/tex">(\mathsf{g}_i)</script> basis of $V$. The component form of <script type="math/tex">\mathsf{A} \cdot (\mathsf{u} \otimes \mathsf{v})</script> then reads
+<script type="math/tex; mode=display">\begin{split}\mathsf{A} \cdot (\mathsf{u} \otimes \mathsf{v}) &= \sum A_{ij} u_i v_j\\ &= \left(\sum u_k \mathsf{g}_k\right) \cdot \left(\sum A_{ij} v_j \mathsf{g}_i\right)\\ &= \mathsf{u} \cdot \mathsf{A}\mathsf{v}.\end{split}</script>
+It can be shown similarly that <script type="math/tex">(\mathsf{u} \otimes \mathsf{v})\cdot\mathsf{A} = \mathsf{A}^T\mathsf{u} \cdot \mathsf{v}</script>.</p>
+</div>
+<h2 id="volume-forms">Volume forms</h2>
+<p>Let <script type="math/tex">V</script> be an inner product space of dimension <script type="math/tex">n</script>. A tensor
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> is said to be <strong>symmetric</strong> if, for
+any <script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_k \in V</script>,
+<script type="math/tex; mode=display">\mathsf{A}(\mathsf{u}_1, \ldots, \mathsf{u}_i, \ldots, \mathsf{u}_j, \ldots, \mathsf{u}_n) = \mathsf{A}(\mathsf{u}_1, \ldots, \mathsf{u}_j, \ldots, \mathsf{u}_i, \ldots, \mathsf{u}_n),</script>
+where <script type="math/tex">1 \le i < j \le n</script>. If the sign reverses when any two arguments
+are interchanged, then the tensor is said to be <strong>skew-symmetric</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It turns out that the set of all antisymmetric tensors of a
+given order have a rich algebraic structure, called <em>exterior algebra</em>.</p>
+</div>
+<p>A <strong>volume form</strong> on <script type="math/tex">V</script> is a skew-symmetric tensor
+<script type="math/tex">\mathsf{\epsilon}:\times^n V \to \mathbb{R}</script> of order <script type="math/tex">n</script>. It is
+customary to denote the set of all volume forms on <script type="math/tex">V</script> using the
+notation <script type="math/tex">\Omega^n(V)</script>:
+<script type="math/tex; mode=display">\Omega^n(V) = \{ \mathsf\epsilon \in \mathcal{T}^n(V) \,|\, \mathsf\epsilon \text{ is skew-symmetric}\}.</script>
+It is important to note that the <strong>trivial volume form</strong>
+<script type="math/tex">\mathsf{0} \in \mathcal{T}^n(V)</script> that maps every set of <script type="math/tex">n</script> vectors
+in <script type="math/tex">V</script> to zero is excluded from this discussion. A volume form that is
+not trivial is said to be <strong>non-trivial</strong>. All volume forms considered
+here are assumed to be non-trivial.</p>
+<p>Given two volume forms
+<script type="math/tex">\mathsf{\epsilon}, \mathsf{\omega} \in \Omega^n(V)</script>, it can be shown
+that there exists a scalar <script type="math/tex">a \in \mathbb{R}</script> such that
+<script type="math/tex">\mathsf\omega = a\mathsf{\epsilon}</script>. An equivalent way of stating
+this is that the set of all antisymmetric tensors of order <script type="math/tex">n</script> over an
+<script type="math/tex">n</script>-dimensional vector space is a vector space of dimension <script type="math/tex">1</script>:
+<script type="math/tex">\text{dim}(\Omega^n(V)) = 1</script>.</p>
+<p>Picking a particular volume form <script type="math/tex">\mathsf{\epsilon} \in \Omega^n(V)</script>,
+the set of all volume forms <script type="math/tex">\mathsf{\omega} \in \Omega^n(V)</script> such
+that <script type="math/tex">\mathsf\omega = a\mathsf{\epsilon}</script> for some <script type="math/tex">a > 0</script> are said
+to constitute an <strong>orientation</strong> of <script type="math/tex">V</script>. Given this orientation on
+<script type="math/tex">V</script>, a basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script> is said to be
+<strong>right-handed</strong> if
+<script type="math/tex">\epsilon(\mathsf{g}_1, \ldots, \mathsf{g}_n) > 0</script>, and
+<strong>left-handed</strong> otherwise.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is emphasized that the choice of orientation is arbitrary.
+Typically, a special volume form that has mathematical or physical
+relevance is chosen and the positive orientation is defined with respect
+to this choice. With a particular choice of orientation, it is customary
+to focus only on only right-handed bases.</p>
+</div>
+<p>Rather than discussing the general theory of volume forms, it is useful
+to look at volume forms on the three dimensional Euclidean space
+<script type="math/tex">\mathbb{R}^3</script>. The <strong>standard volume form</strong> on <script type="math/tex">\mathbb{R}^3</script>,
+written <script type="math/tex">\mathsf{\epsilon} \in \Omega^3(\mathbb{R}^3)</script>, sometimes
+called the <strong>Levi-Civita tensor</strong>, is defined as follows: if
+<script type="math/tex">(\mathsf{e}_i)</script> denotes the standard basis of <script type="math/tex">\mathbb{R}^3</script>,
+<script type="math/tex; mode=display">\mathsf{\epsilon} = \sum \epsilon_{ijk} \mathsf{e}_i \otimes \mathsf{e}_j \otimes \mathsf{e}_k,</script>
+where <script type="math/tex">\epsilon_{ijk}</script> is the Levi-Civita symbol introduced earlier in
+the context of the cross product. Note that
+<script type="math/tex">\mathsf\epsilon(\mathsf{e}_1, \mathsf{e}_2, \mathsf{e}_3) = \epsilon_{123} = 1</script>
+- the standard basis of <script type="math/tex">\mathbb{R}^3</script> is thus right handed with
+respect to the standard volume form of <script type="math/tex">\mathbb{R}^3</script>.</p>
+<h2 id="cross-product-in-mathbbr3">Cross product in $\mathbb{R}^3$</h2>
+<p>The three dimensional Euclidean space <script type="math/tex">\mathbb{R}^3</script> admits another
+special algebraic operation. Given any two vectors
+<script type="math/tex">\mathsf{u} = \sum u_i \mathsf{e}_i \in \mathbb{R}^3</script> and
+<script type="math/tex">\mathsf{v} = \sum v_i \mathsf{e}_i \in \mathbb{R}^3</script>, where
+<script type="math/tex">(\mathsf{e}_i)</script> is the standard basis of <script type="math/tex">\mathbb{R}^3</script>, their
+<strong>cross product</strong> is defined as the vector
+<script type="math/tex">\mathsf{u} \times \mathsf{v} \in \mathbb{R}^3</script> given by
+<script type="math/tex; mode=display">\mathsf{u} \times \mathsf{v} = (u_2 v_3 - u_3 v_2)\mathsf{e}_1 + (u_3 v_1 - u_1 v_3)\mathsf{e}_2 + (u_1 v_2 - u_2 v_1)\mathsf{e}_3.</script>
+This can be written compactly by introducing the <strong>Levi-Civita symbol</strong>
+<script type="math/tex">\epsilon_{ijk}</script>, <script type="math/tex; mode=display">\epsilon_{ijk} = \begin{cases}
+1, & \{i,j,k\}\text{ is an even permutation of $\{1,2,3\}$},\\
+-1, & \{i,j,k\}\text{ is an odd permutation of $\{1,2,3\}$},\\
+0, & \text{otherwise},
+\end{cases}</script> as follows:
+<script type="math/tex; mode=display">\mathsf{u} \times \mathsf{v} = \sum \epsilon_{ijk} u_j v_k \mathsf{e}_i,</script>
+as can be easily checked.</p>
+<p>The reciprocal basis can be computed easily in the special case of the
+three dimensional Euclidean space <script type="math/tex">\mathbb{R}^3</script> using the cross
+product. Given any basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">\mathbb{R}^3</script>, the
+corresponding reciprocal basis <script type="math/tex">(\mathsf{g}^i)</script> of <script type="math/tex">\mathbb{R}^3</script>
+can be computed as
+<script type="math/tex; mode=display">\mathsf{g}^1 = \frac{\mathsf{g}_2 \times \mathsf{g}_3}{\mathsf{g}_1 \cdot \mathsf{g}_2 \times \mathsf{g}_3}, \quad \mathsf{g}^2 = \frac{\mathsf{g}_3 \times \mathsf{g}_1}{\mathsf{g}_1 \cdot \mathsf{g}_2 \times \mathsf{g}_3}, \quad \mathsf{g}^3 = \frac{\mathsf{g}_1 \times \mathsf{g}_2}{\mathsf{g}_1 \cdot \mathsf{g}_2 \times \mathsf{g}_3}.</script>
+It is a simple exercise to check these formulae satisfy the defining
+condition of the reciprocal basis:
+<script type="math/tex">\mathsf{g}^i \cdot \mathsf{g}_j = \delta_{ij}</script>.</p>
+<p>An alternative definition of the cross product of two vectors in
+<script type="math/tex">\mathbb{R}^3</script> can be given in terms of the standard volume form.
+Given vectors <script type="math/tex">\mathsf{v}, \mathsf{w} \in \mathbb{R}^3</script>, their cross
+product <script type="math/tex">\mathsf{v} \times \mathsf{w} \in \mathbb{R}^3</script> is defined as
+follows: for any <script type="math/tex">\mathsf{u} \in \mathbb{R}^3</script>,
+<script type="math/tex; mode=display">\mathsf{u} \cdot (\mathsf{v} \times \mathsf{w}) = \mathsf\epsilon(\mathsf{u}, \mathsf{v}, \mathsf{w}).</script>
+It is left as an exercise to verify this. (<em>Hint.</em> Choose <script type="math/tex">\mathsf{u}</script>
+to be the standard basis <script type="math/tex">\mathsf{e}_i</script>. This immediately yields:
+<script type="math/tex">(\mathsf{v}\times\mathsf{w})_i = \sum \epsilon_{ijk} v_j w_k</script>.)</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../linear_maps_1/" title="Linear Maps - I" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Linear Maps - I
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../linear_maps_2/" title="Linear Maps - II" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Linear Maps - II
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>

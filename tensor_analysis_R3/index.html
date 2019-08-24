@@ -1,0 +1,1346 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Notes on Euclidean Tensor Analysis.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Euclidean Tensor Analysis - Euclidean Tensor Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#coordinate-systems" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Euclidean Tensor Analysis" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            Euclidean Tensor Analysis
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Euclidean Tensor Analysis" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Euclidean Tensor Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../inner_product_spaces/" title="Inner Product Spaces" class="md-nav__link">
+      Inner Product Spaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_1/" title="Linear Maps - I" class="md-nav__link">
+      Linear Maps - I
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_algebra/" title="Tensor Algebra" class="md-nav__link">
+      Tensor Algebra
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_2/" title="Linear Maps - II" class="md-nav__link">
+      Linear Maps - II
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-nav__link">
+      Linearization of Nonlinear Maps
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Euclidean Tensor Analysis
+      </label>
+    
+    <a href="./" title="Euclidean Tensor Analysis" class="md-nav__link md-nav__link--active">
+      Euclidean Tensor Analysis
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#coordinate-systems" title="Coordinate systems" class="md-nav__link">
+    Coordinate systems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tangent-spaces" title="Tangent spaces" class="md-nav__link">
+    Tangent spaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-fields" title="Tensor fields" class="md-nav__link">
+    Tensor fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#covariant-derivative-and-gradient" title="Covariant derivative and Gradient" class="md-nav__link">
+    Covariant derivative and Gradient
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divergence" title="Divergence" class="md-nav__link">
+    Divergence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curl" title="Curl" class="md-nav__link">
+    Curl
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-of-tensor-fields" title="Integration of tensor fields" class="md-nav__link">
+    Integration of tensor fields
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volume-integrals" title="Volume integrals" class="md-nav__link">
+    Volume integrals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-integrals" title="Line integrals" class="md-nav__link">
+    Line integrals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#surface-integrals" title="Surface integrals" class="md-nav__link">
+    Surface integrals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divergence-and-gauss-theorems" title="Divergence and Gauss theorems" class="md-nav__link">
+    Divergence and Gauss theorems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-nav__link">
+      Curvilinear Coordinates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../set_theory/" title="Appendix - Set Theory" class="md-nav__link">
+      Appendix - Set Theory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Appendix - Matrices" class="md-nav__link">
+      Appendix - Matrices
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../calculus/" title="Appendix - Calculus" class="md-nav__link">
+      Appendix - Calculus
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#coordinate-systems" title="Coordinate systems" class="md-nav__link">
+    Coordinate systems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tangent-spaces" title="Tangent spaces" class="md-nav__link">
+    Tangent spaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-fields" title="Tensor fields" class="md-nav__link">
+    Tensor fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#covariant-derivative-and-gradient" title="Covariant derivative and Gradient" class="md-nav__link">
+    Covariant derivative and Gradient
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divergence" title="Divergence" class="md-nav__link">
+    Divergence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curl" title="Curl" class="md-nav__link">
+    Curl
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-of-tensor-fields" title="Integration of tensor fields" class="md-nav__link">
+    Integration of tensor fields
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volume-integrals" title="Volume integrals" class="md-nav__link">
+    Volume integrals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-integrals" title="Line integrals" class="md-nav__link">
+    Line integrals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#surface-integrals" title="Surface integrals" class="md-nav__link">
+    Surface integrals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divergence-and-gauss-theorems" title="Divergence and Gauss theorems" class="md-nav__link">
+    Divergence and Gauss theorems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Euclidean Tensor Analysis</h1>
+                
+                <p>The key ideas of tensor calculus on <script type="math/tex">\mathbb{R}^3</script> are now outlined.
+For the sake of conceptual clarity, the presentation is first carried
+out in the Cartesian coordinate setting. Finally, orthogonal curvilinear
+coordinate systems are briefly discussed.</p>
+<h2 id="coordinate-systems">Coordinate systems</h2>
+<p>A <strong>coordinate system</strong> on <script type="math/tex">\mathbb{R}^3</script> is an open subset
+<script type="math/tex">U \subseteq \mathbb{R}^3</script>, together with a smooth injective map
+<script type="math/tex">\mathsf\phi:\mathbb{R}^3 \to \mathbb{R}^3</script> such that
+<script type="math/tex">\mathsf\phi^{-1}:\mathsf\phi(U) \to U</script> is also smooth; such a map is called a <strong>diffeomorphism</strong>.. The map
+<script type="math/tex">\mathsf\phi</script> is called a <strong>coordinate chart</strong> and the open set <script type="math/tex">U</script>
+is called a <strong>coordinate patch</strong> on <script type="math/tex">\mathbb{R}^3</script>. Given any
+<script type="math/tex">\mathsf{x} \in U</script>, the triple of real numbers
+<script type="math/tex">\mathsf\phi(\mathsf{x}) \in \mathbb{R}^3</script> are called the
+<strong>curvilinear coordinates</strong> of <script type="math/tex">\mathsf{x}</script>. What is special
+about <script type="math/tex">\mathbb{R}^3</script> (, and this is true for <script type="math/tex">\mathbb{R}^n</script> too,) is that it admits a <em>global</em> coordinate system
+<script type="math/tex">(\mathbb{R}^3, \mathsf\iota)</script>, also called the <strong>Cartesian coordinate
+system</strong>, where <script type="math/tex">\mathsf\iota:\mathbb{R}^3 \to \mathbb{R}^3</script> is the
+identity map defined as follows: for any
+<script type="math/tex">\mathsf{x} \in \mathbb{R}^3</script>,
+<script type="math/tex">\mathsf\iota(\mathsf{x}) = \mathsf{x}</script>. The coordinates of
+<script type="math/tex">\mathsf{x}</script> with respect to this global coordinate system are called
+the <strong>Cartesian coordinates</strong> of <script type="math/tex">\mathsf{x}</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>A few terminologies inspired by the more general case of a <em>manifold</em>
+are introduced here. A coordinate system <script type="math/tex">(U,\mathsf\phi)</script> on
+<script type="math/tex">\mathbb{R}^3</script> is said to be <strong>compatible</strong> with the Cartesian
+coordinate system on <script type="math/tex">\mathbb{R}^3</script> if the maps
+<script type="math/tex">\mathsf\phi:U \to \mathsf\phi(U)</script> and
+<script type="math/tex">\mathsf\phi^{-1}:\mathsf\phi(U) \to U</script> are smooth and invertible.
+Note that all coordinate systems considered hereafter are considered to
+be compatible with the Cartesian coordinate system on <script type="math/tex">\mathbb{R}^3</script>.
+An <strong>atlas</strong> on <script type="math/tex">\mathbb{R}^3</script> is a collection of compatible
+coordinate systems <script type="math/tex">((U_\alpha,\mathsf\phi_\alpha))_{\alpha \in A}</script>,
+where <script type="math/tex">A</script> is some index set, such that
+<script type="math/tex">\cup_{\alpha \in A} U_\alpha = \mathbb{R}^3</script>. Note that adding a
+compatible coordinate system to an atlas yields a larger atlas. Consider
+now the Cartesian coordinate system on <script type="math/tex">\mathbb{R}^3</script> and construct
+the <strong>maximal atlas</strong> compatible with it; this amounts to adding <em>every</em>
+compatible coordinate system to the atlas consisting of the global
+Cartesian coordinate system. This maximal atlas is called the <strong>standard
+differentiable structure</strong> on <script type="math/tex">\mathbb{R}^3</script>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The fact that <script type="math/tex">\mathbb{R}^3</script> admits a global coordinate
+system significantly simplifies the development of calculus on
+<script type="math/tex">\mathbb{R}^3</script>. There, however, exist many sets of practical
+importance that cannot be covered using a global coordinate system. The
+modern theory of <em>differentiable manifolds</em> was developed precisely to
+address these issues, and develop an appropriate extension of the tools
+of calculus to these sets.</p>
+</div>
+<p>Suppose that <script type="math/tex">(U,\mathsf\phi)</script> is a coordinate system on
+<script type="math/tex">\mathbb{R}^3</script> that is compatible with the Cartesian coordinate system
+on <script type="math/tex">\mathbb{R}^3</script>. The curvilinear coordinates of <script type="math/tex">\mathsf{x} \in U</script>
+with respect to the coordinate system <script type="math/tex">(U,\mathsf\phi)</script> is given by
+the triple of real numbers <script type="math/tex">\mathsf{y} \in \mathbb{R}^3</script>, where
+<script type="math/tex; mode=display">\mathsf{y} = \mathsf\phi(\mathsf{x}).</script> The inverse map
+<script type="math/tex">\mathsf\phi^{-1}:\mathsf\phi(U) \to U</script> permits the computation of
+<script type="math/tex">\mathsf{x}</script> given <script type="math/tex">\mathsf{y}</script>:
+<script type="math/tex; mode=display">\mathsf{x} = \mathsf\phi^{-1}(\mathsf{y}).</script> A useful simplified
+notation that will be adopted in the following development is the
+following: the foregoing relations will often be written as
+<script type="math/tex; mode=display">\mathsf{y} = \mathsf{y}(\mathsf{x}), \qquad \mathsf{x} = \mathsf{x}(\mathsf{y}).</script>
+Notice that this is a deliberate abuse of notation: <script type="math/tex">\mathsf{x}</script>
+stands for both a point in <script type="math/tex">U</script> and a function that takes a point in
+<script type="math/tex">\mathsf\phi(U)</script> and returns a real number. Despite the ambiguity this
+introduces, this notation is often adopted in practice since it
+significantly simplifies the appearance of many equations. The ambiguity
+will not cause any problems as long as the appropriate meaning of the
+symbols are inferred from the context.</p>
+<p>To quantify precisely the notion that the coordinate system
+<script type="math/tex">(U,\mathsf\phi)</script> is compatible with the Cartesian coordinate system,
+note that the map <script type="math/tex">\mathsf\phi:U \to \mathbb{R}^3</script> is smooth, and
+hence, its Fréchet derivative exists at each <script type="math/tex">\mathsf{x} \in U</script>. This
+implies, in particular that the determinant of the Jacobian matrix is
+non-zero:
+<script type="math/tex; mode=display">\text{det} \begin{bmatrix} \partial_1 y_1(\mathsf{x}) & \partial_2 y_1(\mathsf{x}) & \partial_3 y_1(\mathsf{x})\\ \partial_1 y_2(\mathsf{x}) & \partial_2 y_2(\mathsf{x}) & \partial_3 y_2(\mathsf{x})\\ \partial_1 y_3(\mathsf{x}) & \partial_2 y_3(\mathsf{x}) & \partial_3 y_3(\mathsf{x})\end{bmatrix} \neq 0.</script>
+Here,
+<script type="math/tex">\mathsf{y}(\mathsf{x}) = (y_1(\mathsf{x}), y_2(\mathsf{x}), y_3(\mathsf{x}))</script>.
+A similar condition holds for the inverse map
+<script type="math/tex">\mathsf{x}:\mathsf\phi(U) \to \mathbb{R}^3</script>.</p>
+<h2 id="tangent-spaces">Tangent spaces</h2>
+<p>A concept that will prove to be very useful later on is that of a
+<em>tangent space</em>. Rather than defining this precisely, it suffices for
+the purposes of this course to present a qualitative definition that
+provides some intuition about what tangent spaces are.</p>
+<p>Let <script type="math/tex">U \subseteq \mathbb{R}^3</script> be an open subset of <script type="math/tex">\mathbb{R}^3</script>.
+At each <script type="math/tex">\mathsf{x} \in U</script>, consider the set <script type="math/tex">T_{\mathsf{x}}U</script>
+defined as follows:
+<script type="math/tex; mode=display">T_{\mathsf{x}}U = \{\mathsf{v} \in \mathbb{R}^3 \,|\, \text{there exists a (smooth) curve passing through $\mathsf{x}$ with tangent $\mathsf{v}$ at $\mathsf{x}$}\}.</script>
+This set is called the <strong>tangent space</strong> at <script type="math/tex">\mathsf{x}</script> to
+<script type="math/tex">\mathbb{R}^3</script>. The point <script type="math/tex">\mathsf{x}</script> is called the <strong>base point</strong>
+of the tangent space. In the special case of <script type="math/tex">\mathbb{R}^3</script>, given any
+<script type="math/tex">\mathsf{v} \in \mathbb{R}^3</script>, the straight line
+<script type="math/tex">\{\mathsf{x} + t\mathsf{v}\,|\,t \in \mathbb{R}\}</script> is a smooth curve
+that passes through <script type="math/tex">\mathsf{x}</script> with tangent <script type="math/tex">\mathsf{v}</script> at
+<script type="math/tex">\mathsf{x}</script>. This shows that
+<script type="math/tex">T_{\mathsf{x}}\mathbb{R}^3 \cong \mathbb{R}^3</script>, and is hence a linear
+space. Thus the tangent space at any point in
+<script type="math/tex">\mathsf{x} \in \mathbb{R}^3</script> is a <em>local copy</em> of the whole of
+<script type="math/tex">\mathbb{R}^3</script> attached to <script type="math/tex">\mathsf{x}</script>, and hence need not be
+distinguished from <script type="math/tex">\mathbb{R}^3</script>. For conceptual clarity, however,
+the tangent space will be explicitly indicated whenever appropriate.
+Further, each tangent space is assumed to be an inner product space,
+with the inner product being identical to the standard inner product on
+<script type="math/tex">\mathbb{R}^3</script>. The union of all tangent spaces to <script type="math/tex">U</script> is called the
+<strong>tangent bundle</strong> of <script type="math/tex">U</script>, and is written as <script type="math/tex">TU</script>:
+<script type="math/tex; mode=display">TU = \cup_{\mathsf{x} \in U} T_{\mathsf{x}}U.</script> Notice that this is a
+disjoint union.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>For the special case of <script type="math/tex">U \subseteq \mathbb{R}^3</script>, where
+<script type="math/tex">U</script> is open, the tangent space <script type="math/tex">T_{\mathsf{x}}U</script> to <script type="math/tex">U</script> at
+<script type="math/tex">\mathsf{x} \in U</script> can be equivalently characterized as follows:
+<script type="math/tex; mode=display">T_{\mathsf{x}}U = \{(\mathsf{x},\mathsf{v}) \,|\, \mathsf{v} \in \mathbb{R}^3\}.</script>
+The set <script type="math/tex">T_{\mathsf{x}}U</script> defined above acquires a linear structure
+with addition
+<script type="math/tex">+:T_{\mathsf{x}}U \times T_{\mathsf{x}} \to T_{\mathsf{x}}U</script> and
+scalar multiplication
+<script type="math/tex">\cdot:\mathbb{R} \times T_{\mathsf{x}} \to T_{\mathsf{x}}U</script> defined
+as follows: for any <script type="math/tex">\mathsf{v}, \mathsf{w} \in \mathbb{R}^3</script> and
+<script type="math/tex">a \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">(\mathsf{x},\mathsf{v}) + (\mathsf{x},\mathsf{w}) = (\mathsf{x}, \mathsf{v} + \mathsf{w}), \qquad a(\mathsf{x}, \mathsf{v}) = (\mathsf{x}, a\mathsf{v}).</script>
+Notice now this definition does not affect the base point
+<script type="math/tex">\mathsf{x}</script>: this is necessary to ensure that vector addition and
+scalar multiplication satisfy the <em>closure</em> property. With this
+definition of the tangent space, it is easy to check that the tangent
+bundle is given by <script type="math/tex">TU = U \times \mathbb{R}^3</script>.</p>
+</div>
+<p>It follows from the the foregoing discussion that each
+<script type="math/tex">T_{\mathsf{x}}U</script> can be thought as a <em>local copy</em> of
+<script type="math/tex">\mathbb{R}^3</script>. Thus, the tangent bundle <script type="math/tex">TU</script> can be envisaged as a
+copy of <script type="math/tex">\mathbb{R}^3</script> attached to each point <script type="math/tex">\mathsf{x} \in U</script>.
+Each of the tangent spaces <script type="math/tex">T_{\mathsf{x}}U</script>, where
+<script type="math/tex">\mathsf{x} \in U</script>, can be equipped with a basis of <script type="math/tex">\mathbb{R}^3</script>
+that could, in general, vary as <script type="math/tex">\mathsf{x}</script> varies over <script type="math/tex">U</script>. The
+simplest choice is to use the <em>same</em> standard basis <script type="math/tex">(\mathsf{e}_i)</script>
+of <script type="math/tex">\mathbb{R}^3</script> as the basis for <em>every</em> tangent space
+<script type="math/tex">T_{\mathsf{x}}U</script>. With this choice, any
+<script type="math/tex">\mathsf{h} \in T_{\mathsf{x}}\mathbb{R}^3</script> admits a representation of
+the form <script type="math/tex">\mathsf{h} = \sum h_i \mathsf{e}_i</script>. Note that other choices
+of bases are possible for each tangent space
+<script type="math/tex">T_{\mathsf{x}}\mathbb{R}^3</script>; this will in fact be the case when
+curvilinear coordinate systems are considered in a later section.</p>
+<h2 id="tensor-fields">Tensor fields</h2>
+<p>Having defined the basic concepts of coordinate systems and tangent
+spaces, the stage is set to introduce the most important quantities from
+the point of view of continuum mechanics: <em>tensor fields</em>. In a loose
+sense, the term <em>field</em> is used here in the sense of a quantity that
+varies smoothly over a region of <script type="math/tex">\mathbb{R}^3</script>. The basic idea behind
+a tensor field is to associate a tensor to every point in some region of
+<script type="math/tex">\mathbb{R}^3</script>, and to do so in a manner that is <em>smooth</em>. These ideas
+are developed precisely in this section. Scalar fields, which are tensor
+fields of order <script type="math/tex">0</script> are discussed first, followed by vector fields,
+which are tensor fields of order <script type="math/tex">1</script>, and finally tensor fields of
+order <script type="math/tex">k</script> are discussed. Throughout this section
+<script type="math/tex">U \subseteq \mathbb{R}^3</script> denotes an open subset of <script type="math/tex">\mathbb{R}^3</script>.
+For the coordinate representation of various fields, the global
+Cartesian coordinate system is used for <script type="math/tex">\mathbb{R}^3</script> and the
+standard basis of <script type="math/tex">\mathbb{R}^3</script> is used for each <script type="math/tex">T_{\mathsf{x}}U</script>
+for every <script type="math/tex">\mathsf{x} \in U</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The fact that <script type="math/tex">\mathbb{R}^3</script> has a linear structure will
+turn out be very convenient for the ensuing development and simplify
+many of the calculations. Some of the terminology associated with the
+more general case will however be used when appropriate.</p>
+</div>
+<p>A <strong>scalar field</strong> is a function of the form
+<script type="math/tex">f:U\subseteq\mathbb{R}^3 \to \mathbb{R}</script>. Thus, the scalar field
+<script type="math/tex">f</script> associates with each <script type="math/tex">\mathsf{x} \in U</script> the real number
+<script type="math/tex">f(\mathsf{x})</script>. Note that the continuity, differentiability and
+smoothness of <script type="math/tex">f</script> can be defined according to the definitions given in
+the previous section in the context of nonlinear maps between vector
+spaces. A <strong>vector field</strong> on <script type="math/tex">U \subseteq \mathbb{R}^3</script> is a map of
+the form <script type="math/tex">\mathsf{v}:U \to TU</script> such that
+<script type="math/tex">\mathsf{v}(\mathsf{x}) \in T_{\mathsf{x}}U</script> for every
+<script type="math/tex">\mathsf{x} \in U</script>. The vector field <script type="math/tex">\mathsf{v}</script> can be expressed
+with respect to the Cartesian coordinate system as follows:
+<script type="math/tex; mode=display">\mathsf{v}(\mathsf{x}) = \sum v_i(\mathsf{x}) \mathsf{e}_i,</script> where
+each <script type="math/tex">v_i:U \to \mathbb{R}</script> is a scalar field. The
+continuity/differentiability/smoothness of the vector field
+<script type="math/tex">\mathsf{v}</script> is defined in terms of the corresponding property of the
+scalar fields <script type="math/tex">v_i</script>. A <strong>tensor field</strong> of order <script type="math/tex">k</script> on
+<script type="math/tex">U \subseteq \mathbb{R}^3</script> is defined similarly as a map of the form
+<script type="math/tex; mode=display">\mathsf{A}:U \to \otimes^k \, TU,</script> such that
+<script type="math/tex">\mathsf{A}(\mathsf{x}) \in \otimes^k \, T_{\mathsf{x}}U</script> for every
+<script type="math/tex">\mathsf{x} \in U</script>. In writing these expressions, the following
+notations have been introduced: <script type="math/tex; mode=display">\begin{split}
+\otimes^k T_{\mathsf{x}}U &= \{ \mathsf{T}:\times^k \, T_{\mathsf{x}}U \to \mathbb{R} \,|\, \mathsf{T}\text{ is multilinear }\} = \mathcal{T}^k(T_{\mathsf{x}}U),\\
+\otimes^k TU &= \cup_{\mathsf{x} \in U} \left( \otimes^k T_{\mathsf{x}}U \right) = \cup_{\mathsf{x} \in U} \mathcal{T}^k(T_{\mathsf{x}}U).
+\end{split}</script> Thus, a tensor field of order <script type="math/tex">k</script> associates with each
+point in <script type="math/tex">U</script> a tensor of order <script type="math/tex">k</script> over the tangent space at that
+point. In terms of the Cartesian coordinate system, it is evident that
+<script type="math/tex; mode=display">\mathsf{A}(\mathsf{x}) = \sum A_{i_1\ldots i_k}(\mathsf{x}) \, \mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k},</script>
+where each <script type="math/tex">A_{i_1 \ldots i_k}:U \to \mathbb{R}</script> is a scalar field. As
+in the case of vector fields, the
+continuity/differentiability/smoothness of tensor fields are naturally
+defined in terms of the corresponding properties of their component
+scalar fields.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that a tensor field of order <script type="math/tex">0</script> is a scalar field
+since, for any <script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex">\mathcal{T}^0(T_{\mathsf{x}}U) \cong \mathbb{R}</script>. Similarly, a tensor
+field of order <script type="math/tex">1</script> is a vector field since, for any
+<script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex">\mathcal{T}^1(T_{\mathsf{x}}U) \cong T_{\mathsf{x}}U</script>. Notice that
+this is true since each tangent space <script type="math/tex">T_{\mathsf{x}}U</script> is a finite
+dimensional inner product space. Thus, it suffices to study tensor
+fields of order <script type="math/tex">k</script> on <script type="math/tex">U</script>, where <script type="math/tex">k \ge 0</script>, since this includes
+scalar and vector fields too. For pedagogical reasons, however, scalar,
+vector and tensor fields will be considered successively in these notes.</p>
+</div>
+<h2 id="covariant-derivative-and-gradient">Covariant derivative and Gradient</h2>
+<p>How does a tensor field vary across its domain of definition, and, in
+particular, how can this change be quantified precisely? This is the
+fundamental question that is addressed in this and the next few
+subsections. The fundamental quantity, towards this end, is what is
+called the <em>covariant derivative</em> of the tensor field. This is a
+generalization of the familiar notion of the directional derivative
+encountered earlier.</p>
+<p>Let <script type="math/tex">f:U \subseteq \mathbb{R}^3 \to \mathbb{R}</script>, where <script type="math/tex">U</script> is an
+open subset of <script type="math/tex">\mathbb{R}^3</script> be a smooth scalar field on <script type="math/tex">U</script>. The
+<strong>directional derivative</strong>, also called the <strong>covariant derivative</strong>, of
+<script type="math/tex">f</script> at <script type="math/tex">\mathsf{x} \in U</script> along any
+<script type="math/tex">\mathsf{v} \in T_{\mathsf{x}}U</script> is defined as the scalar
+<script type="math/tex">\nabla_{\mathsf{v}}f(\mathsf{x}) \in \mathbb{R}</script> such that
+<script type="math/tex; mode=display">\nabla_{\mathsf{v}}f(\mathsf{x}) = \frac{d}{dt}\bigg\vert_{t=0} f(\mathsf{x} + t\mathsf{v}).</script>
+Note that in the term <script type="math/tex">f(\mathsf{x} + t\mathsf{v})</script> in the definition
+above, <script type="math/tex">\mathsf{x} \in U</script> and <script type="math/tex">\mathsf{v} \in T_{\mathsf{x}}U</script>.
+Since <script type="math/tex">U</script> and <script type="math/tex">T_{\mathsf{x}}U</script> are not the same spaces, the
+quantity <script type="math/tex">\mathsf{x} + t\mathsf{v}</script> is ill-defined, strictly speaking.
+The saving grace, in this occasion, is the fact that <script type="math/tex">U</script> is an open
+subset of <script type="math/tex">\mathbb{R}^3</script>, which as a linear structure, and since
+<script type="math/tex">T_{\mathsf{x}}U \cong \mathbb{R}^3</script>. Thus,
+<script type="math/tex">\mathsf{x} + t\mathsf{v}</script> is to be understood as the point in
+<script type="math/tex">\mathbb{R}^3</script> whose coordinates are obtained by summing the triples
+of real numbers <script type="math/tex">\mathsf{x}</script> and <script type="math/tex">t\mathsf{v}</script>. Note that this point
+lies inside <script type="math/tex">U</script> when <script type="math/tex">t</script> is sufficiently small, as noted earlier.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In the more general case when <script type="math/tex">U</script> is not a linear set, the
+foregoing definition breaks down. The modern theory of differentiable
+manifolds provides a more rigorous definition of the covariant
+derivative in more general cases where the argument just given breaks
+down by introducing an additional structure called a <em>connection</em> on a
+manifold.</p>
+</div>
+<p>The <strong>gradient</strong> of <script type="math/tex">f</script> is defined as the vector field
+<script type="math/tex">\nabla f:U \to TU</script> such that, at every <script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\nabla f(\mathsf{x}) \cdot \mathsf{v} = \nabla_{\mathsf{v}}f(\mathsf{x}),</script>
+for any <script type="math/tex">\mathsf{v} \in T_{\mathsf{x}}U</script>. Note that
+<script type="math/tex">\nabla f(\mathsf{x}) \in T_{\mathsf{x}}U</script> by definition. Since
+<script type="math/tex">\mathsf{v} \in T_{\mathsf{x}}U</script>, the dot product
+<script type="math/tex">\nabla f(\mathsf{x}) \cdot \mathsf{v}</script> is indeed well-defined.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In this course, the alternative notation
+<script type="math/tex">\text{grad }f(\mathsf{x})</script> will often be used to indicate
+<script type="math/tex">\nabla f(\mathsf{x})</script>.</p>
+</div>
+<p>The directional derivative of <script type="math/tex">f</script> at <script type="math/tex">\mathsf{x} \in U</script> along
+<script type="math/tex">\mathsf{v} \in T_{\mathsf{x}}U</script> can be written in terms of the
+Cartesian coordinate system on <script type="math/tex">\mathbb{R}^3</script> as follows:
+<script type="math/tex; mode=display">\begin{split}
+\nabla_{\mathsf{v}}f(\mathsf{x}) &= \frac{d}{dt}\bigg\vert_{t=0} f(x_1 + tv_1, x_2 + tv_2, x_3 + tv_3)\\
+ &= \sum \partial_i f(\mathsf{x}) v_i.
+\end{split}</script> Noting that
+<script type="math/tex; mode=display">\sum \partial_i f(\mathsf{x})v_i = \left(\sum \partial_i f(\mathsf{x}) \, \mathsf{e}_i\right)\cdot\left(\sum v_j \mathsf{e}_j\right),</script>
+it follows that the Cartesian coordinate representation of the gradient
+of <script type="math/tex">f</script> is given by
+<script type="math/tex">\nabla f(\mathsf{x}) = \sum \partial_i f(\mathsf{x})\,\mathsf{e}_i</script>.</p>
+<p>The covariant derivative and gradient of a smooth vector field
+<script type="math/tex">\mathsf{v}:U \to TU</script> are defined similarly. The <strong>covariant
+derivative</strong> of <script type="math/tex">\mathsf{v}</script> at <script type="math/tex">\mathsf{x} \in U</script> along
+<script type="math/tex">\mathsf{w} \in T_{\mathsf{x}}U</script> is defined as the vector
+<script type="math/tex">\nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x}) \in T_{\mathsf{x}}U</script> such
+that
+<script type="math/tex; mode=display">\nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x}) = \frac{d}{dt}\bigg\vert_{t=0} \mathsf{v}(\mathsf{x} + t\mathsf{w}).</script>
+Note that <script type="math/tex">\mathsf{v}(\mathsf{x}) \in T_{\mathsf{x}}U</script>, whereas
+<script type="math/tex">\mathsf{v}(\mathsf{x} + t\mathsf{w}) \in T_{\mathsf{x} + t\mathsf{w}}U</script>.
+Strictly speaking, the vectors <script type="math/tex">\mathsf{v}(\mathsf{x})</script> and
+<script type="math/tex">\mathsf{v}(\mathsf{x} + t\mathsf{w})</script> cannot be compared since they
+belong to different vector spaces. However, the fact that both
+<script type="math/tex">T_{\mathsf{x}}U</script> and <script type="math/tex">T_{\mathsf{x} + t\mathsf{w}}U</script> are isomorphic
+to <script type="math/tex">\mathbb{R}^3</script> comes to the rescue again. What is actually compared
+are the corresponding images of these vectors in <script type="math/tex">\mathbb{R}^3</script>, which
+is a valid algebraic operation.</p>
+<p>!!! info "Remark" Using the characterization of
+    <script type="math/tex">\mathsf{v}(\mathsf{x}) \in T_{\mathsf{x}}U</script> as the pair
+    <script type="math/tex">(\mathsf{x}, \mathsf{v}(\mathsf{x}))</script>, the derivative in the
+    definition of the covariant derivative of <script type="math/tex">\mathsf{v}</script> can be
+    understood in the following sense:
+    <script type="math/tex; mode=display">\nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x}) = \lim_{t \to 0} \frac{(\mathsf{x},\mathsf{v}(\mathsf{x} + t\mathsf{w})) - (\mathsf{x}, \mathsf{v}(\mathsf{x}))}{t} = \left(\mathsf{x}, \lim_{t \to 0} \frac{\mathsf{v}(\mathsf{x} + t\mathsf{w}) - \mathsf{v}(\mathsf{x})}{t}\right) \in T_{\mathsf{x}}U.</script>
+    Notice how the vector <script type="math/tex">\mathsf{v}(\mathsf{x} + t\mathsf{w})</script> has been
+    <em>parallely shifted</em> from the tangent space
+    <script type="math/tex">T_{\mathsf{x} + t\mathsf{w}}U</script> to <script type="math/tex">T_{\mathsf{x}}U</script>. Such a shift
+    is possible because of the fact that the Euclidean space
+    <script type="math/tex">\mathbb{R}^3</script> is <em>flat</em>.</p>
+<p>The <strong>gradient</strong> of the vector field <script type="math/tex">\mathsf{v}</script> is defined as the
+second order tensor field <script type="math/tex">\nabla \mathsf{v}:U \to \otimes^2 TU</script> such
+that, at every <script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\nabla \mathsf{v}(\mathsf{x}) \cdot \mathsf{w} = \nabla_{\mathsf{w}} \mathsf{v}(\mathsf{x}),</script>
+for every <script type="math/tex">\mathsf{w} \in T_{\mathsf{x}}U</script>. Recall that the term
+<script type="math/tex">\nabla \mathsf{v}(\mathsf{x}) \cdot \mathsf{w}</script> in the definition of
+the gradient above stands for
+<script type="math/tex">\mathcal{C}_{2,3}(\nabla \mathsf{v}(\mathsf{x}) \otimes \mathsf{w})</script>.</p>
+<p>The Cartesian coordinate representation of the covariant derivative of
+the vector field <script type="math/tex">\mathsf{v}:U \to TU</script> at <script type="math/tex">\mathsf{x} \in U</script> along
+<script type="math/tex">\mathsf{w} \in T_{\mathsf{x}}U</script> is computed as follows:
+<script type="math/tex; mode=display">\begin{split}
+\nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x}) &= \frac{d}{dt}\bigg\vert_{t=0} \sum v_i(x_1 + tw_1, x_2 + tw_2, x_3 + tw_3) \mathsf{e}_i\\
+ &= \sum \partial_j v_i(\mathsf{x}) w_j \mathsf{e}_i\\
+ &= \left(\sum \partial_j v_i(\mathsf{x}) \, \mathsf{e}_i \otimes \mathsf{e}_j\right)\cdot\left(\sum w_k \mathsf{e}_k\right).
+\end{split}</script> In deriving this expression, use has been made of the fact
+that the standard basis <script type="math/tex">\mathsf{e}_i</script> of <script type="math/tex">T_{\mathsf{x}}U</script> does not
+change as <script type="math/tex">\mathsf{x}</script> varies over <script type="math/tex">U</script>. This calculation thus shows
+that the gradient of the vector field <script type="math/tex">\mathsf{v}</script> has the following
+Cartesian coordinate representation:
+<script type="math/tex; mode=display">\nabla \mathsf{v}(\mathsf{x}) = \sum \partial_j v_i(\mathsf{x}) \, \mathsf{e}_i \otimes \mathsf{e}_j.</script>
+This calculation also shows that the components of the gradient of a
+vector field with respect to the Cartesian coordinate system can be
+represented in matrix form as follows:
+<script type="math/tex; mode=display">= \begin{bmatrix} \partial_1 v_1(\mathsf{x}) & \partial_2 v_1(\mathsf{x}) & \partial_3 v_1(\mathsf{x})\\ \partial_1 v_2(\mathsf{x}) & \partial_2 v_2(\mathsf{x}) & \partial_3 v_2(\mathsf{x})\\ \partial_1 v_3(\mathsf{x}) & \partial_2 v_3(\mathsf{x}) & \partial_3 v_3(\mathsf{x})\end{bmatrix}.</script>
+As remarked earlier, the alternative notation
+<script type="math/tex">\text{grad }\mathsf{v}(\mathsf{x})</script> will often be used for
+<script type="math/tex">\nabla \mathsf{v}(\mathsf{x})</script>.</p>
+<p>The definition of the covariant derivative of a vector field can be
+readily extended to the covariant derivative of tensor fields. Suppose
+that <script type="math/tex">\mathsf{A}:U \to \otimes^k TU</script> is a smooth tensor field of order
+<script type="math/tex">k</script> on <script type="math/tex">U</script>. The <strong>covariant derivative</strong> of <script type="math/tex">\mathsf{A}</script> at
+<script type="math/tex">\mathsf{x} \in U</script> along <script type="math/tex">\mathsf{v} \in T_{\mathsf{x}}U</script> is defined
+as the <script type="math/tex">k^{\text{th}}</script> order tensor
+<script type="math/tex">\nabla_{\mathsf{v}} \mathsf{A}(\mathsf{x}) \in \otimes^k T_{\mathsf{x}}U</script>
+such that
+<script type="math/tex; mode=display">\nabla_{\mathsf{v}} \mathsf{A}(\mathsf{x}) = \frac{d}{dt}\bigg\vert_{t=0} \mathsf{A}(\mathsf{x} + t\mathsf{v}).</script>
+The <strong>gradient</strong> of the tensor field <script type="math/tex">\mathsf{A}</script> is defined as the
+tensor field <script type="math/tex">\nabla \mathsf{A}:U \to \otimes^{k + 1} TU</script> of order
+<script type="math/tex">k + 1</script> on <script type="math/tex">U</script> such that, at every <script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\nabla \mathsf{A}(\mathsf{x}) \cdot \mathsf{v} = \nabla_{\mathsf{v}} \mathsf{A}(\mathsf{x}),</script>
+for every <script type="math/tex">\mathsf{v} \in T_{\mathsf{x}}U</script>. As before, the Cartesian
+coordinate representation of <script type="math/tex">\nabla \mathsf{A}(\mathsf{x})</script> can be
+worked out to be
+<script type="math/tex; mode=display">\nabla \mathsf{A}(\mathsf{x}) = \sum \partial_j A_{i_1 \ldots i_k}(\mathsf{x}) \, \mathsf{e}_{i_1} \otimes \ldots \mathsf{e}_{i_k} \otimes \mathsf{e}_j.</script>
+Notice how the special structure of <script type="math/tex">\mathbb{R}^3</script>, and the special
+choice of the <em>same</em> basis for every tangent space of <script type="math/tex">U</script> have
+resulted in the simple expressions for gradient of tensor fields.</p>
+<h2 id="divergence">Divergence</h2>
+<p>Suppose that <script type="math/tex">\mathsf{A}:U \to \otimes^k TU</script> is a smooth tensor field
+of order <script type="math/tex">k</script>, where <script type="math/tex">k \ge 1</script>, over an open subset
+<script type="math/tex">U \subseteq \mathbb{R}^3</script>. The <strong>divergence</strong> of <script type="math/tex">\mathsf{A}</script> is
+defined as the smooth tensor field
+<script type="math/tex">\nabla \cdot \mathsf{A}:U \to \otimes^{k-1}TU</script> of order <script type="math/tex">k - 1</script> on
+<script type="math/tex">U</script> such that, for any <script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\nabla \cdot \mathsf{A} (\mathsf{x}) = \mathcal{C}_{k,k+1} \nabla \mathsf{A}(\mathsf{x}).</script>
+Note that the gradient <script type="math/tex">\nabla \mathsf{A}:U \to \otimes^{k+1} TU</script> of
+<script type="math/tex">\mathsf{A}</script> is a tensor field of order <script type="math/tex">k + 1</script> on <script type="math/tex">U</script>, whence its
+contraction is a tensor field of order <script type="math/tex">k - 1</script>, as required. Note also
+since <script type="math/tex">\mathsf{A}</script> is a tensor field of order <script type="math/tex">k</script>, there are <script type="math/tex">k</script>
+possible contractions of <script type="math/tex">\nabla \mathsf{A}</script>. Each of these defines a
+distinct notion of divergence, and the convention adopted here to call
+the <script type="math/tex">(k,k+1)</script> contraction of <script type="math/tex">\nabla \mathsf{A}</script> as the divergence
+of <script type="math/tex">\mathsf{A}</script> is just a matter of convention that will turn out to
+be helpful later on.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The notation <script type="math/tex">\text{div }\mathsf{A}</script> will also be used in
+this course to denote the divergence <script type="math/tex">\nabla \cdot \mathsf{A}</script> of the
+tensor field <script type="math/tex">\mathsf{A}</script>.</p>
+</div>
+<p>In terms of the Cartesian coordinate system on <script type="math/tex">\mathbb{R}^3</script>, it is
+straightforward to check that
+<script type="math/tex; mode=display">\nabla \cdot \mathsf{A}(\mathsf{x}) = \sum \partial_a A_{i_1 \ldots i_{k - 1}a}(\mathsf{x}) \, \mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_{k-1}}.</script>
+It is helpful to work out a few examples to illustrate the definition of
+the divergence of a tensor field. Suppose that <script type="math/tex">\mathsf{v}:U \to TU</script>
+is a smooth vector field on <script type="math/tex">U</script>. The divergence of <script type="math/tex">\mathsf{v}</script> is a
+scalar field on <script type="math/tex">U</script> that is easily computed as follows: for any
+<script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\nabla \cdot \mathsf{v}(\mathsf{x}) = \mathcal{C}_{1,2} \nabla \mathsf{v}(\mathsf{x}) = \sum \partial_i v_i(\mathsf{x}).</script>
+Similarly, given a smooth second order tensor field
+<script type="math/tex">\mathsf{A}:U \to \otimes^2 TU</script> on <script type="math/tex">U</script>, its divergence is a vector
+field on <script type="math/tex">U</script> that is obtained as follows: for any
+<script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\nabla \cdot \mathsf{A}(\mathsf{x}) = \mathcal{C}_{2,3} \nabla \mathsf{A}(\mathsf{x}) = \sum \partial_j A_{ij}(\mathsf{x}) \mathsf{e}_i.</script>
+These expressions agree with the familiar expressions for divergence
+from elementary calculus.</p>
+<h2 id="curl">Curl</h2>
+<p>The <em>curl</em> operation, specific to tensor fields over <script type="math/tex">\mathbb{R}^3</script>,
+is introduced now. The curl of a tensor field of order <script type="math/tex">k</script>, where
+<script type="math/tex">k > 1</script> is defined recursively in terms of the curl of a tensor field
+of order <script type="math/tex">k - 1</script>. Hence, the curl of a vector field is discussed
+first, followed by the general definition and an illustration of how to
+compute the curl of a second order tensor field.</p>
+<p>Suppose that <script type="math/tex">\mathsf{v}:U \to \otimes^k TU</script> is a smooth vector field
+over an open subset <script type="math/tex">U \subseteq \mathbb{R}^3</script>. The <strong>curl</strong> of
+<script type="math/tex">\mathsf{v}</script> is defined as the smooth vector field
+<script type="math/tex">\nabla \times \mathsf{A}:U \to \otimes TU</script> such that, for any
+<script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\mathsf{w} \cdot \nabla \times \mathsf{v}(\mathsf{x}) = \nabla \cdot (\mathsf{v} \times \mathsf{w})(\mathsf{x}).</script>
+In the definition above, <script type="math/tex">\mathsf{w}:U \to TU</script> is a constant vector
+field on <script type="math/tex">U</script>: this can be thought of as the set
+<script type="math/tex">\cup_{\mathsf{x} \in U} (\mathsf{x}, \mathsf{w})</script>. Since
+<script type="math/tex">\mathsf{w}</script> is a constant vector field, its dependence on
+<script type="math/tex">\mathsf{x}</script> will be suppressed. The vector field
+<script type="math/tex">\mathsf{v} \times \mathsf{w}:U \to \otimes TU</script> is defined as follows:
+for any <script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex">\mathsf{v} \times \mathsf{w}(\mathsf{x}) = \mathsf{v}(\mathsf{x}) \times \mathsf{w}</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The alternative notation <script type="math/tex">\text{curl }\mathsf{v}</script> will often
+be used to denote <script type="math/tex">\nabla \times \mathsf{v}</script>.</p>
+</div>
+<p>To see how this definition of the curl of a vector field matches up with
+the familiar expression from undergraduate calculus, it is helpful to
+work out the Cartesian coordinate represention of
+<script type="math/tex">\nabla \times \mathsf{v}</script>. Since the curl of <script type="math/tex">\mathsf{v}</script> is
+computed from the divergence of <script type="math/tex">\mathsf{v}</script>, which, in turn, is
+computed from the gradient of <script type="math/tex">\mathsf{v}</script>, the gradient of the vector
+field <script type="math/tex">\mathsf{v} \times \mathsf{w}:U \to TU</script> is computed first: for
+any <script type="math/tex">\mathsf{x} \in U</script> and <script type="math/tex">\mathsf{z} \in T_{\mathsf{x}}U</script>,
+<script type="math/tex; mode=display">\begin{split}
+\nabla (\mathsf{v} \times \mathsf{w})(\mathsf{x}) \cdot \mathsf{z} &= \frac{d}{dt}\bigg\vert_{t=0} \mathsf{v}(\mathsf{x} + t\mathsf{z}) \times \mathsf{w}\\
+ &= \frac{d}{dt}\bigg\vert_{t=0} \sum \epsilon_{ijk} v_j(x_1 + tz_1, x_2 + tz_2, x_3 + tz_3) \, w_k \mathsf{e}_i\\
+ &= \left(\sum \epsilon_{ijk} \partial_a v_j(\mathsf{x}) w_k \mathsf{e}_i \otimes \mathsf{e}_a\right) \cdot \left(\sum z_b \mathsf{e}_b\right).
+\end{split}</script> This calculation thus yields the Cartesian coordinate
+representation of <script type="math/tex">\nabla (\mathsf{v} \times \mathsf{w})(\mathsf{x})</script>
+as
+<script type="math/tex; mode=display">\nabla (\mathsf{v} \times \mathsf{w})(\mathsf{x}) = \sum \epsilon_{ijk} \partial_a v_j(\mathsf{x}) w_k \mathsf{e}_i \otimes \mathsf{e}_a.</script>
+The Cartesian coordinate representation of the divergence of the vector
+field <script type="math/tex">\mathsf{v} \times \mathsf{w}</script> immediately follows as
+<script type="math/tex; mode=display">\begin{split}
+\nabla \cdot (\mathsf{v} \times \mathsf{w})(\mathsf{x}) &= \sum \epsilon_{ijk} \partial_i v_j(\mathsf{x}) w_k\\
+ &= \left(\sum \epsilon_{kij} \partial_i v_j(\mathsf{x}) \, \mathsf{e}_k\right) \cdot \left(\sum w_l \mathsf{e}_l\right).
+\end{split}</script> Comparing the final expression just obtained with
+<script type="math/tex">\mathsf{w} \cdot \nabla \times \mathsf{v}(\mathsf{x})</script> yields the
+following expression for the Cartesian coordinate representation of the
+curl of the vector field <script type="math/tex">\mathsf{v}</script>:
+<script type="math/tex; mode=display">\nabla \times \mathsf{v}(\mathsf{x}) = \sum \epsilon_{ijk} \partial_j v_k(\mathsf{x}) \, \mathsf{e}_i,</script>
+which is the familiar expression for the curl of a vector field from
+undergraduate calculus.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The foregoing result can more easily be obtained by using the
+Cartesian coordinate expression for the divergence of a vector field.
+The reason for illustrating it in the <em>longer</em> version is to show the
+following dependence tree of the various differential quantities
+introduced in this section:
+<script type="math/tex; mode=display">\text{Covariant derivative} \to \text{Gradient} \to \text{Divergence} \to \text{Curl}.</script>
+The covariant derivative, which is a generalization of the directional
+derivative, is thus the fundamental starting point for all these
+computations.</p>
+</div>
+<p>Before introducing the definition of the curl of a tensor field on
+<script type="math/tex">U</script>, it is pertinent to point out two useful identities. First, given
+any smooth vector field <script type="math/tex">\mathsf{v}:U \to TU</script>, the following result
+holds: <script type="math/tex">\nabla \cdot \nabla \times \mathsf{v} = \mathsf{0}</script>, where
+<script type="math/tex">\mathsf{0}:U \to TU</script> is the vector field that takes every
+<script type="math/tex">\mathsf{x} \in U</script> to the zero vector
+<script type="math/tex">\mathsf{0} \in T_{\mathsf{x}}U</script>. This is most easily seen by using
+Cartesian coordinates: for any <script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\nabla \cdot \nabla \times \mathsf{v}(\mathsf{x}) = \sum \partial_i \epsilon_{ijk} \partial_j v_k(\mathsf{x}) = \sum \epsilon_{ijk} \partial_i \partial_j v_k(\mathsf{x}) = 0.</script>
+The last step follows from the equality of mixed partial derivatives and
+the properties of the Levi-Civita symbols. A second identity that is
+useful in practice is the following: if <script type="math/tex">f:U \to \mathbb{R}</script> is a
+smooth scalar field, then <script type="math/tex">\nabla \times \nabla f = \mathsf{0}</script>. This
+is also easily proved in a Cartesian coordinate setting: for any
+<script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\nabla \times \nabla f(\mathsf{x}) = \sum \epsilon_{ijk} \partial_j \partial_k f(\mathsf{x}) \mathsf{e}_i = 0.</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Despite the fact that a special coordinate system, namely the
+Cartesian coordinate system, was used to prove the identities
+<script type="math/tex">\text{div curl }\mathsf{v} = \mathsf{0}</script> and
+<script type="math/tex">\text{curl grad }f = \mathsf{0}</script>, it should be noted that the final
+expression obtained in the coordinate setting, when cast back into the
+coordinate-free form, is still valid in any coordinate system. This
+trick will be used throughout this course to simplify a variety of
+calculations since it is significantly easier to work in a Cartesian
+coordinate setting.</p>
+</div>
+<p>The <strong>curl</strong> of a smooth tensor field <script type="math/tex">\mathsf{A}:U \to \otimes^k TU</script>
+of order <script type="math/tex">k</script> over <script type="math/tex">U</script>, is defined as the smooth tensor field
+<script type="math/tex">\nabla \times \mathsf{A}:U \to \otimes^k TU</script> of order <script type="math/tex">k</script> on <script type="math/tex">U</script>
+such that, for any <script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\mathsf{w} \cdot \nabla \times \mathsf{A}(\mathsf{x}) = \nabla \times (\mathsf{w} \cdot \mathsf{A})(\mathsf{x}).</script>
+Here, <script type="math/tex">\mathsf{w}:U \to TU</script> is a constant vector field on <script type="math/tex">U</script>, as
+before. Notice that this is a <em>recursive</em> definition. The quantity
+<script type="math/tex">\mathsf{w} \cdot \mathsf{A}</script> is a tensor field of order <script type="math/tex">k-1</script> over
+<script type="math/tex">U</script>. To see this, note that <script type="math/tex">\mathsf{w}\cdot\mathsf{A}</script> has the
+following Cartesian coordinate representation: for any
+<script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\mathsf{w} \cdot \mathsf{A}(\mathsf{x}) = \sum w_{i_1} A_{i_1i_2 \ldots i_k}(\mathsf{x}) \, \mathsf{g}_{i_2} \otimes \ldots \otimes \mathsf{g}_{i_k} \in \otimes^{k-1} T_{\mathsf{x}}U.</script>
+This shows that <script type="math/tex">\mathsf{w}\cdot\mathsf{A}:U \to \otimes^{k-1}TU</script> is
+indeed a smooth tensor field of order <script type="math/tex">k - 1</script> on <script type="math/tex">U</script>. The curl of
+the tensor field <script type="math/tex">\mathsf{w} \cdot \mathsf{A}</script> is, in turn, defined
+using the curl of a tensor field of order <script type="math/tex">k - 2</script>, and so on, until a
+vector field, whose curl is computable directly, is obtained.</p>
+<p>To illustrate the recursive definition, it is instructive to work out
+the curl of a second order tensor field
+<script type="math/tex">\mathsf{A}:U \to \otimes^2 TU</script> on <script type="math/tex">U</script>. Note that, in this case,
+<script type="math/tex">\mathsf{w} \cdot \mathsf{A}:U \to TU</script>, where <script type="math/tex">\mathsf{w}:U \to TU</script>
+is a constant vector field on <script type="math/tex">U</script>, is a smooth vector field on <script type="math/tex">U</script>.
+Hence, using Cartesian coordinates, it is evident that for any
+<script type="math/tex">\mathsf{x} \in U</script>,
+<script type="math/tex; mode=display">\nabla \times (\mathsf{w} \cdot \mathsf{A})(\mathsf{x}) = \sum \epsilon_{ijk} \partial_j (w_a A_{ak}(\mathsf{x})) \mathsf{e}_i = \left(\sum w_b \mathsf{e}_b\right) \cdot \left(\sum \epsilon_{ijk} \partial_j A_{ak}(\mathsf{x}) \, \mathsf{e}_a \otimes \mathsf{e}_i\right).</script>
+Using the definition
+<script type="math/tex">\mathsf{w} \cdot \text{curl }\mathsf{A} = \text{curl }(\mathsf{w} \cdot \mathsf{A})</script>,
+it follows that
+<script type="math/tex; mode=display">\nabla \times \mathsf{A}(\mathsf{x}) = \sum \epsilon_{ijk} \partial_j A_{lk}(\mathsf{x}) \, \mathsf{e}_l \otimes \mathsf{e}_i.</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Notice how the order of the terms in the dot product
+<script type="math/tex">\mathsf{w} \cdot \mathsf{A}</script> used in the definition of the curl
+operation decides the final coordinate expression of the curl of a
+tensor field. The choice to use <script type="math/tex">\mathsf{w} \cdot \mathsf{A}</script>, instead
+of <script type="math/tex">\mathsf{A} \cdot \mathsf{w}</script> is purely conventional, and is chosen
+with an eye towards certain applications.</p>
+</div>
+<h2 id="integration-of-tensor-fields">Integration of tensor fields</h2>
+<p>The integration of scalar, vector and tensor fields on <script type="math/tex">\mathbb{R}^3</script>
+is now outlined. In particular, attention is focused on line, surface
+and volume integrals of scalar fields on <script type="math/tex">\mathbb{R}^3</script>. Certain
+important integral theorems that are very useful for continuum mechanics
+are finally discussed. To keep the discussion simple, the Cartesian
+coordinate system is adopted throughout this section.</p>
+<h3 id="volume-integrals">Volume integrals</h3>
+<p>Given a scalar field <script type="math/tex">f:U \subseteq \mathbb{R}^3 \to \mathbb{R}</script> on an
+open subset <script type="math/tex">U</script> of <script type="math/tex">\mathbb{R}^3</script>. The <strong>(volume) integral</strong> of
+<script type="math/tex">f</script> over <script type="math/tex">U</script> is written as
+<script type="math/tex; mode=display">\int_U f(\mathsf{x})\,dv = \int_U f(x_1,x_2,x_3) \, dx_1 dx_2 dx_3.</script>
+The integral in the expression above is a triple integral with limits
+defined such that they cover <script type="math/tex">U</script>. The integral is understood in the
+usual Riemannian sense.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is more useful to interpret the integral
+<script type="math/tex">\int_U f(x_1, x_2, x_3)\,dx_1dx_2dx_3</script> in the sense of Lebesgue.
+Since this course will not focus on the analytic aspects on
+continuum mechanics, it is sufficient for the present purposes to
+interpret the integral as the limit of a Riemannian sum.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The <em>volume element</em> <script type="math/tex">dv</script> in <script type="math/tex">\int_U f(\mathsf{x}) \, dv</script>
+can be given a precise meaning as a <em>differential <script type="math/tex">3</script>-form</em> on
+<script type="math/tex">\mathbb{R}^3</script>. Since this is outside the scope of these notes, it is
+sufficient to think of <script type="math/tex">dv</script> as just a useful symbol.</p>
+</div>
+<p>If <script type="math/tex">\mathsf{A}:U \to \otimes^k TU</script> is a tensor field of order <script type="math/tex">k</script> on
+<script type="math/tex">U</script>, recall that the Cartesian coordinate representation of
+<script type="math/tex">\mathsf{A}</script> is given by
+<script type="math/tex; mode=display">\mathsf{A}(\mathsf{x}) = \sum A_{i_1\ldots i_k}(x_1, x_2, x_3) \, \mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k},</script>
+for any <script type="math/tex">\mathsf{x} \in U</script>. Note that each of the components
+<script type="math/tex">A_{i_1\ldots i_k}:U \to \mathbb{R}</script> is a scalar field on <script type="math/tex">U</script>. The
+<strong>(volume) integral</strong> of <script type="math/tex">\mathsf{A}</script> over <script type="math/tex">U</script> can be defined in
+terms of its Cartesian components as follows:
+<script type="math/tex; mode=display">\int_U \mathsf{A}(\mathsf{x}) \, dv = \sum \left(\int_U A_{i_1\ldots i_k}(x_1, x_2, x_3)\,dx_1dx_2dx_3\right) \mathsf{e}_{i_1} \otimes \ldots \otimes \mathsf{e}_{i_k}.</script>
+Despite the fact that the Cartesian coordinate system is used to define
+the integral above, the <em>change of variables formula</em> ensures that the
+value of the integral does not depend on the specific choice of
+coordinate system. The expression for the integral in a general
+coordinate system will be presented in a later section.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is important to note that the definition of the integral of
+tensor fields is, in general, not defined over differentiable manifolds.
+What are integrable are special tensor fields called <em>differential
+forms</em>. In the special case of Euclidean spaces <script type="math/tex">\mathbb{R}^n</script>, and in
+particular, in <script type="math/tex">\mathbb{R}^3</script>, this problem does not arise, and the
+integral of tensor fields is defined in terms of the integral of its
+component fields, as done here.</p>
+</div>
+<h3 id="line-integrals">Line integrals</h3>
+<p>A <strong>curve</strong> in <script type="math/tex">\mathbb{R}^3</script> is a smooth and injective map of the
+form <script type="math/tex">\mathsf\gamma:I\subseteq\mathbb{R} \to \mathbb{R}^3</script>, where
+<script type="math/tex">I</script> is an open subset of <script type="math/tex">\mathbb{R}</script>. Thus, for every <script type="math/tex">t \in I</script>,
+there is a point
+<script type="math/tex">(\gamma_1(t), \gamma_2(t), \gamma_3(t)) \in \mathbb{R}^3</script> and the set
+of all such points constitute the curve <script type="math/tex">\mathsf\gamma</script>. Let the line
+<script type="math/tex">C = \mathsf\gamma(I) \subseteq \mathbb{R}^3</script> be the image of the
+curve in <script type="math/tex">\mathbb{R}^3</script>. Note that a curve is <em>not</em> be identified with its image here.
+The <strong>tangent vector</strong> to the curve
+<script type="math/tex">\mathsf\gamma</script> at <script type="math/tex">\mathsf\gamma(t)</script> is the vector
+<script type="math/tex">\dot{\mathsf\gamma}(t) = (\dot{\gamma}_1(t), \dot{\gamma}_2(t), \dot{\gamma}_3(t)) \in T_{\mathsf\gamma(t)}C</script>,
+where <script type="math/tex">\dot{\gamma}_i(t)</script> denotes the derivative of the function
+<script type="math/tex">\gamma_i:I \to \mathbb{R}</script> at <script type="math/tex">t</script>. It is assumed that
+<script type="math/tex">\dot{\mathsf\gamma} \neq \mathsf{0}</script> for every <script type="math/tex">t \in I</script>. A curve
+that has this property is called a <strong>regular curve</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The tangent space <script type="math/tex">T_{\mathsf{x}}C</script> to the curve <script type="math/tex">C</script> at
+<script type="math/tex">\mathsf{x} \in C</script> is defined in a manner similar to the tangent space
+of an open subset of <script type="math/tex">\mathbb{R}^3</script>. Thus, the tangent space to <script type="math/tex">C</script>
+at <script type="math/tex">\mathsf{x}</script> consists of all possible tangent vectors to <script type="math/tex">C</script> at
+<script type="math/tex">\mathsf{x}</script>. Note that
+<script type="math/tex">T_{\mathsf{x}}C \subset T_{\mathsf{x}}\mathbb{R}^3</script>.</p>
+</div>
+<p>Given a scalar field <script type="math/tex">f:U \subseteq \mathbb{R}^3 \to \mathbb{R}</script> where
+<script type="math/tex">U</script> is open and <script type="math/tex">C \subseteq U</script>, the <strong>line integral</strong> of <script type="math/tex">f</script> over
+<script type="math/tex">C</script> is defined as follows:
+<script type="math/tex; mode=display">\int_C f(\mathsf{x}) \, ds = \int_I (f \circ \mathsf\gamma)(t) \lVert \dot{\mathsf\gamma}(t)\rVert \, dt.</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The <em>line element</em> <script type="math/tex">ds</script> used in the line integral
+<script type="math/tex">\int_C f(\mathsf{x})\,ds</script> can be given a precise definition as a
+<em>differential <script type="math/tex">1</script>-form</em> on <script type="math/tex">\mathbb{R}^3</script>. For the present purposes,
+though, it is sufficient to think of <script type="math/tex">ds</script> as just a useful symbol.</p>
+</div>
+<p>Note that the definition of the line integral provided here depends on
+the choice of a curve <script type="math/tex">\mathsf\gamma</script>. Such a curve is called a
+<strong>parametrization</strong> of the line <script type="math/tex">C</script>. It can be shown that the value of
+the line integral is independent of the choice of parametrization,
+thereby establishing that the definition of the integral is
+well-defined.</p>
+<p>The line integral of tensor fields over a regular curve is defined in
+terms of the line integral of its component scalar fields, as in the
+case of the volume integral.</p>
+<h3 id="surface-integrals">Surface integrals</h3>
+<p>To define surface integrals, it is necessary to introduce a few basic
+concepts. A <strong>parametrized surface</strong> in <script type="math/tex">\mathbb{R}^3</script> is a smooth and
+injective map of the form
+<script type="math/tex">\mathsf{a}:R \subseteq \mathbb{R}^2 \to \mathbb{R}^3</script>. The components
+of <script type="math/tex">\mathsf{a}</script> are the maps <script type="math/tex">\mathsf{a}_i:R \to \mathbb{R}^3</script>,
+where <script type="math/tex">i = 1,2,3</script>. Let the surface
+<script type="math/tex">S = \mathsf{a}(R) \subseteq \mathbb{R}^3</script> be the image of the
+parametrized surface <script type="math/tex">\mathsf{a}</script> in <script type="math/tex">\mathbb{R}^3</script>. For any
+<script type="math/tex">(r,s) \in R</script>, the <strong>tangents</strong> to the surface <script type="math/tex">S</script> at
+<script type="math/tex">\mathsf{a}(r,s) \in S</script> are defined as the vectors
+<script type="math/tex">\mathsf{t}_1(r,s), \mathsf{t}_2(r,s) \in T_{\mathsf{a}(r,s)}S</script> given
+by
+<script type="math/tex; mode=display">\mathsf{t}_i(r,s) = \partial_i \mathsf{a}(r,s) = \sum \partial_i a_j(r,s) \mathsf{e}_j, \qquad i = 1,2.</script>
+The map <script type="math/tex">\mathsf{a}:R \to \mathbb{R}^3</script> is called a <strong>regular
+surface</strong> if
+<script type="math/tex">\mathsf{t}_1(r,s) \times \mathsf{t}_2(r,s) \neq \mathsf{0}</script> for every
+<script type="math/tex">(r,s) \in R</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The tangent space to the surface <script type="math/tex">S</script> at <script type="math/tex">\mathsf{x} \in S</script>
+is defined along the same lines as the tangent to a curve in
+<script type="math/tex">\mathbb{R}^3</script> or an open subset of <script type="math/tex">\mathbb{R}^3</script>. Thus
+<script type="math/tex">T_{\mathsf{x}}S</script> consists of all possible tangent vectors to <script type="math/tex">S</script> at
+the point <script type="math/tex">\mathsf{x}</script>. Note that
+<script type="math/tex">T_{\mathsf{x}}S \subset T_{\mathsf{x}}\mathbb{R}^3</script>.</p>
+</div>
+<p>Let <script type="math/tex">\mathsf{t}_1(r,s),\mathsf{t}_2(r,s) \in T_{\mathsf{a}(r,s)}S</script> be
+the tangent vectors at <script type="math/tex">\mathsf{a}(r,s) \in S</script>, where <script type="math/tex">(r,s) \in R</script>,
+to a regular surface <script type="math/tex">S</script>. The <strong>unit normal</strong> to the surface <script type="math/tex">S</script> at
+<script type="math/tex">\mathsf{a}(r,s)</script> is defined as the vector
+<script type="math/tex">\mathsf{n}(r,s) \in T_{\mathsf{a}(r,s)}\mathbb{R}^3</script> given by
+<script type="math/tex; mode=display">\mathsf{n}(r,s) = \frac{\mathsf{t}_1(r,s) \times \mathsf{t}_2(r,s)}{\lVert\mathsf{t}_1(r,s) \times \mathsf{t}_2(r,s)\rVert}.</script>
+Note that it is necessary for the surface <script type="math/tex">S</script> to be regular for the
+unit normal to be well-defined. It is noted, without proof, that
+different parametrizations of <script type="math/tex">S</script> yield the <em>same</em> unit normal vector,
+up to a sign, at any point on <script type="math/tex">S</script>. One of the two possible unit normal
+vectors at point on <script type="math/tex">S</script> is defined as the <strong>positive</strong> unit normal,
+and the set of all parametrizations that yield this positive unit normal
+are said to constitute an <strong>orientation</strong> on <script type="math/tex">S</script>.</p>
+<p>If <script type="math/tex">f:U \subseteq \mathbb{R}^3 \to \mathbb{R}</script>, where <script type="math/tex">U</script> is open in
+<script type="math/tex">\mathbb{R}^3</script>, is a smooth scalar field, and
+<script type="math/tex">\mathsf{a}:R \subseteq \mathbb{R}^2 \to \mathbb{R}^3</script> is a regular
+surface such that <script type="math/tex">S = \mathsf{a}(R) \subseteq U</script>, then the <strong>surface
+integral</strong> of <script type="math/tex">f</script> over <script type="math/tex">S</script> is defined as follows:
+<script type="math/tex; mode=display">\int_S f(\mathsf{x}) \, da = \int_R (f \circ \mathsf{a})(r,s) \lVert \partial_1 \mathsf{a}(r,s) \times \partial_2 \mathsf{a}(r,s)\rVert \, dr ds.</script>
+As in the case of the line integral, it can be shown that this
+definition of the surface integral of the scalar field <script type="math/tex">f</script> is
+independent of the choice of the parametrization <script type="math/tex">\mathsf{a}</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The <em>area element</em> <script type="math/tex">da</script> in <script type="math/tex">\int_S f(\mathsf{x}) \, da</script>
+can be given a precise definition as a <em>differential <script type="math/tex">2</script>-form</em> on
+<script type="math/tex">\mathbb{R}^3</script>. As remarked before, it is sufficient to consider
+<script type="math/tex">da</script> as just a useful symbol for this course.</p>
+</div>
+<p>The surface integral of tensor fields over a regular surface is defined
+in terms of the surface integral of its component scalar fields, as in
+the case of the volume integral.</p>
+<h3 id="divergence-and-gauss-theorems">Divergence and Gauss theorems</h3>
+<p>To conclude this section, two important theorems are presented without
+proof. The <em>divergence theorem</em> provides a means to convert volume
+integrals into an integral over the surface bounding the volume, and
+<em>Stokes’ theorem</em> provides a means to reduce a surface integral to a
+line integral over the bounding curve of the surface.</p>
+<p>Suppose that <script type="math/tex">\mathsf{A}:U \to \otimes^k TU</script> is a tensor field of
+order <script type="math/tex">k</script> on an open subset <script type="math/tex">U \subseteq \mathbb{R}^3</script>. Suppose
+further that the <em>boundary</em> of <script type="math/tex">U</script> is the set <script type="math/tex">\partial U</script>. Then,
+the <strong>divergence theorem</strong> states that
+<script type="math/tex; mode=display">\int_U \nabla \mathsf{A}(\mathsf{x}) \, dv = \int_{\partial U} \mathsf{A}(\mathsf{x}) \otimes \mathsf{n}(\mathsf{x}) \, da,</script>
+where <script type="math/tex">\mathsf{n}(\mathsf{x})</script> is the outward unit normal at
+<script type="math/tex">\mathsf{x} \in \partial U</script>. It is to be noted that the statement of
+the divergence theorem presented here is valid only for tensor fields
+defined on Euclidean spaces.</p>
+<p>A few special cases are now presented to illustrate the divergence
+theorem. First, if <script type="math/tex">f:U \to \mathbb{R}</script>, where
+<script type="math/tex">U \subseteq \mathbb{R}^3</script> is open, is a scalar field, then the
+divergence theorem takes the form
+<script type="math/tex; mode=display">\int_U \nabla f(\mathsf{x}) \, dv = \int_{\partial U} f(\mathsf{x})\mathsf{n}(\mathsf{x})\,da.</script>
+If <script type="math/tex">\mathsf{v}:U \to TU</script> is a vector field on <script type="math/tex">U</script>, the statement of
+the divergence theorem reads
+<script type="math/tex; mode=display">\int_U \nabla \mathsf{v}(\mathsf{x})\,dv = \int_{\partial U} \mathsf{v}(\mathsf{x}) \otimes \mathsf{n}(\mathsf{x})\,da.</script>
+Taking the trace this equation yields the familiar form of the
+divergence theorem:
+<script type="math/tex; mode=display">\int_U \nabla \cdot \mathsf{v}(\mathsf{x}) \, dv = \int_{\partial U} \mathsf{v}(\mathsf{x}) \cdot \mathsf{n}(\mathsf{x}) \, da.</script>
+Finally, if <script type="math/tex">\mathsf{A}:U \to \otimes^2 TU</script> represents a second order
+tensor field on <script type="math/tex">U</script>, the foregoing argument can be extended to yield
+the following form of the divergence theorem:
+<script type="math/tex; mode=display">\int_U \nabla \cdot \mathsf{A}(\mathsf{x}) \, dv = \int_{\partial U} \mathsf{A}(\mathsf{x})\cdot\mathsf{n}(\mathsf{x})\,da.</script>
+This statement of the divergence theorem will also prove to be quite
+handy later on in the study of continuum mechanics.</p>
+<p>A second theorem that is useful in applications relates surface and line
+integrals. Specifically, if <script type="math/tex">\mathsf{v}:U \to TU</script> is a vector field on
+an open subset <script type="math/tex">U</script> of <script type="math/tex">\mathbb{R}^3</script>, and <script type="math/tex">S</script> is a regular surface
+in <script type="math/tex">U</script> with boundary <script type="math/tex">\partial S</script>, then <strong>Stokes’ theorem</strong> states
+that
+<script type="math/tex; mode=display">\int_S \nabla \times \mathsf{v}(\mathsf{x}) \cdot \mathsf{n}(\mathsf{x}) \, da = \int_{\partial S} \mathsf{v}(\mathsf{x}) \cdot \mathsf{t}(\mathsf{x}) \, ds.</script>
+Here <script type="math/tex">\mathsf{t}(\mathsf{x}) \in T_{\mathsf{x}}\partial S</script> is the
+tangent vector at the point <script type="math/tex">\mathsf{x} \in \partial S</script> on the
+boundary curve <script type="math/tex">\partial S</script> of <script type="math/tex">S</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>There is an elegant theory using the notion of <em>differential
+forms</em> that generalizes these theorems to the general case of
+differentiable manifolds. The <em>generalized Stokes’ theorem</em> unifies both
+the theorems presented above and takes a remarkably simple form in the
+language of differential forms.</p>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Linearization of Nonlinear Maps
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Curvilinear Coordinates
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>

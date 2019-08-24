@@ -1,0 +1,727 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Notes on Euclidean Tensor Analysis.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Appendix - Calculus - Euclidean Tensor Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#single-variable-calculus" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Euclidean Tensor Analysis" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Euclidean Tensor Analysis
+            </span>
+            <span class="md-header-nav__topic">
+              Appendix - Calculus
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Euclidean Tensor Analysis" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Euclidean Tensor Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../inner_product_spaces/" title="Inner Product Spaces" class="md-nav__link">
+      Inner Product Spaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_1/" title="Linear Maps - I" class="md-nav__link">
+      Linear Maps - I
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_algebra/" title="Tensor Algebra" class="md-nav__link">
+      Tensor Algebra
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_2/" title="Linear Maps - II" class="md-nav__link">
+      Linear Maps - II
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-nav__link">
+      Linearization of Nonlinear Maps
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_analysis_R3/" title="Euclidean Tensor Analysis" class="md-nav__link">
+      Euclidean Tensor Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-nav__link">
+      Curvilinear Coordinates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../set_theory/" title="Appendix - Set Theory" class="md-nav__link">
+      Appendix - Set Theory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Appendix - Matrices" class="md-nav__link">
+      Appendix - Matrices
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Appendix - Calculus
+      </label>
+    
+    <a href="./" title="Appendix - Calculus" class="md-nav__link md-nav__link--active">
+      Appendix - Calculus
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#single-variable-calculus" title="Single variable calculus" class="md-nav__link">
+    Single variable calculus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuity" title="Continuity" class="md-nav__link">
+    Continuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differentiation" title="Differentiation" class="md-nav__link">
+    Differentiation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-the-derivative" title="Properties of the derivative" class="md-nav__link">
+    Properties of the derivative
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multivariable-calculus" title="Multivariable calculus" class="md-nav__link">
+    Multivariable calculus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuity_1" title="Continuity" class="md-nav__link">
+    Continuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differentiability" title="Differentiability" class="md-nav__link">
+    Differentiability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann-integration" title="Riemann integration" class="md-nav__link">
+    Riemann integration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#single-variable-calculus" title="Single variable calculus" class="md-nav__link">
+    Single variable calculus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuity" title="Continuity" class="md-nav__link">
+    Continuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differentiation" title="Differentiation" class="md-nav__link">
+    Differentiation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-the-derivative" title="Properties of the derivative" class="md-nav__link">
+    Properties of the derivative
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multivariable-calculus" title="Multivariable calculus" class="md-nav__link">
+    Multivariable calculus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuity_1" title="Continuity" class="md-nav__link">
+    Continuity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differentiability" title="Differentiability" class="md-nav__link">
+    Differentiability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann-integration" title="Riemann integration" class="md-nav__link">
+    Riemann integration
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Appendix - Calculus</h1>
+                
+                <p>This appendix reviews elementary topics in single and multivariable
+calculus that are necessary to understand the theory of Euclidean tensor
+analysis developed in the main part of the notes.</p>
+<h2 id="single-variable-calculus">Single variable calculus</h2>
+<p>We start with a brief review of single variable calculus. The primary
+object of study are functions of the form
+<script type="math/tex">f:I \subseteq \mathbb{R} \to \mathbb{R}</script> that map an <strong>open
+interval</strong> <script type="math/tex">I = (a,b) \subseteq \mathbb{R}</script> into the set of real
+numbers. Thus given any <script type="math/tex">x \in I</script>, <script type="math/tex">f(x)</script> is a real number.</p>
+<h3 id="continuity">Continuity</h3>
+<p>Recall that <script type="math/tex">f:I \to \mathbb{R}</script> is said to be <strong>continuous</strong> at
+<script type="math/tex">x \in I</script> if, given any <script type="math/tex">\epsilon > 0</script>, there exists <script type="math/tex">\delta > 0</script>
+such that
+<script type="math/tex; mode=display">|y - x| < \delta \quad\Rightarrow\quad |f(y) - f(x)| < \epsilon.</script> The
+idea is that as the point <script type="math/tex">y</script> approaches <script type="math/tex">x</script>, the value of the
+function <script type="math/tex">f(y)</script> approaches <script type="math/tex">f(x)</script>. In other words, there are no
+abrupt jumps in the function value at <script type="math/tex">x</script>. Note that the foregoing
+definition can be written equivalently as
+<script type="math/tex; mode=display">\lim_{y \to x} f(y) = f(x).</script> The function is said to be continuous
+over the whole of <script type="math/tex">I</script> if it is continuous at every <script type="math/tex">x \in I</script>. The
+set of all continuous functions on <script type="math/tex">I</script> is denoted as
+<script type="math/tex">C^0(I,\mathbb{R})</script>.</p>
+<h3 id="differentiation">Differentiation</h3>
+<p>The function <script type="math/tex">f:I \to \mathbb{R}</script> is said to be <strong>differentiable</strong> at
+<script type="math/tex">x \in I</script> if the limit <script type="math/tex; mode=display">\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}</script>
+exists. In this case, the is limit is called the <strong>derivative</strong> of <script type="math/tex">f</script>
+at <script type="math/tex">x</script> and is denoted variously as
+<script type="math/tex; mode=display">f'(x), \quad \dot{f}(x), \quad \frac{df(x)}{dx}, \quad Df(x),</script>
+depending on the context. The function <script type="math/tex">f</script> is said to be
+differentiable on <script type="math/tex">I</script> if it is differentiable at every <script type="math/tex">x \in I</script>.
+The set of all differentiable functions on <script type="math/tex">I</script> whose derivative is
+also continuous on <script type="math/tex">I</script> is denoted as <script type="math/tex">C^1(I,\mathbb{R})</script>.</p>
+<p>Every differentiable function is continuous. To see this suppose that
+<script type="math/tex">f:I \to \mathbb{R}</script> is a differentiable function. Then, at any
+<script type="math/tex">x \in I</script>, it can be seen that
+<script type="math/tex; mode=display">\lim_{y \to x} f(y) - f(x) = \lim_{y \to x} (y - x)\frac{f(y) - f(x)}{y - x} = 0 \cdot f'(x) = 0.</script>
+This shows that <script type="math/tex">\lim_{y \to x} f(y) = f(x)</script>, thereby establishing the
+claim. Note in particular that
+<script type="math/tex">C^1(I,\mathbb{R}) \subsetneq C^0(I,\mathbb{R})</script>.</p>
+<p>Higher order derivatives can be defined similarly. For instance, a
+differentiable function <script type="math/tex">f:I \to \mathbb{R}</script> is said to be twice
+differentiable at <script type="math/tex">x \in I</script> if the function <script type="math/tex">f'(x):I \to \mathbb{R}</script>
+is differentiable at <script type="math/tex">x</script>. In this case, the <strong>second derivative</strong> of
+<script type="math/tex">f</script> at <script type="math/tex">x</script> is written, variously, as
+<script type="math/tex; mode=display">f''(x), \quad \ddot{f}(x), \quad \frac{d^2f(x)}{dx^2}, \quad D^2f(x).</script>
+The function <script type="math/tex">f:I \to \mathbb{R}</script> is said to be twice differentiable
+on <script type="math/tex">I</script> if its second derivative exists at every <script type="math/tex">x \in I</script>. The set
+of all twice differentiable functions on <script type="math/tex">I</script> whose second derivative
+is also continuous on <script type="math/tex">I</script> is denoted as <script type="math/tex">C^2(I,\mathbb{R})</script>. Third
+and higher derivatives of <script type="math/tex">f</script> are defined in an analogous manner. For
+instance, the set <script type="math/tex">C^k(I,\mathbb{R})</script> consists of all functions
+<script type="math/tex">f:I \to \mathbb{R}</script> that are <script type="math/tex">k</script> times differentiable on <script type="math/tex">I</script>, and
+whose <script type="math/tex">k^{\text{th}}</script> derivative is continuous on <script type="math/tex">I</script>. The function
+<script type="math/tex">f:I \to \mathbb{R}</script> is said to be <strong>smooth</strong> on <script type="math/tex">I</script> if it is an
+element of <script type="math/tex">C^k(I,\mathbb{R})</script> for every <script type="math/tex">k \in \mathbb{N}</script>.</p>
+<h3 id="properties-of-the-derivative">Properties of the derivative</h3>
+<p>We will now recall a few elementary properties of the derivative. The
+derivative is a linear operation in the following sense: given any
+differentiable functions <script type="math/tex">f:I \to \mathbb{R}</script>, <script type="math/tex">g:I \to \mathbb{R}</script>
+and constants <script type="math/tex">a,b \in \mathbb{R}</script>, it follows from an elementary
+argument from the definition of the derivative that
+<script type="math/tex; mode=display">(a f + b g)'(x) = a f'(x) + b g'(x).</script> The <strong>product rule</strong> of
+differentiation states that <script type="math/tex; mode=display">(fg)'(x) = f'(x) g(x) + f(x) g'(x).</script> The
+product rule is also a simple consequence of the definition of the
+derivative.</p>
+<p>An important property of the derivative pertains to composition of
+functions. For simplicity, let us consider differentiable functions
+<script type="math/tex">f, g: \mathbb{R} \to \mathbb{R}</script>. Then, the <strong>chain rule</strong> of
+differentiation states that <script type="math/tex; mode=display">(f \circ g)'(x) = f'(g(x)) g'(x).</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Proof</p>
+<p>To see this, note that <script type="math/tex; mode=display">\begin{split}
+(f \circ g)'(x) &= \lim_{h \to 0} \frac{f(g(x + h)) - f(g(x))}{h}\\
+ &= \lim_{h \to 0} \frac{f(g(x + h)) - f(g(x))}{g(x + h) - g(x)}\frac{g(x + h)) - g(x)}{h}.
+\end{split}</script> Noting that the differentiability of <script type="math/tex">g</script> implies that
+<script type="math/tex; mode=display">\lim_{h \to 0} g(x + h) - g(x) = 0,</script> and introducing the notation
+<script type="math/tex">y = g(x + h) - g(x)</script>, we see that <script type="math/tex; mode=display">\begin{split}
+(f \circ g)'(x) &= \lim_{y \to 0} \frac{f(g(x) + y) - f(g(x))}{y}\lim_{h \to 0}{g(x + h) - g(x)}\frac{g(x + h)) - g(x)}{h}\\
+ &= f'(g(x))g'(x).
+\end{split}</script> This proves the chain rule of differentiation.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As a simple application of the chain rule, consider the case
+of a bijective function <script type="math/tex">f:\mathbb{R} \to \mathbb{R}</script> such that both
+<script type="math/tex">f</script> and <script type="math/tex">f^{-1}</script> are differentiable. The chain rule of
+differentiation can be used to related the derivatives of <script type="math/tex">f</script> and
+<script type="math/tex">f^{-1}</script> as follows: for any <script type="math/tex">x \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">(f^{-1} \circ f)(x) = x \quad\Rightarrow\quad (f^{-1})'(f(x))f'(x) = 1 \quad\Rightarrow\quad (f^{-1})'(f(x)) = \frac{1}{f'(x)}.</script>
+A similar expression can be obtained by differentiating the identity
+<script type="math/tex">(f \circ f^{-1})(x) = x</script>.</p>
+</div>
+<h2 id="multivariable-calculus">Multivariable calculus</h2>
+<p>Let us now present certain elementary facts about multivariable
+calculus. To keep the discussion elementary, let us consider first the
+case of a real valued function of two real variables
+<script type="math/tex">f:\mathbb{R}^2 \to \mathbb{R}</script>. The development here parallels that
+presented in the single variable case. The general case of a function of
+many variables is considered subsequently.</p>
+<h3 id="continuity_1">Continuity</h3>
+<p>The function <script type="math/tex">f:R \subseteq \mathbb{R}^2 \to \mathbb{R}</script>, where <script type="math/tex">R</script>
+is an <strong>open rectangle</strong>
+<script type="math/tex">(x_1,x_2) \times (y_1,y_2) \subseteq \mathbb{R}^2</script>, is said to be
+<strong>continuous</strong> at <script type="math/tex">(x,y) \in R</script> if, for every <script type="math/tex">\epsilon > 0</script>, there
+exists a <script type="math/tex">\delta > 0</script> such that
+<script type="math/tex; mode=display">\sqrt{(\bar{x} - x)^2 + (\bar{y} - y)^2} < \delta \quad\Rightarrow\quad |f(\bar{x},\bar{y} - f(x,y)| \le \epsilon.</script>
+Notice how the Euclidean distance figures in this definition. As before,
+the definition of continuity can be equivalently restated as
+<script type="math/tex; mode=display">\lim_{(\bar{x},\bar{y}) \to (x,y)} f(\bar{x},\bar{y}) = f(x,y).</script> The
+intuitive explanation is the same as before: if <script type="math/tex">f</script> is continuous at
+<script type="math/tex">(x,y) \in R</script>, then the value of <script type="math/tex">f</script>
+<em>close</em> to <script type="math/tex">(x,y)</script> is <em>close</em>
+to <script type="math/tex">f(x,y)</script>. In other words, there are no <em>gaps</em> in the range of
+<script type="math/tex">f</script>.</p>
+<p>The function <script type="math/tex">f</script> is said to be continuous on <script type="math/tex">R</script> if it is continuous
+at every <script type="math/tex">(x,y) \in R</script>. In this case, the set of all continuous
+functions on <script type="math/tex">\mathbb{R}</script> is written as <script type="math/tex">C^0(R,\mathbb{R}^2)</script>.</p>
+<h3 id="differentiability">Differentiability</h3>
+<p>Let us now study the differentiability of the function
+<script type="math/tex">f:R \to \mathbb{R}^2</script>. Rather than develop the general theory (this
+is presented in the main part of these notes), the presentation here
+provides an elementary account of the partial derivatives of <script type="math/tex">f</script>.</p>
+<p>The function <script type="math/tex">f:R \to \mathbb{R}</script> takes two real arguments and returns
+a real number. Fixing one of the arguments, we get a real-valued
+function of a real variable, which can be differentiated as studied
+before, in the context of single variable calculus. In the present case,
+fixing one of the arguments and letting the other vary results in two
+different limits:
+<script type="math/tex; mode=display">\lim_{h \to 0} \frac{f(x + h,y) - f(x,y)}{h}, \qquad \lim_{h \to 0} \frac{f(x,y + h) - f(x,y)}{h},</script>
+where <script type="math/tex">(x,y) \in R</script> and <script type="math/tex">h \in \mathbb{R}</script>. When these limits exist,
+they are called the <strong>partial derivatives</strong> of <script type="math/tex">f</script>. Specifically, the
+partial derivatives of <script type="math/tex">f:R \to \mathbb{R}^2</script> at
+<script type="math/tex">(x,y) \in \mathbb{R}</script> are defined as <script type="math/tex; mode=display">\begin{split}
+\frac{\partial f(x,y)}{\partial x} &= \lim_{h \to 0} \frac{f(x + h,y) - f(x,y)}{h},\\
+\frac{\partial f(x,y)}{\partial y} &= \lim_{h \to 0} \frac{f(x,y + h) - f(x,y)}{h}.
+\end{split}</script> The following alternative notations will be used for
+partial derivatives: <script type="math/tex; mode=display">\begin{split}
+\frac{\partial f(x,y)}{\partial x} &= \partial_x f(x,y) = \partial_1 f(x,y) = D_x f(x,y) = D_1 f(x,y),\\
+\frac{\partial f(x,y)}{\partial y} &= \partial_y f(x,y) = \partial_2 f(x,y) = D_y f(x,y) = D_2 f(x,y).
+\end{split}</script>
+</p>
+<div class="admonition danger">
+<p class="admonition-title">TO DO</p>
+<p>...</p>
+</div>
+<h2 id="riemann-integration">Riemann integration</h2>
+<div class="admonition danger">
+<p class="admonition-title">TO DO</p>
+<p>...</p>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../matrices/" title="Appendix - Matrices" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Appendix - Matrices
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>

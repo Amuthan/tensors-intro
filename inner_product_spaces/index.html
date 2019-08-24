@@ -1,0 +1,1846 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Notes on Euclidean Tensor Analysis.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Inner Product Spaces - Euclidean Tensor Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#introduction" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Euclidean Tensor Analysis" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Euclidean Tensor Analysis
+            </span>
+            <span class="md-header-nav__topic">
+              Inner Product Spaces
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Euclidean Tensor Analysis" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Euclidean Tensor Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Inner Product Spaces
+      </label>
+    
+    <a href="./" title="Inner Product Spaces" class="md-nav__link md-nav__link--active">
+      Inner Product Spaces
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-structure" title="Linear structure" class="md-nav__link">
+    Linear structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subspaces-and-linear-independence" title="Subspaces and linear independence" class="md-nav__link">
+    Subspaces and linear independence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basis-of-a-vector-space" title="Basis of a vector space" class="md-nav__link">
+    Basis of a vector space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-products-and-norms" title="Inner products and norms" class="md-nav__link">
+    Inner products and norms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cauchy-schwarz-inequality" title="Cauchy-Schwarz inequality" class="md-nav__link">
+    Cauchy-Schwarz inequality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gram-schmidt-orthogonalization" title="Gram-Schmidt orthogonalization" class="md-nav__link">
+    Gram-Schmidt orthogonalization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basis-representation-of-vectors" title="Basis representation of vectors" class="md-nav__link">
+    Basis representation of vectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-of-basis-rules-for-vectors" title="Change of basis rules for vectors" class="md-nav__link">
+    Change of basis rules for vectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-basis" title="General basis" class="md-nav__link">
+    General basis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#representation-of-vectors" title="Representation of vectors" class="md-nav__link">
+    Representation of vectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reciprocal-basis" title="Reciprocal basis" class="md-nav__link">
+    Reciprocal basis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-of-basis-rules" title="Change of basis rules" class="md-nav__link">
+    Change of basis rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_1/" title="Linear Maps - I" class="md-nav__link">
+      Linear Maps - I
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_algebra/" title="Tensor Algebra" class="md-nav__link">
+      Tensor Algebra
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_2/" title="Linear Maps - II" class="md-nav__link">
+      Linear Maps - II
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-nav__link">
+      Linearization of Nonlinear Maps
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_analysis_R3/" title="Euclidean Tensor Analysis" class="md-nav__link">
+      Euclidean Tensor Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-nav__link">
+      Curvilinear Coordinates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../set_theory/" title="Appendix - Set Theory" class="md-nav__link">
+      Appendix - Set Theory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Appendix - Matrices" class="md-nav__link">
+      Appendix - Matrices
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../calculus/" title="Appendix - Calculus" class="md-nav__link">
+      Appendix - Calculus
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-structure" title="Linear structure" class="md-nav__link">
+    Linear structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subspaces-and-linear-independence" title="Subspaces and linear independence" class="md-nav__link">
+    Subspaces and linear independence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basis-of-a-vector-space" title="Basis of a vector space" class="md-nav__link">
+    Basis of a vector space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inner-products-and-norms" title="Inner products and norms" class="md-nav__link">
+    Inner products and norms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cauchy-schwarz-inequality" title="Cauchy-Schwarz inequality" class="md-nav__link">
+    Cauchy-Schwarz inequality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gram-schmidt-orthogonalization" title="Gram-Schmidt orthogonalization" class="md-nav__link">
+    Gram-Schmidt orthogonalization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basis-representation-of-vectors" title="Basis representation of vectors" class="md-nav__link">
+    Basis representation of vectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-of-basis-rules-for-vectors" title="Change of basis rules for vectors" class="md-nav__link">
+    Change of basis rules for vectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-basis" title="General basis" class="md-nav__link">
+    General basis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#representation-of-vectors" title="Representation of vectors" class="md-nav__link">
+    Representation of vectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reciprocal-basis" title="Reciprocal basis" class="md-nav__link">
+    Reciprocal basis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-of-basis-rules" title="Change of basis rules" class="md-nav__link">
+    Change of basis rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Inner Product Spaces</h1>
+                
+                <p>We begin with a discussion of the algebraic properties of
+<em>vectors</em>, which are defined as elements of a special kind of a set
+called a <em>vector space</em>. We will then define an additional structure
+called the <em>inner product</em> that significantly simplifies the
+mathematical development. We will learn how to <em>represent</em> a vector with
+respect to a chosen <em>basis</em>, and how this representation changes when
+the basis changes. Finally, we will study <em>linear maps</em> between vector
+spaces, and their representation with respect to chosen bases of the
+vector spaces. To keep the presentation simple, technical proofs for
+many of the statements given here are omitted. Basic notions from set
+theory and matrix algebra, reviewed in two appendices, are assumed to be known.</p>
+<h2 id="introduction">Introduction</h2>
+<p>A vector is typically introduced in high school algebra as a quantity
+with both a magnitude and a direction. A representation of a vector in
+the familiar three dimensional Euclidean space is shown in the following figure:</p>
+<p><img alt="Arrow representation" src="../figures/euclidean_vector.png" />
+<em>Representation of a vector in <script type="math/tex">\mathbb{R}^3</script></em></p>
+<p>If <script type="math/tex">\mathsf{i},\mathsf{j}, \mathsf{k}</script> represent the unit vectors
+along the <script type="math/tex">x,y,z</script> axes, respectively, a vector <script type="math/tex">\mathsf{v}</script> can be
+expressed uniquely as
+<script type="math/tex">\mathsf{v} = v_x \mathsf{i} + v_y \mathsf{j} + v_z \mathsf{k}</script>, where
+<script type="math/tex">v_x, v_y, v_z</script> are the <em>Cartesian components</em> of the vector
+<script type="math/tex">\mathsf{v}</script> (with respect to the basis vectors
+<script type="math/tex">\mathsf{i},\mathsf{j}</script> and <script type="math/tex">\mathsf{k}</script>).</p>
+<p>There are two core operations associated with vectors:</p>
+<ul>
+<li>
+<p><strong>Vector addition</strong>: Given two vectors
+    <script type="math/tex">\mathsf{u} = u_x \mathsf{i} + u_y \mathsf{j} + u_z \mathsf{k}</script>
+    and
+    <script type="math/tex">\mathsf{v} = v_x \mathsf{i} + v_y \mathsf{j} + v_z \mathsf{k}</script>,
+    we can <em>add</em> them to get a new vector <script type="math/tex">\mathsf{u} + \mathsf{v}</script>,
+    defined as
+    <script type="math/tex; mode=display">\mathsf{u} + \mathsf{v} = (u_x + v_x) \mathsf{i} + (u_y + v_y) \mathsf{j} + (u_z + v_z) \mathsf{k}.</script>
+    Geometrically, the new vector <script type="math/tex">\mathsf{u} + \mathsf{v}</script> is
+    obtained by placing the tail of <script type="math/tex">\mathsf{v}</script> at the head of
+    <script type="math/tex">\mathsf{u}</script>. The sum of the two vectors is then the vector which
+    shares it’s tail with <script type="math/tex">\mathsf{u}</script> and head with <script type="math/tex">\mathsf{v}</script>,
+    as shown below:</p>
+<p><img alt="Vector addition" src="../figures/euclidean_vector_addition.png" />
+<em>Vector addition in <script type="math/tex">\mathbb{R}^3</script></em></p>
+<p>Note that we get the same vector independent of the order of
+addition: <script type="math/tex">\mathsf{u} + \mathsf{v} = \mathsf{v} + \mathsf{u}</script>. For
+this reason, vector addition is said to be <em>commutative</em>. It can
+also be shown easily that if <script type="math/tex">\mathsf{u}, \mathsf{v}, \mathsf{w}</script>
+are three vectors, then
+<script type="math/tex">(\mathsf{u} + \mathsf{v}) + \mathsf{w} = \mathsf{u} + (\mathsf{v} + \mathsf{w})</script>.
+This property is called <em>associativity</em>.</p>
+</li>
+<li>
+<p><strong>Scalar multiplication</strong> of a vector with a real number: Given
+    any vector
+    <script type="math/tex">\mathsf{v} = v_x \mathsf{i} + v_y \mathsf{j} + v_z \mathsf{k}</script>,
+    we can <em>multiply</em> it by some real number <script type="math/tex">a</script> to get the new vector
+    that is <script type="math/tex">a</script> times as long as <script type="math/tex">\mathsf{v}</script>:
+    <script type="math/tex">a\mathsf{v}= av_x \mathsf{i} + av_y \mathsf{j} + av_z \mathsf{k}</script>.
+    This is illustrated in the following figure:</p>
+<p><img alt="Scalar multiplication" src="../figures/euclidean_scalar_multiplication.png" />
+<em>Scalar multiplication of a vector in <script type="math/tex">\mathbb{R}^3</script></em></p>
+<p>Note that we will need only real vector spaces in what follows.</p>
+</li>
+</ul>
+<p>Some vector spaces admit an algebraic operation called the <em>inner
+product</em>. For instance, in three dimensional space, given two vectors
+<script type="math/tex">\mathsf{u} = u_x \mathsf{i} + u_y \mathsf{j} + u_z \mathsf{k}</script> and
+<script type="math/tex">\mathsf{v} = v_x \mathsf{i} + v_y \mathsf{j} + v_z \mathsf{k}</script>, we
+can combine them using the <strong>dot product</strong> to produce a real number
+<script type="math/tex">\mathsf{u} \cdot \mathsf{v} = u_x v_x + u_y v_y + u_z v_z</script>. Using the
+dot product, it is customary to define the <strong>length</strong> or <strong>Euclidean
+norm</strong> of a vector
+<script type="math/tex">\mathsf{v} = v_x \mathsf{i} + v_y \mathsf{j} + v_z \mathsf{k}</script> as the
+(non-negative) real number
+<script type="math/tex">\lVert \mathsf{v} \rVert = (\mathsf{v} \cdot \mathsf{v})^{\frac{1}{2}} = (v_x^2 + v_y^2 + v_z^2)^{\frac{1}{2}}</script>.</p>
+<p>For vectors in three dimensional space (only), we also an additional
+important algebraic operation called the <em>cross product</em>: we can combine
+two vectors
+<script type="math/tex">\mathsf{u} = u_x \mathsf{i} + u_y \mathsf{j} + u_z \mathsf{k}</script> and
+<script type="math/tex">\mathsf{v} = v_x \mathsf{i} + v_y \mathsf{j} + v_z \mathsf{k}</script> using
+the <strong>cross product</strong> to obtain a new vector
+<script type="math/tex">\mathsf{u} \times \mathsf{v} = (u_y v_z - u_z v_y) \mathsf{i} + (u_z v_x - u_x v_z) \mathsf{j} + (u_x v_y - u_y v_x) \mathsf{k}</script>.</p>
+<p>In what follows, we will first focus on just vector addition and scalar
+multiplication. These two operations embody a concept known as
+<em>linearity</em>, which is fundamental to appreciate what a vector is. We
+will then study <em>inner product spaces</em>, which are vector spaces with an
+additional structure known as an <em>inner product</em>, and highlight
+Euclidean spaces as an important example of inner product spaces.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The generalization of the cross product is known as the <em>wedge
+product</em>. We will not study the wedge product in detail in these notes
+since it is beyond the scope of these notes.</p>
+</div>
+<p>Notice that all the information about the vector
+<script type="math/tex">\mathsf{v} = v_x \mathsf{i} + v_y \mathsf{j} + v_z \mathsf{k}</script> is
+contained in the ordered set of three real numbers <script type="math/tex">(v_x, v_y, v_z)</script>.
+What this means is that given any vector <script type="math/tex">\mathsf{v}</script> in three
+dimensional space, we can uniquely associate with it a triple of real
+numbers, and vice versa. The set of all such ordered triples is the set
+<script type="math/tex">\mathbb{R}^3</script>, which is the set of all triples of real numbers. If we
+define addition of two such ordered triples and multiplication of an
+ordered triple with a real number as, <script type="math/tex; mode=display">\begin{gathered}
+(u_x, u_y, u_z) + (v_x, v_y, v_z) = (u_x + v_x, u_y + v_y, u_z + v_z), \nonumber\\
+c(u_x, u_y, u_z) = (cu_x, cu_y, cu_z), \nonumber\end{gathered}</script> then
+the elements of <script type="math/tex">\mathbb{R}^3</script>, which are ordered triples of real
+numbers, behave exactly as the geometric picture of vectors as arrows
+that we just discussed, as far as the core properties of vector addition
+and scalar multiplication are concerned.</p>
+<p>We now have two ways of representing a vector: as an arrow in three
+dimensional space, and as a set of ordered triple of real numbers. Both
+of these represent the same object. But the representation in terms of
+ordered tuples of real numbers immediately admits a generalization to
+cases where the pictorial representation fails. It is evident from the
+above discussion that there is nothing special about the number <script type="math/tex">3</script>
+when we considered an ordered <em>triple</em> of real numbers. We can easily
+generalize this to a set of ordered <script type="math/tex">n</script>-tuple of real numbers
+<script type="math/tex">(u_1,u_2,\ldots,u_n) \in \mathbb{R}^n</script>, where <script type="math/tex">n \in \mathbb{N}</script>
+could be any arbitrary positive integer. We can define addition and
+scalar multiplication in <script type="math/tex">\mathbb{R}^n</script> analogous to the case of the
+ordered triples,</p>
+<p>
+<script type="math/tex; mode=display">\begin{gathered}
+(u_1, u_2, \ldots, u_n) + (v_1, v_2, \ldots, v_n) = (u_1 + v_1, u_2 + v_2, \ldots, u_n + v_n), \label{eq:linearity_Rn_add}\\
+a(u_1, u_2, \ldots, u_n) = (au_1, au_2, \ldots, au_n),\label{eq:linearity_Rn_sm}\end{gathered}</script>
+</p>
+<p>where <script type="math/tex">(u_1,u_2,\ldots,u_n)</script> and <script type="math/tex">(v_1,v_2,\ldots,v_n)</script> are two
+elements of <script type="math/tex">\mathbb{R}^n</script>, and <script type="math/tex">a</script> is a real number. We will call
+this the <strong>standard linear structure</strong> on <script type="math/tex">\mathbb{R}^n</script>, and elements
+of <script type="math/tex">\mathbb{R}^n</script> as <strong>vectors</strong> in <script type="math/tex">\mathbb{R}^n</script>. Note that there
+is no obvious way to <em>picture</em> an arrow in the <script type="math/tex">n</script>-dimensional space
+<script type="math/tex">\mathbb{R}^n</script> for <script type="math/tex">n > 3</script>. Thus, by choosing the right
+representation, we can extend the elementary notion of vectors as
+quantities with magnitude and direction to more general objects.</p>
+<h2 id="linear-structure">Linear structure</h2>
+<p>Let us now generalize the previous discussion to define <em>abstract vector
+spaces</em>. Suppose that <script type="math/tex">V</script> is a set such that it is possible to define
+two maps <script type="math/tex; mode=display">\begin{split}
++:V \times V \to V; & \quad +(\mathsf{u},\mathsf{v}) \mapsto \mathsf{u} + \mathsf{v},\\
+\cdot:V \times V \to V; & \quad \cdot(a, \mathsf{u}) \mapsto a\mathsf{u},
+\end{split}</script> called <strong>vector addition</strong> and <strong>scalar multiplication</strong>,
+respectively, in <script type="math/tex">V</script>, that satisfy the following properties: for any
+<script type="math/tex">\mathsf{u}, \mathsf{v}, \mathsf{w} \in V</script> and <script type="math/tex">a,b \in \mathbb{R}</script>,</p>
+<ol>
+<li>
+<p><strong>Associativity</strong> of addition:
+    <script type="math/tex">\mathsf{u} + (\mathsf{v} + \mathsf{w}) = (\mathsf{u} + \mathsf{v}) + \mathsf{w}</script>,</p>
+</li>
+<li>
+<p><strong>Commutativity</strong> of addition:
+    <script type="math/tex">\mathsf{u} + \mathsf{v} = \mathsf{v} + \mathsf{u}</script>,</p>
+</li>
+<li>
+<p>Existence of <strong>additive identity</strong>: there exists a unique element
+    <script type="math/tex">\mathsf{0} \in V</script>, called the <strong>additive identity</strong> of <script type="math/tex">V</script> such
+    that <script type="math/tex">\mathsf{u} + \mathsf{0} = \mathsf{u}</script>,</p>
+</li>
+<li>
+<p>Existence of <strong>additive inverse</strong>: for every <script type="math/tex">\mathsf{u} \in V</script>,
+    there exists a unique element <script type="math/tex">-\mathsf{u} \in V</script> such that
+    <script type="math/tex">\mathsf{u} + (-\mathsf{u}) = \mathsf{0}</script>,</p>
+</li>
+<li>
+<p><strong>Distributivity</strong> of scalar multiplication over vector addition:
+    <script type="math/tex">a(\mathsf{u} + \mathsf{v}) = a\mathsf{u} + a\mathsf{v}</script>,</p>
+</li>
+<li>
+<p><strong>Distributivity</strong> of scalar multiplication over scalar addition:
+    <script type="math/tex">(a + b)\mathsf{u} = a\mathsf{u} + b\mathsf{u}</script>,</p>
+</li>
+<li>
+<p><strong>Compatibility</strong> of scalar multiplication with field
+    multiplication: <script type="math/tex">a(b\mathsf{u}) = (ab)\mathsf{u}</script>,</p>
+</li>
+<li>
+<p><strong>Scaling</strong> property of scalar multiplication:
+    <script type="math/tex">1\mathsf{u} = \mathsf{u}</script>.    </p>
+</li>
+</ol>
+<p>A set <script type="math/tex">V</script> that has two maps that satisfy these axioms is called a <strong>(real) vector space</strong>, or a
+<strong>(real) linear space</strong>. What we have accomplished through these axioms
+is to endow a set with a notion of addition that allows us to <strong>add</strong>
+two elements of the set to get a third element. We have also provided a
+mechanism to <strong>multiply</strong> a member of this set by a real number to get
+another element of this set. The maps <script type="math/tex">+</script> and <script type="math/tex">\cdot</script> are said to
+provide a <strong>linear structure</strong> on <script type="math/tex">V</script>. Elements of <script type="math/tex">V</script> are called
+<strong>vectors</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Some textbooks mention additional <strong>closure</strong> axioms that
+indicate that if <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>, then
+<script type="math/tex">\mathsf{u} + \mathsf{v} \in V</script>, and given any <script type="math/tex">\mathsf{u} \in V</script>
+and <script type="math/tex">a \in \mathbb{R}</script>, <script type="math/tex">a \mathsf{u} \in V</script>. We don’t specify this
+explicitly since this is already implied by the function definitions
+<script type="math/tex">+:V \times V \to V</script> and <script type="math/tex">\cdot:\mathbb{R} \times V \to V</script>. As
+mentioned in the previous discussion on set theory, we will <em>always</em>
+insist on mentioning the domain and codomain of every map/function we
+encounter. Hence, the so-called closure axioms are redundant for our
+purposes.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Following standard convention, we will often use the shorthand notation <script type="math/tex">\mathsf{u} - \mathsf{v}</script> for <script type="math/tex">\mathsf{u} + (-\mathsf{v})</script>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The simplest example of a real vector space is the set of
+real numbers <script type="math/tex">\mathbb{R}</script> with addition and multiplication defined in
+the standard manner. More generally, consider the set <script type="math/tex">\mathbb{R}^n</script>
+consisting of all <script type="math/tex">n</script>-tuples of real numbers:
+<script type="math/tex; mode=display">\mathbb{R}^n = \{(u_1, \ldots, u_n)\,|\,\forall\,i=1,\ldots,n, \; u_i \in \mathbb{R}\}.</script>
+Given <script type="math/tex">(u_1, \ldots, u_n) \in \mathbb{R}^n</script>,
+<script type="math/tex">(v_1, \ldots, v_n) \in \mathbb{R}^n</script>, and <script type="math/tex">a \in \mathbb{R}</script>, let
+us define addition
+<script type="math/tex">+:\mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}^n</script> and scalar
+multiplication <script type="math/tex">\cdot:\mathbb{R}\times \mathbb{R}^n \to \mathbb{R}^n</script>
+as <script type="math/tex; mode=display">\begin{split}
+(u_1, \ldots, u_n) + (v_1, \ldots, v_n) &= (u_1 + v_1, \ldots, u_n + v_n),\\
+a \cdot (u_1, \ldots, u_n) &= (au_1, \ldots, au_n).
+\end{split}</script> It is straightforward to verify that with addition and
+scalar multiplication thus defined, the triple
+<script type="math/tex">(\mathbb{R}^n,+,\cdot)</script> is a real vector space. Note that the
+additive identity in <script type="math/tex">\mathbb{R}^n</script> is the zero vector
+<script type="math/tex">(0, \ldots, 0) \in \mathbb{R}^n</script>, and the additive inverse of
+<script type="math/tex">(u_1, \ldots, u_n) \in \mathbb{R}^n</script> is
+<script type="math/tex">(-u_1, \ldots, -u_n) \in \mathbb{R}^n</script>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the set <script type="math/tex">\mathbb{R}^{m \times n}</script> of all
+<script type="math/tex">m \times n</script> matrices with real entries and defined addition of
+matrices and scalar mutliplication of a matrix with a real number in the
+usual sense (see Appendix ). It is easily checked that the set of all
+<script type="math/tex">m \times n</script> matrices is a vector space. The zero vector in
+<script type="math/tex">\mathbb{R}^{m\times n}</script> is the matrix with zero in all of its
+entries, and the additive inverse of a given matrix is just its
+negative.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The definition of vector spaces admits more general kinds of
+objects. As a simple example, consider the set
+<script type="math/tex">C^0(\mathbb{R},\mathbb{R})</script> consisting of all real-valued and
+continuous functions of one real variable. Given any
+<script type="math/tex">f, g \in C^0(\mathbb{R},\mathbb{R})</script>, and any <script type="math/tex">a \in \mathbb{R}</script>,
+we can define addition and scalar multiplication pointwise as follows:
+for any <script type="math/tex">x \in \mathbb{R}</script>, <script type="math/tex; mode=display">\begin{split}
+(f + g)(x) &= f(x) + g(x),\\
+(a\cdot f)(x) &= a \, f(x).
+\end{split}</script> It is not difficult to verify that
+<script type="math/tex">(C^0(\mathbb{R},\mathbb{R}), +, \cdot)</script> is a real vector space. The
+additive identity in <script type="math/tex">C^0(\mathbb{R},\mathbb{R})</script> is the zero function
+<script type="math/tex">0 \in C^0(\mathbb{R},\mathbb{R})</script> defined as follows: for any
+<script type="math/tex">x \in \mathbb{R}</script>, <script type="math/tex">0(x) = 0</script>. The additive inverse of
+<script type="math/tex">f \in C^0(\mathbb{R},\mathbb{R})</script> is the function
+<script type="math/tex">-f \in C^0(\mathbb{R},\mathbb{R})</script> defined as follows: for any
+<script type="math/tex">x \in \mathbb{R}</script>, <script type="math/tex">(-f)(x) = -f(x)</script>.</p>
+</div>
+<h2 id="subspaces-and-linear-independence">Subspaces and linear independence</h2>
+<p>A subset <script type="math/tex">U \subseteq V</script> of a vector space <script type="math/tex">V</script> is said to be a
+<strong>linear subspace</strong> of <script type="math/tex">V</script> if <script type="math/tex">U</script> is also a vector space. Note that
+it is implicitly assumed that both <script type="math/tex">U</script> and <script type="math/tex">V</script> share the operations
+of vector addition and scalar multiplication. It can be easily checked
+that if a subset <script type="math/tex">U \subseteq V</script> of a real vector space <script type="math/tex">V</script> has the
+property that for any <script type="math/tex">\mathsf{u}, \mathsf{v} \in U</script>, and any
+<script type="math/tex">a,b \in \mathbb{R}</script>, <script type="math/tex">(a\mathsf{u} + b\mathsf{v}) \in U</script>, then
+<script type="math/tex">U</script> is a linear subspace of <script type="math/tex">V</script>. This property is often used to
+check if a given subset of a vector space is a linear subspace. An
+immediate consequence of this is the fact that every linear subspace of
+a given vector space must contain the additive identity
+<script type="math/tex">\mathsf{0} \in V</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the following subsets of <script type="math/tex">\mathbb{R}^3</script>:
+<script type="math/tex; mode=display">\begin{split}
+S_1 &= \{(x,y,z) \in \mathbb{R}^3 \,|\, x + y + z = 0\},\\
+S_2 &= \{(x,y,z) \in \mathbb{R}^3 \,|\, x + y + z = 1\},\\
+S_3 &= \{(x,y,z) \in \mathbb{R}^3 \,|\, y = z = 0\}.
+\end{split}</script> To see that <script type="math/tex">S_1</script> is a linear subspace of
+<script type="math/tex">\mathbb{R}^3</script>, note that if <script type="math/tex">(x_1, y_1, z_1) \in S_1</script>,
+<script type="math/tex">(x_2, y_2, z_2) \in S_1</script>, and <script type="math/tex">a, b \in \mathbb{R}</script>, then
+<script type="math/tex">a(x_1, y_1, z_1) + b(x_2, y_2, z_2) = ((ax_1 + bx_2), (ay_1 + by_2), (az_1 + bz_2)) \in \mathbb{R}^3</script>.
+Since
+<script type="math/tex">(ax_1 + bx_2) + (ay_1 + by_2) + (az_1 + bz_2) = a(x_1 + y_1 + z_1) + b(x_2 + y_2 + z_2) = (0,0,0)</script>,
+we see that <script type="math/tex">((ax_1 + bx_2), (ay_1 + by_2), (az_1 + bz_2)) \in S_1</script>.
+This shows that <script type="math/tex">S_1</script> is indeed a linear subspace of <script type="math/tex">\mathbb{R}^3</script>.
+It is likewise verified that <script type="math/tex">S_3</script> is also a linear subspace
+<script type="math/tex">\mathbb{R}^3</script>, while <script type="math/tex">S_2</script> is not.</p>
+</div>
+<p>The intersection of two linear subspaces is also a linear subspace.
+Moreover, any <em>finite</em> intersection of linear subspaces of a vector
+space <script type="math/tex">V</script> is also a linear subspace of <script type="math/tex">V</script>, as can be easily
+checked.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>In the previous example, the intersection of the subspaces
+<script type="math/tex">S_1 = \{(x,y,z) \in \mathbb{R}^3 \,|\, x + y + z = 0\}</script> and
+<script type="math/tex">S_3 = \{(x,y,z) \in \mathbb{R}^3 \,|\, y = z = 0\}</script> of
+<script type="math/tex">\mathbb{R}^3</script> is easily seen to be <script type="math/tex; mode=display">S_1 \cap S_3 = \{(0,0,0)\},</script>
+which is the trivial subspace of <script type="math/tex">\mathbb{R}^3</script>.</p>
+</div>
+<p>Two non-zero vectors <script type="math/tex">\mathsf{u},\mathsf{v} \in V</script> in a vector space
+<script type="math/tex">V</script> are said to be <strong>linearly independent</strong> iff
+<script type="math/tex">a\mathsf{u} + b\mathsf{v} = 0</script>, where <script type="math/tex">a,b</script> are real numbers,
+implies that <script type="math/tex">a=0</script> and <script type="math/tex">b=0</script>. Thus <script type="math/tex">\mathsf{u}</script> and <script type="math/tex">\mathsf{v}</script>
+are linearly independent iff the only linear combination of
+<script type="math/tex">\mathsf{u}</script> and <script type="math/tex">\mathsf{v}</script> that yields <script type="math/tex">\mathsf{0}</script> is the
+trivial linear combination <script type="math/tex">0\mathsf{u} + 0\mathsf{v}</script>. If this is not
+true, then <script type="math/tex">\mathsf{u}</script> and <script type="math/tex">\mathsf{v}</script> are said to be <strong>linearly
+dependent</strong>. This definition can be easily extended to a <em>finite</em> set of
+non-zero vectors <script type="math/tex">\mathsf{v}_1, \mathsf{v}_2, \ldots, \mathsf{v}_n</script>,
+where <script type="math/tex">n \in \mathbb{N}</script>. Thus, the set of vectors
+<script type="math/tex">\mathsf{v}_1, \mathsf{v}_2, \ldots, \mathsf{v}_n</script> in <script type="math/tex">V</script> is said to
+be linearly independent iff the only real numbers
+<script type="math/tex">a_1, a_2, \ldots, a_n</script> that satisfy the equation
+<script type="math/tex; mode=display">\sum_{i=1}^n a_i \mathsf{v}_i = 0,</script> are
+<script type="math/tex">a_1 = a_2 = \ldots = a_n = 0</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the vectors
+<script type="math/tex">\mathsf{v}_1 = (1,2) \in \mathbb{R}^2</script> and
+<script type="math/tex">\mathsf{v}_2 = (2,3)\in\mathbb{R}^2</script> in the two dimensional Euclidean
+space <script type="math/tex">\mathbb{R}^2</script>. For real numbers <script type="math/tex">a, b \in \mathbb{R}</script>, note
+that
+<script type="math/tex; mode=display">a\mathsf{v}_1 + b\mathsf{v}_2 = 0 \quad\Rightarrow\quad (a + 2b, 2a + 3b) = (0,0).</script>
+Solving the equations <script type="math/tex">a + 2b = 0</script> and <script type="math/tex">2a + 3b = 0</script>, we immediately
+see that <script type="math/tex">a = b = 0</script>, which shows that <script type="math/tex">\mathsf{v}_1</script> and
+<script type="math/tex">\mathsf{v}_2</script> are linearly independent vectors in <script type="math/tex">\mathbb{R}^2</script>.
+If <script type="math/tex">\mathsf{v}_3 = (2,4) \in \mathbb{R}^2</script>, then <script type="math/tex">\mathsf{v}_1</script> and
+<script type="math/tex">\mathsf{v}_3</script> are linearly dependent since if for
+<script type="math/tex">a, b \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">a\mathsf{v}_1 + b\mathsf{v}_3 = 0 \quad\Rightarrow\quad (a + 2b, 2a + 4b) = (0,0).</script>
+These equations do not imply that <script type="math/tex">a = b = 0</script>. For instance,
+<script type="math/tex">a = -2, b = 1</script> satisfies the condition. We thus see that
+<script type="math/tex">\mathsf{v}_1</script> and <script type="math/tex">\mathsf{v}_3</script> are linearly dependent.</p>
+</div>
+<h2 id="basis-of-a-vector-space">Basis of a vector space</h2>
+<p>We will now introduce a very important tool called the <em>basis</em> of a
+vector space. The basic idea is that once we identify a basis for a
+vector space, we can use the linear structure inherent in the space to
+reduce all computations related to the vector space as a whole, to just
+computations on the basis set. We will need a few definitions first in
+order to define the basis.</p>
+<p>The <strong>linear span</strong> of a set of vectors
+<script type="math/tex">\{\mathsf{v}_1, \mathsf{v}_2, \ldots, \mathsf{v}_m\}</script> in <script type="math/tex">V</script>,
+written as <script type="math/tex">\text{span}(\{\mathsf{v}_1,\ldots,\mathsf{v}_m\})</script>, is
+defined as the set of all it’s <strong>linear combinations</strong>:
+<script type="math/tex; mode=display">\text{span}(\{\mathsf{v}_1,\ldots,\mathsf{v}_m\}) = \left\{\sum_{i=1}^m a_i \mathsf{v}_i \,\bigg\vert\, \forall\,1\le i\le m,\,a_i \in \mathbb{R}\right\}.</script>
+It is also common to refer to the linear span as just the <strong>span</strong>. It
+is straightforward to check that the linear span of any finite
+collection of vectors in a vector space <script type="math/tex">V</script> is a linear subspace of
+the vector space <script type="math/tex">V</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us consider the vectors
+<script type="math/tex">\mathsf{v}_1 = (1,2,3) \in \mathbb{R}^3</script> and
+<script type="math/tex">\mathsf{v}_2 = (2,3,4) \in \mathbb{R}^3</script> in <script type="math/tex">\mathbb{R}^3</script>. The
+span of these two vectors is the following subset of <script type="math/tex">\mathbb{R}^3</script>:
+<script type="math/tex; mode=display">\text{span}(\{\mathsf{v}_1, \mathsf{v}_2\}) = \{((a + 2b, 2a + 3b, 3a + 4b) \in \mathbb{R}^3 \,|\, a, b \in \mathbb{R}\}.</script>
+It is left as an easy exercise to verify that this is indeed a linear
+subspace of <script type="math/tex">\mathbb{R}^3</script>.</p>
+</div>
+<p>An <em>ordered</em> subset <script type="math/tex">S \subseteq V</script> a vector space <script type="math/tex">V</script> is said to
+constitute a <strong>basis</strong> of <script type="math/tex">V</script> if</p>
+<ol>
+<li>
+<p>
+<script type="math/tex">S</script> is linearly independent, and</p>
+</li>
+<li>
+<p>
+<script type="math/tex">\text{span}(S) = V</script>.</p>
+</li>
+</ol>
+<p>In the special case when a vector space <script type="math/tex">V</script> is spanned by a <em>finite</em>
+ordered set of vectors
+<script type="math/tex">(\mathsf{v}_1, \ldots, \mathsf{v}_n) \subseteq V</script>, for some
+<script type="math/tex">n \in \mathbb{N}</script>, the vector space <script type="math/tex">V</script> is said to be <strong>finite
+dimensional</strong>, and the number <script type="math/tex">n</script> is called the <strong>dimension</strong> of the
+vector space <script type="math/tex">V</script> (written <script type="math/tex">\text{dim}(V)</script>). A vector space that is
+not finite dimensional is said to be <strong>infinite dimensional</strong>. In what
+follows, we will only deal with finite dimensional vector spaces.</p>
+<p>If <script type="math/tex">V</script> is an <script type="math/tex">n</script>-dimensional vector space, and
+<script type="math/tex">(\mathsf{v}_1, \ldots, \mathsf{v}_n)</script> is a basis for <script type="math/tex">V</script>, then we
+will often abbreviate the basis as <script type="math/tex">(\mathsf{v}_i)_{i=1}^n</script>, or just
+<script type="math/tex">(\mathsf{v}_i)</script>, when the dimension <script type="math/tex">n</script> is evident from the
+context.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us revisit the <script type="math/tex">n</script>-dimensional Euclidean space
+<script type="math/tex">\mathbb{R}^n</script>, and consider the following vectors: for any
+<script type="math/tex">1 \le i \le n</script>,
+<script type="math/tex; mode=display">\mathsf{e}_i = (0, \ldots, \underbrace{1}_{i^{\text{th}}\text{ position}}, \ldots 0).</script>
+It is easy to check that the <script type="math/tex">(\mathsf{e}_1, \ldots, \mathsf{e}_n)</script> is
+a basis of <script type="math/tex">\mathbb{R}^n</script>. In particular, note that any
+<script type="math/tex">(u_1, \ldots, u_n) \in \mathbb{R}^n</script> can be written as
+<script type="math/tex; mode=display">(u_1, \ldots, u_n) = u_1(1, 0, \ldots, 0) + \ldots + u_n(0, \ldots, 0, 1) = \sum_{i=1}^n u_i \mathsf{e}_i.</script>
+The ordered set <script type="math/tex">(\mathsf{e}_i)_{i=1}^n</script> is called the <strong>standard
+basis</strong> of <script type="math/tex">\mathbb{R}^n</script>. Note that in the special case of
+<script type="math/tex">\mathbb{R}^3</script>, the set of basis vectors
+<script type="math/tex">(\mathsf{e}_1,\mathsf{e}_2,\mathsf{e}_3)</script> is identical to the basis
+set <script type="math/tex">(\mathsf{i},\mathsf{j},\mathsf{k})</script> introduced in the beginning
+of this section.</p>
+</div>
+<p>Given a vector space <script type="math/tex">V</script> of dimension <script type="math/tex">n</script>, it is possible to choose
+an <em>infinite</em> number of bases for <script type="math/tex">V</script>. This non-uniqueness in the
+choice of the basis can be easily understood as follows. Pick any
+<script type="math/tex">\mathsf{g}_1 \in V</script>. Choose <script type="math/tex">\mathsf{g}_2</script> from the set
+<script type="math/tex">V \setminus \text{span}({\mathsf{g}_1})</script>, <script type="math/tex">\mathsf{g}_3</script> from the
+set <script type="math/tex">V \setminus \text{span}({\mathsf{g}_1, \mathsf{g}_2})</script>, and so
+on. This process will terminate in <script type="math/tex">n</script> steps since the vector space
+<script type="math/tex">V</script> is of dimension <script type="math/tex">n</script>. The resulting set of vectors
+<script type="math/tex">(\mathsf{g}_1, \ldots, \mathsf{g}_n)</script> is a basis for <script type="math/tex">V</script>.</p>
+<h2 id="inner-products-and-norms">Inner products and norms</h2>
+<p>We will now introduce a special additional structure on an abstract
+vector space <script type="math/tex">V</script> called the <em>inner product</em>. There are two reasons for
+introducing the inner product right at the outset: first, the
+mathematical development becomes significantly simpler, and second, many
+important applications in science and engineering can be studied in this
+setting.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>There is an elegant theory of abstract linear spaces, both in
+the finite and infinite dimensional cases, where inner products are not
+defined. We will however not develop this general theory here.</p>
+</div>
+<p>Given a vector space <script type="math/tex">V</script>, an <strong>inner product</strong> on <script type="math/tex">V</script> is defined as
+a map of the form <script type="math/tex">g:V \times V \to \mathbb{R}</script> such that, for any
+<script type="math/tex">\mathsf{u}, \mathsf{v}, \mathsf{w} \in V</script> and <script type="math/tex">a,b \in \mathbb{R}</script>,</p>
+<ol>
+<li>
+<p><strong>Symmetry</strong>:
+    <script type="math/tex">g(\mathsf{u},\mathsf{v}) = g(\mathsf{v},\mathsf{u})</script>,</p>
+</li>
+<li>
+<p><strong>Bilinearity</strong>:
+    <script type="math/tex">g(\mathsf{u},(a \mathsf{v} + b \mathsf{w})) = a g(\mathsf{u},\mathsf{v}) + b g(\mathsf{u},\mathsf{w})</script>,</p>
+</li>
+<li>
+<p><strong>Positive definiteness</strong>: <script type="math/tex">g(\mathsf{u},\mathsf{u}) \ge 0</script>, and
+    <script type="math/tex">g(\mathsf{u},\mathsf{u}) = 0</script> iff <script type="math/tex">\mathsf{u} = \mathsf{0}</script>.</p>
+</li>
+</ol>
+<p>A vector space <script type="math/tex">V</script> endowed with a map
+<script type="math/tex">\cdot:V \times V \to \mathbb{R}</script> that satisfies the three properties
+mentioned above is said to be an <strong>inner product space</strong>. All vector
+spaces considered henceforth will be assumed to be inner product spaces,
+unless stated otherwise.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Given <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>, we will often write
+<script type="math/tex">g(\mathsf{u}, \mathsf{v})</script> as just <script type="math/tex">\mathsf{u} \cdot \mathsf{v}</script>,
+with the understanding that the inner product <script type="math/tex">g</script> is evident from the
+context.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The simplest, and also the most important, example of an
+inner product space is the vector space <script type="math/tex">\mathbb{R}^n</script> defined
+earlier, with the inner product <script type="math/tex">\cdot:V \times V \to \mathbb{R}</script>
+defined as follows: for any <script type="math/tex">(u_1, \ldots, u_n) \in \mathbb{R}^n</script> and
+<script type="math/tex">(v_1, \ldots, v_n) \in \mathbb{R}^n</script>,
+<script type="math/tex; mode=display">(u_1, \ldots, u_n) \cdot (v_1, \ldots, v_n) = \sum_{i=1}^n u_i v_i.</script>
+It is easy to check that this is indeed an inner product. The vector
+space <script type="math/tex">\mathbb{R}^n</script> with this inner product is called the <strong>Euclidean
+space</strong> of dimension <script type="math/tex">n</script>. We will use the same symbol <script type="math/tex">\mathbb{R}^n</script>
+to denote the <script type="math/tex">n</script>-dimensional Euclidean space.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Define the set <script type="math/tex">\mathcal{P}_n([a,b],\mathbb{R})</script> as the
+set of all real valued polynomials of degree less than or equal to <script type="math/tex">n</script>
+on the interval <script type="math/tex">[a,b] \subseteq \mathbb{R}</script>:
+<script type="math/tex; mode=display">\mathcal{P}_n([a,b],\mathbb{R}) = \{f:[a,b] \subseteq\mathbb{R} \to \mathbb{R} \,|\, \forall\,x \in [a,b], \; f(x) = a_0 + a_1 x + \ldots + a_n x^n, \text{ where } a_0, a_1, \ldots, a_n \in \mathbb{R}\}.</script>
+Define the function
+<script type="math/tex">\cdot:\mathcal{P}_n([a,b],\mathbb{R}) \times \mathcal{P}_n([a,b],\mathbb{R}) \to \mathbb{R}</script>
+as follows: for any <script type="math/tex">f,g \in \mathcal{P}_n([a,b],\mathbb{R})</script>,
+<script type="math/tex; mode=display">f \cdot g = \int_a^b f(x)g(x) \, dx.</script> It is left as a simple exercise
+to verify that this function is actually an inner product on the linear
+space <script type="math/tex">\mathcal{P}_n([a,b],\mathbb{R})</script> with addition and scalar
+multiplication defined pointwise.</p>
+</div>
+<p>The inner product on a vector space <script type="math/tex">V</script> can be used to define a <em>norm</em>
+on <script type="math/tex">V</script>. A <strong>norm</strong> on a vector space <script type="math/tex">V</script> is a function of the form
+<script type="math/tex">\lVert \cdot \rVert:V \to \mathbb{R}</script> such that, for any
+<script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script> and <script type="math/tex">a \in \mathbb{R}</script>,</p>
+<ol>
+<li>
+<p><strong>Positive definiteness</strong>: <script type="math/tex">\lVert \mathsf{u} \rVert \ge 0</script>, and
+    <script type="math/tex">\lVert \mathsf{u} \rVert = 0</script> iff <script type="math/tex">\mathsf{u} = \mathsf{0}</script>,</p>
+</li>
+<li>
+<p><strong>Homogeneity</strong>:
+    <script type="math/tex">\lVert a \mathsf{u} \rVert = |a| \lVert \mathsf{u} \rVert</script>,</p>
+</li>
+<li>
+<p><strong>Sub-additivity</strong>:
+    <script type="math/tex">\lVert \mathsf{u} + \mathsf{v} \rVert \le \lVert \mathsf{u} \rVert + \lVert \mathsf{v} \rVert</script>.</p>
+</li>
+</ol>
+<p>Here, <script type="math/tex">|a|</script> refers to the absolute value of <script type="math/tex">a \in \mathbb{R}</script>. The
+property of sub-additivity is also referred to as the <strong>triangle
+inequality</strong>.</p>
+<p>A vector space <script type="math/tex">V</script> equipped with a norm
+<script type="math/tex">\lVert \cdot \rVert:V \to \mathbb{R}</script> that satisfies these properties
+is called a <strong>normed vector space</strong>, or a <strong>normed linear space</strong>. Note
+that every inner product space is a normed linear space. To see this,
+note that given an an inner product <script type="math/tex">\cdot:V \times V \to \mathbb{R}</script>,
+the norm <script type="math/tex">\lVert \cdot \rVert: V \to \mathbb{R}</script>
+<strong>induced</strong> by this
+inner product is defined as follows: for any <script type="math/tex">\mathsf{v} \in V</script>,
+<script type="math/tex; mode=display">\lVert \mathsf{v} \rVert = \sqrt{\mathsf{v} \cdot \mathsf{v}}.</script> The
+norm induced by the Euclidean inner product on <script type="math/tex">\mathbb{R}^3</script> is
+called the <strong>standard Euclidean norm</strong> on <script type="math/tex">\mathbb{R}^n</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In general, a normed vector space is not an inner product
+space. If, however, the norm <script type="math/tex">\lVert \cdot \rVert:V \to \mathbb{R}</script> on
+a normed vector space <script type="math/tex">V</script> satisfies the following relation, called the
+<strong>parallelogram identity</strong>,
+<script type="math/tex; mode=display">\frac{1}{2}\left(\lVert \mathsf{u} + \mathsf{v} \rVert^2 + \lVert \mathsf{u} - \mathsf{v}\rVert^2\right) = \lVert \mathsf{u} \rVert^2 + \lVert \mathsf{v} \rVert^2,</script>
+for any <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>, then it is possible to define
+an inner product <script type="math/tex">\cdot:V \times V \to \mathbb{R}</script> using the norm as
+follows: for any <script type="math/tex">\mathsf{u},\mathsf{v} \in V</script>,
+<script type="math/tex; mode=display">\mathsf{u} \cdot \mathsf{v} = \frac{1}{4}\left(\lVert \mathsf{u} + \mathsf{v} \rVert^2 - \lVert \mathsf{u} - \mathsf{v}\rVert^2\right).</script>
+This relation is called the <strong>polarization identity</strong>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us consider the <script type="math/tex">n</script>-dimensional Euclidean space
+<script type="math/tex">\mathbb{R}^n</script> with the standard inner product, defined earlier. The
+norm of a vector <script type="math/tex">(x_1, \ldots, x_n) \in \mathbb{R}^n</script> is easily
+computed as <script type="math/tex; mode=display">\lVert (x_1, \ldots, x_n) \rVert^2 = \sum_{i=1}^n x_i^2.</script>
+This norm is called the <strong>standard Euclidean norm</strong>, or the
+<strong><script type="math/tex">L_2</script>-norm</strong> on <script type="math/tex">\mathbb{R}^n</script>.</p>
+</div>
+<p>A variety of other norms can be defined on a given inner product space.
+For instance, the <strong><script type="math/tex">L_p</script>-norm</strong> on <script type="math/tex">\mathbb{R}^n</script> can be defined as
+follows: for any <script type="math/tex">(x_1, \ldots, x_n) \in \mathbb{R}^n</script> and
+<script type="math/tex">1 \le p < \infty</script>,
+<script type="math/tex; mode=display">\lVert (x_1, \ldots, x_n) \rVert_p = \left(\sum_{i=1}^n x_i^p\right)^{\frac{1}{p}}.</script>
+The <strong><script type="math/tex">L_\infty</script>-norm</strong> on <script type="math/tex">\mathbb{R}^n</script> is defined as
+<script type="math/tex; mode=display">\lVert (x_1, \ldots, x_n) \rVert_\infty = \text{max } \{x_1, \ldots, x_n\}.</script>
+Note that the standard Euclidean norm corresponds to
+<script type="math/tex">\lVert \cdot \lVert_2</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>There is an important theorem that states that <em>all</em> norms on
+a finite dimensional vector space are <em>equivalent</em>. This means the
+following: given norms <script type="math/tex">\lVert \cdot \rVert_1:V \to \mathbb{R}</script> and
+<script type="math/tex">\lVert \cdot \rVert_2:V \to \mathbb{R}</script> on a finite dimensional
+vector space <script type="math/tex">V</script>, there exists constants <script type="math/tex">c_L, c_U \in \mathbb{R}</script>
+such that, for any <script type="math/tex">\mathsf{v} \in V</script>,
+<script type="math/tex; mode=display">c_L \lVert \mathsf{v} \rVert_2 \le \lVert \mathsf{v} \rVert_1 \le c_U \lVert \mathsf{v} \rVert_2.</script>
+Without getting into technical details, this roughly means that the
+conclusions we draw about <em>topological notions</em> in a normed vector space
+are independent of the specific norm chosen.</p>
+</div>
+<h2 id="cauchy-schwarz-inequality">Cauchy-Schwarz inequality</h2>
+<p>Let <script type="math/tex">V</script> be a real vector space equipped with an inner product
+<script type="math/tex">\cdot:V \times V \to \mathbb{R}</script>. An important property of inner
+products that turns out to be quite useful in practice is discussed now.
+Given any <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>, the <strong>Cauchy-Schwarz
+inequality</strong> states that
+<script type="math/tex; mode=display">|\mathsf{u} \cdot \mathsf{v}| \le \lVert \mathsf{u} \rVert \lVert \mathsf{v} \rVert.</script>
+Furthermore, the equality holds iff <script type="math/tex">\mathsf{u}</script> and <script type="math/tex">\mathsf{v}</script>
+are linearly dependent. The proof of the Cauchy-Schwarz inequality is
+quite easy: for any <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>, and
+<script type="math/tex">a \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">\lVert \mathsf{u} + a \mathsf{v} \rVert^2 \ge 0 \Rightarrow \lVert \mathsf{u} \rVert^2 + 2a \mathsf{u} \cdot \mathsf{v} + \rVert \mathsf{v} \rVert^2 \ge 0.</script>
+Substituting
+<script type="math/tex; mode=display">a = -\frac{\mathsf{u} \cdot \mathsf{v}}{\lVert \mathsf{v} \rVert^2}</script>
+in this inequality, we get
+<script type="math/tex; mode=display">(\mathsf{u} \cdot \mathsf{v})^2 \le \lVert \mathsf{v} \rVert^2 \lVert \mathsf{v} \rVert^2,</script>
+which immediately yields the Cauchy-Schwartz inequality. To prove the
+second part, note that if <script type="math/tex">\mathsf{u}</script> and <script type="math/tex">\mathsf{v}</script> are linearly
+dependent, then, without loss of generality,
+<script type="math/tex">\mathsf{v} = a\mathsf{u}</script> for some <script type="math/tex">a \ in \mathbb{R}</script>. In this
+case,
+<script type="math/tex">\mathsf{u} \cdot \mathsf{v} = \lvert a \rvert \lVert \mathsf{u} \rVert^2 = \lVert \mathsf{u} \rVert \lVert \mathsf{v} \rVert</script>.
+On the other hand, if
+<script type="math/tex">\mathsf{u} \cdot \mathsf{v} = \lVert \mathsf{u} \rVert \lVert \mathsf{v} \rVert</script>,
+consider the vector <script type="math/tex">\mathsf{w} \in V</script>, where,
+<script type="math/tex; mode=display">\mathsf{w} = \mathsf{u} - \frac{\lVert \mathsf{u} \rVert}{\lVert \mathsf{v} \rVert}\mathsf{v}.</script>
+It is straightforward to show that <script type="math/tex">\lVert \mathsf{w} \rVert = 0</script>, and
+hence that <script type="math/tex">\mathsf{w} = 0</script>. This shows that <script type="math/tex">\mathsf{u}</script> and
+<script type="math/tex">\mathsf{v}</script> are linearly dependent. The Cauchy-Schwartz inequality is
+thus proved.</p>
+<p>The <strong>angle</strong>
+<script type="math/tex">\theta:V \times V \to \in [0,2\pi) \subseteq \mathbb{R}</script> between two
+vectors <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script> is defined via the relation
+<script type="math/tex; mode=display">\cos \theta(\mathsf{u},\mathsf{v}) = \frac{\mathsf{u} \cdot \mathsf{v}}{\lVert \mathsf{u} \rVert\lVert \mathsf{v} \rVert}.</script>
+Note how the Cauchy-Schwarz inequality implies that this definition is
+well-defined. If the angle between two vectors
+<script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script> is <script type="math/tex">\pi/2</script>, they are said to be
+<strong>orthogonal</strong>. Equivalently, <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script> are said
+to be orthogonal if <script type="math/tex">\mathsf{u} \cdot \mathsf{v} = 0</script>. If
+<script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script> are orthogonal, and if it is further
+true that <script type="math/tex">\lVert \mathsf{u} \rVert = \lVert \mathsf{v} \rVert = 1</script>,
+then <script type="math/tex">\mathsf{u}</script> and <script type="math/tex">\mathsf{v}</script> are said to be <strong>orthonormal</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The vectors <script type="math/tex">\mathsf{u} = (1, \sqrt{3}) \in \mathbb{R}^2</script>
+and <script type="math/tex">\mathsf{v} = (-\sqrt{3}, 1) \in \mathbb{R}^2</script> are orthogonal
+since <script type="math/tex">\mathsf{u} \cdot \mathsf{v} = 0</script>. They are not orthonormal
+since <script type="math/tex">\lVert \mathsf{u} \rVert = \lVert \mathsf{v} \rVert = 2</script>. The
+vectors
+<script type="math/tex">\tilde{\mathsf{u}} = \mathsf{u}/\lVert \mathsf{u} \rVert = (1/2, \sqrt{3}/2) \in \mathbb{R}^2</script>
+and
+<script type="math/tex">\mathsf{v} = \mathsf{v}/\lVert \mathsf{v} \rVert = (-\sqrt{3}/2, 1/2) \in \mathbb{R}^2</script>
+are, however, orthonormal.</p>
+</div>
+<p>The following inequality also holds for any
+<script type="math/tex">\mathsf{u},\mathsf{v} \in V</script> in an inner product space <script type="math/tex">V</script>:
+<script type="math/tex; mode=display">\lVert \mathsf{u} + \mathsf{v} \rVert \le \lVert \mathsf{u} \rVert + \lVert \mathsf{v} \rVert.</script>
+Recall that this is the <strong>triangle inequality</strong>. The triangle inequality
+is readily proved using the Cauchy-Schwarz inequality: for any
+<script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>: <script type="math/tex; mode=display">\begin{split}
+\lVert \mathsf{u} + \mathsf{v} \rVert^2 &= \lVert \mathsf{u} \rVert^2 + \lVert \mathsf{v} \rVert^2 + 2 \mathsf{u} \cdot \mathsf{v}\\
+ &\le \lVert \mathsf{u} \rVert^2 + \lVert \mathsf{v} \rVert^2 + 2 \lVert \mathsf{u} \rVert \lVert \mathsf{v} \rVert\\
+ &= (\lVert \mathsf{u} \rVert + \lVert \mathsf{v} \rVert)^2.
+\end{split}</script> The triangle inequality follows by taking the square root
+on both sides.</p>
+<h2 id="gram-schmidt-orthogonalization">Gram-Schmidt orthogonalization</h2>
+<p>Let us now reconsider the notion of a basis of an <script type="math/tex">n</script>-dimensional
+vector space <script type="math/tex">V</script> in the special case when the vector space also has an
+inner product <script type="math/tex">\cdot:V \times V \to \mathbb{R}</script> defined on it. We say
+that a basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script> is <strong>orthogonal</strong> if
+<script type="math/tex">\mathsf{g}_i \cdot \mathsf{g}_j = 0</script> whenever
+<script type="math/tex">i, j \in \{1, \ldots, n\}</script>, and <script type="math/tex">i \neq j</script>. If it is further true
+that <script type="math/tex">\mathsf{g}_i \cdot \mathsf{g}_i = 1</script> for every
+<script type="math/tex">i \in \{1, \ldots, n\}</script>, we say that the basis <script type="math/tex">(\mathsf{g}_i)</script> is
+<strong>orthonormal</strong>. The fact that a basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script> is
+orthonormal can be succinctly expressed by the following equation: for
+any <script type="math/tex">i,j \in \{1,\ldots,n\}</script>,
+<script type="math/tex; mode=display">\mathsf{g}_i \cdot \mathsf{g}_j = \delta_{ij},</script> where <script type="math/tex">\delta_{ij}</script>
+is the <strong>Krönecker delta</strong> symbol that is defined as follows:
+<script type="math/tex; mode=display">\delta_{ij} = \begin{cases}
+1, & i = j,\\
+0, & i \neq j.
+\end{cases}</script>
+</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>It is straightforward to verify that the standard basis
+<script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">\mathbb{R}^n</script> is an orthonormal basis, since it
+follows from the definition of the standard basis that
+<script type="math/tex">\mathsf{e}_i \cdot \mathsf{e}_j = \delta_{ij}</script>.</p>
+</div>
+<p>The <strong>Gram-Schmidt orthogonalization</strong> procedure is an algorithm that
+helps us to transform any given basis <script type="math/tex">(\tilde{\mathsf{g}}_i)</script> of
+<script type="math/tex">V</script> into an orthonormal basis <script type="math/tex">(\mathsf{g}_i)</script>. The algorithm works
+as follows:</p>
+<ul>
+<li>
+<p>Let
+    <script type="math/tex; mode=display">\mathsf{g}_1 = \frac{\tilde{\mathsf{g}}_1}{\lVert \tilde{\mathsf{g}}_1 \rVert}.</script>
+</p>
+</li>
+<li>
+<p>We now define <script type="math/tex">\mathsf{g}_2</script> by removing the component of
+    <script type="math/tex">\tilde{\mathsf{g}}_2</script> along the direction <script type="math/tex">\mathsf{g}_1</script>:
+    <script type="math/tex; mode=display">\mathsf{g}_2 = \frac{\tilde{\mathsf{g}}_2 - (\tilde{\mathsf{g}}_2 \cdot \mathsf{g}_1)e_1}{\lVert \tilde{\mathsf{g}}_2 - (\tilde{\mathsf{g}}_2 \cdot \mathsf{g}_1)\mathsf{g}_1 \rVert}.</script>
+    It is easy to check that <script type="math/tex">\mathsf{g}_2 \cdot \mathsf{g}_1 = 0</script> and
+    <script type="math/tex">\lVert \mathsf{g}_2 \rVert = 1</script>.</p>
+</li>
+<li>
+<p>We then obtain <script type="math/tex">\mathsf{g}_3</script> in a similar manner by removing the
+    components of <script type="math/tex">\tilde{\mathsf{g}}_3</script> along <script type="math/tex">\mathsf{g}_1</script> and
+    <script type="math/tex">\mathsf{g}_2</script>:
+    <script type="math/tex; mode=display">\mathsf{g}_3 = \frac{\tilde{\mathsf{g}}_3 - (\tilde{\mathsf{g}}_3 \cdot \mathsf{g}_2)\mathsf{g}_2 - (\tilde{\mathsf{g}}_3 \cdot \mathsf{g}_1)e_1}{\lVert \tilde{\mathsf{g}}_3 - (\tilde{\mathsf{g}}_3 \cdot \mathsf{g}_2)\mathsf{g}_2 - (\tilde{\mathsf{g}}_3 \cdot \mathsf{g}_1)\mathsf{g}_1 \rVert}.</script>
+    It is straightforward to verify that
+    <script type="math/tex">\mathsf{g}_1 \cdot \mathsf{g}_3 = 0</script>,
+    <script type="math/tex">\mathsf{g}_2 \cdot \mathsf{g}_3 = 0</script> and
+    <script type="math/tex">\lVert \mathsf{g}_3 \rVert = 1</script>.</p>
+</li>
+<li>
+<p>Continuing this process, we can construct an orthonormal basis
+    <script type="math/tex">(\mathsf{g}_i)_{i=1}^n</script>.</p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As a simple illustration of the Gram-Schmidt
+orthogonalization process, let us consider the vectors
+<script type="math/tex">\tilde{\mathsf{g}}_1 = (1,2) \in \mathbb{R}^2</script> and
+<script type="math/tex">\tilde{\mathsf{g}}_2 = (2,3) \in \mathbb{R}^2</script>. We verified earlier
+that these vectors are linearly independent, and that they form a basis
+of <script type="math/tex">\mathbb{R}^2</script>. They are however not orthogonal since
+<script type="math/tex">\tilde{\mathsf{g}}_1 \cdot \tilde{\mathsf{g}}_2 = 8 \neq 0</script>. Let us
+orthonormalize this basis using the Gram-Schmidt process. To start with,
+let us normalize <script type="math/tex">\tilde{\mathsf{g}}_1</script>:
+<script type="math/tex; mode=display">\mathsf{g}_1 = \frac{\tilde{\mathsf{g}}_1}{\lVert \tilde{\mathsf{g}}_1 \rVert} = \left(\frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}}\right) \in \mathbb{R}^2.</script>
+We can now construct <script type="math/tex">\mathsf{g}_2 \in \mathbb{R}^2</script> by projecting out
+the component of <script type="math/tex">\tilde{\mathsf{g}}_2</script> along <script type="math/tex">\mathsf{g}_1</script>:
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{g}_2 &= \frac{\tilde{\mathsf{g}}_2 - (\tilde{\mathsf{g}}_2 \cdot \mathsf{g}_1)\mathsf{g}_1}{\lVert \tilde{\mathsf{g}}_2 - (\tilde{\mathsf{g}}_2 \cdot \mathsf{g}_1)\mathsf{g}_1 \rVert}\\
+ &= \frac{(2,3) - \left((2,3)\cdot(1/\sqrt{5},2/\sqrt{5})\right)(1/\sqrt{5},2/\sqrt{5})}{\lVert (2,3) - \left((2,3)\cdot(1/\sqrt{5},2/\sqrt{5})\right)(1/\sqrt{5},2/\sqrt{5})\rVert}\\
+ &= \frac{(2/5, -1/5)}{\lVert (2/5, -1/5) \rVert}\\
+ &= \left(\frac{2}{\sqrt{5}}, -\frac{1}{\sqrt{5}}\right) \in \mathbb{R}^2.
+\end{split}</script> It is easily checked that
+<script type="math/tex">\lVert \mathsf{g}_1 \rVert = 1</script> and
+<script type="math/tex">\lVert \mathsf{g}_2 \rVert = 1</script>, and that
+<script type="math/tex; mode=display">\mathsf{g}_1 \cdot \mathsf{g}_2 = \left(\frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}}\right) \cdot \left(\frac{2}{\sqrt{5}}, -\frac{1}{\sqrt{5}}\right) = 0.</script>
+We have thus constructed an orthonormal basis
+<script type="math/tex">(\mathsf{g}_1, \mathsf{g}_2)</script> of <script type="math/tex">\mathbb{R}^2</script> starting from the
+general basis <script type="math/tex">(\tilde{\mathsf{g}}_1, \tilde{\mathsf{g}}_2)</script> of
+<script type="math/tex">\mathbb{R}^2</script> by following the Gram-Schmidt algorithm.</p>
+<p>Note that the orientation of the basis <script type="math/tex">(\mathsf{g}_1, \mathsf{g}_2)</script>
+obtained here is the <em>opposite</em> of the orientation of the standard basis
+<script type="math/tex">(\mathsf{e}_1, \mathsf{e}_2)</script>. To see this, <em>embed</em> these vectors in
+<script type="math/tex">\mathbb{R}^3</script> to get the vectors <script type="math/tex">\mathsf{e}_1 = (1,0,0)</script>,
+<script type="math/tex">\mathsf{e}_2 = (0,1,0)</script>,
+<script type="math/tex">\mathsf{g}_1 = (1/\sqrt{5}, 2/\sqrt{5}, 0)</script>,
+<script type="math/tex">\mathsf{g}_2 = (2/\sqrt{5}, -1/\sqrt{5}, 0)</script>, and note that
+<script type="math/tex">\mathsf{e}_1 \times \mathsf{e}_2 = \mathsf{e}_3</script>, whereas
+<script type="math/tex">\mathsf{g}_1 \times \mathsf{g}_2 = -\sqrt{5} \hat{e}_3</script> - they have
+opposite signs! This doesn’t really affect the Gram-Schmidt algorithm
+because if <script type="math/tex">(\mathsf{g}_1, \mathsf{g}_2)</script> is a basis of
+<script type="math/tex">\mathbb{R}^2</script>, then so is <script type="math/tex">(\mathsf{g}_2, \mathsf{g}_1)</script>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It turns out that the choice of an orthonormal basis is sufficient for most applications. In the discussion below, we will first study various concepts with respect to the choice of an orthonormal basis, since the calculations are much simpler in this case. The general case of arbitrary bases will be discussed after this to give an idea of how some calculations can be more involved with respect to general bases.</p>
+</div>
+<h2 id="basis-representation-of-vectors">Basis representation of vectors</h2>
+<p>We will now study the representation of a vector <script type="math/tex">\mathsf{v} \in V</script> in
+an <script type="math/tex">n</script>-dimensional inner product space <script type="math/tex">V</script> with respect to an
+orthonormal basis <script type="math/tex">(\mathsf{e}_1, \ldots, \mathsf{e}_n)</script> of <script type="math/tex">V</script>. It
+is worth reiterating that we will only deal with orthonormal bases
+unless otherwise stated.</p>
+<p>The fact that <script type="math/tex">(\mathsf{e}_1, \ldots, \mathsf{e}_n)</script> is a basis of
+<script type="math/tex">V</script> implies that every <script type="math/tex">\mathsf{v} \in V</script> can be written as
+<script type="math/tex; mode=display">\mathsf{v} = \sum_{i=1}^n v_i \mathsf{e}_i</script> where
+<script type="math/tex">v_i \in \mathbb{R}</script> for every <script type="math/tex">i \in \{1, \ldots, n\}</script>. This is
+called the <strong>representation</strong> of <script type="math/tex">v</script> with respect to the basis
+<script type="math/tex">(\mathsf{e}_1, \ldots, \mathsf{e}_n)</script>. The real numbers
+<script type="math/tex">v_1, \ldots v_n</script> are called the <strong>components</strong> of <script type="math/tex">\mathsf{v}</script> with
+respect to the basis <script type="math/tex">(\mathsf{e}_1, \ldots, \mathsf{e}_n)</script>.</p>
+<p>To compute the components <script type="math/tex">v_i</script>, we can exploit the fact that
+<script type="math/tex">(\mathsf{e}_i)</script> is an orthonormal basis:
+<script type="math/tex; mode=display">\mathsf{v} \cdot \mathsf{e}_j = v_j \quad\Rightarrow\quad \mathsf{v} = \sum (\mathsf{v} \cdot \mathsf{e}_i) \mathsf{e}_i.</script>
+The components <script type="math/tex">v_i</script> thus computed are unique since we have explicitly
+constructed each component <script type="math/tex">v_i</script> as <script type="math/tex">\mathsf{v} \cdot \mathsf{e}_i</script>.
+We can alternatively show the uniqueness of the components based on the
+fact that the basis vectors are linearly independent by definition.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Notice how we have represented the sum on the right without
+representing the summation index, and the range of summation. We will
+write <script type="math/tex">\sum_i</script>, or just <script type="math/tex">\sum</script> in place of <script type="math/tex">\sum_{i=1}^n</script>,
+whenever the range under consideration is obvious from the context. If
+no index is associated with the summation symbol, as in <script type="math/tex">\sum</script>, it
+will be assumed that the sum is with respect to <em>all</em> repeating indices.
+In addition, we will assume that the range of the all the indices
+involved is known from the context. While on this, it is worth noting
+that many authors employ the <strong>Einstein summation convention</strong>,
+according to which, a sum of the form <script type="math/tex">\sum u_i \mathsf{e}_i</script> is
+written simply as <script type="math/tex">u_i \mathsf{e}_i</script>, with the summation over <script type="math/tex">i</script>
+being implicitly understood as long as the indices repeat twice. For
+pedagogical reasons, we will <em>not</em> follow the Einstein summation
+convention in these notes.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As a trivial example of the basis representation of a
+vector, consider any <script type="math/tex">(x_1, \ldots, x_n) \in \mathbb{R}^n</script>. This
+vector can be written with respect to the standard basis
+<script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">\mathbb{R}^n</script> as
+<script type="math/tex; mode=display">(x_1, \ldots, x_n) = \sum x_i \mathsf{e}_i.</script> Notice that
+<script type="math/tex">x_i = (x_1, \ldots, x_n) \cdot \mathsf{e}_i</script>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As a non-trivial, yet simple, example of basis
+representation of a vector, consider the orthonormal basis
+<script type="math/tex">(\mathsf{g}_1, \mathsf{g}_2)</script> of <script type="math/tex">\mathbb{R}^2</script>, where
+<script type="math/tex">\mathsf{g}_1 = (2/\sqrt{5}, -1/\sqrt{5})</script> and
+<script type="math/tex">\mathsf{g}_2 = (1/\sqrt{5}, 2/\sqrt{5})</script> - notice that we have
+swapped the order of the basis constructed earlier in the context of the
+Gram-Schmidt procedure to maintain orientation. Consider any
+<script type="math/tex">(x_1, x_2) \in \mathbb{R}^2</script>, we can express this in terms of the
+basis <script type="math/tex">(\mathsf{g}_1, \mathsf{g}_2)</script> as
+<script type="math/tex; mode=display">(x_1, x_2) = \sum \bar{x}_i \mathsf{g}_i,</script> for some real constants
+<script type="math/tex">(\bar{x}_i)</script>. To compute this, note that we can write
+<script type="math/tex">(x_1, x_2) = \sum x_i \mathsf{e}_i</script> using the standard basis of
+<script type="math/tex">\mathbb{R}^2</script>. The constants <script type="math/tex">(\bar{x}_i)</script> are easily computed by
+taking the appropriate dot products: <script type="math/tex; mode=display">\begin{split}
+\bar{x}_i &= \left(\sum x_j \mathsf{e}_j\right)\cdot \mathsf{g}_i\\
+ &= (\mathsf{g}_i \cdot \mathsf{e}_1) x_1 + (\mathsf{g}_i \cdot \mathsf{e}_2) x_2.
+\end{split}</script> For instance, the vector <script type="math/tex">(1,2) \in \mathbb{R}^2</script> can be
+expressed in terms of the <script type="math/tex">(\mathsf{g}_1, \mathsf{g}_2)</script> basis as
+<script type="math/tex">(1,2) = \sum \bar{x}_i \mathsf{g}_i</script>, where <script type="math/tex; mode=display">\begin{split}
+\bar{x}_1 &= \frac{2}{\sqrt{5}}1 - \frac{1}{\sqrt{5}}2 = 0,\\
+\bar{x}_2 &= \frac{1}{\sqrt{5}}1 + \frac{2}{\sqrt{5}}2 = \sqrt{5}.
+\end{split}</script> We thus see that <script type="math/tex">(1,2) = \sqrt{5}\mathsf{g}_2</script>, a fact
+that can be easily checked directly.</p>
+</div>
+<p>We will now introduce a useful notion called <em>component maps</em> to collect
+the components <script type="math/tex">v_i</script> of any <script type="math/tex">\mathsf{v} \in V</script> with respect to the
+(not necessarily orthonormal) basis
+<script type="math/tex">B = (\mathsf{e}_1, \ldots, \mathsf{e}_n)</script> of <script type="math/tex">V</script>. Define the
+<strong>component map</strong> <script type="math/tex">\mathsf\phi_{V,B}:V \to \mathbb{R}^n</script> as follows:
+<script type="math/tex; mode=display">\mathsf\phi_{V,B}(\mathsf{v}) = [v_1, \ldots, v_n]^T.</script> Notice how we
+have collected together the components of <script type="math/tex">\mathsf{v}</script> as a column
+vector of size <script type="math/tex">n</script> using the component map. It is useful at this point
+to introduce the following notation:
+<script type="math/tex; mode=display">_{(\mathsf{e}_i)} = [v_1, \ldots, v_n]^T</script> When the choice of basis is
+evident from the context, we will often write
+<script type="math/tex">[\mathsf{v}]_{(\mathsf{e}_i)}</script> as just <script type="math/tex">[\mathsf{v}]</script>. We can thus
+alternatively the basis representation of any <script type="math/tex">\mathsf{v} \in V</script> with
+respect to a general basis <script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">V</script> as follows:
+<script type="math/tex; mode=display">\mathsf{v} = \sum v_i \mathsf{e}_i = \sum \left(\mathsf\phi_{V,B}(\mathsf{v})\right)_i \mathsf{e}_i = \sum [\mathsf{v}]_i \mathsf{e}_i.</script>
+We will however use the simpler notation
+<script type="math/tex">\mathsf{v} = \sum v_i \mathsf{e}_i</script>, and use the <script type="math/tex">[\mathsf{v}]</script>
+notation only when we want to refer to the components alone as a column
+vector. We will see shortly that the component map is an example of an
+<em>isomorphism</em> between the vector spaces <script type="math/tex">V</script> and <script type="math/tex">\mathbb{R}^n</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>We will often write the component map <script type="math/tex">\mathsf\phi_{V,B}</script> as
+<script type="math/tex">\mathsf\phi_V</script>, or just <script type="math/tex">\mathsf\phi</script>, when the vector space and
+its basis are evident from the context. At times, we will omit
+<script type="math/tex">\mathsf\phi</script> altogether and refer to the component map using the
+following notation:
+<script type="math/tex">\mathsf{v} \in V \mapsto [\mathsf{v}] \in \mathbb{R}^n</script>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As a quick illustration of this, notice that the vector
+<script type="math/tex">(1,2) \in \mathbb{R}^2</script> has the following matrix representation with
+respect to the orthonormal basis <script type="math/tex">(e_1, e_2)</script>, where
+<script type="math/tex">e_1 = (2/\sqrt{5}, -1/\sqrt{5})</script> and
+<script type="math/tex">e_2 = (1/\sqrt{5}, 2/\sqrt{5})</script> of <script type="math/tex">\mathbb{R}^2</script> is
+<script type="math/tex">[0,\sqrt{5}]^T</script>.</p>
+</div>
+<h2 id="change-of-basis-rules-for-vectors">Change of basis rules for vectors</h2>
+<p>Given an <script type="math/tex">n</script>-dimensional inner product space <script type="math/tex">V</script>, let us first
+consider the case where <script type="math/tex">(\mathsf{e}_i)</script> and <script type="math/tex">(\mathsf{g}_i)</script> are
+two <em>general</em> bases of <script type="math/tex">V</script>, not necessarily orthonormal. Then, any
+<script type="math/tex">\mathsf{v} \in V</script> can be written as
+<script type="math/tex; mode=display">\mathsf{v} = \sum v_i \mathsf{e}_i = \sum \tilde{v}_i \mathsf{g}_i,</script>
+where <script type="math/tex">(v_i)</script> and <script type="math/tex">(\tilde{v}_i)</script> are the components of
+<script type="math/tex">\mathsf{v}</script> with respect to the bases <script type="math/tex">(\mathsf{e}_i)</script> and
+<script type="math/tex">(\mathsf{g}_i)</script>, respectively. The fact that <script type="math/tex">(\mathsf{e}_i)</script> is a
+basis of <script type="math/tex">V</script> implies that <script type="math/tex; mode=display">\mathsf{g}_i = \sum A_{ji} \mathsf{e}_j,</script>
+where <script type="math/tex">A_{ij} \in \mathbb{R}</script> for every <script type="math/tex">1 \le i,j \le n</script>.
+Similarly, we have <script type="math/tex; mode=display">\mathsf{e}_i = \sum B_{ji} \mathsf{g}_j,</script> where
+<script type="math/tex">B_{ij} \in \mathbb{R}</script> for every <script type="math/tex">1 \le i,j \le n</script>. Notice how the
+<em>first</em> index of the transformation coefficients pairs with the
+corresponding basis vector. The reason for this specific choice will
+become clear shortly.</p>
+<p>Combining these two transformation relations, we see that
+<script type="math/tex; mode=display">\mathsf{g}_i = \sum A_{ji}B_{kj} \mathsf{g}_k \quad\Rightarrow\quad \sum B_{kj}A_{ji} = \delta_{ki},</script>
+and
+<script type="math/tex; mode=display">\mathsf{e}_i = \sum B_{ji}A_{kj}\mathsf{e}_k \quad\Rightarrow\quad \sum A_{kj}B_{ji} = \delta_{ki}.</script>
+It is convenient to collect together the constants <script type="math/tex">\{A_{ij}\}</script> as a
+matrix <script type="math/tex">\mathsf{A}</script> whose <script type="math/tex">(i,j)^{\text{th}}</script> entry is <script type="math/tex">A_{ij}</script>.
+We will similarly collect the constants <script type="math/tex">\{B_{ij}\}</script> in a matrix
+<script type="math/tex">\mathsf{B}</script>. In matrix notation, we can write the foregoing equations
+succinctly as
+<script type="math/tex; mode=display">\mathsf{A}\mathsf{B} = \mathsf{I}, \quad \mathsf{B}\mathsf{A} = \mathsf{I}, \quad\Rightarrow\quad \mathsf{A} = \mathsf{B}^{-1},</script>
+where <script type="math/tex">\mathsf{I}</script> is the identity matrix of order <script type="math/tex">n</script>. We thus see
+that matrices <script type="math/tex">\mathsf{A}</script> and <script type="math/tex">\mathsf{B}</script> are inverses of each
+other.</p>
+<p>Given the transformation relations between the two bases, we can use the
+identity <script type="math/tex">\sum v_i \mathsf{e}_i = \sum \tilde{v}_i \mathsf{g}_i</script> to
+see that
+<script type="math/tex; mode=display">\sum \tilde{v}_i \mathsf{g}_i = \sum v_i B_{ji} \mathsf{g}_j \quad\Rightarrow\quad \tilde{v}_i = \sum B_{ij} v_j = \sum A^{-1}_{ij} v_j.</script>
+In matrix notation, we can summarize the foregoing result as follows:
+<script type="math/tex; mode=display">\mathsf{g}_i = \sum A_{ji} \mathsf{e}_j \quad\Rightarrow\quad [\mathsf{v}]_{(\mathsf{g}_i)} = \mathsf{A}^{-1}[\mathsf{v}]_{(\mathsf{e}_i)}.</script>
+!!! info "Remark" In a more general treatment of linear algebra, the fact that
+the components of a vector <script type="math/tex">\mathsf{v} \in V</script> transform in a manner
+<em>contrary</em> to that of the manner in which the basis vectors transform is
+used to call elements of <script type="math/tex">V</script> as <strong>contravariant</strong> vectors. We will not
+develop the general theory here, but make a few elementary remarks
+occasionally regarding this.</p>
+<p>Let us now consider the special case when both <script type="math/tex">(\mathsf{e}_i)</script> and
+<script type="math/tex">(\mathsf{g}_i)</script> are orthonormal bases of <script type="math/tex">V</script>. In this case, we can
+use the fact that
+<script type="math/tex; mode=display">\mathsf{e}_i \cdot \mathsf{e}_j = \delta_{ij}, \qquad \mathsf{g}_i \cdot \mathsf{g}_j = \delta_{ij},</script>
+to simplify the calculations. Suppose that
+<script type="math/tex; mode=display">\mathsf{g}_i = \sum Q_{ji} \mathsf{e}_j.</script> It follows immediately that
+<script type="math/tex; mode=display">Q_{ji} = \mathsf{g}_i \cdot \mathsf{e}_j.</script> Let us now see how the
+components of any <script type="math/tex">\mathsf{v} \in V</script> transform upon this change of
+basis:
+<script type="math/tex; mode=display">\mathsf{v} = \sum \tilde{v}_i \mathsf{g}_i = \sum v_i \mathsf{e}_i \quad\Rightarrow\quad \tilde{v}_i = \sum \mathsf{e}_j \cdot \mathsf{g}_i v_j = \sum Q_{ji} v_j.</script>
+In matrix notation, this is written as
+<script type="math/tex; mode=display">_{(\mathsf{g}_i)} = \mathsf{Q}^T[\mathsf{v}]_{(\mathsf{e}_i)},</script> where
+<script type="math/tex">\mathsf{Q}</script> is the matrix whose <script type="math/tex">(i,j)^{\text{th}}</script> entry is
+<script type="math/tex">Q_{ij}</script>. But, based on the calculation we carried out earlier in the
+context of general bases, we see that
+<script type="math/tex; mode=display">\mathsf{g}_i = \sum Q_{ji} \mathsf{e}_j \quad\Rightarrow\quad [\mathsf{v}]_{(\mathsf{g}_i)} = \mathsf{Q}^{-1}[\mathsf{v}]_{(\mathsf{e}_i)}.</script>
+Comparing these two expressions, we are led to the following conclusion:
+<script type="math/tex; mode=display">\mathsf{Q}^T = \mathsf{Q}^{-1}.</script> Recall that matrices that satisfy
+this condition are called <strong>orthogonal</strong> matrices. It is an easy
+consequence of orthogonality that the determinant of an orthogonal
+matrix is <script type="math/tex">\pm 1</script>, as the following calculation shows: if
+<script type="math/tex">\mathsf{Q}</script> is an orthogonal matrix
+<script type="math/tex; mode=display">(\text{det}(\mathsf{Q}))^2 = \text{det}(\mathsf{Q}^T\mathsf{Q}) = \text{det}(\mathsf{I}) = 1 \quad\Rightarrow\quad \text{det}(\mathsf{Q}) = \pm 1.</script>
+If <script type="math/tex">\text{det}(\mathsf{Q}) = 1</script>, then the orthogonal matrix
+<script type="math/tex">\mathsf{Q}</script> is called <strong>proper orthogonal</strong>, or <strong>special
+orthogonal</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is important to note that the foregoing conclusion that the
+matrix involved in the change of basis is orthogonal is true <em>only</em> in
+the special case when both bases are orthonormal.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the orthonormal bases
+<script type="math/tex">(\mathsf{e}_1, \mathsf{e}_2)</script> and <script type="math/tex">(\mathsf{g}_1, \mathsf{g}_2)</script> of
+<script type="math/tex">\mathbb{R}^2</script>, where <script type="math/tex">(\mathsf{e}_1, \mathsf{e}_2)</script> is the standard
+basis of <script type="math/tex">\mathbb{R}^2</script> and
+<script type="math/tex">\mathsf{g}_1 = (2/\sqrt{5}, -1/\sqrt{5})</script>,
+<script type="math/tex">\mathsf{g}_2 = (1/\sqrt{5}, 2/\sqrt{5})</script>. The transformation matrix
+<script type="math/tex">\mathsf{Q}</script> from <script type="math/tex">(\mathsf{e}_1,\mathsf{e}_2)</script> to
+<script type="math/tex">(\mathsf{g}_1,\mathsf{g}_2)</script> is computed using the relation
+<script type="math/tex">Q_{ij} = \mathsf{g}_j \cdot \mathsf{e}_i</script> as
+<script type="math/tex; mode=display">\mathsf{Q} = \begin{bmatrix}
+\mathsf{g}_1 \cdot \mathsf{e}_1 & \mathsf{g}_2 \cdot \mathsf{e}_1\\
+\mathsf{g}_1 \cdot \mathsf{e}_2 & \mathsf{g}_2 \cdot \mathsf{e}_2
+\end{bmatrix} = \frac{1}{\sqrt{5}}\begin{bmatrix}
+2 & 1\\
+-1 & 2
+\end{bmatrix}.</script> It is easily checked that <script type="math/tex">\mathsf{Q}</script> is orthogonal:
+<script type="math/tex; mode=display">\mathsf{Q}^T\mathsf{Q} = \frac{1}{5}\begin{bmatrix}2 & -1\\ 1 & 2\end{bmatrix}\begin{bmatrix}2 & 1\\ -1 & 2\end{bmatrix} = \begin{bmatrix} 1 & 0\\ 0 & 1\end{bmatrix}.</script>
+It can be similarly checked that
+<script type="math/tex">\mathsf{Q}\mathsf{Q}^T = \mathsf{I}</script>.</p>
+<p>As a quick check, note that also the determinant of the transformation
+map <script type="math/tex">\mathsf{Q}</script> in the previous example is <script type="math/tex">1</script>:
+<script type="math/tex; mode=display">\text{det}\left( \frac{1}{\sqrt{5}}\begin{bmatrix}
+2 & 1\\ -1 & 2
+\end{bmatrix} \right)
+= 1.</script> This informs us that the transformation matrix <script type="math/tex">\mathsf{Q}</script> is
+in fact special orthogonal.</p>
+</div>
+<h2 id="general-basis">General basis</h2>
+<p>Most of the discussion thus far regarding the representation of a vector
+in a finite dimensional inner product space has been restricted to the
+special case of orthonormal bases. Let us briefly consider the general
+case when a general basis, which is not necessarily orthonormal, is
+chosen. In what follows, <script type="math/tex">V</script> denotes an inner product space of
+dimension <script type="math/tex">n</script>, and <script type="math/tex">(\mathsf{g}_i)</script> is a general basis of <script type="math/tex">V</script>.</p>
+<h3 id="representation-of-vectors">Representation of vectors</h3>
+<p>Any <script type="math/tex">\mathsf{v} \in V</script> can be written in terms of the basis
+<script type="math/tex">(\mathsf{g}_1, \ldots, \mathsf{g}_n)</script> of <script type="math/tex">V</script> as
+<script type="math/tex; mode=display">\mathsf{v} = \sum v_i \mathsf{g}_i,</script> where <script type="math/tex">(v_1, \ldots, v_n)</script> are
+the components of <script type="math/tex">\mathsf{v}</script> with respect to this basis. To compute
+these components, start with taking the inner product of this equation
+with the basis vector <script type="math/tex">g_i</script>; this yields
+<script type="math/tex; mode=display">\mathsf{v} \cdot \mathsf{g}_i = \sum \mathsf{g}_i \cdot \mathsf{g}_j \, v_j.</script>
+This equation can be written in the form of a matrix equation, as
+follows: <script type="math/tex; mode=display">\begin{bmatrix}
+\mathsf{g}_1 \cdot \mathsf{g}_1 & \ldots & \mathsf{g}_1 \cdot \mathsf{g}_n\\
+\vdots & \ddots & \vdots\\
+\mathsf{g}_n \cdot \mathsf{g}_1 & \ldots & \mathsf{g}_n \cdot \mathsf{g}_n
+\end{bmatrix}
+\begin{bmatrix}
+v_1 \\ \vdots \\ v_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+\mathsf{v} \cdot \mathsf{g}_1\\ \vdots\\ \mathsf{v} \cdot \mathsf{g}_n
+\end{bmatrix}.</script> The fact that <script type="math/tex">(\mathsf{g}_i)</script> is a basis of <script type="math/tex">V</script>
+implies that the components <script type="math/tex">v_1,\ldots,v_n</script> exist and are unique.
+This implies that the matrix introduced above, whose
+<script type="math/tex">(i,j)^{\text{th}}</script> entry is
+<script type="math/tex">g_{ij} = \mathsf{g}_i\cdot\mathsf{g}_j</script>, is invertible. It is
+conventional, and convenient, to represent the inverse of this
+matrix as the matrix with entries <script type="math/tex">g^{ij}</script>; thus, <script type="math/tex; mode=display">\begin{bmatrix}
+g_{11} & \ldots & g_{1n}\\
+\vdots & \ddots & \vdots\\
+g_{n1} & \ldots & g_{nn}
+\end{bmatrix}^{-1}
+=
+\begin{bmatrix}
+g^{11} & \ldots & g^{1n}\\
+\vdots & \ddots & \vdots\\
+g^{n1} & \ldots & g^{nn}
+\end{bmatrix}.</script> 
+A proper justification for this choice of notation will be given shortly when we study <em>reciprocal bases</em>. The fact that these two matrices are inverses of each
+other can be written succinctly as follows:
+<script type="math/tex; mode=display">\sum g^{ik}g_{kj} = \delta_{ij} = \sum g_{ik}g^{kj}.</script> Using this
+result, a trite calculation yields the following result: for any
+<script type="math/tex">\mathsf{v} \in V</script>,
+<script type="math/tex; mode=display">\mathsf{v} = \sum v_i \mathsf{g}_i \quad\Rightarrow\quad v_i = \sum g^{ij}\mathsf{g}_j \cdot \mathsf{v}.</script>
+The components of any vector with respect to a general basis can thus be
+computed explicitly.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the basis <script type="math/tex">(\mathsf{g}_1,\mathsf{g}_2)</script> of
+<script type="math/tex">\mathbb{R}^2</script>, where <script type="math/tex">\mathsf{g}_1 = (1,2)</script> and
+<script type="math/tex">\mathsf{g}_2 = (2,3)</script>. Let us now compute the components of
+<script type="math/tex">\mathsf{v} = (2,5) \in \mathbb{R}^2</script> with respect to this basis.</p>
+<p>The first step in to compute the matrix whose entries are <script type="math/tex">g_{ij}</script>:
+<script type="math/tex; mode=display">\begin{bmatrix}
+\mathsf{g}_1 \cdot \mathsf{g}_1 & \mathsf{g}_1 \cdot \mathsf{g}_2\\
+\mathsf{g}_2 \cdot \mathsf{g}_1 & \mathsf{g}_2 \cdot \mathsf{g}_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+5 & 8\\
+8 & 13
+\end{bmatrix}.</script> Notice that this matrix is symmetric, as expected,
+since <script type="math/tex">g_{ij} = g_{ji}</script>, in general. The inverse of this matrix gives
+the scalars <script type="math/tex">(g^{ij})</script> as follows: <script type="math/tex; mode=display">\begin{bmatrix}
+g^{11} & g^{12}\\
+g^{21} & g^{22}
+\end{bmatrix}
+=
+\begin{bmatrix}
+5 & 8\\
+8 & 13
+\end{bmatrix}^{-1}
+=
+\begin{bmatrix}
+13 & -8\\
+-8 & 5
+\end{bmatrix}.</script> The components of <script type="math/tex">\mathsf{v}</script> with respect to the
+basis <script type="math/tex">(\mathsf{g}_i)</script> are now easily computed using the result
+<script type="math/tex">v_i = \sum g^{ij} \mathsf{g}_j \cdot \mathsf{v}</script> as, <script type="math/tex; mode=display">\begin{split}
+v_1 &= \sum g^{1j} \mathsf{g}_j \cdot \mathsf{v} = g^{11} \begin{bmatrix} 1 \\ 2\end{bmatrix} \cdot \begin{bmatrix} 2 \\ 5\end{bmatrix} + g^{12} \begin{bmatrix} 2 \\ 3\end{bmatrix} \cdot \begin{bmatrix} 2 \\ 5\end{bmatrix} = 4,\\
+v_2 &= \sum g^{2j} \mathsf{g}_j \cdot \mathsf{v} = g^{21} \begin{bmatrix} 1 \\ 2\end{bmatrix} \cdot \begin{bmatrix} 2 \\ 5\end{bmatrix} + g^{22} \begin{bmatrix} 2 \\ 3\end{bmatrix} \cdot \begin{bmatrix} 2 \\ 5\end{bmatrix} = -1.
+\end{split}</script> We thus see that
+<script type="math/tex">\mathsf{v} = 4\mathsf{g}_1 - \mathsf{g}_2</script>. As a consistency check,
+substitute the representations of
+<script type="math/tex">\mathsf{v}, \mathsf{g}_1,\mathsf{g}_2</script> with respect to the standard
+basis of <script type="math/tex">\mathbb{R}^2</script> and verify that this is correct.</p>
+</div>
+<h3 id="reciprocal-basis">Reciprocal basis</h3>
+<p>The computations presented in the previous section can be greatly
+simplified by introducing the <em>reciprocal basis</em> corresponding to a
+given basis. Given a basis <script type="math/tex">(\mathsf{g}_1, \ldots, \mathsf{g}_n)</script> of
+<script type="math/tex">V</script>, its <strong>reciprocal basis</strong> is defined as the basis
+<script type="math/tex">(\mathsf{g}^1, \ldots, \mathsf{g}^n)</script> such that
+<script type="math/tex; mode=display">\mathsf{g}^i \cdot \mathsf{g}_j = \delta_{ij},</script> where
+<script type="math/tex">1 \le i,j \le n</script>. Based on the preceding development, it can be seen
+that the reciprocal basis is explicitly given by the following
+equations: <script type="math/tex; mode=display">\mathsf{g}^i = \sum g^{ij}\mathsf{g}_j.</script> This can be
+readily inverted to yield the following equation:
+<script type="math/tex; mode=display">\mathsf{g}_i = \sum g_{ij} \mathsf{g}^j.</script> Note that in the special
+case of the standard basis <script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">\mathbb{R}^3</script>,
+<script type="math/tex">\mathsf{e}^i = \mathsf{e}_i</script>. More generally, if <script type="math/tex">(\mathsf{g}_i)</script>
+is an orthonormal basis of an inner product space <script type="math/tex">V</script>, then
+<script type="math/tex">\mathsf{g}^i = \mathsf{g}_i</script>. This is one of the reasons why many
+calculations are much simpler when using orthonormal bases.</p>
+<p>It follows from the definition of the reciprocal basis
+<script type="math/tex">(\mathsf{g}^i)</script> of <script type="math/tex">V</script> that <script type="math/tex; mode=display">\begin{split}
+\mathsf{g}^i \cdot \mathsf{g}^j &= \left(\sum g^{ik}\mathsf{g}_k\right)\left(\sum g^{jl}\mathsf{g}_l\right)\\
+&= \sum g^{ik}g^{jl}g_{kl} = \sum \delta_{il}g^{jl}\\
+&= g^{ij}.
+\end{split}</script> Thus, the following useful formulate are obtained: if
+<script type="math/tex">(\mathsf{g}_i)</script> is a general basis of <script type="math/tex">V</script> and <script type="math/tex">(\mathsf{g}^i)</script> is
+its reciprocal basis, then <script type="math/tex">\mathsf{g}_i \cdot \mathsf{g}_j = g_{ij}</script>
+and <script type="math/tex">\mathsf{g}^i \cdot \mathsf{g}^j = g^{ij}</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The use of superscripts here is done purely for notational
+convenience. It is however possible to justify such a notation when
+considering a more detailed treatment of this subject, as will be
+briefly noted later.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the previous example involving the basis
+<script type="math/tex">(\mathsf{g}_1,\mathsf{g}_2)</script> of <script type="math/tex">\mathbb{R}^2</script>, where
+<script type="math/tex">\mathsf{g}_1 = (1,2)</script> and <script type="math/tex">\mathsf{g}_2 = (2,3)</script>. In this case, the
+reciprocal basis <script type="math/tex">(\mathsf{g}^1, \mathsf{g}^2)</script> is computed as
+follows: <script type="math/tex; mode=display">\begin{split}
+\mathsf{g}^1 &= \sum g^{1j}\mathsf{g}_j = 13\cdot(1,2) - 8\cdot(2,3) = (-3,2),\\
+\mathsf{g}^2 &= \sum g^{2j}\mathsf{g}_j = -8\cdot(1,2) + 5\cdot(2,3) = (2,-1).
+\end{split}</script> It can be checked with a simple calculation that
+<script type="math/tex">\mathsf{g}^i \cdot \mathsf{g}_j = \delta_{ij}</script>, as expected. Further
+more, the matrix whose <script type="math/tex">(i,j)^{\text{th}}</script> entry is
+<script type="math/tex">\mathsf{g}^i \cdot \mathsf{g}^j</script> is computed as <script type="math/tex; mode=display">\begin{bmatrix}
+\mathsf{g}^1 \cdot \mathsf{g}^1 & \mathsf{g}^1 \cdot \mathsf{g}^2\\
+\mathsf{g}^2 \cdot \mathsf{g}^1 & \mathsf{g}^2 \cdot \mathsf{g}^2
+\end{bmatrix}
+= 
+\begin{bmatrix}
+13 & -8\\
+-8 & 5
+\end{bmatrix}
+=
+\begin{bmatrix}
+5 & 8\\
+8 & 13
+\end{bmatrix}^{-1}
+=
+\begin{bmatrix}
+\mathsf{g}_1 \cdot \mathsf{g}_1 & \mathsf{g}_1 \cdot \mathsf{g}_2\\
+\mathsf{g}_2 \cdot \mathsf{g}_1 & \mathsf{g}_2 \cdot \mathsf{g}_2
+\end{bmatrix}^{-1}.</script> This confirms that the matrix whose
+<script type="math/tex">(i,j)^{\text{th}}</script> entry is <script type="math/tex">\mathsf{g}_i \cdot \mathsf{g}_j</script> is
+indeed the inverse of the matrix whose <script type="math/tex">(i,j)^{\text{th}}</script> entry is
+<script type="math/tex">\mathsf{g}^i \cdot \mathsf{g}^j</script>.</p>
+</div>
+<p>The expressions for the coefficients of a vector with respect to a given
+basis simple form when expressed in terms of the reciprocal basis. Given
+any <script type="math/tex">\mathsf{v} \in 
+V</script> and a basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script>,
+<script type="math/tex; mode=display">\mathsf{v} = \sum \tilde{v}_i \mathsf{g}_i \quad\Rightarrow\quad \tilde{v}_i = \mathsf{v} \cdot \mathsf{g}^i.</script>
+Thus, any <script type="math/tex">\mathsf{v} \in V</script> has the compact representation
+<script type="math/tex; mode=display">\mathsf{v} = \sum (\mathsf{v} \cdot \mathsf{g}^i) \mathsf{g}_i.</script>
+Compare this with the representation
+<script type="math/tex">\mathsf{v} = \sum (\mathsf{v} \cdot \mathsf{e}_i) \mathsf{e}_i</script> of
+<script type="math/tex">\mathsf{v}</script> with respect to an orthonormal basis <script type="math/tex">(\mathsf{e}_i)</script>
+of <script type="math/tex">V</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Given any <script type="math/tex">\mathsf{v} \in V</script> and a basis <script type="math/tex">(\mathsf{g}_i)</script>
+of <script type="math/tex">V</script>, the components of <script type="math/tex">\mathsf{v}</script> with respect to the
+<script type="math/tex">(\mathsf{g}_i)</script> and its reciprocal basis <script type="math/tex">(\mathsf{g}^i)</script> are
+written as follows:
+<script type="math/tex; mode=display">\mathsf{v} = \sum v_i \mathsf{g}_i = \sum v^*_i \mathsf{g}^i.</script> The
+components <script type="math/tex">(v_i)</script> and <script type="math/tex">(v^*_i)</script> are called the <em>contravariant</em> and
+<em>covariant</em> components of <script type="math/tex">\mathsf{v}</script>, respectively. In many
+textbooks, the following alternative notation is used:
+<script type="math/tex; mode=display">\mathsf{v} = \sum v^i \mathsf{g}_i = \sum v_i \mathsf{g}^i.</script> The
+components <script type="math/tex">v_i</script> and <script type="math/tex">v^i</script> are related as follows:
+<script type="math/tex">v^i = g^{ij}v_j</script> and <script type="math/tex">v_i = g_{ij}v^j</script>. For this reason, <script type="math/tex">g^{ij}</script>
+and <script type="math/tex">g_{ij}</script> are said to raise and lower, respectively, indices. Since
+we will largely restrict ourselves to the case of orthonormal bases and
+rarely represent a vector in terms of the reciprocal basis to a given
+basis, we will not adopt this more nuanced notation here.</p>
+</div>
+<h3 id="change-of-basis-rules">Change of basis rules</h3>
+<p>The ideas presented so far can be used to express a given vector
+<script type="math/tex">\mathsf{v} \in V</script> with respect to different bases. Suppose that
+<script type="math/tex">\mathsf{v}</script> has the following representations, with respect to two
+different bases <script type="math/tex">(\mathsf{f}_i)</script> and <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script>:
+<script type="math/tex; mode=display">\mathsf{v} = \sum \bar{v}_i\mathsf{f}_i = \sum \tilde{v}_i \mathsf{g}_i.</script>
+Taking the inner product of these representations with respect to the
+appropriate reciprocal basis vectors, it is evident that
+<script type="math/tex; mode=display">\mathsf{v} = \sum \bar{v}_i \mathsf{f}_i = \sum \tilde{v}_i \mathsf{g}_i \quad\Rightarrow\quad \bar{v}_i = \sum \mathsf{f}^i\cdot\mathsf{g}_j \tilde{v}_j,</script>
+and a similar formula expressing <script type="math/tex">(\tilde{v}_i)</script> in terms of
+<script type="math/tex">(\bar{v}_i)</script>. Notice how the use of the reciprocal basis
+significantly simplifies the computations.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the example considered earlier where the vector
+<script type="math/tex">(2,5) \in \mathbb{R}^2</script> was expressed in terms of the basis
+<script type="math/tex">(\mathsf{g}_1,\mathsf{g}_2)</script> of <script type="math/tex">\mathbb{R}^2</script>, where
+<script type="math/tex">\mathsf{g}_1 = (1,2)</script> and <script type="math/tex">\mathsf{g}_2 = (2,3)</script>. We saw earlier
+that <script type="math/tex; mode=display">\mathsf{v} = 4\mathsf{g}_1 - \mathsf{g}_2.</script> Let us now consider
+another basis <script type="math/tex">(\mathsf{f}_1,\mathsf{f}_2)</script> of <script type="math/tex">\mathbb{R}^2</script>, where
+<script type="math/tex">\mathsf{f}_1 = (2,1)</script>, <script type="math/tex">\mathsf{f}_2 = (1,3)</script>. To compute the
+representation of <script type="math/tex">\mathsf{v}</script> with respect to the basis
+<script type="math/tex">(\mathsf{f}_1,\mathsf{f}_2)</script>, we first need to compute its reciprocal
+basis <script type="math/tex">(\mathsf{f}^1,\mathsf{f}^2)</script>. This is easily accomplished as
+follows: <script type="math/tex; mode=display">\begin{bmatrix}
+\mathsf{f}_1 \cdot \mathsf{f}_1 & \mathsf{f}_1 \cdot \mathsf{f}_2\\
+\mathsf{f}_2 \cdot \mathsf{f}_1 & \mathsf{f}_2 \cdot \mathsf{f}_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+5 & 8\\
+8 & 13
+\end{bmatrix}
+\quad\Rightarrow\quad
+\begin{bmatrix}
+f^{11} & f^{12}\\
+f^{21} & f^{22}
+\end{bmatrix}
+=
+\frac{1}{5}
+\begin{bmatrix}
+2 & -1\\
+-1 & 1
+\end{bmatrix}</script> The reciprocal basis is computed using the relations
+<script type="math/tex">\mathsf{f}^i = \sum f^{ij}\mathsf{f}_j</script>: <script type="math/tex; mode=display">\begin{split}
+\mathsf{f}^1 &= \sum f^{1j}\mathsf{f}_j = \frac{2}{5}(2,1) - \frac{1}{5}(1,3) = \frac{1}{5}(3,-1),\\
+\mathsf{f}^2 &= \sum f^{2j}\mathsf{f}_j = -\frac{1}{5}(2,1) + \frac{1}{5}(1,3) = \frac{1}{5}(-1,2).
+\end{split}</script> It is left as an easy exercise to verify that
+<script type="math/tex">\mathsf{f}^i \cdot \mathsf{f}_j = \delta_{ij}</script>. Using these relations
+the components <script type="math/tex">(\bar{v}_1,\bar{v}_2)</script> of <script type="math/tex">\mathsf{v}</script> with respect
+to the basis <script type="math/tex">(\mathsf{f}_1,\mathsf{f}_2)</script> can be computed using the
+relations <script type="math/tex">\bar{v}_i = \mathsf{v} \cdot \mathsf{f}^i</script> as follows:
+<script type="math/tex; mode=display">\begin{split}
+\bar{v}_1 &= \mathsf{v} \cdot \mathsf{f}^1 = (2,5) \cdot \frac{1}{5}(3,-1) = \frac{1}{5},\\
+\bar{v}_2 &= \mathsf{v} \cdot \mathsf{f}^2 = (2,5) \cdot \frac{1}{5}(-1,2) = \frac{8}{5}. 
+\end{split}</script> We thus see get the representation of <script type="math/tex">\mathsf{v}</script> in
+the basis <script type="math/tex">(\mathsf{f}_1,\mathsf{f}_2)</script> as
+<script type="math/tex; mode=display">\mathsf{v} = \frac{1}{5}(\mathsf{f}_1 + 8\mathsf{f}_2).</script> It is left
+as a simple exercise to verify by direct substitution that this is true.</p>
+<p>Finally, note that the components <script type="math/tex">(\bar{v}_1,\bar{v}_2)</script> of
+<script type="math/tex">\mathsf{v}</script> with respect to the basis <script type="math/tex">(\mathsf{f}_1,\mathsf{f}_2)</script>
+can be directly obtained from its components
+<script type="math/tex">(\tilde{v}_1,\tilde{v}_2)</script> with respect to the basis
+<script type="math/tex">(\mathsf{g}_1,\mathsf{g}_2)</script> using the relations
+<script type="math/tex">\bar{v}_i = \sum \mathsf{f}^i \cdot \mathsf{g}_j \tilde{v}_j</script> as
+follows: <script type="math/tex; mode=display">\begin{split}
+\bar{v}_1 &= \sum \mathsf{f}^1\cdot\mathsf{g}_j \tilde{v}_j = \frac{4}{5}(3,-1)\cdot(1,2) - \frac{1}{5}(3,-1)\cdot(2,3) = \frac{1}{5},\\
+\bar{v}_2 &= \sum \mathsf{f}^2\cdot\mathsf{g}_j \tilde{v}_j = \frac{4}{5}(-1,2)\cdot(1,2) - \frac{1}{5}(-1,2)\cdot(2,3) = \frac{8}{5}.
+\end{split}</script> We thus see that all the different ways to compute the
+components of <script type="math/tex">\mathsf{v}</script> with respect to two different choices of
+bases are consistent with each other.</p>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../linear_maps_1/" title="Linear Maps - I" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Linear Maps - I
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>

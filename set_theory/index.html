@@ -1,0 +1,1256 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Notes on Euclidean Tensor Analysis.">
+      
+      
+      
+        <meta name="author" content="Amuthan A. Ramabathiran">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+    
+    
+      
+        <title>Appendix - Set Theory - Euclidean Tensor Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Open+Sans">
+        <style>body,input{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Open Sans","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#describing-a-set" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Euclidean Tensor Analysis" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Euclidean Tensor Analysis
+            </span>
+            <span class="md-header-nav__topic">
+              Appendix - Set Theory
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Euclidean Tensor Analysis" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Euclidean Tensor Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../inner_product_spaces/" title="Inner Product Spaces" class="md-nav__link">
+      Inner Product Spaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_1/" title="Linear Maps - I" class="md-nav__link">
+      Linear Maps - I
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_algebra/" title="Tensor Algebra" class="md-nav__link">
+      Tensor Algebra
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../linear_maps_2/" title="Linear Maps - II" class="md-nav__link">
+      Linear Maps - II
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../nonlinear_maps/" title="Linearization of Nonlinear Maps" class="md-nav__link">
+      Linearization of Nonlinear Maps
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tensor_analysis_R3/" title="Euclidean Tensor Analysis" class="md-nav__link">
+      Euclidean Tensor Analysis
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-nav__link">
+      Curvilinear Coordinates
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Appendix - Set Theory
+      </label>
+    
+    <a href="./" title="Appendix - Set Theory" class="md-nav__link md-nav__link--active">
+      Appendix - Set Theory
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#describing-a-set" title="Describing a set" class="md-nav__link">
+    Describing a set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-sets" title="Numerical sets" class="md-nav__link">
+    Numerical sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets-inclusion-and-equality" title="Subsets, inclusion and equality" class="md-nav__link">
+    Subsets, inclusion and equality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#families-of-sets" title="Families of sets" class="md-nav__link">
+    Families of sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-operations" title="Set operations" class="md-nav__link">
+    Set operations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union" title="Union" class="md-nav__link">
+    Union
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection" title="Intersection" class="md-nav__link">
+    Intersection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-difference" title="Set difference" class="md-nav__link">
+    Set difference
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartesian-products" title="Cartesian products" class="md-nav__link">
+    Cartesian products
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-relations" title="Binary relations" class="md-nav__link">
+    Binary relations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps-and-functions" title="Maps and functions" class="md-nav__link">
+    Maps and functions
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../matrices/" title="Appendix - Matrices" class="md-nav__link">
+      Appendix - Matrices
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../calculus/" title="Appendix - Calculus" class="md-nav__link">
+      Appendix - Calculus
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#describing-a-set" title="Describing a set" class="md-nav__link">
+    Describing a set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-sets" title="Numerical sets" class="md-nav__link">
+    Numerical sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets-inclusion-and-equality" title="Subsets, inclusion and equality" class="md-nav__link">
+    Subsets, inclusion and equality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#families-of-sets" title="Families of sets" class="md-nav__link">
+    Families of sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-operations" title="Set operations" class="md-nav__link">
+    Set operations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#union" title="Union" class="md-nav__link">
+    Union
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection" title="Intersection" class="md-nav__link">
+    Intersection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-difference" title="Set difference" class="md-nav__link">
+    Set difference
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartesian-products" title="Cartesian products" class="md-nav__link">
+    Cartesian products
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-relations" title="Binary relations" class="md-nav__link">
+    Binary relations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maps-and-functions" title="Maps and functions" class="md-nav__link">
+    Maps and functions
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Appendix - Set Theory</h1>
+                
+                <p>A review of a few basic ideas from set theory is provided here. Set
+theory forms the foundation for almost all of modern mathematics.
+Indeed, one can say that modern mathematics <em>is</em> the study of sets. We
+will not make any attempts to define rigorously the notion of a set.
+Certain elementary definitions are provided here for convenient
+reference. More definitions will be introduced later on as and when they
+are required.</p>
+<h2 id="describing-a-set">Describing a set</h2>
+<p>Loosely speaking, a <strong>set</strong> is a collection of elements. These elements
+are said to <strong>belong</strong> to the set. Given a set <script type="math/tex">S</script>, the statement that
+an element <script type="math/tex">a</script> belongs to <script type="math/tex">S</script> is abbreviated as <script type="math/tex; mode=display">a \in S.</script> The
+negation of this statement, that <script type="math/tex">a</script> does not belong to <script type="math/tex">S</script>, is
+written as <script type="math/tex; mode=display">a \notin S.</script> The set consisting of <script type="math/tex">n</script> elements
+<script type="math/tex">a_1, a_2, \ldots, a_n</script> is written as <script type="math/tex; mode=display">\{a_1,a_2,\ldots,a_n\}.</script>
+</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us collect together the list <script type="math/tex">C</script> of India’s Twenty20
+cricket captains so far (as of 2019):
+<script type="math/tex; mode=display">C = \{\text{Sehwag}, \text{Dhoni}, \text{Raina}, \text{Rahane}, \text{Kohli}, \text{Sharma}\}.</script>
+(I have listed only the last names since the full names would make the
+list too long.) We denote the fact that <script type="math/tex">\text{Dhoni}</script> was a captain
+of the Indian Twenty20 cricket team as <script type="math/tex; mode=display">\text{Dhoni} \in C.</script>
+Similarly, we denote the fact that <script type="math/tex">\text{Tendulkar}</script> was not a
+captain of the Indian Twenty20 cricket team using the notation
+<script type="math/tex; mode=display">\text{Tendulkar} \notin C.</script> Notice how the set-theoretic notation
+<script type="math/tex">\text{Tendulkar} \notin C</script> succinctly represents the more verbose
+statement <em>‘Tendulkar was not a captain of the Indian Twenty20 cricket
+team’</em>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Whenever you see a mathematical expression, keep in mind that
+it just summarizes a possibly long, or, complex idea - it is a good idea
+to <em>read it out fully</em> until you gain enough intuition to think
+abstractly.</p>
+</div>
+<p>A more powerful notation to represent a set is as follows. Suppose we
+are given a property <script type="math/tex">P(a)</script> that any element <script type="math/tex">a</script> belonging to a set
+<script type="math/tex">S</script> may, or may not, satisfy. The set of all elements in <script type="math/tex">S</script> that
+satisfy the property <script type="math/tex">P</script> is written as <script type="math/tex; mode=display">\{a \in S \,|\, P(a)\}.</script> The
+above statement is read <em>‘the set of all <script type="math/tex">a</script> in <script type="math/tex">S</script> for which
+<script type="math/tex">P(a)</script> is true’</em>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Continuing the earlier example involving the set <script type="math/tex">C</script> of
+all Indian Twenty20 cricket team (as of 2019), notice that only
+<script type="math/tex">\text{Rahane}</script> and <script type="math/tex">\text{Sharma}</script> represented Mumbai, in the
+domestic matches. Using the notation just introduced, we see that the
+set <script type="math/tex; mode=display">\{\text{Rahane}, \text{Sharma}\}</script> consisting of just those Indian
+Twenty20 captains until 2019 who played for Mumbai as
+<script type="math/tex; mode=display">\{A \in C \,|\, A\text{ played for Mumbai}\}.</script>
+</p>
+</div>
+<p>It is helpful to postulate the existence of a special set called the
+<strong>empty set</strong> that contains nothing. The standard notation for the empty
+set is <script type="math/tex">\emptyset</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Returning to the set <script type="math/tex">C</script> of all Indian Twenty20 captains,
+it turns out that none of them were born in Mumbai. In set-theoretic
+notation, we write this as
+<script type="math/tex; mode=display">\{A \in C \,|\, A\text{ was born in Mumbai}\} = \emptyset.</script>
+</p>
+</div>
+<p>Finally, we will always work within the confines of a <strong>universal set</strong>,
+which contains everything that we are dealing with in a particular
+context.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>In all the earlier examples involving the set <script type="math/tex">C</script> of all
+Indian Twenty20 captains, a convenient choice of universal set is the
+set <script type="math/tex">P</script> of all cricketers who represented India at the international
+level in cricket matches:
+<script type="math/tex; mode=display">P = \{\text{Indians who played for India in at least one international cricket match}\}.</script>
+Note that the set <script type="math/tex">C</script> can be obtained from <script type="math/tex">P</script> as follows:
+<script type="math/tex; mode=display">C = \{A \in P \,|\, A\text{ captained India in a Twenty20 match}\}.</script>
+</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Note that the choice of universal set is not unique. In the
+examples considered above, we might just as well have chosen the set
+<script type="math/tex">I</script> of all Indians who were born, say, after 1900, as our universal
+set. In practice, the best choice of the universal set is often
+implicitly understood from the context. It is always a good idea to be
+aware of it, nevertheless.</p>
+</div>
+<h2 id="numerical-sets">Numerical sets</h2>
+<p>While set theory is very broad in its purview, we will limit our
+discussion henceforth to studying the properties of special kinds of
+sets. In particular, we will find the following <strong>numerical sets</strong> to be
+very useful:</p>
+<ul>
+<li>
+<p>The set of all <strong>natural numbers</strong>:
+    <script type="math/tex">\mathbb{N} = \{1, 2, 3, \ldots \}</script>.</p>
+</li>
+<li>
+<p>The set of all <strong>integers</strong>:
+    <script type="math/tex">\mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\}</script>.</p>
+</li>
+<li>
+<p>The set of all <strong>rational numbers</strong>, which are numbers of the form
+    <script type="math/tex">p/q</script> where <script type="math/tex">p \in \mathbb{Z}</script> and <script type="math/tex">q \in \mathbb{N}</script>, will be
+    denoted by the symbol <script type="math/tex">\mathbb{Q}</script>.</p>
+</li>
+<li>
+<p>Finally, the set of all <strong>real numbers</strong> will be denoted by the
+    symbol <script type="math/tex">\mathbb{R}</script>.</p>
+</li>
+</ul>
+<p>We will sometimes use the symbol <script type="math/tex">\mathbb{R}_+</script> to denote the set of
+non-negative real numbers:
+<script type="math/tex">\mathbb{R}_+ = \{a \in \mathbb{R} \,|\, a \ge 0\}</script>.</p>
+<p>!!! info "Remark
+    In the modern mathematical formalism, <em>all</em> the numerical sets
+    introduced above are constructed from the empty set <script type="math/tex">\emptyset</script>.
+    Understanding how this is done is beyond the scope of these notes. Any
+    good book on real analysis should, however, provide the necessary
+    details.</p>
+<p>All the discussion henceforth will be confined to numerical sets, or
+sets constructed from numerical sets, unless stated otherwise.</p>
+<h2 id="subsets-inclusion-and-equality">Subsets, inclusion and equality</h2>
+<p>A set <script type="math/tex">S</script> is said to be a <strong>subset</strong> of another set <script type="math/tex">T</script>, written
+<script type="math/tex">S \subseteq T</script>, if, and only if, it is true that whenever
+<script type="math/tex">a \in S</script>, it is also the case that <script type="math/tex">a \in T</script>. Formally,
+<script type="math/tex; mode=display">S \subseteq T \,\Leftrightarrow\, a\in S \Rightarrow a \in T.</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>We will use a variety of <strong>logical qualifiers</strong> in these
+notes. The symbol <script type="math/tex">\forall</script> stands for the logical qualifier <strong>for
+all</strong>. We also use the logical qualifiers <script type="math/tex">\exists</script> and <script type="math/tex">\exists!</script>
+to represent the notions <strong>there exists</strong>, and <strong>there exists a
+unique</strong>, respectively. The symbol <script type="math/tex">\Rightarrow</script> stands for
+<strong>implication</strong>. Thus, <script type="math/tex">a \Rightarrow b</script> is read <strong><script type="math/tex">b</script> if <script type="math/tex">a</script></strong>,
+or <strong><script type="math/tex">a</script> only if <script type="math/tex">b</script></strong>. Finally, the symbol <script type="math/tex">\Leftrightarrow</script>
+stands for <strong>equivalence</strong>. Thus, <script type="math/tex">a \Leftrightarrow b</script> is read
+<strong><script type="math/tex">a</script> if, and only if, <script type="math/tex">b</script></strong>. We will henceforth abbreviate the
+phrase <strong>if, and only if</strong> as <strong>iff</strong>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>We will use the following subsets of <script type="math/tex">\mathbb{R}</script> to be
+very useful: for any <script type="math/tex">a,b \in \mathbb{R}</script>, <script type="math/tex; mode=display">\begin{split}
+(a,b) &= \{x \in \mathbb{R}\,|\, a < x < b\},\\
+(a,b] &= \{x \in \mathbb{R}\,|\, a < x \le b\},\\
+[a,b) &= \{x \in \mathbb{R}\,|\, a \le x < b\},\\
+[a,b] &= \{x \in \mathbb{R}\,|\, a \le x \le b\},\\
+(a,\infty) &= \{x \in \mathbb{R}\,|\, x > a\},\\
+[a,\infty) &= \{x \in \mathbb{R}\,|\, x \ge a\},\\
+(\infty,a) &= \{x \in \mathbb{R}\,|\, x < a\},\\
+(\infty,a] &= \{x \in \mathbb{R}\,|\, x \le a\}.
+\end{split}</script>
+</p>
+</div>
+<p>The phrase <script type="math/tex">S</script> is <strong>contained in</strong> <script type="math/tex">T</script> is also used for
+<script type="math/tex">S \subseteq T</script>. This can alternatively be stated as,
+<script type="math/tex">T \supseteq S</script>, and we say that <script type="math/tex">T</script> is a <strong>superset</strong> of <script type="math/tex">S</script>, or
+that <script type="math/tex">T</script>
+<strong>contains</strong> <script type="math/tex">S</script>. <script type="math/tex">S</script> is said to be a strict subset of
+<script type="math/tex">T</script>, written <script type="math/tex">S \subsetneq T</script>, if <script type="math/tex">S</script> is a subset of <script type="math/tex">T</script>, and
+there exists an element <script type="math/tex">a \in T</script> such that <script type="math/tex">a \notin S</script>. Formally,
+<script type="math/tex; mode=display">S \subsetneq T \,\Leftrightarrow\, S \subseteq T, \text{ and } \exists\, a \in T \text{ such that } a \notin S.</script>
+</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Note that the following inclusion relation holds among the
+numerical sets introduced earlier:
+<script type="math/tex; mode=display">\emptyset \subseteq \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}.</script>
+</p>
+</div>
+<p>Finally, two sets <script type="math/tex">S</script> and <script type="math/tex">T</script> are said to be <strong>equal</strong>, written
+<script type="math/tex">S = T</script>, if both <script type="math/tex">S \subseteq T</script> and <script type="math/tex">T \subseteq S</script>. In other
+words, every element in <script type="math/tex">S</script> belongs to <script type="math/tex">T</script>, and vice versa.
+Formally,
+<script type="math/tex; mode=display">S = T \,\Leftrightarrow\, S \subseteq T \text{ and } T \subseteq S \,\Leftrightarrow\, (a \in S \Leftrightarrow a \in T).</script>
+This is an important strategy to prove the equality of two sets.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us consider the two sets
+<script type="math/tex; mode=display">S = [-1,1] \subseteq \mathbb{R},</script> and
+<script type="math/tex; mode=display">T = \{ \sin x \,|\, x \in \mathbb{R} \} \subseteq \mathbb{R}</script> For any
+<script type="math/tex">y \in S</script>, note that it is possible to find a unique
+<script type="math/tex">x \in [-\pi/2,\pi/2]</script> such that <script type="math/tex">y = \sin x \in T</script>. Thus, we see
+that <script type="math/tex">S \subseteq T</script>. To prove the reverse inclusion, note that for
+any <script type="math/tex">x \in \mathbb{R}</script>, <script type="math/tex">\sin x \in [-1,1]</script>, and hence it is true
+that <script type="math/tex">T \subseteq S</script>. We have thus shown that
+<script type="math/tex; mode=display">S = [-1,1] = \{ \sin x \,|\, x \in \mathbb{R} \} = T.</script>
+</p>
+</div>
+<h2 id="families-of-sets">Families of sets</h2>
+<p>We will now introduce a useful notation that will serve us well in the
+subsequent development of set theory. A <strong>family</strong> of sets <strong>indexed
+by</strong> the set <script type="math/tex">I</script> is a set <script type="math/tex">S</script> whose elements are sets <script type="math/tex">S_i</script> where
+<script type="math/tex">i \in I</script>. In symbols, <script type="math/tex; mode=display">S = \{S_i \,|\, i \in I\}.</script> The set <script type="math/tex">I</script> is
+also called the <strong>index set</strong> for the family. It is also conventional to
+represent the family as <script type="math/tex; mode=display">\{S_i\}_{i\in I}.</script>
+</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that we have <script type="math/tex">4</script> sets <script type="math/tex">S_1, S_2, S_3, S_4</script>
+defined as follows: <script type="math/tex; mode=display">\begin{split}
+S_1 &= [0, 1) \subseteq \mathbb{R},\\
+S_2 &= [0, 1/2) \subseteq \mathbb{R},\\
+S_3 &= [0, 1/3) \subseteq \mathbb{R},\\
+S_4 &= [0, 1/4) \subseteq \mathbb{R}.
+\end{split}</script> Let <script type="math/tex">I_n \subseteq \mathbb{N}</script> be the set consisting of
+the first <script type="math/tex">n</script> natural numbers: <script type="math/tex; mode=display">I_n = \{1, 2, \ldots, n\}.</script> We can
+now collect together all the <script type="math/tex">4</script> sets <script type="math/tex">S_1, S_2, S_3, S_4</script> into a
+single set <script type="math/tex">S</script>, and index it using <script type="math/tex">I_5</script>:
+<script type="math/tex; mode=display">S = \{[0,1), [0,1/2), [0,1/3), [0,1/4)\} = \{S_i \,|\, i \in I_4\}  = \{S_i\}_{i \in I_4}.</script>
+The indexing notation is particularly convenient when dealing with index
+sets which are subsets of real numbers. For instance, defining the sets
+<script type="math/tex; mode=display">T_a = \{[0, 1/a) \subseteq\mathbb{R}\,|\, a \in (0,1]\},</script> we write
+the set <script type="math/tex">T</script> consisting of every such <script type="math/tex">T_a</script> as
+<script type="math/tex; mode=display">T = \{T_a \,|\, a \in (0,1]\} = \{T_a\}_{a \in (0,1]}.</script>
+</p>
+</div>
+<p>An important kind of family of sets is the <strong>power set</strong>
+<script type="math/tex">\mathcal{P}(S)</script> of a given set <script type="math/tex">S</script>, consisting of all the subsets
+of <script type="math/tex">S</script>. Note that since <script type="math/tex">\emptyset \subseteq S</script> for every set <script type="math/tex">S</script>,
+<script type="math/tex">\emptyset \in \mathcal{P}(S)</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the set <script type="math/tex">S = \{1,2,3\}</script>. The power set of <script type="math/tex">S</script>
+is the set
+<script type="math/tex; mode=display">\mathcal{P}(S) = \{ \emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{2,3\}, \{1,3\}, \{1,2,3\} \}.</script>
+Note that <script type="math/tex">\mathcal{P}(S)</script> has <script type="math/tex">2^3 = 8</script> elements. In general, the
+power set of a <strong>finite</strong> set consisting of <script type="math/tex">n</script> elements has <script type="math/tex">2^n</script>
+elements.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The power set of a given set is strictly larger than that set.
+Consider the set <script type="math/tex">\mathbb{N}</script> of all natural numbers. Intuitively, we
+think of this as an <em>infinite</em> set. Consider the power set
+<script type="math/tex">\mathcal{P}(\mathbb{N})</script> of <script type="math/tex">\mathbb{N}</script>. Based on the comment just
+made, <script type="math/tex">\mathcal{P}(\mathbb{N})</script> should have <em>more</em> elements in it than
+<script type="math/tex">\mathbb{N}</script>, which by itself has infinite elements. Does it make
+sense to say that something is larger than infinity? We will
+unfortunately not have the luxury of studying this very interesting
+question in these notes.</p>
+</div>
+<h2 id="set-operations">Set operations</h2>
+<p>Given an initial collection of sets, we can construct new sets from the
+existing ones using a variety of <strong>set operations</strong>. We will study a few
+of the more important one here.</p>
+<h3 id="union">Union</h3>
+<p>The <strong>union</strong> of two sets <script type="math/tex">S</script> and <script type="math/tex">T</script>, written as <script type="math/tex">S \cup T</script>, is
+defined as the set of elements that belong to either <script type="math/tex">S</script>, or to <script type="math/tex">T</script>,
+or to both. Symbolically,
+<script type="math/tex; mode=display">S \cup T = \{a \,|\, a \in S, \text{ or } a \in T\}.</script> Given a family
+of sets <script type="math/tex">\{ S_i \}_{i \in I}</script>, the union of the family is defined
+similarly as
+<script type="math/tex; mode=display">\cup_{i \in I} S_i = \{a \,|\, \exists\,j\in I \text{ such that }a \in S_j\}.</script>
+Two special cases are worth noting here. When <script type="math/tex">I = \{1,2,\ldots,N\}</script>,
+the union is written as <script type="math/tex; mode=display">\cup_{i=1}^N S_i.</script> When <script type="math/tex">I = \mathbb{N}</script>,
+it is written as <script type="math/tex; mode=display">\cup_{i=1}^\infty S_i.</script>
+</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Continuing the previous example involving the family
+<script type="math/tex">\{S_i \,|\, i\in I_4\}</script> and <script type="math/tex">\{T_a \,|\, a \in (0,1]\}</script>, we see
+that
+<script type="math/tex; mode=display">\cup_{i \in I_4} S_i = [0,1) \cup [0,1/2) \cup [0,1/3) \cup [0,1/4) = [0,1).</script>
+Similarly, it is easily checked that <script type="math/tex; mode=display">\cup_{a \in (0,1]} T_a = [0,1).</script>
+</p>
+</div>
+<h3 id="intersection">Intersection</h3>
+<p>The <strong>intersection</strong> of two sets <script type="math/tex">S</script> and <script type="math/tex">T</script>, written <script type="math/tex">S \cap T</script>,
+is defined as the set of elements that belong to both <script type="math/tex">S</script> and <script type="math/tex">T</script>.
+In symbols, <script type="math/tex; mode=display">S \cap T = \{a \,|\, a \in S, \text{ and } a \in T\}.</script>
+The extension of the notation to the case of families of sets is
+analogous to the case of unions described earlier.</p>
+<p>Two sets <script type="math/tex">S</script> and <script type="math/tex">T</script> are said to be <strong>disjoint</strong> if they have no
+element in common, <script type="math/tex">S \cap T = \emptyset</script>. A collection of sets is
+said to be <strong>pairwise disjoint</strong> if every pair of two sets in the
+collection is disjoint.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>With the sets <script type="math/tex">\{S_i \,|\, i \in I_4\}</script> defined as
+earlier, note that
+<script type="math/tex; mode=display">\cap_{i \in I_4} S_i = [0,1) \cap [0,1/2) \cap [0,1/3) \cap [0,1/4) = [0,1/4).</script>
+Note also that <script type="math/tex">S_i \cap [1,2] = \emptyset</script> for every <script type="math/tex">i \in I_4</script>.
+We therefore say that <script type="math/tex">S_i</script> and <script type="math/tex">[1,2]</script> are disjoint for every
+<script type="math/tex">i \in I_4</script>.</p>
+</div>
+<h3 id="set-difference">Set difference</h3>
+<p>The <strong>set difference</strong> of two sets <script type="math/tex">S</script> and <script type="math/tex">T</script>, denoted as
+<script type="math/tex">S \setminus T</script>, is defined as the set of all elements of <script type="math/tex">S</script> that
+do not belong to <script type="math/tex">T</script>:
+<script type="math/tex; mode=display">S \setminus T = \{a \in S \,|\, a \notin T\}.</script> If a universal set
+<script type="math/tex">X</script> is provided, the <strong>complement</strong> of a set <script type="math/tex">S \subset X</script>, written
+as <script type="math/tex">S^c</script>, is defined as the set difference of <script type="math/tex">X</script> and <script type="math/tex">S</script>. In
+symbols, <script type="math/tex">S^c = X \setminus S</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>For any <script type="math/tex">a \in (0,1]</script>, we defined the set <script type="math/tex">T_a</script> earlier
+as <script type="math/tex">[0,1/a)</script>. If <script type="math/tex">I = [0,1]</script>, then we see that
+<script type="math/tex; mode=display">I \setminus T_a = [1/a,1].</script> Since <script type="math/tex">T_a \subseteq \mathbb{R}</script>, we
+can compute its complement in <script type="math/tex">\mathbb{R}</script> as
+<script type="math/tex; mode=display">T_a^c = \mathbb{R} \setminus T_a = (-\infty, 0) \cup [1/a,\infty).</script>
+</p>
+</div>
+<h2 id="cartesian-products">Cartesian products</h2>
+<p>A set containing two elements <script type="math/tex">\{a,b\}</script> has no natural ordering among
+its elements. Thus, this set is exactly the same as the set <script type="math/tex">\{b,a\}</script>.
+We define an <strong>ordered pair</strong> <script type="math/tex">(a,b)</script> as a collection of two elements
+such that <script type="math/tex">a</script> is the <strong>first element</strong>, and <script type="math/tex">b</script> is the <strong>second
+element</strong>. Note that the ordered pair <script type="math/tex">(a,b)</script> is <strong>different</strong> from
+the ordered pair <script type="math/tex">(b,a)</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The notion of an ordered pair can be defined entirely in terms
+of sets. Consider the set <script type="math/tex">\{a,\{a,b\}\}</script>. This prescribes a set
+<script type="math/tex">\{a,b\}</script>, and singles out a particular element, <script type="math/tex">a</script> in this case.
+If we <em>define</em> <script type="math/tex">(a,b) = \{a,\{a,b\}\}</script>, it is immediately obvious that
+the set <script type="math/tex">(a,b)</script> is not the same as the set <script type="math/tex">(b,a) = \{b,\{a,b\}\}</script>.
+While this shows how an order is fundamentally just a special set, it is
+almost never explicitly written out in practice.</p>
+</div>
+<p>The <strong>Cartesian product</strong> of two sets <script type="math/tex">S</script> and <script type="math/tex">T</script> is defined as the
+set <script type="math/tex">S \times T</script> that consists of all ordered pairs <script type="math/tex">(s,t)</script> such
+that <script type="math/tex">s</script> belongs to <script type="math/tex">S</script> and <script type="math/tex">t</script> belongs to <script type="math/tex">T</script>:
+<script type="math/tex; mode=display">S \times T = \{(s,t) \,|\, s \in S, t \in T\}.</script>
+</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the sets <script type="math/tex">S = \{1,2,3\}</script> and
+<script type="math/tex">T = \{\text{red}, \text{blue}\}</script>. The Cartesian product of <script type="math/tex">S</script> and
+<script type="math/tex">T</script> in this case is computed as
+<script type="math/tex; mode=display">S \times T = \{ (1,\text{red}), (1,\text{blue}), (2,\text{red}), (2,\text{blue}, (3,\text{red}), (3,\text{blue} \}</script>
+</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The word <em>Cartesian</em> derives from the the name of the French
+philosopher Rene Descartes. We will capitalize the first letter of the
+name of a term if that term has its origin in the name of an individual.</p>
+</div>
+<p>The Cartesian product of a finite collection of sets
+<script type="math/tex">S_1, S_2, \ldots, S_n</script> is defined similarly as
+<script type="math/tex; mode=display">S_1 \times S_2 \times \ldots \times S_n = \{(s_1, s_2, \ldots, s_n) \,|\, \forall\,i\in\{1,2,\ldots,n\},\,s_i \in S_i\}.</script>
+A similar extension holds for an infinite collection of sets.</p>
+<p>The Cartesian product of a set <script type="math/tex">S</script> with itself, <script type="math/tex">S \times S</script>, is
+often written as <script type="math/tex">S^2</script>. Similarly, the cartesian product of <script type="math/tex">n</script>
+copies of <script type="math/tex">S</script> is written as <script type="math/tex">S^n</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As an important example of the Cartesian product of a set
+with itself is the set <script type="math/tex">\mathbb{R}^n</script>:
+<script type="math/tex; mode=display">\mathbb{R}^n = \underbrace{\mathbb{R} \times \ldots \times \mathbb{R}}_{n \text{ factors}}.</script>
+In particular, the sets <script type="math/tex">\mathbb{R}</script>, <script type="math/tex">\mathbb{R}^2</script> and
+<script type="math/tex">\mathbb{R}^3</script> will play a significant role in these notes.</p>
+</div>
+<h2 id="binary-relations">Binary relations</h2>
+<p>A <strong>binary relation</strong> <script type="math/tex">R</script> on a set <script type="math/tex">S</script> is a subset of
+<script type="math/tex">S \times S</script>. If <script type="math/tex">(a,b) \in R</script>, it is conventional to represent this
+as <script type="math/tex">a\,R\,b</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In the example presented earlier in the context of the
+Cartesian product, <script type="math/tex">S = \{1,2,3\}</script> and
+<script type="math/tex">T = \{\text{red}, \text{blue}\}</script>. One possible relation on
+<script type="math/tex">S \times T</script> is the set <script type="math/tex">R</script> defined as
+<script type="math/tex; mode=display">R = \{(1, \text{red}), (1, \text{blue}), (3, \text{blue})\}.</script> Note
+that, in this case, <script type="math/tex">1 \,R\, \text{blue}</script>, while it is not true that
+<script type="math/tex">2 \,R\, \text{blue}</script>.</p>
+</div>
+<p>A binary relation <script type="math/tex">R \subseteq S \times S</script> is said to be</p>
+<ul>
+<li>
+<p><strong>reflexive</strong>, if it is true that for each <script type="math/tex">a \in S</script>, it is the
+    case that <script type="math/tex">a\,R\,a</script>.</p>
+</li>
+<li>
+<p><strong>symmetric</strong>, if for every <script type="math/tex">a,b \in S</script>,
+    <script type="math/tex">a\,R\,b \Rightarrow b\,R\,a</script>.</p>
+</li>
+<li>
+<p><strong>antisymmetric</strong> if for every <script type="math/tex">a,b \in S</script>,
+    <script type="math/tex">(a\,R\,b\text{ and }b\,R\,a)\Rightarrow a = b</script>.</p>
+</li>
+<li>
+<p><strong>transitive</strong> if for every <script type="math/tex">a,b,c \in S</script>,
+    <script type="math/tex">(a\,R\,b\text{ and }b\,R\,c)\Rightarrow a\,R\,c</script>.</p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Given any set <script type="math/tex">S</script>, let us consider the relation
+<script type="math/tex">\subseteq</script> on the power set <script type="math/tex">\mathcal{P}(S)</script> of <script type="math/tex">S</script>. Note that
+for any <script type="math/tex">A, B, C \in \mathcal{P}(S)</script>, <script type="math/tex">A \subseteq A</script> shows us that
+the relation is reflexive;
+<script type="math/tex">A \subseteq B \text{ and } B \subseteq A \Rightarrow A = B</script> shows us
+that the relation is anti-symmetric; and,
+<script type="math/tex">A \subseteq B \text{ and } B \subseteq C \Rightarrow A \subseteq C</script>
+shows us that the relation is transitive.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the set <script type="math/tex">S = \{1,2,3\}</script>. The relation <script type="math/tex">R</script> on
+<script type="math/tex">S</script> defined as
+<script type="math/tex; mode=display">R = \{(1,1), (2,2), (1,2), (2,1), (2,3), (3,2), (1,3), (3,1)\}</script> is
+<em>not</em> reflexive since <script type="math/tex">(3,3) \notin R</script>. It is, however, symmetric and
+transitive.</p>
+</div>
+<p>An <strong>equivalence class</strong> on a set <script type="math/tex">S</script> is a binary relation on <script type="math/tex">S</script>
+that is reflexive, symmetric and transitive. An equivalence class is
+typically represented using symbols like <script type="math/tex">\sim</script>, and <script type="math/tex">(a,b)\in\sim</script>
+is usually written as <script type="math/tex">a \sim b</script>. Given an equivalence relation
+<script type="math/tex">\sim</script> on <script type="math/tex">S</script>, we define the <strong>equivalence class</strong> of <script type="math/tex">a \in S</script> as
+the set <script type="math/tex">[a]</script> consisting of all elements in <script type="math/tex">S</script> that are related to
+<script type="math/tex">a</script> through <script type="math/tex">\sim</script>, <script type="math/tex; mode=display">= \{b \in S \,|\, b \sim a\}.</script> The notation
+<script type="math/tex">[a]_\sim</script> is used if the particular equivalence relation used to
+define this class is to be emphasized. The collection of all equivalence
+classes <script type="math/tex">[a]</script> of <script type="math/tex">S</script>
+<strong>induced</strong> by the equivalence relation
+<script type="math/tex">\sim</script> is called the <strong>factor space</strong> of <script type="math/tex">S</script>, and is denoted as
+<script type="math/tex">S / \sim</script>. Thus, <script type="math/tex; mode=display">S / \sim = \{[a] \,|\, a \in S\}.</script>
+</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the following equivalence relation <script type="math/tex">\sim</script> on the
+set <script type="math/tex">\mathbb{N}</script> of all natural numbers:
+<script type="math/tex; mode=display">m \sim n \text{ iff } (m - n) \text{ is divisible by } 5.</script> Let us
+first verify that this is an equivalence relation. <script type="math/tex">\sim</script> is reflexive
+since for any natural number <script type="math/tex">n \in \mathbb{N}</script>, <script type="math/tex">n - n = 0</script> is
+divisible by <script type="math/tex">5</script>. For any <script type="math/tex">m, n \in \mathbb{N}</script>, if <script type="math/tex">m \sim n</script>,
+then <script type="math/tex">(m - n)</script> is divisible by <script type="math/tex">5</script>. But this also means that
+<script type="math/tex">(n - m)</script> is divisible by <script type="math/tex">5</script>. In other words, <script type="math/tex">n \sim m</script>. Thus,
+we see that <script type="math/tex">\sim</script> is symmetric. Finally, for
+<script type="math/tex">m,n,k \in \mathbb{N}</script>, if <script type="math/tex">m \sim n</script> and <script type="math/tex">n \sim k</script>, then
+<script type="math/tex">(m -n) = 5p</script> for some <script type="math/tex">p \in \mathbb{Z}</script>, and <script type="math/tex">(n - k) = 5q</script> for
+some <script type="math/tex">q \in \mathbb{Z}</script>. Adding these two equations, we see that
+<script type="math/tex">(m - k) = 5(p + q)</script>, and hence that <script type="math/tex">m \sim k</script>. We therefore see
+that <script type="math/tex">\sim</script> is also a transitive relation. Together, these three
+results show that <script type="math/tex">\sim</script> is an equivalence relation on <script type="math/tex">\mathbb{N}</script>.
+The equivalence classes of <script type="math/tex">\mathbb{N}</script> in this case are given by
+<script type="math/tex; mode=display">\begin{split}
+[0] &= \{0, 5, 10, 15, \ldots \},\\
+[1] &= \{1, 6, 11, 16, \ldots \},\\
+[2] &= \{2, 7, 12, 17, \ldots \},\\
+[3] &= \{3, 8, 13, 18, \ldots \},\\
+[4] &= \{4, 9, 14, 19, \ldots \}.
+\end{split}</script> There are only <script type="math/tex">5</script> distinct equivalence classes in this
+case. The factor space is thus seen to be
+<script type="math/tex; mode=display">\mathbb{N}/\sim = \{[0], [1], [2], [3], [4]\}.</script>
+</p>
+</div>
+<p>Equivalence classes offer a power means to <em>partition</em> a set. A
+<strong>partition</strong> of a set <script type="math/tex">S</script> is a pairwise disjoint family
+<script type="math/tex">\{T_i \, |\, i \in I\}</script> of subsets of <script type="math/tex">S</script> such that the
+<script type="math/tex">\cup_{i \in I} T_i = S</script>. The sets <script type="math/tex">\{T_i\}_{i \in I}</script> are then said
+to <strong>partition</strong> the set. The importance of equivalence relation lies in
+the fact that it partitions the set on which it is defined into disjoint
+equivalence classes.</p>
+<div class="admonition info">
+<p class="admonition-title">Proof</p>
+<p>A proof of the statement that an equivalence class <script type="math/tex">\sim</script> on a set
+<script type="math/tex">S</script> partitions the set into disjoint equivalence classes is provided
+here. This can be skipped on a first reading.</p>
+<p>Consider the set <script type="math/tex">P = \{[a]\,|\,a \in S\}</script> consisting of all the
+equivalence classes of <script type="math/tex">S</script>. It is easy to see that
+<script type="math/tex">\cup_{a \in S} [a] = S</script>. By construction,
+<script type="math/tex">\cup_{a \in S} [a] \subseteq S</script>. Further,
+<script type="math/tex">a \in S \Rightarrow a \in [a] \subseteq \cup_{a \in S} [a]</script>, which
+gives the reverse inclusion, <script type="math/tex">S \subseteq \cup_{a \in S} [a]</script>. Thus,
+<script type="math/tex">\cup_{a \in S} [a] = S</script>.</p>
+<p>We prove next that if <script type="math/tex">a,b \in S</script> and <script type="math/tex">a \sim b</script>, then
+<script type="math/tex">[a] = [b]</script>. Choose any <script type="math/tex">c \in [a]</script>. This choice is always possible
+since <script type="math/tex">a \in [a]</script>, and hence <script type="math/tex">[a] \neq \emptyset</script>. From the
+definition of an equivalence class, <script type="math/tex">c \in [a] \Rightarrow c \sim a</script>.
+Using the transitivity property of the equivalence relation,
+<script type="math/tex">(c \sim a</script> and <script type="math/tex">a \sim b) \Rightarrow c \sim b</script>, and hence
+<script type="math/tex">c \in [b]</script>. We have thus shown that <script type="math/tex">[a] \subseteq [b]</script>. By a
+symmetric argument, it is evident that <script type="math/tex">[b] \subseteq [a]</script>. This shows
+that if <script type="math/tex">a \sim b</script>, then <script type="math/tex">[a] = [b]</script>.</p>
+<p>Finally, let us show that the equivalence classes that are not disjoint
+are identical. Consider any two equivalence classes <script type="math/tex">[a]</script> and <script type="math/tex">[b]</script>,
+where <script type="math/tex">a, b \in S</script>. It is either the case that
+<script type="math/tex">[a] \cap [b] = \emptyset</script>, or <script type="math/tex">[a] \cap [b] \neq \emptyset</script>. In the
+latter case, <script type="math/tex">\exists\,c \in S</script> such that <script type="math/tex">c\in[a]</script> and <script type="math/tex">c\in[b]</script>.
+But this means that <script type="math/tex">c \sim a</script> and <script type="math/tex">c \sim b</script>, and hence, by
+symmetry and transitivity of the equivalence relation, <script type="math/tex">a \sim b</script>.
+Using the argument given earlier, we see that <script type="math/tex">[a] = [b]</script>. We have
+thus shown that <script type="math/tex">\cup_{a \in S} [a] = S</script> is a pairwise disjoint cover
+of <script type="math/tex">S</script>, consisting of subsets of <script type="math/tex">S</script>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>In the example considered earlier, notice how the set of
+equivalence classes <script type="math/tex">\{[0], [1], [2], [3], [4]\}</script> is pairwise
+disjoint, and further that <script type="math/tex; mode=display">\cup_{i \in I_5} [i-1] = \mathbb{N}.</script> The
+factor space <script type="math/tex">S/\sim = \{[0], [1], [2], [3], [4]\}</script> thus provides a
+partition the set of natural numbers <script type="math/tex">\mathbb{N}</script>.</p>
+</div>
+<h2 id="maps-and-functions">Maps and functions</h2>
+<p>Given two sets <script type="math/tex">S</script> and <script type="math/tex">T</script>, a <strong>map</strong>, or a <strong>mapping</strong>, from <script type="math/tex">S</script>
+into <script type="math/tex">T</script> is a relation <script type="math/tex">\varphi \subseteq S \times T</script> between <script type="math/tex">S</script>
+and <script type="math/tex">T</script> with the property that for every <script type="math/tex">s \in S</script>, there exists a
+unique <script type="math/tex">t \in T</script> such that <script type="math/tex">(s,t) \in \varphi</script>. In symbols,
+<script type="math/tex; mode=display">\forall\,s\in S,\,(s,t)\in\varphi\text{ and }(s,t')\in\varphi \,\Rightarrow\,t = t'.</script>
+It is conventional to notate <script type="math/tex">(s,t)\in\varphi</script> as <script type="math/tex">\varphi(s) = t</script>
+to make connection with the notation often employed in applications. We
+will also use the notation <script type="math/tex">\varphi:s \mapsto t</script> to denote the fact
+that <script type="math/tex">\varphi</script> maps <script type="math/tex">s \in S</script> to <script type="math/tex">t \in T</script>. The set
+<script type="math/tex">\{(s,t)\in S \times T \,|\, (s,t) \in \varphi\}</script> is called the
+<strong>graph</strong> of <script type="math/tex">\varphi</script>. We will reserve the word <strong>function</strong> to
+denote a map of the form <script type="math/tex">\varphi:S \to \mathbb{R}</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the sets <script type="math/tex">S = \{1,2,3\}</script> and
+<script type="math/tex">T = \{\text{red},\text{blue}\}</script>. The relation
+<script type="math/tex">\varphi \subseteq S \times T</script> defined as
+<script type="math/tex; mode=display">\varphi = \{(1,\text{red}),(1,\text{blue}),(2,\text{red}),(3,\text{blue})\}</script>
+does not represent a map since <script type="math/tex">1</script> is related to both <script type="math/tex">\text{red}</script>
+and <script type="math/tex">\text{blue}</script>. One the other hand, the relation
+<script type="math/tex">\psi \subseteq S \times T</script> defined as
+<script type="math/tex; mode=display">\psi = \{(1,\text{red}),(2,\text{red}),(3,\text{blue})\}</script> represents
+a mapping between <script type="math/tex">S</script> and <script type="math/tex">T</script>: <script type="math/tex">\psi(1) = \text{red}</script>,
+<script type="math/tex">\psi(2) = \text{red}</script>, and <script type="math/tex">\psi(3) = \text{blue}</script>.</p>
+</div>
+<p>The fact that the map <script type="math/tex">\varphi</script> takes an element of <script type="math/tex">S</script> and returns
+an element of <script type="math/tex">T</script> is compactly written using the notation
+<script type="math/tex">\varphi:S \to T</script>. Here, the set <script type="math/tex">S</script> is called the <strong>domain</strong> of
+<script type="math/tex">\varphi</script>, and <script type="math/tex">T</script> is called the <strong>codomain</strong> of <script type="math/tex">\varphi</script>. The
+domain of <script type="math/tex">\varphi</script> is sometimes abbreviated as
+<script type="math/tex">\text{dom }\varphi</script>. The set
+<script type="math/tex">\varphi(S) = \{t \in T \,|\, \exists\,s\in S\text{ such that }\varphi(s) = t\}</script>
+is called the <strong>range</strong> of <script type="math/tex">\varphi</script>. <script type="math/tex">\varphi(S)</script> is also called
+the <strong>image</strong> of <script type="math/tex">S</script> under <script type="math/tex">\varphi</script>, and is sometimes abbreviated
+as <script type="math/tex">\text{img }\varphi</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is important to <em>always</em> be aware of the domain and
+codomain of any map/function. For instance, the two functions
+<script type="math/tex">f:\mathbb{R}\to\mathbb{R}</script>, defined as
+<script type="math/tex; mode=display">\forall\,x \in \mathbb{R}, \quad f(x) = x^2,</script> and the function
+<script type="math/tex">g:\mathbb{R}_+\to\mathbb{R}</script>, defined as
+<script type="math/tex; mode=display">\forall\,x \in \mathbb{R}_+, \quad g(x) = x^2,</script> represent two
+<em>different</em> functions.</p>
+</div>
+<p>The <strong>pre-image</strong>, or <strong>inverse image</strong>, of a subset <script type="math/tex">V \subseteq T</script>
+of <script type="math/tex">T</script> under the mapping <script type="math/tex">\varphi:S \to T</script> is the subset of <script type="math/tex">S</script>
+consisting of all those elements that are mapped into <script type="math/tex">V</script> through
+<script type="math/tex">\varphi</script>, <script type="math/tex; mode=display">\varphi^{-1}(V) = \{ s \in S \,|\,\varphi(s) \in V\}.</script>
+The notation <script type="math/tex">\varphi^{-1}</script> should not be confused with the <strong>inverse
+map</strong>, to be defined later. We also note that
+<script type="math/tex">\varphi^{-1}(V) = \emptyset</script> if there is no <script type="math/tex">s \in S</script> such that
+<script type="math/tex">\varphi(s) \in V</script>. Thus, the inverse image is defined for <em>all</em>
+subsets of <script type="math/tex">V</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the sets <script type="math/tex">S = \{1,2,3\}</script>,
+<script type="math/tex">T = \{\text{red}, \text{green}, \text{blue}\}</script> and the map
+<script type="math/tex">\psi:S \to T</script> defined as
+<script type="math/tex; mode=display">\psi = \{(1,\text{red}), (2,\text{red}), (3,\text{blue})\}.</script> In this
+case, <script type="math/tex">\psi^{-1}(\text{red}) = \{1,2\}</script>,
+<script type="math/tex">\psi^{-1}(\text{blue}) = \{3\}</script> and
+<script type="math/tex">\psi^{-1}(\text{green}) = \emptyset</script>.</p>
+</div>
+<p>Given sets <script type="math/tex">S,T,V</script> and maps <script type="math/tex">\varphi:S \to T</script> and <script type="math/tex">\psi:T\to V</script>,
+the <strong>composition</strong> map <script type="math/tex">\psi \circ \varphi:S \to V</script> is defined as
+<script type="math/tex">\psi\circ\varphi(s) = \psi(\varphi(s))</script>, for every <script type="math/tex">s \in S</script>. The
+composition of maps is <strong>associative</strong>. What this means is that if
+<script type="math/tex">\varphi:S \to T</script>, <script type="math/tex">\psi: T \to V</script>, and <script type="math/tex">\xi:V \to W</script> are given
+maps, then <script type="math/tex">\xi\circ(\psi\circ\varphi) = (\xi\circ\psi)\circ\varphi</script>.
+It thus makes sense to write the composition map as
+<script type="math/tex">\xi\circ\psi\circ\phi:S \to W</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let <script type="math/tex">f:\mathbb{R}\to\mathbb{R}_+</script> be the function defined
+as <script type="math/tex; mode=display">\forall\, x\in \mathbb{R}, \quad f(x) = x^2.</script>
+</p>
+<p>Let <script type="math/tex">g:\mathbb{R}_+\to \mathbb{R}</script> be the function defined as
+<script type="math/tex; mode=display">\forall\, x\in\mathbb{R}, \quad g(x) = \log x.</script>
+</p>
+<p>Then the composite function <script type="math/tex">g \circ f:\mathbb{R}\to\mathbb{R}</script> is
+given by
+<script type="math/tex; mode=display">\forall\,x\in\mathbb{R},\quad (g\circ f)(x) = g(f(x)) = \log x^2.</script>
+</p>
+</div>
+<p>The map <script type="math/tex">\varphi:S \to T</script> is said to be a <strong>one-to-one</strong> map from
+<script type="math/tex">S</script>
+<strong>into</strong> <script type="math/tex">T</script>, or <strong>injective</strong>, or an <strong>injection</strong>, if for
+<script type="math/tex">s,s' \in S,\,\varphi(s) = \varphi(s') \Rightarrow s = s'</script>. The map
+<script type="math/tex">\varphi:S\to T</script> is said to be a map from <script type="math/tex">S</script>
+<strong>onto</strong> <script type="math/tex">T</script>, or
+<strong>surjective</strong>, or a <strong>surjection</strong>, if <script type="math/tex">\varphi(S) = T</script>. The map
+<script type="math/tex">\varphi:S\to T</script> that is both one-to-one and onto, or, equivalently,
+both injective and surjective, is said to be a <strong>one-to-one
+correspondence</strong>, or <strong>bijective</strong>, or a <strong>bijection</strong> from <script type="math/tex">S</script> onto
+<script type="math/tex">T</script>. A bijection thus allows us to identify elements of one set with
+that of another.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>We will now illustrate how the choice of the domain and
+codomain for the same <strong>rule</strong> can be critical in deciding the nature of
+the corresponding map:</p>
+<ul>
+<li>
+<p>The function <script type="math/tex">f:\mathbb{R} \to \mathbb{R}_+</script> defined as
+    <script type="math/tex; mode=display">\forall\, x \in \mathbb{R}, \quad f(x) = x^2,</script> is onto, but not
+    one-to-one.</p>
+</li>
+<li>
+<p>The function <script type="math/tex">g:\mathbb{R}_+ \to \mathbb{R}</script> defined as
+    <script type="math/tex; mode=display">\forall\, x \in \mathbb{R}_+, \quad g(x) = x^2,</script> is one-to-one,
+    but not onto.</p>
+</li>
+<li>
+<p>The function <script type="math/tex">h:\mathbb{R}_+ \to\mathbb{R}_+</script> defined as
+    <script type="math/tex; mode=display">\forall\, x \in \mathbb{R}_+, \quad h(x) = x^2,</script> is both
+    one-to-one and onto.</p>
+</li>
+</ul>
+</div>
+<p>If <script type="math/tex">\varphi:S \to T</script> is a bijection, the <strong>inverse map</strong>
+<script type="math/tex">\varphi^{-1}:T \to S</script> is defined as follows:
+<script type="math/tex">\forall\,t\in T,\,\varphi^{-1}(t) = s</script>, where <script type="math/tex">s \in S</script> is the
+unique element in <script type="math/tex">S</script> such that <script type="math/tex">\varphi(s) = t</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is important to distinguish the inverse map from the
+inverse image. The latter is a mapping from subsets of <script type="math/tex">T</script> to subsets
+of <script type="math/tex">S</script>, and is defined even when the inverse map does not exist.</p>
+</div>
+<p>Given any set <script type="math/tex">S</script>, we will use the notation
+<script type="math/tex">\text{id}_S:S \to S</script> to denote the <strong>identity map</strong> defined as
+<script type="math/tex">\text{id}_S(s) = s</script> for every <script type="math/tex">s \in S</script>. (Depending on the context, other notations will also be used for the identity map.) We thus see that if
+<script type="math/tex">\varphi:S \to T</script> is a bijection, then
+<script type="math/tex">\varphi^{-1} \circ \varphi = \text{id}_S</script> and
+<script type="math/tex">\varphi \circ \varphi^{-1} = \text{id}_T</script>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../curvilinear_coordinates/" title="Curvilinear Coordinates" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Curvilinear Coordinates
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../matrices/" title="Appendix - Matrices" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Appendix - Matrices
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../mathjaxhelper.js"></script>
+      
+    
+  </body>
+</html>
