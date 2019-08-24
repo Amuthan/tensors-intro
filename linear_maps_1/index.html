@@ -250,8 +250,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tensor-product-basis-for-lvw" title="Tensor product basis for L(V,W)" class="md-nav__link">
-    Tensor product basis for L(V,W)
+  <a href="#tensor-product-basis-for-lvw" title="Tensor product basis for $L(V,W)$" class="md-nav__link">
+    Tensor product basis for $L(V,W)$
   </a>
   
 </li>
@@ -410,8 +410,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tensor-product-basis-for-lvw" title="Tensor product basis for L(V,W)" class="md-nav__link">
-    Tensor product basis for L(V,W)
+  <a href="#tensor-product-basis-for-lvw" title="Tensor product basis for $L(V,W)$" class="md-nav__link">
+    Tensor product basis for $L(V,W)$
   </a>
   
 </li>
@@ -501,7 +501,7 @@ This is known as the <strong>rank-nullity theorem</strong>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Consider the map
-<script type="math/tex">\mathsf\pi:\mathbb{R}^3 \to \mathbb{R}^2</script> that was defined earlier as
+<script type="math/tex">\pi:\mathbb{R}^3 \to \mathbb{R}^2</script> that was defined earlier as
 <script type="math/tex">\mathsf\pi(x_1, x_2, x_3) = (x_1, x_2)</script> for any
 <script type="math/tex">(x_1, x_2, x_3) \in \mathbb{R}^3</script>. In this case the null space of
 <script type="math/tex">\pi</script> is seen to be
@@ -600,7 +600,7 @@ used.</p>
 <p>Let us revisit the linear map
 <script type="math/tex">\mathsf\pi:\mathbb{R}^3 \to \mathbb{R}^2</script>. With respect to the
 standard basis of <script type="math/tex">\mathbb{R}^3</script> and <script type="math/tex">\mathbb{R}^2</script>, <script type="math/tex">\mathsf\pi</script>
-has the following matrix representation: <script type="math/tex; mode=display">= \begin{bmatrix}
+has the following matrix representation: <script type="math/tex; mode=display">[\pi] = \begin{bmatrix}
 1 & 0 & 0\\
 0 & 1 & 0
 \end{bmatrix},</script> as can be checked easily with a simple calculation.</p>
@@ -678,7 +678,6 @@ for any <script type="math/tex">x \in [-1,1]</script>,
 It is not hard to check that <script type="math/tex">(e_i)</script> and <script type="math/tex">(f_i)</script> are orthonormal
 bases of <script type="math/tex">\mathcal{P}_2([-1,1],\mathbb{R})</script> and
 <script type="math/tex">\mathcal{P}_1([-1,1],\mathbb{R})</script>, respectively.</p>
-</div>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
 <p>The basis <script type="math/tex">(e_1, e_2, e_3)</script> is obtained by applying the
@@ -733,12 +732,13 @@ We therefore verify by simple matrix multiplication that
 strongly recommended to work out all the details of this example step by
 step since it covers many of the concepts introduced earlier.</p>
 </div>
+</div>
 <p>Given three vector spaces <script type="math/tex">U, V, W</script>, let us consider the successive
 action of two linear maps <script type="math/tex">\mathsf{T}:U \to V</script> and
 <script type="math/tex">\mathsf{S}:V \to W</script> on a vector <script type="math/tex">\mathsf{u} \in U</script>. We define the
 <strong>product map</strong> <script type="math/tex">\mathsf{ST}:U \to W</script> as
 <script type="math/tex">(\mathsf{ST})(\mathsf{u}) = \mathsf{S}(\mathsf{T}\mathsf{u})</script>. It can
-be shown that this translates to <script type="math/tex; mode=display">= [\mathsf{S}][\mathsf{T}]</script> in
+be shown that this translates to <script type="math/tex; mode=display">[\mathsf{ST}] = [\mathsf{S}][\mathsf{T}]</script> in
 matrix notation, with respect to any choice of bases in <script type="math/tex">U, V, W</script>. To
 see this, let <script type="math/tex">(\mathsf{e}_i), (\mathsf{f}_i), (\mathsf{g}_i)</script> be
 general bases of <script type="math/tex">U, V, W</script>, respectively. Then, for any
@@ -751,7 +751,7 @@ thus corresponds to the familiar matrix multiplication. Combining the
 expression just derived with the definition
 <script type="math/tex">[\mathsf{ST}]_{ij} = \mathsf{g}_i \cdot \mathsf{ST}\mathsf{e}_j</script>, we
 see that
-<script type="math/tex; mode=display">_{ij} = \sum S_{ik}T_{kj} = ([\mathsf{S}][\mathsf{T}])_{ij} \quad\Rightarrow\quad [\mathsf{ST}] = [\mathsf{S}][\mathsf{T}].</script>
+<script type="math/tex; mode=display">(\mathsf{ST})_{ij} = \sum S_{ik}T_{kj} = ([\mathsf{S}][\mathsf{T}])_{ij} \quad\Rightarrow\quad [\mathsf{ST}] = [\mathsf{S}][\mathsf{T}].</script>
 In fact, the rationale for defining matrix multiplication in the
 specific way it is defined is to ensure that the matrix representation
 of the product map is the product of the matrix representations of the
@@ -781,7 +781,7 @@ another choice of general bases for <script type="math/tex">V</script> and <scri
 the components of the matrix representation of <script type="math/tex">\mathsf{T}</script>, written
 <script type="math/tex">\tilde{T}_{ij}</script>, are computed as
 <script type="math/tex; mode=display">\tilde{T}_{ij} = \tilde{\mathsf{g}}^i \cdot \mathsf{T}\tilde{\mathsf{f}}_j.</script>
-The equations relating <script type="math/tex">\tilde{T}_ij</script> and <script type="math/tex">T_{ij}</script> are now worked.
+The equations relating <script type="math/tex">\tilde{T}_{ij}</script> and <script type="math/tex">T_{ij}</script> are now worked out.
 Though these calculations take a much simpler form with respect to a
 choice of orthonormal bases for both <script type="math/tex">V</script> and <script type="math/tex">W</script>, the slightly more
 involved case involving general bases is presented below as a good
@@ -808,7 +808,7 @@ Noting that <script type="math/tex; mode=display">\begin{split}
 it follows at once that
 <script type="math/tex; mode=display">\tilde{T}_{ij} = \sum B^{-1}_{ia} T_{ab} A_{bj}.</script> Using matrix
 notation, we can write the foregoing equation in matrix form as
-<script type="math/tex; mode=display">_{(\tilde{\mathsf{f}}_i)}^{(\tilde{\mathsf{g}}_i)} = \mathsf{B}^{-1}\;[\mathsf{T}]_{(\mathsf{f}_i)}^{(\mathsf{g}_i)}\;\mathsf{A},</script>
+<script type="math/tex; mode=display">[\mathsf{T}]_{(\tilde{\mathsf{f}}_i)}^{(\tilde{\mathsf{g}}_i)} = \mathsf{B}^{-1}\;[\mathsf{T}]_{(\mathsf{f}_i)}^{(\mathsf{g}_i)}\;\mathsf{A},</script>
 where <script type="math/tex">\mathsf{A}</script> and <script type="math/tex">\mathsf{B}</script> are the matrices whose
 <script type="math/tex">(i,j)^{\text{th}}</script> component is <script type="math/tex">A_{ij}</script> and <script type="math/tex">B_{ij}</script>,
 respectively. </p>
@@ -828,13 +828,24 @@ This special case will turn out to be very useful in later applications.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="admonition danger">
-<p class="admonition-title">TO DO</p>
-<p>Change of basis for linear maps. WS 1. Problem 2.</p>
+<p>Let us revisit the projection map <script type="math/tex">\pi:\mathbb{R}^3 \to \mathbb{R}^2</script>. We saw earlier that with respect to the standard bases of <script type="math/tex">\mathbb{R}^3</script> and <script type="math/tex">\mathbb{R}^2</script>, the linear map <script type="math/tex">\pi</script> has the following representation:
+<script type="math/tex; mode=display">[\pi] = \begin{bmatrix} 1 & 0 & 0\\ 0 & 1 & 0\end{bmatrix}.</script> Let us now consider a different set of bases <script type="math/tex">(\mathsf{g}_1, \mathsf{g}_2)</script> of <script type="math/tex">\mathbb{R}^2</script> and <script type="math/tex">(\mathsf{g}_1, \mathsf{g}_2, \mathsf{g}_3)</script> of <script type="math/tex">\mathbb{R}^3</script>, where <script type="math/tex">\mathsf{g}_3 = \mathsf{e}_3</script>, and <script type="math/tex">(\mathsf{g}_1,\mathsf{g}_2)</script> is obtained by rotating <script type="math/tex">(\mathsf{e}_1,\mathsf{e}_2)</script> by an angle <script type="math/tex">\theta</script> about <script type="math/tex">\mathsf{e}_3</script>. Thus, we have the following relations:
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{g}_1 &= \cos \theta \mathsf{e}_1 + \sin \theta \mathsf{e}_2,\\
+\mathsf{g}_2 &= -\sin \theta \mathsf{e}_1 + \cos \theta \mathsf{e}_2.
+\end{split}</script>
+The components <script type="math/tex">(\tilde\pi_{ij})</script> of <script type="math/tex">\pi</script> with respect to the bases <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">\mathbb{R}^3</script> and <script type="math/tex">\mathbb{R}^2</script> are computed using
+<script type="math/tex; mode=display">\tilde\pi_{ij} = \mathsf{g}_i \cdot \pi\mathsf{g}_j.</script>
+A simple calculation shows that
+<script type="math/tex; mode=display">[\pi]_{(\mathsf{g}_i)}^{(\mathsf{g}_i)} = \begin{bmatrix}
+1 & 0 & 0\\ 0 & 1 & 0.
+\end{bmatrix}</script>
+The change of basis can also be computed using the relation
+<script type="math/tex; mode=display">[\pi]_{(\mathsf{g}_i)}^{(\mathsf{g}_i)} = \mathsf{B}^{-1} [\pi]_{(\mathsf{e}_i)}^{(\mathsf{e}_i)} \mathsf{A},</script>
+where <script type="math/tex">\mathsf{A}</script> and <script type="math/tex">\mathsf{B}</script> are the matrices that related the new and old bases in <script type="math/tex">\mathbb{R}^3</script> and <script type="math/tex">\mathbb{R}^2</script>, respectively. It is left as a simple exercise to check that this yields the same representation as shown above.</p>
+<p>Notice that in this special case, the representation of <script type="math/tex">\pi</script> does not change for <em>any</em> value of <script type="math/tex">\theta</script>. This is not true for a general linear map. Can you think of a simple geometric interpretation of this invariance of the representation of <script type="math/tex">\pi</script>?</p>
 </div>
-</div>
-<h2 id="tensor-product-basis-for-lvw">Tensor product basis for <script type="math/tex">L(V,W)</script>
-</h2>
+<h2 id="tensor-product-basis-for-lvw">Tensor product basis for $L(V,W)$</h2>
 <p>Suppose that <script type="math/tex">V</script> and <script type="math/tex">W</script> are inner product spaces of dimension <script type="math/tex">m</script>
 and <script type="math/tex">n</script>, respectively. Let us focus on the set <script type="math/tex">L(V,W)</script>,
 <script type="math/tex; mode=display">L(V,W) = \{\mathsf{T}:V \to W \,|\, \mathsf{T} \text{ is linear }\},</script>
@@ -908,6 +919,26 @@ the product of the dimensions of <script type="math/tex">V</script> and <script 
 a linear map can also be derived using the tensor product
 representation. It is a simple exercise to verify this.</p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the <strong>identity map</strong> <script type="math/tex">\text{id}:\mathbb{R}^3 \to \mathbb{R}^3</script> defined as follows: for any <script type="math/tex">\mathsf{x} \in \mathbb{R}^3</script>, 
+<script type="math/tex; mode=display">\text{id} (\mathsf{v}) = \mathsf{v}.</script>
+It is trivial to check that this is a linear map. The components <script type="math/tex">\text{id}_{ij}</script> of <script type="math/tex">\text{id}</script> with respect to the standard basis of <script type="math/tex">\mathbb{R}^3</script> is obtained as follows:
+<script type="math/tex; mode=display">\pi_{ij} = \mathsf{e}_i \cdot \text{id}(\mathsf{e}_j) = \delta_{ij}.</script>
+We thus see that
+<script type="math/tex; mode=display">\begin{split}
+\text{id} &= \sum \delta_{ij} \mathsf{e}_i \otimes \mathsf{e}_j\\
+ &= \sum \mathsf{e}_i \otimes \mathsf{e}_i.
+\end{split}</script>
+This representation of the identity map is very useful in applications.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Considering again the projection map <script type="math/tex">\pi:\mathbb{R}^3 \to \mathbb{R}^2</script> introduced earlier, note that, with respect to the standard bases of <script type="math/tex">\mathbb{R}^3</script> and <script type="math/tex">\mathbb{R}^2</script>, we have
+<script type="math/tex; mode=display">\pi = \sum \pi_{ij} \mathsf{e}_i \otimes \mathsf{e}_j = \mathsf{e}_1 \otimes \mathsf{e}_1 + \mathsf{e}_2 \otimes \mathsf{e}_2.</script>
+Compare the form of this representation with the representation of the identity map in the previous example. Notice how we can <em>read off</em> the fact that <script type="math/tex">\pi</script>
+<em>projects</em> the first two components of the vector it acts on based on this analogy.</p>
+</div>
 <p>Let us briefly look at the representation of any
 <script type="math/tex">\mathsf{T} \in L(V,W)</script> with respect to general bases
 <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> and <script type="math/tex">(\mathsf{g}_i)</script>. Given any any
@@ -946,7 +977,7 @@ of <script type="math/tex">\mathsf{T}^T</script> with respect to orthonormal bas
 <script type="math/tex; mode=display">\sum T^T_{ij} w_j v_i = T_{ji} w_j v_i \quad\Rightarrow\quad T^T_{ij} = T_{ji}.</script>
 Here <script type="math/tex">T_{ij} = \mathsf{g}_i \cdot \mathsf{T}\mathsf{f}_j</script> and
 <script type="math/tex">T^T_{ij} = \mathsf{f}_i \cdot \mathsf{T}^T\mathsf{g}_j</script>. In matrix
-notation, this amounts to the following equation: <script type="math/tex; mode=display">= [\mathsf{T}]^T.</script>
+notation, this amounts to the following equation: <script type="math/tex; mode=display">[\mathsf{T}^T] = [\mathsf{T}]^T.</script>
 We thus recover the familiar expression for the transpose of a matrix.
 The fact that <script type="math/tex">[\mathsf{T}^T]_{ij} = T_{ji}</script> also leads to the
 following representation of <script type="math/tex">\mathsf{T}^T \in L(W,V)</script> with respect to
@@ -968,18 +999,22 @@ can be directly checked using the definition of the transpose.</p>
 <p>Let us now compute the representation of the transpose of a linear map
 <script type="math/tex">\mathsf{T}:V \to W</script> with respect to general bases <script type="math/tex">(\mathsf{f}_i)</script>
 for <script type="math/tex">V</script> and <script type="math/tex">(\mathsf{g}_i)</script> for <script type="math/tex">W</script>. With respect to these choice
-of basis, we have: <script type="math/tex; mode=display">\begin{split}
+of basis, we have: 
+<script type="math/tex; mode=display">\begin{split}
 \left(\sum v_i \mathsf{f}_i\right) \cdot \mathsf{T}^T\left(\sum w_j \mathsf{g}_j\right) &= \mathsf{T}\left(\sum v_i \mathsf{f}_i\right) \cdot \left(\sum w_j \mathsf{g}_j\right),\\
 \sum v_i w_j \mathsf{f}_i \cdot \mathsf{T}^T\mathsf{g}_j &= \sum v_i w_j \mathsf{T}\mathsf{f}_i\cdot \mathsf{g}_j,\\
 \sum v_i w_j g_{il} \mathsf{f}^l \cdot \mathsf{T}^T\mathsf{g}_j &= \sum v_i w_j g_{kj} \mathsf{g}^k \cdot \mathsf{T}\mathsf{f}_i,\\
-\sum v_i w_j g_{il} T^T_{lj} = \sum v_i w_j g_{kj} T_{ki}.
-\end{split}</script> Since this equation holds true for any choice of <script type="math/tex">v_i</script>
+\sum v_i w_j g_{il} T^T_{lj} &= \sum v_i w_j g_{kj} T_{ki}.
+\end{split}</script> 
+Since this equation holds true for any choice of <script type="math/tex">v_i</script>
 and <script type="math/tex">w_j</script>, it follows immediately that
 <script type="math/tex; mode=display">\sum g_{ik} T^T_{kj} = \sum g_{jk}T_{ki}.</script> In the special case when
 the bases <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> and <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">W</script>
 are orthonormal, the use of the relations <script type="math/tex">f_{ij} = \delta_{ij}</script> and
 <script type="math/tex">g_{ij} = \delta_{ij}</script> yields the familiar expression for the
 components of the transpose: <script type="math/tex">T^T_{ij} = T_{ji}</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <p>The properties of the transpose of a linear map parallel that of the
 transpose of matrices. For instance, if
 <script type="math/tex">\mathsf{S}, \mathsf{T} \in L(V, W)</script>, and <script type="math/tex">a \in \mathbb{R}</script>, then
@@ -989,6 +1024,7 @@ have the following relation:
 <script type="math/tex; mode=display">(\mathsf{S}\mathsf{T})^T = \mathsf{T}^T \mathsf{S}^T.</script> These
 properties are easy consequences of the definition of the transpose - it
 is left as an exercise to verify these claims.</p>
+</div>
                 
                   
                 

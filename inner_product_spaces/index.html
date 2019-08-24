@@ -1367,11 +1367,11 @@ the components <script type="math/tex">v_i</script> of any <script type="math/te
 (not necessarily orthonormal) basis
 <script type="math/tex">B = (\mathsf{e}_1, \ldots, \mathsf{e}_n)</script> of <script type="math/tex">V</script>. Define the
 <strong>component map</strong> <script type="math/tex">\mathsf\phi_{V,B}:V \to \mathbb{R}^n</script> as follows:
-<script type="math/tex; mode=display">\mathsf\phi_{V,B}(\mathsf{v}) = [v_1, \ldots, v_n]^T.</script> Notice how we
+<script type="math/tex; mode=display">\phi_{V,B}(\mathsf{v}) = [v_1, \ldots, v_n]^T.</script> Notice how we
 have collected together the components of <script type="math/tex">\mathsf{v}</script> as a column
 vector of size <script type="math/tex">n</script> using the component map. It is useful at this point
 to introduce the following notation:
-<script type="math/tex; mode=display">_{(\mathsf{e}_i)} = [v_1, \ldots, v_n]^T</script> When the choice of basis is
+<script type="math/tex; mode=display">[\mathsf{v}]_{(\mathsf{e}_i)} = [v_1, \ldots, v_n]^T</script> When the choice of basis is
 evident from the context, we will often write
 <script type="math/tex">[\mathsf{v}]_{(\mathsf{e}_i)}</script> as just <script type="math/tex">[\mathsf{v}]</script>. We can thus
 alternatively the basis representation of any <script type="math/tex">\mathsf{v} \in V</script> with
@@ -1452,7 +1452,7 @@ components of any <script type="math/tex">\mathsf{v} \in V</script> transform up
 basis:
 <script type="math/tex; mode=display">\mathsf{v} = \sum \tilde{v}_i \mathsf{g}_i = \sum v_i \mathsf{e}_i \quad\Rightarrow\quad \tilde{v}_i = \sum \mathsf{e}_j \cdot \mathsf{g}_i v_j = \sum Q_{ji} v_j.</script>
 In matrix notation, this is written as
-<script type="math/tex; mode=display">_{(\mathsf{g}_i)} = \mathsf{Q}^T[\mathsf{v}]_{(\mathsf{e}_i)},</script> where
+<script type="math/tex; mode=display">[\mathsf{v}]_{(\mathsf{g}_i)} = \mathsf{Q}^T[\mathsf{v}]_{(\mathsf{e}_i)},</script> where
 <script type="math/tex">\mathsf{Q}</script> is the matrix whose <script type="math/tex">(i,j)^{\text{th}}</script> entry is
 <script type="math/tex">Q_{ij}</script>. But, based on the calculation we carried out earlier in the
 context of general bases, we see that
