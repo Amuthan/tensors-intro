@@ -1663,6 +1663,18 @@ more, the matrix whose <script type="math/tex">(i,j)^{\text{th}}</script> entry 
 indeed the inverse of the matrix whose <script type="math/tex">(i,j)^{\text{th}}</script> entry is
 <script type="math/tex">\mathsf{g}^i \cdot \mathsf{g}^j</script>.</p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The reciprocal basis can be computed easily in the special case of the
+three dimensional Euclidean space <script type="math/tex">\mathbb{R}^3</script> using the cross
+product. Given any basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">\mathbb{R}^3</script>, the
+corresponding reciprocal basis <script type="math/tex">(\mathsf{g}^i)</script> of <script type="math/tex">\mathbb{R}^3</script>
+can be computed as
+<script type="math/tex; mode=display">\mathsf{g}^1 = \frac{\mathsf{g}_2 \times \mathsf{g}_3}{\mathsf{g}_1 \cdot \mathsf{g}_2 \times \mathsf{g}_3}, \quad \mathsf{g}^2 = \frac{\mathsf{g}_3 \times \mathsf{g}_1}{\mathsf{g}_1 \cdot \mathsf{g}_2 \times \mathsf{g}_3}, \quad \mathsf{g}^3 = \frac{\mathsf{g}_1 \times \mathsf{g}_2}{\mathsf{g}_1 \cdot \mathsf{g}_2 \times \mathsf{g}_3}.</script>
+It is a simple exercise to check these formulae satisfy the defining
+condition of the reciprocal basis:
+<script type="math/tex">\mathsf{g}^i \cdot \mathsf{g}_j = \delta_{ij}</script>.</p>
+</div>
 <p>The expressions for the coefficients of a vector with respect to a given
 basis simple form when expressed in terms of the reciprocal basis. Given
 any <script type="math/tex">\mathsf{v} \in 

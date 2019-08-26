@@ -289,13 +289,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#cross-product-in-mathbbr3" title="Cross product in $\mathbb{R}^3$" class="md-nav__link">
-    Cross product in $\mathbb{R}^3$
-  </a>
-  
-</li>
-      
       
       
       
@@ -458,13 +451,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#cross-product-in-mathbbr3" title="Cross product in $\mathbb{R}^3$" class="md-nav__link">
-    Cross product in $\mathbb{R}^3$
-  </a>
-  
-</li>
-      
       
       
       
@@ -534,6 +520,8 @@ tensors of order <script type="math/tex">k</script> on <script type="math/tex">V
 \end{split}</script> for any <script type="math/tex">\mathsf{A},\mathsf{B} \in \mathcal{T}^k(V)</script>,
 <script type="math/tex">a \in \mathbb{R}</script> and <script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_k \in V</script>,
 it is easy to verify that <script type="math/tex">\mathcal{T}^k(V)</script> is a real linear space.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
 <p>The set
 <script type="math/tex">\mathcal{T}^1(V) = \{\mathsf{T}:V \to \mathbb{R} \,|\, \mathsf{T} \text{ is linear}\}</script>,
 defined as the set of all linear functions on <script type="math/tex">V</script>, is called the
@@ -553,6 +541,7 @@ can be identified with linear maps. The present definition thus unifies
 the various kinds of linear spaces on <script type="math/tex">V</script> studied earlier. The set of
 all <script type="math/tex">\mathcal{T}^k(V)</script> is said to constitute a <strong>tensor algebra</strong> on
 <script type="math/tex">V</script>.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>As a simple but important example of tensors, consider the
@@ -602,7 +591,7 @@ Thus, the tensor product allows us to construct higher order tensors
 from lower order tensors. A higher order tensor that is constructed from
 vectors, like the one shown above, is called a <strong>rank-<script type="math/tex">1</script></strong> tensor.</p>
 <div class="admonition info">
-<p class="admonition-title">Important Note!</p>
+<p class="admonition-title">Remark</p>
 <p>There is an ambiguity in the tensor product notation that
 warrants clarification. Given vectors <script type="math/tex">\mathsf{v}, \mathsf{w} \in V</script>,
 the quantity <script type="math/tex">\mathsf{v}\otimes\mathsf{w}</script> can stand for either a
@@ -667,7 +656,7 @@ constitute a basis of <script type="math/tex">\mathcal{T}(V^k,\mathbb{R})</scrip
 <script type="math/tex">\hat{I}\in\mathcal{T}^2(V)</script> defined earlier. Suppose that
 <script type="math/tex">(\mathsf{e}_i)</script> is an orthonormal basis of <script type="math/tex">V</script>. The representation
 of <script type="math/tex">\hat{\mathsf{I}}</script> can be computed easily as follows:
-<script type="math/tex; mode=display">\hat{\mathsf{I}} = \sum \hat{I}_{ij} \mathsf{e}_i \otimes \mathsf{e}_j,</script>
+<script type="math/tex; mode=display">\hat{\mathsf{I}} = \sum \hat{I}_{ij} \; \mathsf{e}_i \otimes \mathsf{e}_j,</script>
 where
 <script type="math/tex; mode=display">\hat{I}_{ij} = \hat{\mathsf{I}}(\mathsf{e}_i,\mathsf{e}_j) = \mathsf{e}_i\cdot\mathsf{e}_j = \delta_{ij}.</script>
 We thus see that the second order tensor
@@ -704,9 +693,9 @@ Since this holds for any choice of
 It is straightforward to check that the set of <script type="math/tex">n^k</script> tensors
 <script type="math/tex">(\mathsf{g}^{i_1} \otimes \ldots \otimes \mathsf{g}^{i_k})</script> form a
 basis of <script type="math/tex">\mathcal{T}^k(V)</script>. This also shows that the dimension of
-<script type="math/tex">\mathcal{T}^k(\mathbb{R}^3)</script> is <script type="math/tex">n^k</script>. The coefficients
-<script type="math/tex">A^*_{i_1\ldots i_k}</script> are called the <span><strong>c</strong>ovariant
-components</span> of <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> with respect to
+<script type="math/tex">\mathcal{T}^k(V)</script> is <script type="math/tex">n^k</script>. The coefficients
+<script type="math/tex">A^*_{i_1\ldots i_k}</script> are called the <strong>covariant
+components</strong> of <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> with respect to
 the basis <script type="math/tex">(\mathsf{g}^{i_1} \otimes \ldots \mathsf{g}^{i_k})</script> of
 <script type="math/tex">\mathcal{T}^k(V)</script>.</p>
 <p>An alternative means to represent the basis representation of the tensor
@@ -750,7 +739,11 @@ that <script type="math/tex; mode=display">\begin{split}
 A_{j_1\ldots j_k} &= \sum Q_{j_1i_1} \ldots Q_{j_ki_k} \tilde{A}_{i_1\ldots i_k}\\
 \Rightarrow \tilde{A}_{i_1\ldots i_k} &= \sum Q^{-1}_{i_1j_1} \ldots Q^{-1}_{i_kj_k} A_{j_1\ldots j_k}\\
  &= \sum Q_{j_1i_1} \ldots Q_{j_ki_k} A_{j_1\ldots j_k}.
-\end{split}</script> !!! info "Remark" We can equivalently derive this transformation
+\end{split}</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>We can equivalently derive this transformation
 rule as follows <script type="math/tex; mode=display">\begin{split}
 \tilde{A}_{i_1\ldots i_k} &= \mathsf{A}(\mathsf{f}_{i_1}, \ldots, \mathsf{f}_{i_k})\\
  &= \mathsf{A}\left(\sum Q_{j_1i_1}\mathsf{e}_{j_1}, \ldots, \sum Q_{j_ki_k}\mathsf{e}_{j_k}\right)\\
@@ -758,12 +751,28 @@ rule as follows <script type="math/tex; mode=display">\begin{split}
 \end{split}</script> Notice how the orthonormality of the two bases
 <script type="math/tex">(\mathsf{e}_i)</script> and <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> are implicitly used
 in this derivation.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Let us revisit the second order tensor
 <script type="math/tex">\hat{\mathsf{I}} \in \mathcal{T}^2(V)</script> that we studied earlier.
 Suppose that <script type="math/tex">(\mathsf{e}_i)</script> and <script type="math/tex">(\mathsf{f}_i)</script> are orthonormal
-bases of <script type="math/tex">V</script> such that <script type="math/tex">\mathsf{f}_i = \sum Q_{ji}\mathsf{e}_j</script>.</p>
+bases of <script type="math/tex">V</script> such that <script type="math/tex">\mathsf{f}_i = \sum Q_{ji}\mathsf{e}_j</script>. Let the representation of <script type="math/tex">\hat{\mathsf{I}}</script> with respect to these bases be as follows:
+<script type="math/tex; mode=display">\begin{split}
+\hat{\mathsf{I}} &= \sum \hat{I}_{ij} \; \mathsf{e}_i \otimes \mathsf{e}_j\\
+ &= \sum \hat{I}'_{ij} \; \mathsf{e}_i \otimes \mathsf{e}_j.
+\end{split}</script>
+The components <script type="math/tex">\hat{I}_{ij}</script> and <script type="math/tex">\hat{I}'_{ij}</script> of <script type="math/tex">\hat{\mathsf{I}}</script> with respect to the orthonormal bases <script type="math/tex">(\mathsf{e}_i)</script> and <script type="math/tex">(\mathsf{f}_i)</script>, respectively, can be computed as follows:
+<script type="math/tex; mode=display">\begin{split}
+\hat{I}_{ij} &= \hat{\mathsf{I}}(\mathsf{e}_i, \mathsf{e}_j) = \mathsf{e}_i \cdot \mathsf{e}_j = \delta_{ij},\\
+\hat{I}'_{ij} &= \hat{\mathsf{I}}(\mathsf{f}_i, \mathsf{f}_j) = \mathsf{f}_i \cdot \mathsf{f}_j = \delta_{ij}.
+\end{split}</script>
+We thus see that, in this case, <script type="math/tex">\hat{I}_{ij} = \hat{I}'_{ij} = \delta_{ij}</script>.</p>
+<p>Alternatively, we can compute the components <script type="math/tex">\hat{I}'_{ij}</script> in terms of the components <script type="math/tex">\hat{I}_{ij}</script> as follows:
+<script type="math/tex; mode=display">
+\hat{I}'_{ij} = \sum Q_{ki}Q_{lj}\hat{I}_{kl} = \sum Q_{ki}Q_{lj}\delta_{kl} = \sum Q_{ki}Q_{kj} = \delta_{ij}.
+</script>
+The last step follows from the fact that <script type="math/tex">\mathsf{Q}</script> is an orthogonal matrix. </p>
 </div>
 <p>Let us briefly consider the case when general bases are employed.
 Suppose that the tensor <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> has
@@ -779,52 +788,83 @@ computed as follows: <script type="math/tex; mode=display">\begin{split}
 \end{split}</script> The inverse of this relation can also be computed
 similarly.</p>
 <h2 id="contraction">Contraction</h2>
-<p>Let <script type="math/tex">V</script> be a finite dimensional inner product space, and let
-<script type="math/tex">(\mathsf{g}_i)</script> be a general basis of <script type="math/tex">V</script>. Given a tensor
+<p>Let <script type="math/tex">V</script> be a finite dimensional inner product space, and let <script type="math/tex">(\mathsf{e}_i)</script> be an orthonormal basis of <script type="math/tex">V</script>. Given a tensor
 <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> of order <script type="math/tex">k</script>, where <script type="math/tex">k \ge 2</script>,
 the <strong><script type="math/tex">(i,j)</script>-contraction</strong> of <script type="math/tex">\mathsf{A}</script> is the tensor
 <script type="math/tex">\mathcal{C}_{i,j}\mathsf{A} \in \mathcal{T}^{k-2}(V)</script> of order
 <script type="math/tex">(k - 2)</script> defined as follows: for any
 <script type="math/tex">\mathsf{v}_1, \ldots, \mathsf{v}_k \in V</script>,
-<script type="math/tex; mode=display">\begin{split} & \mathcal{C}_{i,j}\mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i-1}, \mathsf{v}_{i+1}, \ldots, \mathsf{v}_{j-1},\mathsf{v}_{j+1}, \ldots, \mathsf{v}_k)\\ = & \sum_a \mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i-1}, \mathsf{g}_a, \mathsf{v}_{i+1}, \ldots, \mathsf{v}_{j-1}, \mathsf{g}^a, \mathsf{v}_{j+1}, \ldots, \mathsf{v}_k). \end{split}</script>
-</p>
-<div class="admonition info">
-<p class="admonition-title">Remark</p>
-<p>It can be verified that <script type="math/tex">\mathsf{g}_a</script> and <script type="math/tex">\mathsf{g}^a</script>
-in the definition of the contraction can be swapped:
-<script type="math/tex; mode=display">\sum \mathsf{A}(\ldots, \mathsf{g}_a, \ldots, \mathsf{g}^a, \ldots) = \sum \mathsf{A}(\ldots, \mathsf{g}^a, \ldots, \mathsf{g}_a, \ldots).</script>
-Thus, the order in which <script type="math/tex">\mathsf{g}_a</script> and <script type="math/tex">\mathsf{g}^a</script> appears
-is irrelevant.</p>
+<script type="math/tex; mode=display">\begin{split} & \mathcal{C}_{i,j}\mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i-1}, \mathsf{v}_{i+1}, \ldots, \mathsf{v}_{j-1},\mathsf{v}_{j+1}, \ldots, \mathsf{v}_k)\\ = & \sum_a \mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i-1}, \mathsf{e}_a, \mathsf{v}_{i+1}, \ldots, \mathsf{v}_{j-1}, \mathsf{e}_a, \mathsf{v}_{j+1}, \ldots, \mathsf{v}_k). \end{split}</script>
+Choosing <script type="math/tex">(\mathsf{v}_i)_{i=1}^k</script> to be the set <script type="math/tex">\mathsf{e}_{i_j})_{j=1}^k</script>, we see that 
+<script type="math/tex; mode=display">
+[\mathcal{C}_{i,j}\mathsf{A}]_{i_1\ldots i_{i-1}i_{i+1} \ldots i_{j-1}i_{j+1}\ldots i_k} = \sum_a A_{i_1\ldots i_{i-1}a i_{i+1} \ldots i_{j-1}a i_{j+1}\ldots i_k}.
+</script>
+The definition of the contraction is best illustrated with the help of some simple examples.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that <script type="math/tex">\mathsf{A} \in \mathcal{T}^4(V)</script> is a fourth order tensor on <script type="math/tex">V</script>, and <script type="math/tex">(\mathsf{e}_i)</script> is an orthonormal basis of <script type="math/tex">V</script>. The <script type="math/tex">(2,3)</script>-contraction of <script type="math/tex">\mathsf{A}</script> is the second order tensor <script type="math/tex">\mathcal{C}_{2,3}\mathsf{A} \in \mathcal{T}^2(V)</script> defined as follows: for any <script type="math/tex">\mathsf{u},\mathsf{v} \in V</script>,
+<script type="math/tex; mode=display">
+\mathcal{C}_{2,3}\mathsf{A}(\mathsf{u},\mathsf{v}) = \sum_a \mathsf{A}(\mathsf{u},\mathsf{e}_a,\mathsf{e}_a,\mathsf{v}).
+</script>
+Expressing both sides in terms of the orthonormal basis <script type="math/tex">(\mathsf{e}_i)</script>, we get
+<script type="math/tex; mode=display">
+[\mathcal{C}_{2,3}\mathsf{A}]_{ij} u_i v_j = \sum_a A_{iaaj} u_i v_j.
+</script>
+Since this is true for any choice of <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>, we get the following result:
+<script type="math/tex; mode=display">
+[\mathcal{C}_{2,3}\mathsf{A}]_{ij} = \sum_a A_{iaaj}.
+</script>
+Thus, we can express the second order tensor <script type="math/tex">\mathcal{C}_{2,3}\mathsf{A}</script> in terms of the orthonormal basis <script type="math/tex">(\mathsf{e})_i</script> of <script type="math/tex">V</script> as
+<script type="math/tex; mode=display">
+\mathcal{C}_{2,3}\mathsf{A} = \sum_a A_{iaaj} \mathsf{e}_i \otimes \mathsf{e}_j.
+</script>
+Other possible contractions of <script type="math/tex">\mathsf{A}</script> can be expressed similarly. For instance,
+<script type="math/tex; mode=display">\begin{split}
+\mathcal{C}_{1,2}\mathsf{A} &= \sum_a A_{aaij} \mathsf{e}_i \otimes \mathsf{e}_j,\\
+\mathcal{C}_{1,4}\mathsf{A} &= \sum_a A_{aija} \mathsf{e}_i \otimes \mathsf{e}_j,
+\end{split}</script>
+and so on; other possible contractions can be computed similarly.</p>
 </div>
-<p>Unlike the various definitions provided earlier, note that this
-definition seemingly depends on the choice of a basis
-<script type="math/tex">(\mathsf{g}_i)</script>. It is left as a simple exercise to verify that if
-another basis <script type="math/tex">(\mathsf{f}_i)</script> of <script type="math/tex">V</script> is chosen instead, the
-contraction operation yields the same tensor
-<script type="math/tex">\mathcal{C}_{i,j}\mathsf{A} \in \mathcal{T}^{k-2}(V)</script> as when the
-bases <script type="math/tex">(\mathsf{g}_i)</script> are chosen. The contraction operation is thus
-<em>well-defined</em>.</p>
-<p>The basis representation of the contracted tensor can be easily
-computed. With respect to a basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script>, recall
-that any <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> can be written as
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that <script type="math/tex">\mathsf{A} \in \mathcal{T}^2(V)</script> is a second order tensor. In this case, there is only one possible contraction of the tensor <script type="math/tex">\mathsf{A}</script>, namely <script type="math/tex">\mathcal{C}_{1,2}\mathsf{A} \in \mathbb{R}</script>. This is easily computed as follows: if <script type="math/tex">(\mathsf{e}_i)</script> is an orthonormal basis of <script type="math/tex">V</script>, then
+<script type="math/tex; mode=display">
+\mathcal{C}_{1,2}\mathsf{A} = \sum_a \mathsf{A}(\mathsf{e}_a,\mathsf{e}_a) = \sum A_{aa}.
+</script>
+In this special case, the contraction <script type="math/tex">\mathcal{C}_{1,2}\mathsf{A}</script> is called the <strong>trace</strong> of <script type="math/tex">\mathsf{A}</script>, and is often written as <script type="math/tex">\text{tr}(\mathsf{A})</script>. The trace of the linear map associated with <script type="math/tex">\mathsf{A}</script> will be defined in a later section.</p>
+</div>
+<p>Note that the definition of the contraction operation uses the orthonormal basis <script type="math/tex">(\mathsf{e}_i)</script> of <script type="math/tex">V</script>. It turns out that if we use a different orthonormal basis, the definition remains unaltered. To see this, suppose that <script type="math/tex">(\mathsf{f}_i)</script> is another orthonormal basis of <script type="math/tex">V</script> that is related to the orthonormal basis <script type="math/tex">(\mathsf{e}_i)</script> through the relations <script type="math/tex">\mathsf{f}_i = \sum Q_{ji}\mathsf{e}_j</script>. Then, for any tensor <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> of order <script type="math/tex">k \ge 2</script>, it follows that
+<script type="math/tex; mode=display">\begin{split}
+ & \mathcal{C}_{i,j}\mathsf{A}(\mathsf{v}_{i_1}, \ldots, \mathsf{v}_{i_{i-1}}, \mathsf{v}_{i_{i+1}}, \ldots, \mathsf{v}_{i_{j-1}}, \mathsf{v}_{i_{j + 1}}, \ldots, \mathsf{v}_k)\\
+ =& \sum \mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i_{i-1}}, \mathsf{f}_a, \mathsf{v}_{i_{i+1}}, \ldots, \mathsf{v}_{i_{j-1}}, \mathsf{f}_a, \mathsf{v}_{i_{j+1}}, \ldots, \mathsf{v}_k)\\
+ =& \sum Q_{ba}Q_{ca}\mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i_{i-1}}, \mathsf{e}_b, \mathsf{v}_{i_{i+1}}, \ldots, \mathsf{v}_{i_{j-1}}, \mathsf{e}_c, \mathsf{v}_{i_{j+1}}, \ldots, \mathsf{v}_k)\\
+ =& \sum \delta_{bc} \mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i_{i-1}}, \mathsf{e}_b, \mathsf{v}_{i_{i+1}}, \ldots, \mathsf{v}_{i_{j-1}}, \mathsf{e}_c, \mathsf{v}_{i_{j+1}}, \ldots, \mathsf{v}_k)\\
+ =& \sum \mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i_{i-1}}, \mathsf{e}_a, \mathsf{v}_{i_{i+1}}, \ldots, \mathsf{v}_{i_{j-1}}, \mathsf{e}_a, \mathsf{v}_{i_{j+1}}, \ldots, \mathsf{v}_k).
+\end{split}</script>
+Here <script type="math/tex">(\mathsf{v}_i)_{i=1}^k</script> are any <script type="math/tex">k</script> vectors in <script type="math/tex">V</script>. We thus see that the contraction operation does not depend on whether we choose the basis <script type="math/tex">(\mathsf{e}_i)</script> or the basis <script type="math/tex">(\mathsf{f}_i)</script>. In this sense, the definition of the contraction operation is said to be <em>well-defined</em> since we get the same tensor irrespective of the choice of orthnormal basis. This remains true even if use a general basis, but this requires a more careful treatment, as will be discussed next.</p>
+<p>Let <script type="math/tex">(\mathsf{g}_i)</script> be a general basis of <script type="math/tex">V</script>. Given a tensor
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> of order <script type="math/tex">k</script>, where <script type="math/tex">k \ge 2</script>,
+the <script type="math/tex">(i,j)</script>-contraction of <script type="math/tex">\mathsf{A}</script> can be defined as follows: for any <script type="math/tex">\mathsf{v}_1, \ldots, \mathsf{v}_k \in V</script>,
+<script type="math/tex; mode=display">\begin{split} & \mathcal{C}_{i,j}\mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i-1}, \mathsf{v}_{i+1}, \ldots, \mathsf{v}_{j-1},\mathsf{v}_{j+1}, \ldots, \mathsf{v}_k)\\ = & \sum_a \mathsf{A}(\mathsf{v}_1, \ldots, \mathsf{v}_{i-1}, \mathsf{g}_a, \mathsf{v}_{i+1}, \ldots, \mathsf{v}_{j-1}, \mathsf{g}^a, \mathsf{v}_{j+1}, \ldots, \mathsf{v}_k). \end{split}</script>
+Notice how both the basis <script type="math/tex">\mathsf{g}_i)</script> and its reciprocal basis <script type="math/tex">(\mathsf{g}^i)</script> figure in this equation. It can be verified with a simple calculation that the order in which the bases <script type="math/tex">\mathsf{g}_i)</script> and <script type="math/tex">(\mathsf{g}^i)</script> appear in this expression is not important. Thus,
+<script type="math/tex; mode=display">\sum \mathsf{A}(\ldots, \mathsf{g}_a, \ldots, \mathsf{g}^a, \ldots) = \sum \mathsf{A}(\ldots, \mathsf{g}^a, \ldots, \mathsf{g}_a, \ldots).</script>
+Further, a calculation analogous to the one presented earlier can be used to establish the fact the contraction operation is well defined in the sense that using a different (general) basis <script type="math/tex">\mathsf{f}_i</script> of <script type="math/tex">V</script> results in the same tensor as when the basis <script type="math/tex">\mathsf{g}_i)</script> is used.</p>
+<p>The basis representation of <script type="math/tex">\mathcal{C}_{i,j}\mathsf{A}</script> with respect to the general basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script> can be computed using the foregoing definitions. Recall that <script type="math/tex">\mathsf{A} \in \mathcal{T}^k(V)</script> has the following basis representation:
 <script type="math/tex; mode=display">\mathsf{A} = \sum A_{a_1 \ldots a_k} \mathsf{g}_{a_1} \otimes \ldots \otimes \mathsf{g}_{a_k}.</script>
-The <script type="math/tex">(i,j)</script> contraction of <script type="math/tex">\mathsf{A}</script> is easily seen to have the
-following representation:
+It is left as an exercise to verify that the <script type="math/tex">(i,j)</script> contraction of <script type="math/tex">\mathsf{A}</script> is given by
 <script type="math/tex; mode=display">\begin{split}\mathcal{C}_{i,j}\mathsf{A} &= \sum g_{a_ia_j}A_{a_1\ldots a_{i-1} a_i a_{i+1} \ldots a_{j-1} a_j a_{j+1}\ldots a_k}\\ & \qquad\quad\mathsf{g}_{a_1} \otimes \mathsf{g}_{a_{i-1}} \otimes \mathsf{g}_{a_{i+1}} \otimes \ldots \otimes \mathsf{g}_{a_{j-1}}\otimes\mathsf{g}_{a_{j+1}}\otimes \ldots \otimes \mathsf{g}_{a_k}. \end{split}</script>
-In the special case of a second order tensor
-<script type="math/tex">\mathsf{B} \in \mathcal{T}^2(V)</script>, there is only one possible
-contraction, <script type="math/tex">\mathcal{C}_{1,2}\mathsf{B} \in \mathbb{R}</script>, which is a
-tensor of order <script type="math/tex">0</script>, or just a real number. The contraction operation,
-in this case, is called the <strong>trace</strong>. It is customary to write the
-trace of <script type="math/tex">\mathsf{B}</script> as <script type="math/tex">\text{tr}(\mathsf{B})</script>. With respect to a
-basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script>,
-<script type="math/tex; mode=display">\mathsf{B} = \sum B_{ij} \, \mathsf{g}_i \otimes \mathsf{g}_j \quad\Rightarrow\quad \text{tr}(\mathsf{B}) = \sum g_{ab}B_{ab}.</script>
-It can be easily checked that <script type="math/tex">\mathsf{tr}(\mathsf{B})</script> is independent
-of the choice of basis. Note that in the special case when
+Notice the extra factor <script type="math/tex">g_{a_ia_j}</script>, unlike the representation with the choice of an orthonormal basis.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>In the special case of a second order tensor
+<script type="math/tex">\mathsf{A} \in \mathcal{T}^2(V)</script>, there is only one possible
+contraction, <script type="math/tex">\mathcal{C}_{1,2}\mathsf{B} \in \mathbb{R}</script>, which we introduced earlier as the trace of <script type="math/tex">\mathsf{A}</script>. With respect to a general basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">V</script>, it can be checked that
+<script type="math/tex; mode=display">\mathsf{A} = \sum A_{ij} \, \mathsf{g}_i \otimes \mathsf{g}_j \quad\Rightarrow\quad \text{tr}(\mathsf{A}) = \sum g_{ab}A_{ab}.</script>
+Note that in the special case when
 <script type="math/tex">(\mathsf{g}_i)</script> is an orthonormal basis of <script type="math/tex">V</script>, the expression for
-the trace of <script type="math/tex">\mathsf{B}</script> reduces to the familiar form
-<script type="math/tex">\text{tr}(\mathsf{B}) = \sum B_{aa}</script>. An alternative definition of
-the trace of a linear map will be provided in a later section.</p>
+the trace of <script type="math/tex">\mathsf{A}</script> reduces to the familiar form
+<script type="math/tex">\text{tr}(\mathsf{A}) = \sum A_{aa}</script>.</p>
+</div>
 <h2 id="generalized-dot-product-of-tensors">Generalized dot product of tensors</h2>
 <div class="admonition danger">
 <p class="admonition-title">Note!</p>
@@ -987,46 +1027,53 @@ written <script type="math/tex">\mathsf{\epsilon} \in \Omega^3(\mathbb{R}^3)</sc
 called the <strong>Levi-Civita tensor</strong>, is defined as follows: if
 <script type="math/tex">(\mathsf{e}_i)</script> denotes the standard basis of <script type="math/tex">\mathbb{R}^3</script>,
 <script type="math/tex; mode=display">\mathsf{\epsilon} = \sum \epsilon_{ijk} \mathsf{e}_i \otimes \mathsf{e}_j \otimes \mathsf{e}_k,</script>
-where <script type="math/tex">\epsilon_{ijk}</script> is the Levi-Civita symbol introduced earlier in
-the context of the cross product. Note that
-<script type="math/tex">\mathsf\epsilon(\mathsf{e}_1, \mathsf{e}_2, \mathsf{e}_3) = \epsilon_{123} = 1</script>
-- the standard basis of <script type="math/tex">\mathbb{R}^3</script> is thus right handed with
-respect to the standard volume form of <script type="math/tex">\mathbb{R}^3</script>.</p>
-<h2 id="cross-product-in-mathbbr3">Cross product in $\mathbb{R}^3$</h2>
-<p>The three dimensional Euclidean space <script type="math/tex">\mathbb{R}^3</script> admits another
-special algebraic operation. Given any two vectors
-<script type="math/tex">\mathsf{u} = \sum u_i \mathsf{e}_i \in \mathbb{R}^3</script> and
-<script type="math/tex">\mathsf{v} = \sum v_i \mathsf{e}_i \in \mathbb{R}^3</script>, where
-<script type="math/tex">(\mathsf{e}_i)</script> is the standard basis of <script type="math/tex">\mathbb{R}^3</script>, their
-<strong>cross product</strong> is defined as the vector
-<script type="math/tex">\mathsf{u} \times \mathsf{v} \in \mathbb{R}^3</script> given by
-<script type="math/tex; mode=display">\mathsf{u} \times \mathsf{v} = (u_2 v_3 - u_3 v_2)\mathsf{e}_1 + (u_3 v_1 - u_1 v_3)\mathsf{e}_2 + (u_1 v_2 - u_2 v_1)\mathsf{e}_3.</script>
-This can be written compactly by introducing the <strong>Levi-Civita symbol</strong>
-<script type="math/tex">\epsilon_{ijk}</script>, <script type="math/tex; mode=display">\epsilon_{ijk} = \begin{cases}
+where <script type="math/tex">\epsilon_{ijk}</script> is the Levi-Civita symbol, defined as follows:
+<script type="math/tex; mode=display">\epsilon_{ijk} = \begin{cases}
 1, & \{i,j,k\}\text{ is an even permutation of $\{1,2,3\}$},\\
 -1, & \{i,j,k\}\text{ is an odd permutation of $\{1,2,3\}$},\\
 0, & \text{otherwise},
-\end{cases}</script> as follows:
+\end{cases}</script>
+Note that
+<script type="math/tex">\mathsf\epsilon(\mathsf{e}_1, \mathsf{e}_2, \mathsf{e}_3) = \epsilon_{123} = 1</script>
+- the standard basis of <script type="math/tex">\mathbb{R}^3</script> is thus right handed with
+respect to the standard volume form of <script type="math/tex">\mathbb{R}^3</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>A <strong>permutation</strong> of order <script type="math/tex">n</script> is formally defined as a bijection of the form <script type="math/tex">\pi:I_n \to I_n</script>, where <script type="math/tex">I_n = \{1, \ldots, n\} \subseteq \mathbb{N}</script>. A special kind permuatation is the <strong>swap</strong> permutation <script type="math/tex">\pi_{i,j}:I_n \to I_n</script> that interchanges the <script type="math/tex">i^{\text{th}}</script> and <script type="math/tex">j^{\text{th}}</script> elements in <script type="math/tex">I_n</script>. It can be shown that any arbitrary permutation of <script type="math/tex">I_n</script> can be obtained as a succession of swaps of <script type="math/tex">I_n</script>. Further, the number of such swaps, for a given permutation, is either always even or always odd. This can be used to assign a <strong>parity</strong>, or a <strong>sign</strong>, to the permuation. The notation <script type="math/tex">(-1)^\pi</script> is often used to denote the sign of the permutation <script type="math/tex">\pi:I_n \to I_n</script>. If <script type="math/tex">(-1)^\pi = 1</script>, the permutation is said to be <strong>even</strong>, while if <script type="math/tex">(-1)^\pi = -1</script>, the permutation is said to be <strong>odd</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Recall that the three dimensional Euclidean space <script type="math/tex">\mathbb{R}^3</script> admits a special algebraic operation called the cross product: given any two vectors <script type="math/tex">\mathsf{u} = \sum u_i \mathsf{e}_i \in \mathbb{R}^3</script> and <script type="math/tex">\mathsf{v} = \sum v_i \mathsf{e}_i \in \mathbb{R}^3</script>, where
+<script type="math/tex">(\mathsf{e}_i)</script> is the standard basis of <script type="math/tex">\mathbb{R}^3</script>, their
+cross product is defined as the vector
+<script type="math/tex">\mathsf{u} \times \mathsf{v} \in \mathbb{R}^3</script> given by
+<script type="math/tex; mode=display">\mathsf{u} \times \mathsf{v} = (u_2 v_3 - u_3 v_2)\mathsf{e}_1 + (u_3 v_1 - u_1 v_3)\mathsf{e}_2 + (u_1 v_2 - u_2 v_1)\mathsf{e}_3.</script>
+This can be written compactly using the Levi-Civita symbols <script type="math/tex">\epsilon_{ijk}</script>,  as follows:
 <script type="math/tex; mode=display">\mathsf{u} \times \mathsf{v} = \sum \epsilon_{ijk} u_j v_k \mathsf{e}_i,</script>
 as can be easily checked.</p>
-<p>The reciprocal basis can be computed easily in the special case of the
-three dimensional Euclidean space <script type="math/tex">\mathbb{R}^3</script> using the cross
-product. Given any basis <script type="math/tex">(\mathsf{g}_i)</script> of <script type="math/tex">\mathbb{R}^3</script>, the
-corresponding reciprocal basis <script type="math/tex">(\mathsf{g}^i)</script> of <script type="math/tex">\mathbb{R}^3</script>
-can be computed as
-<script type="math/tex; mode=display">\mathsf{g}^1 = \frac{\mathsf{g}_2 \times \mathsf{g}_3}{\mathsf{g}_1 \cdot \mathsf{g}_2 \times \mathsf{g}_3}, \quad \mathsf{g}^2 = \frac{\mathsf{g}_3 \times \mathsf{g}_1}{\mathsf{g}_1 \cdot \mathsf{g}_2 \times \mathsf{g}_3}, \quad \mathsf{g}^3 = \frac{\mathsf{g}_1 \times \mathsf{g}_2}{\mathsf{g}_1 \cdot \mathsf{g}_2 \times \mathsf{g}_3}.</script>
-It is a simple exercise to check these formulae satisfy the defining
-condition of the reciprocal basis:
-<script type="math/tex">\mathsf{g}^i \cdot \mathsf{g}_j = \delta_{ij}</script>.</p>
 <p>An alternative definition of the cross product of two vectors in
-<script type="math/tex">\mathbb{R}^3</script> can be given in terms of the standard volume form.
-Given vectors <script type="math/tex">\mathsf{v}, \mathsf{w} \in \mathbb{R}^3</script>, their cross
-product <script type="math/tex">\mathsf{v} \times \mathsf{w} \in \mathbb{R}^3</script> is defined as
-follows: for any <script type="math/tex">\mathsf{u} \in \mathbb{R}^3</script>,
+<script type="math/tex">\mathbb{R}^3</script> can be given in terms of the standard volume form of <script type="math/tex">\mathbb{R}^3</script>. Given vectors <script type="math/tex">\mathsf{v}, \mathsf{w} \in \mathbb{R}^3</script>, their cross product <script type="math/tex">\mathsf{v} \times \mathsf{w} \in \mathbb{R}^3</script> satisfies the following relation: for any <script type="math/tex">\mathsf{u} \in \mathbb{R}^3</script>,
 <script type="math/tex; mode=display">\mathsf{u} \cdot (\mathsf{v} \times \mathsf{w}) = \mathsf\epsilon(\mathsf{u}, \mathsf{v}, \mathsf{w}).</script>
-It is left as an exercise to verify this. (<em>Hint.</em> Choose <script type="math/tex">\mathsf{u}</script>
+This expression can be used to define the cross product in terms of the volume form. It is left as an exercise to verify this. (<em>Hint.</em> Choose <script type="math/tex">\mathsf{u}</script>
 to be the standard basis <script type="math/tex">\mathsf{e}_i</script>. This immediately yields:
 <script type="math/tex">(\mathsf{v}\times\mathsf{w})_i = \sum \epsilon_{ijk} v_j w_k</script>.)</p>
+<p>The advantange in defining the cross product in terms of the volume form is that this allows us to extend the notion of a cross product to higher (and lower!) dimensional analogues called <em>wedge products</em>. We will not be studying wedge products here, but they play an important role in <em>exterior algebra</em> and the theory of <em>differential forms</em>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="admonition danger">
+<p class="admonition-title">TO DO</p>
+<p>
+<script type="math/tex">\epsilon-\delta</script> identities</p>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="admonition danger">
+<p class="admonition-title">TO DO</p>
+<p>Identities for cross products based on the <script type="math/tex">\epsilon-\delta</script> identities.</p>
+</div>
+</div>
                 
                   
                 
