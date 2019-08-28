@@ -1061,18 +1061,37 @@ to be the standard basis <script type="math/tex">\mathsf{e}_i</script>. This imm
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="admonition danger">
-<p class="admonition-title">TO DO</p>
-<p>
-<script type="math/tex">\epsilon-\delta</script> identities</p>
-</div>
+<p>We will now introduce a few important identities relating the Levi-Civita symbols <script type="math/tex">\epsilon_{ijk}</script> and the Kronecker delta symbols <script type="math/tex">\delta_{ij}</script>, called the <strong><script type="math/tex">\epsilon-\delta</script> identities</strong>. These can be written succinctly as follows:
+<script type="math/tex; mode=display">\begin{split}
+\epsilon_{ijk}\epsilon_{lmn} &= \text{det} \begin{bmatrix}
+\delta_{il} & \delta_{im} & \delta_{in}\\
+\delta_{jl} & \delta_{jm} & \delta_{jn}\\
+\delta_{kl} & \delta_{km} & \delta_{kn}
+\end{bmatrix},\\
+\sum \epsilon_{ijk}\epsilon_{imn} &= \text{det} \begin{bmatrix}
+\delta_{jm} & \delta_{jn}\\
+\delta_{km} & \delta_{kn}
+\end{bmatrix},\\
+\sum \epsilon_{ijk}\epsilon_{ijn} &= 2\delta_{kn},\\
+\sum \epsilon_{ijk}\epsilon_{ijk} &= 6.
+\end{split}</script>
+These relations are easily proved by direct inspection. For instance, to prove the first identity, note that <script type="math/tex">\epsilon_{ijk}\epsilon_{klm}</script> is <script type="math/tex">0</script> if any of the pair of indices <script type="math/tex">(i,j,k)</script>, or <script type="math/tex">(l,m,n)</script> has repeated indices, owing to the skew-symmetry of the Levi-Civita symbol. In this case, the right hand side is also zero since this would correspond to the determinant of a matrix with either two identical rows, or two identical columns. Suppose then that the indices do not repeat. Then there are only two possibilities: either <script type="math/tex">(l,m,n)</script> is an even permutation of <script type="math/tex">(i,j,k)</script>, or not. In the former case, <script type="math/tex">\epsilon_{ijk}\epsilon_{lmn} = 1</script>. Note that if <script type="math/tex">(l,m,n)</script> is an even permutation of <script type="math/tex">(i,j,k)</script>, then exactly one of the three possibilities are true: <script type="math/tex">(l,m,n) = (i,j,k)</script>, or <script type="math/tex">(n,l,m) = (i,j,k)</script>, or <script type="math/tex">(m,n,l) = (i,j,k)</script>. In each of these cases, it can be verified by direct substitution that the identity is true. The case when <script type="math/tex">(l,m,n)</script> is an odd permutation of <script type="math/tex">(i,j,k)</script> is computed similarly, thereby estabilishing the validity of the first identity. It is left as a simple exercise to prove the remaining three identities based on the first by direct substitution.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="admonition danger">
-<p class="admonition-title">TO DO</p>
-<p>Identities for cross products based on the <script type="math/tex">\epsilon-\delta</script> identities.</p>
-</div>
+<p>As an illustration of the use of the <script type="math/tex">\epsilon-\delta</script> identities, let us prove the following identity: given any three vectors <script type="math/tex">\mathsf{u},\mathsf{v},\mathsf{w} \in \mathbb{R}^3</script>, it is true that
+<script type="math/tex; mode=display">
+\mathsf{u} \times (\mathsf{v} \times \mathsf{w}) = (\mathsf{u}\cdot\mathsf{w})\mathsf{v} - (\mathsf{u}\cdot\mathsf{v})\mathsf{w}.
+</script>
+Using the definition of the cross product, we see that
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{u}\times(\mathsf{v} \times \mathsf{w}) &= \sum \epsilon_{ijk} u_j (\mathsf{v} \times \mathsf{w})_k \mathsf{e}_i\\
+ &= \sum \epsilon_{ijk}\epsilon_{klm} u_j v_l w_m \mathsf{e}_i\\
+ &= \sum (\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}) u_j v_l w_m \mathsf{e}_i\\
+ &= \left(\sum u_m w_m\right)\sum v_l \mathsf{e}_l - \left(\sum u_j v_j\right)\sum w_m \mathsf{e}_m\\
+ &= (\mathsf{u}\cdot\mathsf{w})\mathsf{v} - (\mathsf{u}\cdot\mathsf{v})\mathsf{w}.
+\end{split}</script>
+The idenity is thus proved.</p>
 </div>
                 
                   
