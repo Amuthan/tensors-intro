@@ -562,8 +562,7 @@
                 
                   <h1>Linear Maps - II</h1>
                 
-                <p>We now discuss certain additional topics related to linear maps that are
-useful in the study of continuum mechanics.</p>
+                <p>We will now discuss certain additional topics related to linear maps that are useful in the study of continuum mechanics.</p>
 <h2 id="important-invariants-of-linear-maps">Important invariants of linear maps</h2>
 <p>The fact that the set of all volume forms on a finite dimensional inner
 product space is itself a vector space of dimension <script type="math/tex">1</script> permits a
@@ -589,6 +588,8 @@ The fact that the set of all volume forms is a vector space of dimension
 <script type="math/tex">1</script> implies that <script type="math/tex">\mathsf{\epsilon}_{\mathsf{T}}</script> is a scalar
 multiple of <script type="math/tex">\mathsf{\epsilon}</script>. This scalar multiple is, in fact,
 defined as the determinant of <script type="math/tex">\mathsf{T}</script>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <p>To see how this definition is related to the determinant of a matrix
 encountered in elementary linear algebra, it is helpful to work in
 <script type="math/tex">\mathbb{R}^3</script>. The determinant of a linear map
@@ -605,9 +606,10 @@ to be the standard basis <script type="math/tex">(\mathsf{e}_i)</script> of <scr
 for the determinant of the matrix <script type="math/tex">[\mathsf{T}]</script>. It is a good
 exercise to expand this and check that it indeed reduces to the familiar
 expression for the determinant.</p>
-<p>To see the advantage in the abstract and basis-independent definition of
-the determinant provided here, consider the determinant of the product
-of two linear maps <script type="math/tex">\mathsf{S}, \mathsf{T} \in L(V,V)</script>. Given any
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>To see the advantage in the abstract and basis-independent definition of the determinant provided here, consider the determinant of the product of two linear maps <script type="math/tex">\mathsf{S}, \mathsf{T} \in L(V,V)</script>. Given any
 <script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_n \in V</script>, <script type="math/tex; mode=display">\begin{split}
 \text{det}(\mathsf{S}\mathsf{T}) &= \frac{\mathsf{\epsilon}(\mathsf{S}\mathsf{T}\mathsf{u}_1, \ldots, \mathsf{S}\mathsf{T}\mathsf{u}_n)}{\mathsf{\epsilon}(\mathsf{u}_1, \ldots, \mathsf{u}_n)}\\
  &= \frac{\mathsf{\epsilon}(\mathsf{S}(\mathsf{T}\mathsf{u}_1), \ldots, \mathsf{S}(\mathsf{T}\mathsf{u}_n))}{\mathsf{\epsilon}(\mathsf{T}\mathsf{u}_1, \ldots, \mathsf{T}\mathsf{u}_n)} \frac{\mathsf{\epsilon}(\mathsf{T}\mathsf{u}_1, \ldots, \mathsf{T}\mathsf{u}_n)}{\mathsf{\epsilon}(\mathsf{u}_1, \ldots, \mathsf{u}_n)}\\
@@ -615,16 +617,52 @@ of two linear maps <script type="math/tex">\mathsf{S}, \mathsf{T} \in L(V,V)</sc
 \end{split}</script> Notice how this proof of the fact that
 <script type="math/tex">\text{det}(\mathsf{S}\mathsf{T}) = \text{det}(\mathsf{S})\text{det}(\mathsf{T})</script>
 is significantly simpler than the proof in terms of the elementary
-definition of the determinant in terms of the components of a linear map
-with respect to suitable choice of bases.</p>
+definition of the determinant in terms of the components of a linear map with respect to suitable choice of bases.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is left as a simple exercise to verify, along the same lines as the previous example, that for any <script type="math/tex">a,b \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">\text{det}(a\mathsf{S} + b\mathsf{T}) \neq a\,\text{det}(\mathsf{S}) + b\,\text{det}(\mathsf{T}).</script>
+The determinant is thus <em>not</em> a linear map.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let <script type="math/tex">\mathsf{u},\mathsf{v} \in V</script> be any two vectors in an inner product space <script type="math/tex">V</script> of dimension <script type="math/tex">n</script>. Then the determinant of the  linear map <script type="math/tex">\mathsf{u} \otimes \mathsf{v} \in L(V,V)</script> is always <script type="math/tex">0</script>. To see this, note that for any <script type="math/tex">\mathsf{w}_1, \ldots, \mathsf{w}_n \in V</script>, 
+<script type="math/tex; mode=display">\begin{split}
+\text{det}(\mathsf{u} \otimes \mathsf{v}) &= \frac{\epsilon(\mathsf{u} \otimes \mathsf{v}(\mathsf{w}_1), \ldots, \mathsf{u}\otimes\mathsf{v}(\mathsf{w}_n))}{\epsilon(\mathsf{w}_1, \ldots, \mathsf{w}_n)}\\
+ &= \prod_{i=1}^n (\mathsf{v}\cdot\mathsf{w}_i) \; \frac{\epsilon(\mathsf{u}, \ldots, \mathsf{u})}{\epsilon(\mathsf{w}_1, \ldots, \mathsf{w}_n)}\\
+ &= 0.
+\end{split}</script>
+The last step follows from the skew-symmetry of the volume form <script type="math/tex">\epsilon \in \Omega^n(V)</script>. We have thus demonstrated that <script type="math/tex">\text{det}(\mathsf{u} \otimes \mathsf{v}) = 0</script>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that <script type="math/tex">\mathsf{A} \in L(V,V)</script> is a linear map on an <script type="math/tex">n</script>-dimensional inner product space <script type="math/tex">V</script>. Then, for any real number <script type="math/tex">a\in\mathbb{R}</script>,
+<script type="math/tex; mode=display">
+\text{det}(a\mathsf{A}) = a^n \text{det}(\mathsf{A}).
+</script>
+This is easily proved as follows: for any <script type="math/tex">\mathsf{w}_1, \ldots, \mathsf{w}_n \in V</script>,
+<script type="math/tex; mode=display">\begin{split}
+\text{det}(a\mathsf{A}) &= \frac{\epsilon(a\mathsf{A}\mathsf{w}_1, \ldots, a\mathsf{A}\mathsf{w}_n)}{\epsilon(\mathsf{w}_1, \ldots, \mathsf{w}_n)}\\
+ &= a^n \frac{\epsilon(\mathsf{A}\mathsf{w}_1, \ldots, \mathsf{A}\mathsf{w}_n)}{\epsilon(\mathsf{w}_1, \ldots, \mathsf{w}_n)}\\
+ &= a^n \text{det}(\mathsf{A}).
+\end{split}</script>
+</p>
+</div>
 <h3 id="trace">Trace</h3>
 <p>The <strong>trace</strong> of the linear map <script type="math/tex">\mathsf{T} \in L(V,V)</script>, written
 <script type="math/tex">\text{tr}(\mathsf{T})</script>, is defined as follows: for any
 <script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_n \in V</script>,
 <script type="math/tex; mode=display">\text{tr}(\mathsf{T}) = \sum_i \frac{\mathsf{\epsilon}(\mathsf{u}_1, \ldots, \mathsf{T}\mathsf{e}_i, \ldots, \mathsf{u}_n)}{\mathsf{\epsilon}(\mathsf{u}_1, \ldots, \mathsf{u}_n)}.</script>
-To understand this definition better, consider the special case of a
+Despite the cumbersome form of
+the definition of the trace of a linear map adopted here, it will prove
+to be very convenient later on.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>To understand this definition better, consider the special case of a
 linear map <script type="math/tex">\mathsf{T} \in L(\mathbb{R}^3,\mathbb{R}^3)</script>. In this
-case, it easily follows from the definition that <script type="math/tex; mode=display">\begin{split}
+case, it easily follows from the definition that 
+<script type="math/tex; mode=display">\begin{split}
 \epsilon_{ijk}\text{tr}(\mathsf{T}) &= \mathsf{\epsilon}(\mathsf{T}\mathsf{e}_i, \mathsf{e}_j, \mathsf{e}_k) + \mathsf{\epsilon}(\mathsf{e}_i, \mathsf{T}\mathsf{e}_j, \mathsf{e}_k) + \mathsf{\epsilon}(\mathsf{e}_i, \mathsf{e}_j, \mathsf{T}\mathsf{e}_k)\\
  &= \sum (\epsilon_{ajk} T_{ai} + \epsilon_{iak} T_{aj} + \epsilon_{ija} T_{ak})\\
  &= \epsilon_{ijk}(T_{ii} + T_{jj} + T_{kk}).
@@ -633,11 +671,40 @@ case, it easily follows from the definition that <script type="math/tex; mode=di
 also that there is no summation over the repeated indices in the final
 expression. Choosing <script type="math/tex">(i,j,k) = (1,2,3)</script> the familiar expression for
 the trace of <script type="math/tex">[\mathsf{T}]</script> is recovered:
-<script type="math/tex; mode=display">\text{tr}(\mathsf{T}) = \sum T_{ii}.</script> Despite the cumbersome form of
-the definition of the trace of a linear map adopted here, it will prove
-to be very convenient later on.</p>
-<div class="admonition info">
-<p class="admonition-title">Remark</p>
+<script type="math/tex; mode=display">\text{tr}(\mathsf{T}) = \sum T_{ii}.</script>
+</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Unlike the determinant, the trace operation is a linear map. To see this, note that given any two linear maps <script type="math/tex">\mathsf{S},\mathsf{T} \in L(V,V)</script> on an <script type="math/tex">n</script>-dimensional inner product space <script type="math/tex">V</script> and real numbers <script type="math/tex">a,b \in \mathbb{R}</script>,
+<script type="math/tex; mode=display">\begin{split}
+\text{tr}(a\mathsf{S} + b\mathsf{T}) &= \sum_i \frac{\epsilon(\mathsf{u}_1, \ldots, (a\mathsf{S} + b\mathsf{T})\mathsf{u}_i, \ldots, \mathsf{u}_n)}{\epsilon(\mathsf{u}_1, \ldots, \mathsf{u}_n)}\\
+ &= \sum_i a\frac{\epsilon(\mathsf{u}_1, \ldots, \mathsf{S}\mathsf{u}_i, \ldots, \mathsf{u}_n)}{\epsilon(\mathsf{u}_1, \ldots, \mathsf{u}_n)} + b\frac{\epsilon(\mathsf{u}_1, \ldots, \mathsf{T}\mathsf{u}_i, \ldots, \mathsf{u}_n)}{\epsilon(\mathsf{u}_1, \ldots, \mathsf{u}_n)}\\
+ &= a \text{tr}(\mathsf{S}) + b \text{tr}(\mathsf{T}).
+\end{split}</script>
+where <script type="math/tex">\mathsf{u}_1, \ldots, \mathsf{u}_n \in V</script> are any set of <script type="math/tex">n</script> vectors in <script type="math/tex">V</script>.  </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Many identities involving the trace operation are conveniently proved by working with representations with respect to an orthonormal basis of the vector space under consideration. For instance, suppose that <script type="math/tex">V</script> is an <script type="math/tex">n</script>-dimensional inner product space, and let <script type="math/tex">\mathsf{u},\mathsf{v} \in V</script> be any two vectors. Let us prove that
+<script type="math/tex; mode=display">\text{tr}(\mathsf{u} \otimes \mathsf{v}) = \mathsf{u} \cdot \mathsf{v}.</script>
+Let <script type="math/tex">(\mathsf{e}_i)</script> is an orthonormal basis of <script type="math/tex">V</script>. Then, with respect to this basis, the trace of the linear map <script type="math/tex">\mathsf{u} \otimes \mathsf{v} \in L(V,V)</script> can be written as
+<script type="math/tex; mode=display">
+\text{tr}(\mathsf{u} \otimes \mathsf{v}) = \sum [\mathsf{u} \otimes \mathsf{v}]_{ii} = \sum u_i v_i = \mathsf{u} \cdot \mathsf{v}.
+</script>
+Note that despite the fact that we have used a special basis to prove this fact, the equation remains true in general. This is because the final equation <script type="math/tex">\text{tr}(\mathsf{u} \otimes \mathsf{v}) = \mathsf{u} \cdot \mathsf{v}</script> has no explicit dependence on the basis vectors. This is a useful trick in proving many identities that we will often exploit later.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As another example of the foregoing trick in proving identities involving traces, let us now show that given any two linear maps <script type="math/tex">\mathsf{S},\mathsf{T} \in L(V,V)</script> on a finite dimensional inner product space <script type="math/tex">V</script>, 
+<script type="math/tex; mode=display">\text{tr}(\mathsf{S}\mathsf{T}) = \text{tr}(\mathsf{T}\mathsf{S}).</script>
+If <script type="math/tex">(\mathsf{e})_i</script> is an orthonormal basis of <script type="math/tex">V</script>, then
+<script type="math/tex; mode=display">\begin{split}
+\text{tr}(\mathsf{ST}) &= \sum S_{ij}T_{ji},\\
+\text{tr}(\mathsf{TS}) &= \sum T_{ij}S_{ji} = \sum S_{ij}T_{ji}.
+\end{split}</script>
+The identity is thus proved.</p>
+</div>
 <p>It is possible to introduce an inner product in the space
 <script type="math/tex">L(V,W)</script> of all linear maps from <script type="math/tex">V</script> into <script type="math/tex">W</script> as follows. Given
 <script type="math/tex">\mathsf{S},\mathsf{T} \in L(V,W)</script>, the <strong>inner product</strong>
@@ -645,7 +712,39 @@ to be very convenient later on.</p>
 any <script type="math/tex">\mathsf{S},\mathsf{T} \in L(V,W)</script>,
 <script type="math/tex; mode=display">\mathsf{S} \cdot \mathsf{T} = \text{tr}(\mathsf{S}\mathsf{T}^T).</script> It is
 left as an easy exercise to verify that this is indeed an inner product
-on <script type="math/tex">L(V,W)</script>. Note also that <script type="math/tex">\text{tr}(\mathsf{S}\mathsf{T}^T) = \text{tr}(\mathsf{S}^T\mathsf{T})</script>.</p>
+on <script type="math/tex">L(V,W)</script>. Note also that <script type="math/tex">\text{tr}(\mathsf{S}\mathsf{T}^T) = \text{tr}(\mathsf{S}^T\mathsf{T})</script>. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>As an illustration of the inner product just introduced, let us prove a very useful way of rewriting the expression for the trace of a linear map <script type="math/tex">\mathsf{T} \in L(V,V)</script> on a finite dimensional inner product space <script type="math/tex">V</script>. If <script type="math/tex">\mathsf{I} \in L(V,V)</script> denotes the identity map, then
+<script type="math/tex; mode=display">
+\text{tr}(\mathsf{T}) = \mathsf{I} \cdot \mathsf{T}.
+</script>
+To see this, choose an orthonormal basis <script type="math/tex">(\mathsf{e})_i</script> of <script type="math/tex">V</script>. With respect to this basis,
+<script type="math/tex; mode=display">
+\mathsf{I} \cdot \mathsf{T} = \sum \delta_{ij} T_{ij} = \sum T_{ii} = \text{tr}(\mathsf{T}).
+</script>
+It is a good exercise to prove this using a general basis <script type="math/tex">(\mathsf{g})_i</script> of <script type="math/tex">V</script>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Given linear maps <script type="math/tex">\mathsf{R},\mathsf{S},\mathsf{T} \in L(V,V)</script>, we have the following identities:
+<script type="math/tex; mode=display">
+\mathsf{R} \cdot \mathsf{ST} = \mathsf{S}^T\mathsf{R} \cdot \mathsf{T} = \mathsf{R}\mathsf{T}^T\cdot\mathsf{S}.
+</script>
+To see why, note that
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{R} \cdot \mathsf{ST} &= \text{tr}(\mathsf{R}^T\mathsf{ST})\\
+ &= \text{tr}(\mathsf{T}^T\mathsf{S}^T\mathsf{R})\\
+ &= \mathsf{T} \cdot \mathsf{S}^T\mathsf{R}\\
+ &= \mathsf{S}^T\mathsf{R} \cdot \mathsf{T}.
+\end{split}</script>
+In proving this, we have used the fact that trace of the transpose of a linear map is just the trace of that linear map - a fact that is easily checked. The other identity is similarly proved by noting that
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{R} \cdot \mathsf{ST} &= \text{tr}(\mathsf{R}(\mathsf{ST})^T)\\
+ &= \text{tr}(\mathsf{R}\mathsf{T}^T\mathsf{S}^T)\\
+ &= \mathsf{R}\mathsf{T}^T \cdot \mathsf{S}.
+\end{split}</script>
+</p>
 </div>
 <h2 id="special-groups-of-linear-maps">Special groups of linear maps</h2>
 <p>To conclude the current introductory discussion on tensor algebra, a few
