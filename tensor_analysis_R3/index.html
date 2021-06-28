@@ -800,17 +800,20 @@ belong to different vector spaces. However, the fact that both
 to <script type="math/tex">\mathbb{R}^3</script> comes to the rescue again. What is actually compared
 are the corresponding images of these vectors in <script type="math/tex">\mathbb{R}^3</script>, which
 is a valid algebraic operation.</p>
-<p>!!! info "Remark" Using the characterization of
-    <script type="math/tex">\mathsf{v}(\mathsf{x}) \in T_{\mathsf{x}}U</script> as the pair
-    <script type="math/tex">(\mathsf{x}, \mathsf{v}(\mathsf{x}))</script>, the derivative in the
-    definition of the covariant derivative of <script type="math/tex">\mathsf{v}</script> can be
-    understood in the following sense:
-    <script type="math/tex; mode=display">\nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x}) = \lim_{t \to 0} \frac{(\mathsf{x},\mathsf{v}(\mathsf{x} + t\mathsf{w})) - (\mathsf{x}, \mathsf{v}(\mathsf{x}))}{t} = \left(\mathsf{x}, \lim_{t \to 0} \frac{\mathsf{v}(\mathsf{x} + t\mathsf{w}) - \mathsf{v}(\mathsf{x})}{t}\right) \in T_{\mathsf{x}}U.</script>
-    Notice how the vector <script type="math/tex">\mathsf{v}(\mathsf{x} + t\mathsf{w})</script> has been
-    <em>parallely shifted</em> from the tangent space
-    <script type="math/tex">T_{\mathsf{x} + t\mathsf{w}}U</script> to <script type="math/tex">T_{\mathsf{x}}U</script>. Such a shift
-    is possible because of the fact that the Euclidean space
-    <script type="math/tex">\mathbb{R}^3</script> is <em>flat</em>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Using the characterization of
+<script type="math/tex">\mathsf{v}(\mathsf{x}) \in T_{\mathsf{x}}U</script> as the pair
+<script type="math/tex">(\mathsf{x}, \mathsf{v}(\mathsf{x}))</script>, the derivative in the
+definition of the covariant derivative of <script type="math/tex">\mathsf{v}</script> can be
+understood in the following sense:
+<script type="math/tex; mode=display">\nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x}) = \lim_{t \to 0} \frac{(\mathsf{x},\mathsf{v}(\mathsf{x} + t\mathsf{w})) - (\mathsf{x}, \mathsf{v}(\mathsf{x}))}{t} = \left(\mathsf{x}, \lim_{t \to 0} \frac{\mathsf{v}(\mathsf{x} + t\mathsf{w}) - \mathsf{v}(\mathsf{x})}{t}\right) \in T_{\mathsf{x}}U.</script>
+Notice how the vector <script type="math/tex">\mathsf{v}(\mathsf{x} + t\mathsf{w})</script> has been
+<em>parallely shifted</em> from the tangent space
+<script type="math/tex">T_{\mathsf{x} + t\mathsf{w}}U</script> to <script type="math/tex">T_{\mathsf{x}}U</script>. Such a shift
+is possible because of the fact that the Euclidean space
+<script type="math/tex">\mathbb{R}^3</script> is <em>flat</em>.</p>
+</div>
 <p>The <strong>gradient</strong> of the vector field <script type="math/tex">\mathsf{v}</script> is defined as the
 second order tensor field <script type="math/tex">\nabla \mathsf{v}:U \to \otimes^2 TU</script> such
 that, at every <script type="math/tex">\mathsf{x} \in U</script>,

@@ -615,7 +615,7 @@ variable calculus. This result can be established easily by working in
 the component representation of the Fréchet derivatives. Choosing the
 standard bases of all the Euclidean spaces involved, it can be shown
 that
-<script type="math/tex; mode=display">_{ij} = \sum \partial_k F_i(\mathsf{G}(\mathsf{x}_0)) \, \partial_j G_k(\mathsf{x}_0),</script>
+<script type="math/tex; mode=display">(D_{\mathsf{x}_0}(\mathsf{F} \circ \mathsf{G}))_{ij} = \sum \partial_k F_i(\mathsf{G}(\mathsf{x}_0)) \, \partial_j G_k(\mathsf{x}_0),</script>
 for any <script type="math/tex">\mathsf{x}_0 \in \mathbb{R}^n</script>.</p>
 <p>The second property of the Fréchet derivative that is useful in
 applications relates to the local invertibility of nonlinear maps. Let
@@ -684,23 +684,14 @@ all maps between vector spaces are assumed to be Fréchet differentiable,
 unless stated otherwise.</p>
 </div>
 <h2 id="gradient-of-nonlinear-maps">Gradient of nonlinear maps</h2>
-<p>We will now introduce an important notion called the <em>gradient</em> of a nonlinear map. Suppose that <script type="math/tex">\mathsf{F}:V \to W</script> is a nonlinear map between finite dimensional inner product spaces as before that is differentiable. In this case, the Fr\'echet derivative of <script type="math/tex">\mathsf{F}</script> is equal to its G\^ateaux derivative, as we just discussed. To introduce the notion of the gradient of <script type="math/tex">\mathsf{F}</script>, it is helpful to first introduce the notion of <em>tensor product spaces</em>.</p>
-<p>Given finite dimensional inner product spaces <script type="math/tex">V, W</script>, the <strong>tensor product space</strong> <script type="math/tex">W \otimes V</script> is defined as follows:
+<p>We will now introduce an important notion called the <em>gradient</em> of a nonlinear map. Suppose that <script type="math/tex">\mathsf{F}:V \to W</script> is a nonlinear map between finite dimensional inner product spaces as before that is differentiable. In this case, the Fréchet derivative of <script type="math/tex">\mathsf{F}</script> is equal to its Gâteaux derivative, as we just discussed. To introduce the notion of the gradient of <script type="math/tex">\mathsf{F}</script>, it is helpful to first introduce the notion of <em>tensor product spaces</em> -- given finite dimensional inner product spaces <script type="math/tex">V, W</script>, the <strong>tensor product space</strong> <script type="math/tex">W \otimes V</script> is defined as follows:
 <script type="math/tex; mode=display">W \otimes V = \{\mathsf{T}:W \times V \to \mathbb{R} \,|\, \mathsf{T} \text{ is a multilinear map}\}.</script>
-This is best illustrated with the help of some examples.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="admonition danger">
-<p class="admonition-title">TO DO</p>
-<p>...</p>
-</div>
-</div>
-<p>The <strong>gradient</strong> of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}_0 \in V</script> is defined as the tensor <script type="math/tex">\text{grad }\mathsf{F}(\mathsf{x}_0) \in W \otimes V</script> such that, for any <script type="math/tex">\mathsf{h} \in V</script>, 
+The <strong>gradient</strong> of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}_0 \in V</script> is defined as the tensor <script type="math/tex">\text{grad }\mathsf{F}(\mathsf{x}_0) \in W \otimes V</script> such that, for any <script type="math/tex">\mathsf{h} \in V</script>, 
 <script type="math/tex; mode=display">\text{grad }\mathsf{F}(\mathsf{x}_0) \cdot \mathsf{h} = \partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0)\mathsf{h}.</script>
-</p>
+Note that the inner product on the left is understood in the sense of the generalized inner product of tensors as we discussed earlier.</p>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
-<p>It is conventional to denote the gradient of <script type="math/tex">\mathsf{F}</script> using the same symbol as the G\^ateaux derivative of <script type="math/tex">F</script>. Thus, we will often write <script type="math/tex">\partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0)</script> to denote the gradient of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}_0</script>, <script type="math/tex">\text{grad }\mathsf{F}(\mathsf{x}_0)</script>. The meaning of a term like <script type="math/tex">\partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0)</script> should thus be carefully interpreted depending on the context. </p>
+<p>It is conventional to denote the gradient of <script type="math/tex">\mathsf{F}</script> using the same symbol as the Gâteaux derivative of <script type="math/tex">F</script>. Thus, we will often write <script type="math/tex">\partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0)</script> to denote the gradient of <script type="math/tex">\mathsf{F}</script> at <script type="math/tex">\mathsf{x}_0</script>, <script type="math/tex">\text{grad }\mathsf{F}(\mathsf{x}_0)</script>. The meaning of a term like <script type="math/tex">\partial_{\mathsf{x}} \mathsf{F}(\mathsf{x}_0)</script> should thus be carefully interpreted depending on the context. </p>
 </div>
                 
                   

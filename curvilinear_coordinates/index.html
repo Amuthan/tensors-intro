@@ -485,6 +485,10 @@ general coordinate system on <script type="math/tex">U</script>, it is possible 
 natural set of basis vectors for each tangent space, called the
 <em>coordinate basis</em>, and which in turn can be used to build a systematic
 calculus using these curvilinear coordinates.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>It is possible to choose basis vectors for each tangent space that are not derived from coordinates. Such a choice is called a <em>frame</em>, and the associated calculus is called <em>Cartan's method of moving frames</em>. We will not develop that here since coordinate bases are sufficient for our purposes.</p>
+</div>
 <h2 id="coordinate-basis">Coordinate basis</h2>
 <p>Recall that a coordinate system on <script type="math/tex">\mathbb{R}^3</script> is a pair
 <script type="math/tex">(U,\mathsf\phi)</script> where <script type="math/tex">U</script> is an open subset of <script type="math/tex">\mathbb{R}^3</script>
@@ -545,6 +549,10 @@ the scalars
 Note that it is not the case, in general, that <script type="math/tex">g_{ij} = \delta_{ij}</script>.
 This shows that the basis <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script> of
 <script type="math/tex">T_{\mathsf{x}(\mathsf{y})}U</script> is not necessarily an orthonormal basis.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The scalars $g_{ij}(\mathsf{y})$ are the components of a tensor field <script type="math/tex">\mathsf{g}:U \to T^* U\otimes T^* U</script> called the <strong>metric tensor</strong>. The presence of a metric tensor gives what is called a <strong>Riemannian structure</strong>. It is possible to develop a more general theory without specifying a Riemannian structure, but we will not require that level of generality in this course.</p>
+</div>
 <p>Given a smooth vector field <script type="math/tex">\mathsf{v}:U \to TU</script>, the vector
 <script type="math/tex">\mathsf{v}(\mathsf{x}) \in T_{\mathsf{x}}U</script> can now be expressed in
 terms of the corresponding coordinate basis
@@ -563,7 +571,7 @@ then
 <script type="math/tex; mode=display">\sum v_i(\mathsf{x}) \mathsf{e}_i = \sum \hat{v}_i(\mathsf{y})\mathsf{g}_i(\mathsf{y}) \quad\Rightarrow\quad v_i(\mathsf{x}) = \sum \frac{\partial x_i(\mathsf{y})}{\partial y_j} \hat{v}_j(\mathsf{y}).</script>
 The inverse relation can be calculated by inverting this equation. This
 is more elegantly achieved by the use of the reciprocal basis to
-<script type="math/tex">(\mathsf{g}_i(\mathsf{y})</script>, which is presented next.</p>
+<script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script>, which is presented next.</p>
 <h2 id="reciprocal-coordinate-basis">Reciprocal coordinate basis</h2>
 <p>The coordinate basis <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script> to the tangent space
 at <script type="math/tex">\mathsf{x}(\mathsf{y}) \in U</script> is in general not orthornormal, as
@@ -600,6 +608,10 @@ It is thus evident that the vectors <script type="math/tex">(\mathsf{g}_i(\maths
 defined constitute the reciprocal basis to the coordinate basis
 <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script> of <script type="math/tex">T_{\mathsf{x}}U</script>, and is called the
 <strong>reciprocal coordinate basis</strong> of <script type="math/tex">T_{\mathsf{x}}U</script>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>The use of superscript indices, as in <script type="math/tex">\mathsf{g}^i(\mathsf{y})</script>, is just a notational construct at this point. The same applies for other quantities with superscripts that will be encountered below.</p>
+</div>
 <p>The reciprocal coordinate basis <script type="math/tex">(\mathsf{g}^i(\mathsf{y}))</script> of
 <script type="math/tex">T_{\mathsf{x}(\mathsf{y})}U</script> can be used to compute the scalars
 <script type="math/tex">g^{ij}(\mathsf{y}) = \mathsf{g}^i(\mathsf{y}) \cdot \mathsf{g}^j(\mathsf{y})</script>:
