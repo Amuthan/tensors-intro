@@ -312,15 +312,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#riemann-curvature-tensor" class="md-nav__link">
-    Riemann curvature tensor
+  <a href="#metric-tensor" class="md-nav__link">
+    Metric tensor
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gradient-and-divergence" class="md-nav__link">
-    Gradient and Divergence
+  <a href="#gradient" class="md-nav__link">
+    Gradient
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divergence" class="md-nav__link">
+    Divergence
   </a>
   
 </li>
@@ -409,15 +416,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#riemann-curvature-tensor" class="md-nav__link">
-    Riemann curvature tensor
+  <a href="#metric-tensor" class="md-nav__link">
+    Metric tensor
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gradient-and-divergence" class="md-nav__link">
-    Gradient and Divergence
+  <a href="#gradient" class="md-nav__link">
+    Gradient
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divergence" class="md-nav__link">
+    Divergence
   </a>
   
 </li>
@@ -551,7 +565,7 @@ This shows that the basis <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</sc
 <script type="math/tex">T_{\mathsf{x}(\mathsf{y})}U</script> is not necessarily an orthonormal basis.</p>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
-<p>The scalars $g_{ij}(\mathsf{y})$ are the components of a tensor field <script type="math/tex">\mathsf{g}:U \to T^* U\otimes T^* U</script> called the <strong>metric tensor</strong>. The presence of a metric tensor gives what is called a <strong>Riemannian structure</strong>. It is possible to develop a more general theory without specifying a Riemannian structure, but we will not require that level of generality in this course.</p>
+<p>The scalars $g_{ij}(\mathsf{y})$ are the components of a tensor field called the <em>metric tensor</em>, to be introduced shortly. The presence of a metric tensor gives what is called a <em>Riemannian structure</em>. It is possible to develop a more general theory without specifying a Riemannian structure, but we will not require that level of generality in this course.</p>
 </div>
 <p>Given a smooth vector field <script type="math/tex">\mathsf{v}:U \to TU</script>, the vector
 <script type="math/tex">\mathsf{v}(\mathsf{x}) \in T_{\mathsf{x}}U</script> can now be expressed in
@@ -604,7 +618,7 @@ Second, note that <script type="math/tex; mode=display">\begin{split}
 <script type="math/tex; mode=display">\mathsf{g}^i(\mathsf{y}) = \sum \frac{\partial y_i(\mathsf{x})}{\partial x_k}\mathsf{e}_k \in T_{\mathsf{x}}U,</script>
 satisfy the relations
 <script type="math/tex; mode=display">\mathsf{g}^i(\mathsf{y}) \cdot \mathsf{g}_j(\mathsf{y}) = \delta_{ij}.</script>
-It is thus evident that the vectors <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script> thus
+It is thus evident that the vectors <script type="math/tex">(\mathsf{g}^i(\mathsf{y}))</script> thus
 defined constitute the reciprocal basis to the coordinate basis
 <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script> of <script type="math/tex">T_{\mathsf{x}}U</script>, and is called the
 <strong>reciprocal coordinate basis</strong> of <script type="math/tex">T_{\mathsf{x}}U</script>.</p>
@@ -665,9 +679,35 @@ to another.</p>
 appropriate generalization of the ideas discussed leads to the notion of
 a <em>connection</em> on the manifold.</p>
 </div>
-<h2 id="riemann-curvature-tensor">Riemann curvature tensor</h2>
-<p>...</p>
-<h2 id="gradient-and-divergence">Gradient and Divergence</h2>
+<h2 id="metric-tensor">Metric tensor</h2>
+<p>It is convenient at this point to introduce the <strong>metric tensor</strong> <script type="math/tex">g:U \to TU \otimes TU</script>, where $U \subseteq \mathbb{R}^3$ is open, as follows: for any $x \in U$,<br />
+<script type="math/tex; mode=display">\mathsf{g}(\mathsf{x}) = \sum \delta_{ij} \mathsf{e}_i \otimes \mathsf{e}_j = \sum g_{ij}(\mathsf{y}) \, \mathsf{g}^i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y}).</script>
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>Technically, the metric tensor has to be defined as a tensor of the form <script type="math/tex">\mathsf{g}:U \to T^*U \otimes T^*U</script>, where <script type="math/tex">T^*U</script> is the <em>cotangent bundle</em> on $U$. Since we are dealing throughout with finite dimensional Euclidean spaces, an implicit identification of the cotangent bundle <script type="math/tex">T^*U</script> with the tangent bundle <script type="math/tex">TU</script> is made in the foregoing definition. This is not a good idea in general -- the simpler and more imprecise approach adopted here is sufficient for our purposes.</p>
+</div>
+<p>The idea behind the metric is to provide a smooth extension of the inner
+product over every tangent space. Indeed, for any <script type="math/tex">\mathsf{x} \in U</script>,
+given any <script type="math/tex">\mathsf{u},\mathsf{w} \in T_{\mathsf{x}}U</script>, it follows that
+<script type="math/tex; mode=display">\sum u_i w_i = \mathsf{u} \cdot \mathsf{w} = \mathsf{g}(\mathsf{x})(\mathsf{u},\mathsf{w}) = \sum g_{ij}(\mathsf{y}) \hat{u}_i \hat{w}_j.</script>
+</p>
+<p>Introducing the
+notation
+<script type="math/tex; mode=display">J_{ij}(\mathsf{y}) = \frac{\partial x_i(\mathsf{y})}{\partial y_j},</script>
+for the elements of the Jacobian matrix for the change of coordinate
+system from <script type="math/tex">(U,\mathsf\phi)</script> to the Cartesian coordinate system, it
+follows from a simple calculation that
+<script type="math/tex; mode=display">g_{ij}(\mathsf{y}) = \sum \frac{\partial x_k(\mathsf{y})}{\partial y_i}\frac{\partial x_k(\mathsf{y})}{\partial y_j} = \sum J_{ki}(\mathsf{y})J_{kj}(\mathsf{y}).</script>
+Denoting by <script type="math/tex">J(\mathsf{y})</script> the determinant of the matrix whose
+<script type="math/tex">(i,j)^{\text{th}}</script> entry is <script type="math/tex">J_{ij}(\mathsf{y})</script>, and by
+<script type="math/tex">g(\mathsf{x})</script> the determinant of the matrix
+whose <script type="math/tex">(i,j)^{\text{th}}</script> entry is <script type="math/tex">g_{ij}(\mathsf{y})</script>, it follows
+from the previous equation that
+<script type="math/tex; mode=display">g(\mathsf{x}) = J(\mathsf{y})^2 \quad\Rightarrow\quad J(\mathsf{y}) = \sqrt{g(\mathsf{x})}.</script>
+Note that in the equation above,
+<script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script>. Similar expressions can be computed for the inverse transformation from the curvilinear coordinates $\mathsf{y}$ to the Cartesian coordinates $\mathsf{x}$.</p>
+<h2 id="gradient">Gradient</h2>
 <p>Let <script type="math/tex">\mathsf{v}:U \to TU</script> be a smooth vector field over an open subset
 <script type="math/tex">U \subseteq \mathbb{R}^3</script>. Recall from the earlier discussion that
 all the key differential quantities related to <script type="math/tex">\mathsf{v}</script> are
@@ -688,18 +728,14 @@ as follows: for any <script type="math/tex">\mathsf{x} \in U</script> and
 expression for the covariant derivative
 <script type="math/tex">\nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x})</script> just derived can rewritten
 as follows:
-<script type="math/tex; mode=display">\sum \left(\partial_j \hat{v}_i(\mathsf{y}) + \Gamma^i_{kj}(\mathsf{y})\hat{v}_k(\mathsf{y})\right)\hat{w}_j \mathsf{g}_i(\mathsf{y}) = \left(\sum \left(\partial_j \hat{v}_i(\mathsf{y}) + \Gamma^i_{kj}(\mathsf{y})\hat{v}_k(\mathsf{y})\right)\mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y})\right) \cdot \left(\sum \hat{w}_l \mathsf{g}_l(\mathsf{y})\right).</script>
+<script type="math/tex; mode=display">\begin{split}
+\sum \left(\partial_j \hat{v}_i(\mathsf{y}) + \Gamma^i_{kj}(\mathsf{y})\hat{v}_k(\mathsf{y})\right)\hat{w}_j \mathsf{g}_i(\mathsf{y}) = \\
+\left(\sum \left(\partial_j \hat{v}_i(\mathsf{y}) + \Gamma^i_{kj}(\mathsf{y})\hat{v}_k(\mathsf{y})\right)\mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y})\right) \cdot \left(\sum \hat{w}_l \mathsf{g}_l(\mathsf{y})\right).\end{split}</script>
 It immediately follows from this equation that the gradient of the
 vector field <script type="math/tex">\mathsf{v}</script> can be written in curvilinear coordinates as
 <script type="math/tex; mode=display">\nabla \mathsf{v}(\mathsf{x}) = \sum \left(\partial_j \hat{v}_i(\mathsf{y}) + \Gamma^i_{kj}(\mathsf{y})\hat{v}_k(\mathsf{y})\right)\mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y}).</script>
-In the expression above, <script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script>. The
-divergence of <script type="math/tex">\mathsf{v}</script> is obtained by contracting the gradient:
-<script type="math/tex; mode=display">\nabla \cdot \mathsf{v}(\mathsf{x}) = \sum \left(\partial_i \hat{v}_i(\mathsf{y}) + \Gamma^i_{ki}(\mathsf{y})\hat{v}_k(\mathsf{y})\right).</script>
-Notice how the expressions for the gradient and divergence and
-divergence derived here reduce to their Cartesian forms when the
-Christoffel symbols are set to zero.</p>
-<p>The gradient and divergence of tensor fields over <script type="math/tex">U</script> are considered
-next. Rather than providing the corresponding expressions for a general
+In the expression above, <script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script>.</p>
+<p>The foregoing calculations can be extended to tensor fields too. Rather than providing the corresponding expressions for a general
 tensor field, the special case of a second order tensor field
 <script type="math/tex">\mathsf{A}:U \to \otimes^2 TU</script> is considered here. The starting point
 is, as before, the covariant derivative of <script type="math/tex">\mathsf{A}</script> at
@@ -710,10 +746,17 @@ computed as follows: <script type="math/tex; mode=display">\begin{split}
 \end{split}</script> The gradient of <script type="math/tex">\mathsf{A}</script> can be easily seen from the
 above calculation as
 <script type="math/tex; mode=display">\nabla \mathsf{A}(\mathsf{x}) = \sum \left(\partial_k \hat{A}_{ij}(\mathsf{y}) + \Gamma^i_{ak}(\mathsf{y})\hat{A}_{aj}(\mathsf{y}) + \Gamma^j_{bk}(\mathsf{y})\hat{A}_{ib}(\mathsf{y})\right) \mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}_j(\mathsf{y}) \otimes \mathsf{g}^k(\mathsf{y}).</script>
-The divergence of <script type="math/tex">\mathsf{A}</script> is computed easily from this expression
+Notice that the final term in the basis vector is a reciprocal vector.</p>
+<h2 id="divergence">Divergence</h2>
+<p>The divergence of the smooth vector field <script type="math/tex">\mathsf{v}:U \to TU</script> is obtained by contracting the gradient:
+<script type="math/tex; mode=display">\nabla \cdot \mathsf{v}(\mathsf{x}) = \sum \left(\partial_i \hat{v}_i(\mathsf{y}) + \Gamma^i_{ki}(\mathsf{y})\hat{v}_k(\mathsf{y})\right).</script>
+Notice how the expressions for the gradient and divergence and
+divergence derived here reduce to their Cartesian forms when the
+Christoffel symbols are set to zero.</p>
+<p>Similar calculations can be carried out for tensor fields. The divergence of the second order tensor field <script type="math/tex">\mathsf{A}:U \to \otimes^2 TU</script> considered in the previous is computed easily from this expression
 as
 <script type="math/tex; mode=display">\nabla \cdot \mathsf{A}(\mathsf{x}) = \sum \left(\partial_j \hat{A}_{ij}(\mathsf{y}) + \Gamma^i_{aj}(\mathsf{y})\hat{A}_{aj}(\mathsf{y}) + \Gamma^j_{bj}(\mathsf{y})\hat{A}_{ib}(\mathsf{y})\right) \mathsf{g}_i(\mathsf{y})</script>
-The curvilinear coordinate representation of the gradient and divergence
+The curvilinear coordinate representation of the divergence
 of a tensor field of arbitrary order over <script type="math/tex">U</script> can be computed using a
 straightforward extension of the ideas presented above.</p>
 <h2 id="curl">Curl</h2>
@@ -727,51 +770,24 @@ vector field. Employing a curvilinear coordinate system
 written as
 <script type="math/tex; mode=display">\mathsf{v}(\mathsf{x}) \times \mathsf{w} = \left(\sum \hat{v}_i(\mathsf{y}) \mathsf{g}_i(\mathsf{y})\right) \times \left(\sum \hat{w}_j \mathsf{g}_j(\mathsf{y})\right) = \sum \hat{v}_i(\mathsf{y})\hat{w}_j \mathsf{g}_i(\mathsf{y}) \times \mathsf{g}_j(\mathsf{y}),</script>
 where <script type="math/tex">\mathsf{y} = \mathsf{y}(\mathsf{x})</script>. To evaluate
-<script type="math/tex">\mathsf{g}_i(\mathsf{y}) \times \mathsf{g}_j(\mathsf{y})</script>, it is
-helpful first to introduce a few useful relations. Introducing the
-notation
-<script type="math/tex; mode=display">J_{ij}(\mathsf{y}) = \frac{\partial x_i(\mathsf{y})}{\partial y_j},</script>
-for the elements of the Jacobian matrix for the change of coordinate
-system from <script type="math/tex">(U,\mathsf\phi)</script> to the Cartesian coordinate system, it
-follows from a simple calculation that
-<script type="math/tex; mode=display">g_{ij}(\mathsf{y}) = \sum \frac{\partial x_k(\mathsf{y})}{\partial y_i}\frac{\partial x_k(\mathsf{y})}{\partial y_j} = \sum J_{ki}(\mathsf{y})J_{kj}(\mathsf{y}).</script>
-Denoting by <script type="math/tex">J(\mathsf{y})</script> the determinant of the matrix whose
-<script type="math/tex">(i,j)^{\text{th}}</script> entry is <script type="math/tex">J_{ij}(\mathsf{y})</script>, and by
-<script type="math/tex">\text{det }\mathsf{g}(\mathsf{x})</script> the determinant of the matrix
-whose <script type="math/tex">(i,j)^{\text{th}}</script> entry is <script type="math/tex">g_{ij}(\mathsf{y})</script>, it follows
-from the previous equation that
-<script type="math/tex; mode=display">\text{det }\mathsf{g}(\mathsf{x}) = J(\mathsf{y})^2 \quad\Rightarrow\quad J(\mathsf{y}) = \sqrt{\text{det }\mathsf{g}(\mathsf{x})}.</script>
-Note that in the equation above,
-<script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script>. To understand the rationale
-behind this notation, it is useful to introduce a second order tensor
-field <script type="math/tex">\mathsf{g}:U \to \otimes^2 U</script> on <script type="math/tex">U</script> called the <strong>metric</strong> on
-<script type="math/tex">U</script>, defined as follows: for any <script type="math/tex">\mathsf{x} \in U</script>,
-<script type="math/tex; mode=display">\mathsf{g}(\mathsf{x}) = \sum \delta_{ij} \mathsf{e}_i \otimes \mathsf{e}_j = \sum g_{ij}(\mathsf{y}) \, \mathsf{g}^i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y}).</script>
-The idea behind the metric is to provide a smooth extension of the inner
-product over every tangent space. Indeed, for any <script type="math/tex">\mathsf{x} \in U</script>,
-given any <script type="math/tex">\mathsf{u},\mathsf{w} \in T_{\mathsf{x}}U</script>, it follows that
-<script type="math/tex; mode=display">\sum u_i w_i = \mathsf{u} \cdot \mathsf{w} = \mathsf{g}(\mathsf{x})(\mathsf{u},\mathsf{w}) = \sum g_{ij}(\mathsf{y}) \hat{u}_i \hat{w}_j.</script>
-Using the ideas just developed, the definition of the Levi-Civita tensor
-on <script type="math/tex">\mathbb{R}^3</script>, and the definition of the determinant, it follows
-that
-<script type="math/tex; mode=display">\mathsf{g}_i(\mathsf{y}) \cdot \mathsf{g}_j(\mathsf{y}) \times \mathsf{g}_k(\mathsf{y}) = \sum \epsilon_{abc} \frac{\partial x_a(\mathsf{y})}{\partial y_i}\frac{\partial x_b(\mathsf{y})}{\partial y_j}\frac{\partial x_c(\mathsf{y})}{\partial y_k} = \sqrt{\text{det }\mathsf{g}(\mathsf{x})} \, \epsilon_{ijk}.</script>
+<script type="math/tex">\mathsf{g}_i(\mathsf{y}) \times \mathsf{g}_j(\mathsf{y})</script>, we use the definition of the Levi-Civita tensor on <script type="math/tex">\mathbb{R}^3</script>, and the definition of the determinant, to first establish the following result:
+<script type="math/tex; mode=display">\mathsf{g}_i(\mathsf{y}) \cdot \mathsf{g}_j(\mathsf{y}) \times \mathsf{g}_k(\mathsf{y}) = \sum \epsilon_{abc} \frac{\partial x_a(\mathsf{y})}{\partial y_i}\frac{\partial x_b(\mathsf{y})}{\partial y_j}\frac{\partial x_c(\mathsf{y})}{\partial y_k} = \sqrt{g(\mathsf{x})} \, \epsilon_{ijk}.</script>
 This shows at once that
-<script type="math/tex; mode=display">\mathsf{g}_j(\mathsf{y}) \times \mathsf{g}_k(\mathsf{y}) = \sum \sqrt{\text{det }\mathsf{g}(\mathsf{x})} \, \epsilon_{ijk} \, \mathsf{g}^i(\mathsf{y}).</script>
+<script type="math/tex; mode=display">\mathsf{g}_j(\mathsf{y}) \times \mathsf{g}_k(\mathsf{y}) = \sum \sqrt{g(\mathsf{x})} \, \epsilon_{ijk} \, \mathsf{g}^i(\mathsf{y}).</script>
 Returning to the computation of the vector
-<script type="math/tex">\mathsf{v}(\mathsf{x}) \times \mathsf{w}</script> in curvilinear coordinates
-initiated in the beginning of this section, it follows that
+<script type="math/tex">\mathsf{v}(\mathsf{x}) \times \mathsf{w}</script> in curvilinear coordinates, we note that
 <script type="math/tex; mode=display">\begin{split}
-\mathsf{v}(\mathsf{x}) \times \mathsf{w} &= \sum \sqrt{\text{det }\mathsf{g}(\mathsf{y})} \, \epsilon_{ijk} \hat{v}_i(\mathsf{y})\hat{w}_j(\mathsf{y}) \, \mathsf{g}^k(\mathsf{y})\\
- &= \sum \sqrt{\text{det }\mathsf{g}(\mathsf{y})} \, \epsilon_{ijk} \, g^{ka}(\mathsf{y}) \, \hat{v}_i(\mathsf{y})\hat{w}_j(\mathsf{y}) \, \mathsf{g}_a(\mathsf{y}).
+\mathsf{v}(\mathsf{x}) \times \mathsf{w} &= \sum \sqrt{g(\mathsf{x})} \, \epsilon_{ijk} \hat{v}_i(\mathsf{y})\hat{w}_j(\mathsf{y}) \, \mathsf{g}^k(\mathsf{y})\\
+ &= \sum \sqrt{g(\mathsf{x})} \, \epsilon_{ijk} \, g^{ka}(\mathsf{y}) \, \hat{v}_i(\mathsf{y})\hat{w}_j(\mathsf{y}) \, \mathsf{g}_a(\mathsf{y}).
 \end{split}</script> The divergence of
 <script type="math/tex">\mathsf{v}(\mathsf{x}) \times \mathsf{w}</script> can now be computed in
 curvilinear coordinates as <script type="math/tex; mode=display">\begin{split}
-\nabla \cdot (\mathsf{v} \times \mathsf{w})(\mathsf{x}) &= \sum \epsilon_{ijk} \left(\partial_a  \left(g^{ka}(\mathsf{y})\sqrt{\text{det }\mathsf{g}(\mathsf{x})} \, \hat{v}_i(\mathsf{y})\right) + g^{ka}(\mathsf{y})\sqrt{\text{det }\mathsf{g}(\mathsf{x})} \, \Gamma^b_{ab}(\mathsf{y}) \hat{v}_i(\mathsf{y})\right)\hat{w}_j\\
- &= \left(\sum \hat{w}_c\mathsf{g}_c(\mathsf{y})\right) \cdot \left(\sum \epsilon_{ijk} \left(\partial_a \left(g^{ka}(\mathsf{y})\sqrt{\text{det }\mathsf{g}(\mathsf{x})}\right) \hat{v}_i(\mathsf{y}) \right.\right.\\
- & \qquad\qquad\qquad\qquad\qquad\qquad\left.\left. + g^{ka}(\mathsf{y})\sqrt{\text{det }\mathsf{g}(\mathsf{x})} \left(\partial_a \hat{v}_i(\mathsf{y}) + \Gamma^b_{ab}(\mathsf{y}) \hat{v}_i(\mathsf{y})\right)\right) \mathsf{g}^j(\mathsf{y})\right).
+\nabla \cdot (\mathsf{v} \times \mathsf{w})(\mathsf{x}) &= \sum \epsilon_{ijk} \left(\partial_a  \left(g^{ka}(\mathsf{y})\sqrt{g(\mathsf{x})} \, \hat{v}_i(\mathsf{y})\right) + g^{ka}(\mathsf{y})\sqrt{g(\mathsf{x})} \, \Gamma^b_{ab}(\mathsf{y}) \hat{v}_i(\mathsf{y})\right)\hat{w}_j\\
+ &= \left(\sum \hat{w}_c\mathsf{g}_c(\mathsf{y})\right) \cdot \left(\sum \epsilon_{ijk} \left(\partial_a \left(g^{ka}(\mathsf{y})\sqrt{g(\mathsf{x})}\right) \hat{v}_i(\mathsf{y}) \right.\right.\\
+ & \qquad\qquad\qquad\qquad\qquad\qquad\left.\left. + g^{ka}(\mathsf{y})\sqrt{g(\mathsf{x})} \left(\partial_a \hat{v}_i(\mathsf{y}) + \Gamma^b_{ab}(\mathsf{y}) \hat{v}_i(\mathsf{y})\right)\right) \mathsf{g}^j(\mathsf{y})\right).
 \end{split}</script> The curvilinear coordinate expression for the curl of the
 vector field <script type="math/tex">\mathsf{v}</script> follows at once from this calculation that
-<script type="math/tex; mode=display">\nabla \times \mathsf{v}(\mathsf{x}) = \sum \epsilon_{ijk} \left(\partial_a \left(g^{ka}(\mathsf{y})\sqrt{\text{det }\mathsf{g}(\mathsf{x})}\right) \hat{v}_i(\mathsf{y}) + g^{ka}(\mathsf{y})\sqrt{\text{det }\mathsf{g}(\mathsf{x})} \left(\partial_a \hat{v}_i(\mathsf{y}) + \Gamma^b_{ab}(\mathsf{y}) \hat{v}_i(\mathsf{y})\right)\right) \mathsf{g}^j(\mathsf{y}).</script>
+<script type="math/tex; mode=display">\nabla \times \mathsf{v}(\mathsf{x}) = \sum \epsilon_{ijk} \left(\partial_a \left(g^{ka}(\mathsf{y})\sqrt{g(\mathsf{x})}\right) \hat{v}_i(\mathsf{y}) + g^{ka}(\mathsf{y})\sqrt{g(\mathsf{x})} \left(\partial_a \hat{v}_i(\mathsf{y}) + \Gamma^b_{ab}(\mathsf{y}) \hat{v}_i(\mathsf{y})\right)\right) \mathsf{g}^j(\mathsf{y}).</script>
 The curl of tensor fields of higher order is computed along the same
 lines. The final expressions are not provided here since they have
 cumbersome algebraic forms in curvilinear coordinates.</p>
@@ -782,7 +798,7 @@ cumbersome algebraic forms in curvilinear coordinates.</p>
 <script type="math/tex">U</script> is defined as follows: <script type="math/tex; mode=display">\begin{split}
 \int_U f(\mathsf{x})\,dv &= \int_U f(x_1, x_2, x_3)\,dx_1 dx_2 dx_3\\
  &= \int_{\mathsf\phi(U)} (f \circ \mathsf\phi^{-1})(y_1, y_2, y_3) \, \text{det}\left(\frac{\partial \mathsf{x}}{\partial \mathsf{y}}\right) dy_1 dy_2 dy_3\\
- &= \int_{\mathsf\phi(U)} (f \circ \mathsf\phi^{-1})(y_1, y_2, y_3) \sqrt{\text{det }\mathsf{g}(\mathsf{x})} \, dy_1 dy_2 dy_3.
+ &= \int_{\mathsf\phi(U)} (f \circ \mathsf\phi^{-1})(y_1, y_2, y_3) \sqrt{g(\mathsf{x})} \, dy_1 dy_2 dy_3.
 \end{split}</script> In the equation above
 <script type="math/tex">\partial \mathsf{x}/\partial \mathsf{y}</script> denotes the matrix whose
 <script type="math/tex">(i,j)^{\text{th}}</script> component is
