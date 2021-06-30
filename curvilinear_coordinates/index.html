@@ -323,6 +323,19 @@
     Gradient
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradient-of-the-metric-tensor" class="md-nav__link">
+    Gradient of the metric tensor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -426,6 +439,19 @@
   <a href="#gradient" class="md-nav__link">
     Gradient
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradient-of-the-metric-tensor" class="md-nav__link">
+    Gradient of the metric tensor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -673,6 +699,9 @@ This equation clearly demonstrates that in the special case of the
 Cartesian coordinate system, the Christoffel symbols vanish identically
 since the basis vectors do not change when moving from one tangent space
 to another.</p>
+<p>An entirely analogous set of calculations can be peformed to show that
+<script type="math/tex; mode=display"> \frac{\partial \mathsf{g}^i(\mathsf{y})}{\partial y_j} = -\sum \Gamma^i_{jk} \mathsf{g}^j. </script>
+Thus the Christoffel symbols provide all the information necessary to compute how the basis vectors change as we move across tangent spaces. </p>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
 <p>In the general theory of differentiable manifolds, the
@@ -715,6 +744,13 @@ from the previous equation that
 <script type="math/tex; mode=display">g(\mathsf{y}) = J(\mathsf{y})^2 \quad\Rightarrow\quad J(\mathsf{y}) = \sqrt{g(\mathsf{y})}.</script>
 Note that in the equation above,
 <script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script>. Similar expressions can be computed for the inverse transformation from the curvilinear coordinates $\mathsf{y}$ to the Cartesian coordinates $\mathsf{x}$.</p>
+<p>An important result that is quite useful in applications concerns the derivative of the determinant of $g(\mathsf{y})$ with respect to its entries $g_{ij}(\mathsf{y})$. Towards this end, consider an invertible matrix $\mathsf{A}$ whose (real-valued) entries are $a_{ij}$. We will denote the entries of its inverse $\mathsf{A}^{-1}$ as $a^{ij}$. Let $a$ be the determinant of $\mathsf{A}$. From elementary matrix algebra, we know that the inverse of the matrix is computed as
+<script type="math/tex; mode=display"> a^{ij} = \frac{1}{a}(\text{cof }\mathsf{A})_{ji}. </script>
+Here, $\text{cof }\mathsf{A}$ denotes the <strong>cofactor</strong> of $\mathsf{A}$, and its transpose is called the <strong>adjoint</strong> of $\mathsf{A}$. We wish to compute the derivative of $a$ with respect to $a_{ij}$. Let us consier the Laplace expansion of the determinant:
+<script type="math/tex; mode=display">a = \sum_j a_{ij} (\text{cof }\mathsf{A})_{ij}. </script>
+Differentiating this with respect to $a_{ij}$ and noting that <script type="math/tex">(\text{cof }\mathsf{A})_{ij}</script> does not involve $a_{ij}$, a simple calculation shows that
+<script type="math/tex; mode=display"> \frac{\partial a}{\partial a_{ij}} = (\text{cof }\mathsf{A})_{ij} = a a^{ji}. </script>
+This result is called <strong>Jacobi's formula</strong>.</p>
 <h2 id="gradient">Gradient</h2>
 <p>Let <script type="math/tex">\mathsf{v}:U \to TU</script> be a smooth vector field over an open subset
 <script type="math/tex">U \subseteq \mathbb{R}^3</script>. Recall from the earlier discussion that
@@ -759,6 +795,14 @@ The gradient of <script type="math/tex">\mathsf{A}</script> can be easily seen f
 above calculation as
 <script type="math/tex; mode=display">\nabla \mathsf{A}(\mathsf{x}) = \sum \hat{A}_{ij|k}(\mathsf{y}) \mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}_j(\mathsf{y}) \otimes \mathsf{g}^k(\mathsf{y}).</script>
 Notice that the final term in the basis vector is a reciprocal vector.</p>
+<h3 id="gradient-of-the-metric-tensor">Gradient of the metric tensor</h3>
+<p>As an immediate application, let us compute the covariant derivative of the metric tensor $\mathsf{g}:U \to \otimes^2 TU$. It follows from the definition of the covariant derivative that since <script type="math/tex">\mathsf{g}(\mathsf{x}) = \sum \mathsf{e}_i \otimes \mathsf{e}_i</script> does not vary as $\mathsf{x}$ varies over $U$, that
+<script type="math/tex; mode=display">\nabla \mathsf{g}(\mathsf{x}) = \mathsf{0}. </script>
+This is equivalent to stating that $g_{ij|k}(\mathsf{y}) = 0$, for any choice of coordinate system. Working out the details, we get
+<script type="math/tex; mode=display">g_{ij,k}(\mathsf{y}) = g_{lj}(\mathsf{y})\Gamma^l_{ik}(\mathsf{y}) + g_{il}(\mathsf{y})\Gamma^l_{jk}(\mathsf{y}). </script>
+The foregoing equation can alternatively be obtained by directly differentiating <script type="math/tex">\sum g_{ij}(\mathsf{y}) \mathsf{g}^i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y})</script> with respect to $\mathsf{y}$ and setting it to zero. A straightforward algebraic manipulation of this result yields the following useful relation:
+<script type="math/tex; mode=display">\Gamma^l_{ij}(\mathsf{y}) = \frac{1}{2}g^{kl}(\mathsf{y})\left(g_{ik,j}(\mathsf{y}) + g_{kj,i}(\mathsf{y}) - g_{ij,k}(\mathsf{y})\right).</script>
+Alternatively, the validity of this expression can be checked by substituting the expression for the partial derivatives of $g_{ij}(\mathsf{y})$ with respect to $\mathsf{y}$ computed earlier. </p>
 <h2 id="divergence">Divergence</h2>
 <p>The divergence of the smooth vector field <script type="math/tex">\mathsf{v}:U \to TU</script> is obtained by contracting the gradient:
 <script type="math/tex; mode=display">\nabla \cdot \mathsf{v}(\mathsf{x}) = \sum \hat{v}_{i|i}(\mathsf{y}).</script>
