@@ -502,7 +502,11 @@
                 
                   <h1>Curvilinear Coordinates</h1>
                 
-                <p>The notion of a general coordinate system was introduced at the
+                <div class="admonition danger">
+<p class="admonition-title">WARNING: unconventional notation!</p>
+<p>In the following presentation, <strong>contravariant components are indicated using subscript indices</strong>, and covariant components are not formally used at all. Thus, the equations obtained will <em>look different</em> in comparison to conventional treatments which employ superscript indices for contravariant components and subscript indices for covariant components. The reason for this particular choice here is two-fold: (i) I wanted the notation here to be compatible with the subscript notation used throughout in AE 639, and (ii) Only orthogonal curvilinear coordinates are actually used in applications encountered in AE 639, so it is sufficient to work with only one level of indices. I have made some exceptions to keep the notation simple, and these are explained at the appropriate places.</p>
+</div>
+<p>The notion of a general coordinate system was introduced at the
 beginning of this section. All the coordinate computations thus far have
 been restricted to the global Cartesian coordinate system on
 <script type="math/tex">\mathbb{R}^3</script>. There are, however, many applications where the use of
@@ -769,7 +773,7 @@ as follows: for any <script type="math/tex">\mathsf{x} \in U</script> and
 <script type="math/tex">\hat{\mathsf{w}} = (\hat{w}_1, \hat{w}_2, \hat{w}_3)</script> where
 <script type="math/tex">\{\hat{w}_i\}</script> are constants such that
 <script type="math/tex">\mathsf{w} = \sum \hat{w}_i \mathsf{g}_i(\mathsf{y})</script>. We will use the following special notation to denote the components of the covariant derivative of $\mathsf{v}$:
-<script type="math/tex; mode=display">\hat{v}_{i|j}(\mathsf{y}) = \partial_j \hat{v}_i(\mathsf{y}) + \Gamma^i_{kj}(\mathsf{y})\hat{v}_k(\mathsf{y}).</script>
+<script type="math/tex; mode=display">\hat{v}_{i|j}(\mathsf{y}) = \partial_j \hat{v}_i(\mathsf{y}) + \sum \Gamma^i_{kj}(\mathsf{y})\hat{v}_k(\mathsf{y}).</script>
 Using this, the final expression for the covariant derivative
 <script type="math/tex">\nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x})</script> just derived can rewritten
 as follows:
@@ -799,9 +803,9 @@ Notice that the final term in the basis vector is a reciprocal vector.</p>
 <p>As an immediate application, let us compute the covariant derivative of the metric tensor $\mathsf{g}:U \to \otimes^2 TU$. It follows from the definition of the covariant derivative that since <script type="math/tex">\mathsf{g}(\mathsf{x}) = \sum \mathsf{e}_i \otimes \mathsf{e}_i</script> does not vary as $\mathsf{x}$ varies over $U$, that
 <script type="math/tex; mode=display">\nabla \mathsf{g}(\mathsf{x}) = \mathsf{0}. </script>
 This is equivalent to stating that $g_{ij|k}(\mathsf{y}) = 0$, for any choice of coordinate system. Working out the details, we get
-<script type="math/tex; mode=display">g_{ij,k}(\mathsf{y}) = g_{lj}(\mathsf{y})\Gamma^l_{ik}(\mathsf{y}) + g_{il}(\mathsf{y})\Gamma^l_{jk}(\mathsf{y}). </script>
+<script type="math/tex; mode=display">g_{ij,k}(\mathsf{y}) = \sum g_{lj}(\mathsf{y})\Gamma^l_{ik}(\mathsf{y}) + \sum  g_{il}(\mathsf{y})\Gamma^l_{jk}(\mathsf{y}). </script>
 The foregoing equation can alternatively be obtained by directly differentiating <script type="math/tex">\sum g_{ij}(\mathsf{y}) \mathsf{g}^i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y})</script> with respect to $\mathsf{y}$ and setting it to zero. A straightforward algebraic manipulation of this result yields the following useful relation:
-<script type="math/tex; mode=display">\Gamma^l_{ij}(\mathsf{y}) = \frac{1}{2}g^{kl}(\mathsf{y})\left(g_{ik,j}(\mathsf{y}) + g_{kj,i}(\mathsf{y}) - g_{ij,k}(\mathsf{y})\right).</script>
+<script type="math/tex; mode=display">\Gamma^l_{ij}(\mathsf{y}) = \sum \frac{1}{2}g^{kl}(\mathsf{y})\left(g_{ik,j}(\mathsf{y}) + g_{kj,i}(\mathsf{y}) - g_{ij,k}(\mathsf{y})\right).</script>
 Alternatively, the validity of this expression can be checked by substituting the expression for the partial derivatives of $g_{ij}(\mathsf{y})$ with respect to $\mathsf{y}$ computed earlier. </p>
 <h2 id="divergence">Divergence</h2>
 <p>The divergence of the smooth vector field <script type="math/tex">\mathsf{v}:U \to TU</script> is obtained by contracting the gradient:
@@ -853,6 +857,9 @@ The divergence of <script type="math/tex">\mathsf{v}(\mathsf{x}) \times \mathsf{
 The curvilinear coordinate expression for the curl of the
 vector field <script type="math/tex">\mathsf{v}</script> follows at once from this calculation that
 <script type="math/tex; mode=display">\nabla \times \mathsf{v}(\mathsf{x}) = \sum \frac{\epsilon_{ijk}}{\sqrt{g(\mathsf{y})}}\partial_l \left(g(\mathsf{y})g^{kl}(\mathsf{y})\hat{v}_i(\mathsf{y})\right) \mathsf{g}^j(\mathsf{y}).</script>
+Alternatively, a simpler expression is obtained by directly using the definition of divergence in terms of the covariant derivative. Skipping the lengthy algebraic details, the final expression for the curl of a vector field take the following compact form:
+<script type="math/tex; mode=display">\begin{split}\nabla \times \mathsf{v}(\mathsf{y}) &= \sum \frac{\epsilon_{lmn}}{\sqrt{g(\mathsf{y})}}g_{im}(\mathsf{y})\hat{v}_{i|l}(\mathsf{y})\mathsf{g}_n\\
+ &= \sum \hat{v}_{i|j}(\mathsf{y}) \mathsf{g}^j(\mathsf{y}) \times \mathsf{g}_i(\mathsf{y}).\end{split}</script>
 The curl of tensor fields of higher order is computed along the same
 lines. The final expressions are not provided here since they have
 cumbersome algebraic forms in curvilinear coordinates.</p>
