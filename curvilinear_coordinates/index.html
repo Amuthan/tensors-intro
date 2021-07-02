@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#coordinate-basis" tabindex="1" class="md-skip">
+      <a href="#reciprocal-basis-vs-dual-basis" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -291,6 +291,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#reciprocal-basis-vs-dual-basis" class="md-nav__link">
+    Reciprocal basis vs Dual basis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#coordinate-basis" class="md-nav__link">
     Coordinate basis
   </a>
@@ -315,6 +322,19 @@
   <a href="#metric-tensor" class="md-nav__link">
     Metric tensor
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jacobis-formula" class="md-nav__link">
+    Jacobi's formula
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -408,6 +428,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#reciprocal-basis-vs-dual-basis" class="md-nav__link">
+    Reciprocal basis vs Dual basis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#coordinate-basis" class="md-nav__link">
     Coordinate basis
   </a>
@@ -432,6 +459,19 @@
   <a href="#metric-tensor" class="md-nav__link">
     Metric tensor
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jacobis-formula" class="md-nav__link">
+    Jacobi's formula
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -502,12 +542,7 @@
                 
                   <h1>Curvilinear Coordinates</h1>
                 
-                <div class="admonition danger">
-<p class="admonition-title">WARNING: unconventional notation!</p>
-<p>In the following presentation, <strong>contravariant components are indicated using subscript indices</strong>, and covariant components are not formally used at all. Thus, the equations obtained will <em>look different</em> in comparison to conventional treatments which employ superscript indices for contravariant components and subscript indices for covariant components. The reason for this particular choice here is two-fold: (i) I wanted the notation here to be compatible with the subscript notation used throughout in AE 639, and (ii) Only orthogonal curvilinear coordinates are actually used in applications encountered in AE 639, so it is sufficient to work with only one level of indices. I have made some exceptions to keep the notation simple, and these are explained at the appropriate places.</p>
-</div>
-<p>The notion of a general coordinate system was introduced at the
-beginning of this section. All the coordinate computations thus far have
+                <p>The notion of a general coordinate system was introduced in the previous chapter. All the coordinate computations thus far have
 been restricted to the global Cartesian coordinate system on
 <script type="math/tex">\mathbb{R}^3</script>. There are, however, many applications where the use of
 special coordinate systems significantly simplify the calculations. It
@@ -533,6 +568,65 @@ calculus using these curvilinear coordinates.</p>
 <p class="admonition-title">Remark</p>
 <p>It is possible to choose basis vectors for each tangent space that are not derived from coordinates. Such a choice is called a <em>frame</em>, and the associated calculus is called <em>Cartan's method of moving frames</em>. We will not develop that here since coordinate bases are sufficient for our purposes.</p>
 </div>
+<h2 id="reciprocal-basis-vs-dual-basis">Reciprocal basis vs Dual basis</h2>
+<p>Before we proceed further, it is helpful to clarify the difference between a <em>reciprocal basis</em> and a <em>dual basis</em>, since the distinction between these two distinct concepts is often not clear in the literature. To keep the discussion slightly more general, let us work in the context of a finite dimensional vector space $V$ of dimension $n$. </p>
+<p>Let <script type="math/tex">B = (\mathsf{b}_i)_{i=1}^n</script> be a basis of $V$. Any vector $\mathsf{v} \in V$ admits a basis representation of the following form:
+<script type="math/tex; mode=display">\mathsf{v} = \sum v^i \mathsf{b}_i.</script>
+Note that the components of $\mathsf{v}$ with respect to the basis $B$ are represented using superscripts. The <strong>dual space</strong> of $V$, written $V^\star$, is defined as the set of all linear functions defined on $V$:
+<script type="math/tex; mode=display">V^\star = \{\omega:V \to \mathbb{R} \,|\, \omega \text{ is linear}\}.</script>
+Elements of $V^\star$ are called <strong>dual vectors</strong> or <strong>covectors</strong>. Note that since $V$ is finite dimensional, elements of the dual space $V^\star$ are also continuous -- this is not true in general if $V$ is infinite dimensional. Using the linearity of $\omega \in V^\star$, we see at once that for any $\mathsf{v} \in V$, we have
+<script type="math/tex; mode=display">\omega(\mathsf{v}) = \omega\left(\sum v^i \mathsf{b}_i\right) = \sum v^i \omega(\mathsf{b}_i).</script>
+Introducing the special linear maps $\beta^i \in V^\star$, $i = 1, \ldots, n$, as
+<script type="math/tex; mode=display">\beta^i(\mathsf{v}) = v^i,</script>
+for any $\mathsf{v} = \sum v^i \mathsf{b}_i \in V$, we see that
+<script type="math/tex; mode=display">\omega(\mathsf{v}) = \sum \omega(\mathsf{b}_i) \beta^i(\mathsf{v}).</script>
+Since this is true for every $\mathsf{v} \in V$, we have the following identity:
+<script type="math/tex; mode=display">\omega = \sum \omega_i \beta^i,</script>
+where $\omega_i = \omega(\mathsf{b}_i) \in \mathbb{R}$. It is straightforward to establish that <script type="math/tex">B^\star = (\beta^i)_{i=1}^n</script> is a basis of the dual space $V^\star$, and is called the <strong>dual basis</strong> of $V^\star$ corresponding to the basis $B$ of $V$. This also shows that the dual space $V^\star$ is also a finite dimensional vector space with the same dimension as $V$. </p>
+<p>An important property of the dual basis $B^\star$ which follows immediately from its definition is that
+<script type="math/tex; mode=display">\beta^i(\mathsf{b}_j) = \delta^i_j.</script>
+This, is in fact, is the the property that <em>defines</em> a dual basis. </p>
+<p>Given an arbitrary $\omega \in V^\star$, we can express it in terms of the dual basis $B^\star$ as
+<script type="math/tex; mode=display">\omega = \sum \omega_i \beta^i.</script>
+Notice the use of subscripts to denote the components of $\omega$. Given any $\mathsf{v} \in V$, we see at once that
+<script type="math/tex; mode=display">\begin{split}
+\omega(\mathsf{v}) &= \sum \omega_i \beta^i\left(\sum v^j \mathsf{b}_j\right)\\
+ &= \sum \omega_i v^j \beta^i(\mathsf{b}_j)\\
+ &= \sum \omega_i v^j \delta^i_j\\
+ &= \sum \omega_i v^i.
+\end{split}</script>
+The choice of subscript and superscript notation is chosen so that the component representation of <em>natural</em> pairings - like $\omega(\mathsf{v})$, which is also called a <strong>duality pairing</strong>, - has a neat component representation involving sums that have matching subscripts and superscripts.</p>
+<p>Let us now recall the notion of a reciprocal basis introduced earlier. Consider the special case when $V$ has an inner product $\cdot:V \times V \to \mathbb{R}$. In this case, we can define the <strong>reciprocal basis</strong> <script type="math/tex">\hat{B} = (\mathsf{b}^i)_{i=1}^n</script> as
+<script type="math/tex; mode=display">\mathsf{b}^i \cdot \mathsf{b}_j = \delta^i_j, \quad i,j = 1, \ldots, n.</script>
+Note that the existence of the reciprocal basis is guaranteed by the defining properties of an inner product. Given an arbitrary $\mathsf{v} \in V$, we can express it both in terms of the basis $B$ and its reciprocal basis $\hat{B}$ as
+<script type="math/tex; mode=display">\mathsf{v} = \sum v^i \mathsf{b}_i = \sum \hat{v}_i \mathsf{b}^i.</script>
+Note that the components of a vector with respect to a reciprocal basis are also represented using subscripts. </p>
+<p>To understand the relation between dual and reciprocal basis, let us consider the basis $B$ of $V$, the reciprocal basis $\hat{B}$ of $V$, and the dual basis $B^\star$ of $V^\star$. Given $\omega \in V^\star$, the <strong>Riesz representation theorem</strong> tells us that we can find a $\mathsf{w} \in V$ such that, for any $\mathsf{v} \in V$,
+<script type="math/tex; mode=display">\omega(\mathsf{v}) = \mathsf{w} \cdot \mathsf{v}.</script>
+In fact, it is possible in this case to find this relationship explicitly. Let us first make the following definitions:
+<script type="math/tex; mode=display">b_{ij} = \mathsf{b}_i\cdot\mathsf{b}_j, \quad b^{ij} = \mathsf{b}^i\cdot\mathsf{b}^j, \quad i,j=1,\ldots,n.</script>
+It is straightforward to verify that
+<script type="math/tex; mode=display">\mathsf{b}^i = \sum b^{ij}\mathsf{b}_j, \quad \mathsf{b}_i = \sum b_{ij}\mathsf{b}^j,</script>
+and that the matrices whose components are $(b_{ij})$ and $(b^{ij})$ are inverses of each other. We then see that the equation <script type="math/tex">\omega(\mathsf{v}) = \mathsf{w}\cdot\mathsf{v}</script> is equivalent to 
+<script type="math/tex; mode=display">\sum \omega_i v^i = \sum b_{ij}w^i v^j = \sum \hat{w}_i v^i.</script>
+Since this is true for all $\mathsf{v} \in V$, we see at once that
+<script type="math/tex; mode=display">\omega_i = \hat{w}_i = \sum b_{ij}w^j.</script>
+We can also invert this relation to see that
+<script type="math/tex; mode=display">w^i = \sum g^{ij}\omega_j = \sum g^{ij}\hat{w}_j.</script>
+We thus see that there is a one-to-one correspondence between the vector space $V$ and its dual space $V^\star$ as a consequence of the inner product that arises by identifying each vector $\mathsf{w} \in V$ with the covector $\omega \in V^\star$ such that $\omega(\mathsf{v}) = \mathsf{w}\cdot\mathsf{v}$ for every $\mathsf{v} \in V$. In particular, the identity
+<script type="math/tex; mode=display">\beta^i(\mathsf{v}) = \mathsf{b}^i\cdot\mathsf{v}</script>
+suggests as indentification of the dual basis covector $\beta^i$ with the reciprocal basis vector $\mathsf{b}^i$. This is the reason why the components of both covectors and components of the corresponding vectors with respect to the reciprocal basis are represented with subscripts, and why these two distinct notions are often identified in the literature. Since we will always work with inner product spaces in this course, it is sufficient to work just with the reciprocal basis. But the distinction between the dual basis and reciprocal basis should be kept in mind. The former is always defined, while the latter is defined only when an inner product is available.</p>
+<p>For the special case of the standard basis <script type="math/tex">(\mathsf{e}_1, \mathsf{e}_2, \mathsf{e}_3)</script> of <script type="math/tex">\mathbb{R}^3</script>, note that the identity <script type="math/tex">\mathsf{e}_i \cdot \mathsf{e}_j = \delta_{ij}</script> informs us that 
+<script type="math/tex; mode=display">\mathsf{e}^i = \mathsf{e}_i, \quad i = 1,2,3.</script>
+The dual space of $\mathbb{R}^3$, namely $(\mathbb{R}^3)^\star$, can be identified with $\mathbb{R}^3$ using the standard inner product. The dual basis in $(\mathbb{R}^3)^\star$, $(\mathsf{epsilon}^i)_{i=1}^3$ is defined such that
+<script type="math/tex; mode=display">\epsilon^i(\mathsf{e}_j) = \delta^i_j.</script>
+For any $\mathsf{z} \in \mathbb{R}^3$, a simple calculation shows that
+<script type="math/tex; mode=display">z^i = z_i = \hat{z}_i, \quad i=1,2,3.</script>
+The placement of the indices is thus irrelevant when dealing with Cartesian coordinate systems. This is the reason for working with subscripts throughout in the foregoing development. We will however try to follow the convention, in this chapter, that whenever we have twice repeating indices that are summed over, one of them will be a superscript and the other will be a subscript, even when dealing with Cartesian coordinate systems.</p>
+<div class="admonition info">
+<p class="admonition-title">Notation</p>
+<p>Since we will not employ the dual basis in the sequel, we will drop the hat when representing components of vectors (and tensors) with respect to the reciprocal basis. Thus, we will write $\mathsf{v} = \sum v_i \mathsf{b}^i = \sum v^i \mathsf{b}_i$.</p>
+</div>
 <h2 id="coordinate-basis">Coordinate basis</h2>
 <p>Recall that a coordinate system on <script type="math/tex">\mathbb{R}^3</script> is a pair
 <script type="math/tex">(U,\mathsf\phi)</script> where <script type="math/tex">U</script> is an open subset of <script type="math/tex">\mathbb{R}^3</script>
@@ -547,8 +641,8 @@ is convenient to introduce the notation
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
 <p>Note that depending on the choice of coordinate system, the
-triads of real numbers <script type="math/tex">\mathsf{x} = (x_1, x_2, x_3)</script> and
-<script type="math/tex">\mathsf{y} = (y_1, y_2, y_3)</script> could represent the <em>same</em> point in
+triads of real numbers <script type="math/tex">\mathsf{x} = (x^1, x^2, x^3)</script> and
+<script type="math/tex">\mathsf{y} = (y^1, y^2, y^3)</script> could represent the <em>same</em> point in
 <script type="math/tex">U</script>. Specifically, if <script type="math/tex">\mathsf{y} = \mathsf\phi(\mathsf{x})</script>, or if
 <script type="math/tex">\mathsf{x} = \mathsf\phi^{-1}(\mathsf{y})</script>, then they indeed
 represent the same point. It is conventional to work with the the
@@ -560,36 +654,36 @@ using curvilinear coordinates.</p>
 the form <script type="math/tex">\mathsf{c}_i:I_{\delta} \to \mathbb{R}^3</script>, where
 <script type="math/tex">I_\delta = [-\delta, \delta] \subseteq \mathbb{R}</script> for some
 <script type="math/tex">\delta > 0</script>, such that, for any <script type="math/tex">t \in I_\delta</script>, <script type="math/tex; mode=display">\begin{split}
-\mathsf{c}_1(t) &= \mathsf{x}(y_1 + t, y_2, y_3),\\
-\mathsf{c}_2(t) &= \mathsf{x}(y_1, y_2 + t, y_3),\\
-\mathsf{c}_3(t) &= \mathsf{x}(y_1, y_2, y_3 + t),
+\mathsf{c}_1(t) &= \mathsf{x}(y^1 + t, y^2, y^3),\\
+\mathsf{c}_2(t) &= \mathsf{x}(y^1, y^2 + t, y^3),\\
+\mathsf{c}_3(t) &= \mathsf{x}(y^1, y^2, y^3 + t),
 \end{split}</script> where <script type="math/tex">\mathsf{y} = \mathsf{y}(\mathsf{x})</script>. Note that
 <script type="math/tex">\mathsf{c}_i(0) = \mathsf{x}</script> for <script type="math/tex">i=1,2,3</script>. The tangent vector
 <script type="math/tex">\mathsf{g}_i(\mathsf{y})</script> to the coordinate curve <script type="math/tex">\mathsf{c}_i</script> at
 <script type="math/tex">t = 0</script> is defined as the <strong><script type="math/tex">i^{th}</script> coordinate tangent vector</strong>:
-<script type="math/tex; mode=display">\mathsf{g}_i(\mathsf{y}) = \dot{\mathsf{c}}_i(0) = \sum \frac{\partial x_j(\mathsf{y})}{\partial y_i} \mathsf{e}_j.</script>
+<script type="math/tex; mode=display">\mathsf{g}_i(\mathsf{y}) = \dot{\mathsf{c}}_i(0) = \sum \frac{\partial x^j(\mathsf{y})}{\partial y^i} \mathsf{e}_j.</script>
 Note that each
 <script type="math/tex">\mathsf{g}_i(\mathsf{y}) \in T_{\mathsf{x}(\mathsf{y})}U</script>. Further,
 the triad of tangent vectors <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script> is linearly
 independent: to see this, note that if for some real numbers
-<script type="math/tex">a_1, a_2, a_3 \in \mathbb{R}</script>,
-<script type="math/tex">\sum a_i \mathsf{g}_i(\mathsf{y}) = \mathsf{0}</script>, then
-<script type="math/tex; mode=display">\sum a_i \frac{\partial x_j(\mathsf{y})}{\partial y_i} \mathsf{e}_j = \mathsf{0} \quad\Rightarrow\quad \sum a_i \frac{\partial x_j(\mathsf{y})}{\partial y_i} = 0, \; i = 1,2,3.</script>
+<script type="math/tex">a^1, a^2, a^3 \in \mathbb{R}</script>,
+<script type="math/tex">\sum a^i \mathsf{g}_i(\mathsf{y}) = \mathsf{0}</script>, then
+<script type="math/tex; mode=display">\sum a^i \frac{\partial x^j(\mathsf{y})}{\partial y^i} \mathsf{e}_j = \mathsf{0} \quad\Rightarrow\quad \sum a^i \frac{\partial x^j(\mathsf{y})}{\partial y^i} = 0, \; i = 1,2,3.</script>
 The implication in the equation above follows from the fact that the
 triad of vectors <script type="math/tex">(\mathsf{e}_i)</script> is linearly independent. Arranging
 these three equations in matrix form, it follows from the fact that
 <script type="math/tex; mode=display">\text{det}\begin{bmatrix}
-\partial_1 x_1(\mathsf{y}) & \partial_2 x_1(\mathsf{y}) & \partial_3 x_1(\mathsf{y})\\
-\partial_1 x_2(\mathsf{y}) & \partial_2 x_2(\mathsf{y}) & \partial_3 x_2(\mathsf{y})\\
-\partial_1 x_3(\mathsf{y}) & \partial_2 x_3(\mathsf{y}) & \partial_3 x_3(\mathsf{y})\\
-\end{bmatrix} \neq 0</script> that <script type="math/tex">a_1 = a_2 = a_3 = 0</script>. This shows that the
+\partial_1 x^1(\mathsf{y}) & \partial_2 x^1(\mathsf{y}) & \partial_3 x^1(\mathsf{y})\\
+\partial_1 x^2(\mathsf{y}) & \partial_2 x^2(\mathsf{y}) & \partial_3 x^2(\mathsf{y})\\
+\partial_1 x^3(\mathsf{y}) & \partial_2 x^3(\mathsf{y}) & \partial_3 x^3(\mathsf{y})\\
+\end{bmatrix} \neq 0</script> that <script type="math/tex">a^1 = a^2 = a^3 = 0</script>. This shows that the
 triad <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script> is a basis of
 <script type="math/tex">T_{\mathsf{x}(\mathsf{y})}U</script>, and is called the <strong>coordinate basis</strong>
 of <script type="math/tex">T_{\mathsf{x}(\mathsf{y})}U</script> with respect to the coordinate system
 <script type="math/tex">(U,\mathsf\phi)</script>. At any <script type="math/tex">\mathsf{y} \in V</script>, it is easy to compute
 the scalars
 <script type="math/tex">g_{ij}(\mathsf{y}) = \mathsf{g}_i(\mathsf{y})\cdot\mathsf{g}_j(\mathsf{y})</script>:
-<script type="math/tex; mode=display">g_{ij}(\mathsf{y}) = \sum \frac{\partial x_k(\mathsf{y})}{\partial y_i}\frac{\partial x_k(\mathsf{y})}{\partial y_j}.</script>
+<script type="math/tex; mode=display">g_{ij}(\mathsf{y}) = \sum \frac{\partial x^k(\mathsf{y})}{\partial y^i}\frac{\partial x^k(\mathsf{y})}{\partial y^j}.</script>
 Note that it is not the case, in general, that <script type="math/tex">g_{ij} = \delta_{ij}</script>.
 This shows that the basis <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script> of
 <script type="math/tex">T_{\mathsf{x}(\mathsf{y})}U</script> is not necessarily an orthonormal basis.</p>
@@ -602,17 +696,17 @@ This shows that the basis <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</sc
 terms of the corresponding coordinate basis
 <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script>, where
 <script type="math/tex">\mathsf{y} = \mathsf{y}(\mathsf{x}) \in V</script>, as follows:
-<script type="math/tex; mode=display">\mathsf{v}(\mathsf{x}) = \sum \hat{v}_i(\mathsf{y}) \mathsf{g}_i(\mathsf{y}).</script>
-Notice how <em>both</em> the component fields <script type="math/tex">\hat{v}_i</script> and the basis
+<script type="math/tex; mode=display">\mathsf{v}(\mathsf{x}) = \sum \hat{v}^i(\mathsf{y}) \mathsf{g}_i(\mathsf{y}).</script>
+Notice how <em>both</em> the component fields <script type="math/tex">\hat{v}^i</script> and the basis
 vectors <script type="math/tex">\mathsf{g}_i</script> depend on <script type="math/tex">\mathsf{y}</script>. This is in contrast
 to the Cartesian representation of <script type="math/tex">\mathsf{v}</script> where the basis
 vectors do not depend on the tangent space under consideration. The
 change of basis rules discussed earlier can be used here to study how
-the curvilinear components <script type="math/tex">(\hat{v}_i)</script> of <script type="math/tex">\mathsf{v}</script> are related
-to its Cartesian components <script type="math/tex">(v_i)</script>: if
+the curvilinear components <script type="math/tex">(\hat{v}^i)</script> of <script type="math/tex">\mathsf{v}</script> are related
+to its Cartesian components <script type="math/tex">(v^i)</script>: if
 <script type="math/tex">\mathsf{y} = \mathsf{y}(\mathsf{x})</script>, where <script type="math/tex">\mathsf{x} \in U</script>,
 then
-<script type="math/tex; mode=display">\sum v_i(\mathsf{x}) \mathsf{e}_i = \sum \hat{v}_i(\mathsf{y})\mathsf{g}_i(\mathsf{y}) \quad\Rightarrow\quad v_i(\mathsf{x}) = \sum \frac{\partial x_i(\mathsf{y})}{\partial y_j} \hat{v}_j(\mathsf{y}).</script>
+<script type="math/tex; mode=display">\sum v^i(\mathsf{x}) \mathsf{e}_i = \sum \hat{v}^i(\mathsf{y})\mathsf{g}_i(\mathsf{y}) \quad\Rightarrow\quad v^i(\mathsf{x}) = \sum \frac{\partial x^i(\mathsf{y})}{\partial y^j} \hat{v}^j(\mathsf{y}).</script>
 The inverse relation can be calculated by inverting this equation. This
 is more elegantly achieved by the use of the reciprocal basis to
 <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script>, which is presented next.</p>
@@ -626,56 +720,54 @@ from the observation that the coordinate relations
 <script type="math/tex">\mathsf{y} = \mathsf{y}(\mathsf{x})</script> and
 <script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script> are inverses of each other,
 whence
-<script type="math/tex; mode=display">\mathsf{x}(\mathsf{y}(\mathsf{x})) = \mathsf{x}, \quad\text{or}\quad x_i(\mathsf{y}(\mathsf{x})) = x_i.</script>
+<script type="math/tex; mode=display">\mathsf{x}(\mathsf{y}(\mathsf{x})) = \mathsf{x}, \quad\text{or}\quad x^i(\mathsf{y}(\mathsf{x})) = x^i.</script>
 Differentiating this expression with respect to <script type="math/tex">x_j</script> immediately
 yields the identity
-<script type="math/tex; mode=display">\sum \frac{\partial x_i(\mathsf{y})}{\partial y_k}\frac{\partial y_k(\mathsf{x})}{\partial x_j} = \delta_{ij}.</script>
+<script type="math/tex; mode=display">\sum \frac{\partial x^i(\mathsf{y})}{\partial y^k}\frac{\partial y^k(\mathsf{x})}{\partial x^j} = \delta^i_{j}.</script>
 Similarly, the identity
 <script type="math/tex">\mathsf{y}(\mathsf{x}(\mathsf{y})) = \mathsf{y}</script> yields the relation
-<script type="math/tex; mode=display">\sum \frac{\partial y_i(\mathsf{y})}{\partial x_k}\frac{\partial x_k(\mathsf{x})}{\partial y_j} = \delta_{ij}</script>
+<script type="math/tex; mode=display">\sum \frac{\partial y^i(\mathsf{y})}{\partial x^k}\frac{\partial x^k(\mathsf{x})}{\partial y^j} = \delta^i_{j}</script>
 These two identies state the expected fact that the matrices whose
-<script type="math/tex">(i,j)^{\text{th}}</script> entries are <script type="math/tex">\partial_j x_i(\mathsf{y})</script> and
-<script type="math/tex">\partial_j y_i(\mathsf{x})</script> are inverses of each other. These
+<script type="math/tex">(i,j)^{\text{th}}</script> entries are <script type="math/tex">\partial_j x^i(\mathsf{y})</script> and
+<script type="math/tex">\partial_j y^i(\mathsf{x})</script> are inverses of each other. These
 identities can be used to derive a variety of useful results. First,
 note that
-<script type="math/tex; mode=display">\mathsf{g}_i(\mathsf{y}) = \sum \frac{\partial x_j(\mathsf{y})}{\partial y_i} \mathsf{e}_j \quad\Rightarrow\quad \mathsf{e}_i = \sum \frac{\partial y_j(\mathsf{x})}{\partial x_i}\mathsf{g}_j(\mathsf{y}).</script>
+<script type="math/tex; mode=display">\mathsf{g}_i(\mathsf{y}) = \sum \frac{\partial x^j(\mathsf{y})}{\partial y^i} \mathsf{e}_j \quad\Rightarrow\quad \mathsf{e}_i = \sum \frac{\partial y^j(\mathsf{x})}{\partial x^i}\mathsf{g}_j(\mathsf{y}).</script>
 Second, note that <script type="math/tex; mode=display">\begin{split}
-\delta_{ij} &= \sum \frac{\partial y_i(\mathsf{y})}{\partial x_k}\frac{\partial x_k(\mathsf{x})}{\partial y_j}\\
- &= \left(\sum \frac{\partial y_i(\mathsf{x})}{\partial x_k}\mathsf{e}_k\right)\cdot\left(\sum \frac{\partial x_l(\mathsf{y})}{\partial y_j}\mathsf{e}_l\right)\\
- &= \left(\sum \frac{\partial y_i(\mathsf{x})}{\partial x_k}\mathsf{e}_k\right)\cdot\mathsf{g}_j(\mathsf{y}).
-\end{split}</script> This calculation shows at once that the vector
+\delta^i_j &= \sum \frac{\partial y^i(\mathsf{y})}{\partial x^k}\frac{\partial x^k(\mathsf{x})}{\partial y^j}\\
+ &= \left(\sum \frac{\partial y^i(\mathsf{x})}{\partial x^k}\mathsf{e}_k\right)\cdot\left(\sum \frac{\partial x^l(\mathsf{y})}{\partial y^j}\mathsf{e}_l\right)\\
+ &= \left(\sum \frac{\partial y^i(\mathsf{x})}{\partial x^k}\mathsf{e}_k\right)\cdot\mathsf{g}_j(\mathsf{y}).
+\end{split}</script> 
+This calculation shows at once that the vector
 <script type="math/tex">(\mathsf{g}^i(\mathsf{y}))</script> defined as
-<script type="math/tex; mode=display">\mathsf{g}^i(\mathsf{y}) = \sum \frac{\partial y_i(\mathsf{x})}{\partial x_k}\mathsf{e}_k \in T_{\mathsf{x}}U,</script>
+<script type="math/tex; mode=display">\mathsf{g}^i(\mathsf{y}) = \sum \frac{\partial y^i(\mathsf{x})}{\partial x^k}\mathsf{e}^k \in T_{\mathsf{x}}U,</script>
 satisfy the relations
-<script type="math/tex; mode=display">\mathsf{g}^i(\mathsf{y}) \cdot \mathsf{g}_j(\mathsf{y}) = \delta_{ij}.</script>
+<script type="math/tex; mode=display">\mathsf{g}^i(\mathsf{y}) \cdot \mathsf{g}_j(\mathsf{y}) = \delta^i_j.</script>
 It is thus evident that the vectors <script type="math/tex">(\mathsf{g}^i(\mathsf{y}))</script> thus
 defined constitute the reciprocal basis to the coordinate basis
 <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script> of <script type="math/tex">T_{\mathsf{x}}U</script>, and is called the
 <strong>reciprocal coordinate basis</strong> of <script type="math/tex">T_{\mathsf{x}}U</script>.</p>
-<div class="admonition info">
-<p class="admonition-title">Remark</p>
-<p>The use of superscript indices, as in <script type="math/tex">\mathsf{g}^i(\mathsf{y})</script>, is just a notational construct at this point. But since they form a basis of $T_{\mathsf{x}}U$, it is possible to expand tangent vectors with respect to the reciprocal basis too. To keep the discussion compact, we will not elaborate on those details here. Moreover, a better setting to appreciate that is using <em>dual basis</em>, which in the presence of a Riemannian metric, can be identified with the reciprocal basis. Since we will only be dealing with <em>orthogonal curvilinear coordinates</em> in this course, these details are not relevant for our purposes.</p>
-</div>
 <p>The reciprocal coordinate basis <script type="math/tex">(\mathsf{g}^i(\mathsf{y}))</script> of
 <script type="math/tex">T_{\mathsf{x}(\mathsf{y})}U</script> can be used to compute the scalars
 <script type="math/tex">g^{ij}(\mathsf{y}) = \mathsf{g}^i(\mathsf{y}) \cdot \mathsf{g}^j(\mathsf{y})</script>:
-<script type="math/tex; mode=display">g^{ij}(\mathsf{y}) = \sum \frac{\partial y_i(\mathsf{x})}{\partial x_a}\frac{\partial y_j(\mathsf{x})}{\partial x_a}.</script>
+<script type="math/tex; mode=display">g^{ij}(\mathsf{y}) = \sum \frac{\partial y^i(\mathsf{x})}{\partial x^l}\frac{\partial y^j(\mathsf{x})}{\partial x^l}.</script>
 It is straightforward to verify that
-<script type="math/tex">\sum g^{ij}(\mathsf{y})g_{jk}(\mathsf{y}) = \delta_{ik}</script>.</p>
+<script type="math/tex; mode=display">\sum g^{ij}(\mathsf{y})g_{jk}(\mathsf{y}) = \delta^i_k = \sum g_{jk}(\mathsf{y})g^{ki}(\mathsf{y}).</script>
+In other words, the matrices whose <script type="math/tex">(i,j)^\text{th}</script> entry is $g_{ij}(\mathsf{y})$ and $g^{ij}(\mathsf{y})$ are inverses of each other. </p>
+<p>We also note for future reference the following symmetry relations: $g_{ij}(\mathsf{y}) = g_{ji}(\mathsf{y})$ and $g^{ij}(\mathsf{y}) = g^{ji}(\mathsf{y})$. 
+These follow at once from the symmetry of the Euclidean inner product.</p>
 <p>As an example of the usefulness of the reciprocal basis, the change in
 coordinate representation of a vector field is revisited. Suppose that
 <script type="math/tex">\mathsf{v}:U \to TU</script> is a smooth vector field on <script type="math/tex">U</script>. The
 coordinate representation of <script type="math/tex">\mathsf{v}</script> using the Cartesian
 coordinate system and the coordinate system <script type="math/tex">(U,\mathsf\phi)</script> are
 related as follows:
-<script type="math/tex">\sum v_i(\mathsf{x}) \mathsf{e}_i = \sum \hat{v}_i(\mathsf{y}) \mathsf{g}_i(\mathsf{y})</script>,
+<script type="math/tex">\sum v^i(\mathsf{x}) \mathsf{e}_i = \sum \hat{v}^i(\mathsf{y}) \mathsf{g}_i(\mathsf{y})</script>,
 where <script type="math/tex">\mathsf{x} \in U</script> and <script type="math/tex">\mathsf{y} = \mathsf{y}(\mathsf{x})</script>.
 Using the reciprocal coordinate basis just introduced, it follows after
 a simple computation that
-<script type="math/tex; mode=display">\hat{v}_i(\mathsf{y}) = \sum \frac{\partial y_i(\mathsf{x})}{\partial x_j} v_j(\mathsf{x}).</script>
-This is the inverse of the relation obtained in the previous section
-that expressed the Cartesian components <script type="math/tex">v_i</script> in terms of the
-curvilinear components <script type="math/tex">\hat{v}_i</script>.</p>
+<script type="math/tex; mode=display">\hat{v}^i(\mathsf{y}) = \mathsf{v}(\mathsf{y}) \cdot \mathsf{g}^i(\mathsf{y}) = \sum \frac{\partial y^i(\mathsf{x})}{\partial x^j} v^j(\mathsf{x}).</script>
+This is the inverse of the relation obtained in the previous section.</p>
 <h2 id="christoffel-symbols">Christoffel symbols</h2>
 <p>The discussion thus far can be summarized as follows: the choice of a
 coordinate system <script type="math/tex">(U,\mathsf\phi)</script> naturally suggests a choice of
@@ -684,27 +776,27 @@ basis <script type="math/tex">(\mathsf{g}_i(\mathsf{y}))</script>, where <script
 question to ask at this juncture is how the coordinate basis vectors
 <script type="math/tex">\mathsf{g}_i(\mathsf{y})</script> as <script type="math/tex">\mathsf{y}</script> varies over <script type="math/tex">V</script>. To
 answer this question, note that <script type="math/tex; mode=display">\begin{split}
-\mathsf{g}_i(\mathsf{y}) = \sum \frac{\partial x_k(\mathsf{y})}{\partial y_i} \mathsf{e}_k \quad\Rightarrow\quad \frac{\partial \mathsf{g}_i(\mathsf{y})}{\partial y_j} &= \frac{\partial}{\partial x_j}\left(\sum \frac{\partial x_k(\mathsf{y})}{\partial y_i} \mathsf{e}_k\right)\\
- &= \sum \frac{\partial^2 x_a(\mathsf{y})}{\partial y_i \partial y_j} \mathsf{e}_a\\
- &= \sum \frac{\partial^2 x_a(\mathsf{y})}{\partial y_i \partial y_j} \frac{\partial y_k(\mathsf{x})}{\partial x_a} \mathsf{g}_k(\mathsf{y}),
+\mathsf{g}_i(\mathsf{y}) = \sum \frac{\partial x^k(\mathsf{y})}{\partial y^i} \mathsf{e}_k \quad\Rightarrow\quad \frac{\partial \mathsf{g}_i(\mathsf{y})}{\partial y^j} &= \frac{\partial}{\partial y^j}\left(\sum \frac{\partial x^k(\mathsf{y})}{\partial y^i} \mathsf{e}_k\right)\\
+ &= \sum \frac{\partial^2 x^l(\mathsf{y})}{\partial y^i \partial y^j} \mathsf{e}_l\\
+ &= \sum \frac{\partial^2 x^l(\mathsf{y})}{\partial y^i \partial y^j} \frac{\partial y^k(\mathsf{x})}{\partial x^l} \mathsf{g}_k(\mathsf{y}),
 \end{split}</script> where <script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script>. Introducing
 the <strong>Christoffel symbols</strong> <script type="math/tex">\Gamma^k_{ij}:V \to \mathbb{R}</script> as
-<script type="math/tex; mode=display">\Gamma^k_{ij}(\mathsf{y}) = \sum \frac{\partial^2 x_a(\mathsf{y})}{\partial y_i \partial y_j} \frac{\partial y_k(\mathsf{x})}{\partial x_a},</script>
+<script type="math/tex; mode=display">\Gamma^k_{ij}(\mathsf{y}) = \sum \frac{\partial^2 x^l(\mathsf{y})}{\partial y^i \partial y^j} \frac{\partial y^k(\mathsf{x})}{\partial x^l},</script>
 where <script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script>. Note that each
 <script type="math/tex">\Gamma^k_{ij}</script> is a scalar field on <script type="math/tex">V</script>, but they do not form the
 components of a third order tensor field. Using the Christoffel symbols,
 the foregoing equation can be written compactly as
-<script type="math/tex; mode=display">\frac{\partial \mathsf{g}_i(\mathsf{y})}{\partial y_j} = \sum \Gamma^k_{ij} \mathsf{g}_k(\mathsf{y}).</script>
+<script type="math/tex; mode=display">\frac{\partial \mathsf{g}_i(\mathsf{y})}{\partial y^j} = \sum \Gamma^k_{ij} \mathsf{g}_k(\mathsf{y}).</script>
 The Christoffel symbols thus provide a means to study how the coordinate
 basis vectors change when moving from one tangent space to a
 <em>neighboring</em> one. It also follows from this result that
-<script type="math/tex; mode=display">\Gamma^k_{ij}(\mathsf{y}) = \mathsf{g}^k(\mathsf{y}) \cdot \frac{\partial \mathsf{g}_i(\mathsf{y})}{\partial y_j}.</script>
+<script type="math/tex; mode=display">\Gamma^k_{ij}(\mathsf{y}) = \mathsf{g}^k(\mathsf{y}) \cdot \frac{\partial \mathsf{g}_i(\mathsf{y})}{\partial y^j}.</script>
 This equation clearly demonstrates that in the special case of the
 Cartesian coordinate system, the Christoffel symbols vanish identically
 since the basis vectors do not change when moving from one tangent space
 to another.</p>
 <p>An entirely analogous set of calculations can be peformed to show that
-<script type="math/tex; mode=display"> \frac{\partial \mathsf{g}^i(\mathsf{y})}{\partial y_j} = -\sum \Gamma^i_{jk} \mathsf{g}^j. </script>
+<script type="math/tex; mode=display"> \frac{\partial \mathsf{g}^i(\mathsf{y})}{\partial y^j} = -\sum \Gamma^i_{kj} \mathsf{g}^k. </script>
 Thus the Christoffel symbols provide all the information necessary to compute how the basis vectors change as we move across tangent spaces. </p>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
@@ -712,13 +804,13 @@ Thus the Christoffel symbols provide all the information necessary to compute ho
 appropriate generalization of the ideas discussed leads to the notion of
 a <em>connection</em> on the manifold.</p>
 </div>
-<p>One important symmetry that the Christoffel symbols possess is that $\Gamma^k_{ij} = \Gamma^k_{ji}$, as can be easily verified from the expression defining the Christoffel symbols (using equality of mixed partial derivatives).</p>
+<p>One important symmetry that the Christoffel symbols possess is that $\Gamma^k_{ij}(\mathsf{y}) = \Gamma^k_{ji}(\mathsf{y})$, as can be easily verified from the expression defining the Christoffel symbols (using equality of mixed partial derivatives).</p>
 <h2 id="metric-tensor">Metric tensor</h2>
 <p>It is convenient at this point to introduce the <strong>metric tensor</strong> <script type="math/tex">g:U \to TU \otimes TU</script>, where $U \subseteq \mathbb{R}^3$ is open, as follows: for any $x \in U$,
-<script type="math/tex; mode=display">\mathsf{g}(\mathsf{x}) = \sum \mathsf{e}_i \otimes \mathsf{e}_i.</script>
+<script type="math/tex; mode=display">\mathsf{g}(\mathsf{x}) = \sum \mathsf{e}^i \otimes \mathsf{e}_i.</script>
 Note that this is just the identity tensor field. In terms of another coordinate system $(U,\phi)$ on $U$ that maps $\mathsf{x}$ to $\mathsf{y}$, it is easily checked that the following identities hold:
 <script type="math/tex; mode=display">\begin{split}
-\mathsf{g}(\mathsf{x}) &= \sum \delta_{ij} \mathsf{e}_i \otimes \mathsf{e}_j\\
+\mathsf{g}(\mathsf{x}) &= \sum \delta^i_j \mathsf{e}_i \otimes \mathsf{e}^j\\
  &= \sum g_{ij}(\mathsf{y}) \, \mathsf{g}^i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y})\\
  &= \sum g^{ij}(\mathsf{y}) \, \mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}_j(\mathsf{y})\\
  &= \sum \mathsf{g}_i \otimes \mathsf{g}^i\\
@@ -731,15 +823,17 @@ Note that this is just the identity tensor field. In terms of another coordinate
 <p>The idea behind the metric is to provide a smooth extension of the inner
 product over every tangent space. Indeed, for any <script type="math/tex">\mathsf{x} \in U</script>,
 given any <script type="math/tex">\mathsf{u},\mathsf{w} \in T_{\mathsf{x}}U</script>, it follows that
-<script type="math/tex; mode=display">\sum u_i w_i = \mathsf{u} \cdot \mathsf{w} = \mathsf{g}(\mathsf{x})(\mathsf{u},\mathsf{w}) = \sum g_{ij}(\mathsf{y}) \hat{u}_i \hat{w}_j.</script>
+<script type="math/tex; mode=display">\begin{split}\sum u^i w_i = \mathsf{u} \cdot \mathsf{w} = \mathsf{g}(\mathsf{x})(\mathsf{u},\mathsf{w}) &= \sum \hat{u}^i\hat{w}_i\\
+ &= \sum g_{ij}(\mathsf{y}) \hat{u}^i \hat{w}^j\\
+ &= \sum g^{ij}(\mathsf{y}) \hat{u}_i \hat{w}_j.\end{split}</script>
 </p>
 <p>Introducing the
 notation
-<script type="math/tex; mode=display">J_{ij}(\mathsf{y}) = \frac{\partial x_i(\mathsf{y})}{\partial y_j},</script>
+<script type="math/tex; mode=display">J_{ij}(\mathsf{y}) = \frac{\partial x_i(\mathsf{y})}{\partial y^j},</script>
 for the elements of the Jacobian matrix for the change of coordinate
 system from <script type="math/tex">(U,\mathsf\phi)</script> to the Cartesian coordinate system, it
 follows from a simple calculation that
-<script type="math/tex; mode=display">g_{ij}(\mathsf{y}) = \sum \frac{\partial x_k(\mathsf{y})}{\partial y_i}\frac{\partial x_k(\mathsf{y})}{\partial y_j} = \sum J_{ki}(\mathsf{y})J_{kj}(\mathsf{y}).</script>
+<script type="math/tex; mode=display">g_{ij}(\mathsf{y}) = \sum \frac{\partial x_k(\mathsf{y})}{\partial y^i}\frac{\partial x_k(\mathsf{y})}{\partial y^j} = \sum J_{ki}(\mathsf{y})J_{kj}(\mathsf{y}).</script>
 Denoting by <script type="math/tex">J(\mathsf{y})</script> the determinant of the matrix whose
 <script type="math/tex">(i,j)^{\text{th}}</script> entry is <script type="math/tex">J_{ij}(\mathsf{y})</script>, and by
 <script type="math/tex">g(\mathsf{y})</script> the determinant of the matrix
@@ -748,6 +842,7 @@ from the previous equation that
 <script type="math/tex; mode=display">g(\mathsf{y}) = J(\mathsf{y})^2 \quad\Rightarrow\quad J(\mathsf{y}) = \sqrt{g(\mathsf{y})}.</script>
 Note that in the equation above,
 <script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script>. Similar expressions can be computed for the inverse transformation from the curvilinear coordinates $\mathsf{y}$ to the Cartesian coordinates $\mathsf{x}$.</p>
+<h3 id="jacobis-formula">Jacobi's formula</h3>
 <p>An important result that is quite useful in applications concerns the derivative of the determinant of $g(\mathsf{y})$ with respect to its entries $g_{ij}(\mathsf{y})$. Towards this end, consider an invertible matrix $\mathsf{A}$ whose (real-valued) entries are $a_{ij}$. We will denote the entries of its inverse $\mathsf{A}^{-1}$ as $a^{ij}$. Let $a$ be the determinant of $\mathsf{A}$. From elementary matrix algebra, we know that the inverse of the matrix is computed as
 <script type="math/tex; mode=display"> a^{ij} = \frac{1}{a}(\text{cof }\mathsf{A})_{ji}. </script>
 Here, $\text{cof }\mathsf{A}$ denotes the <strong>cofactor</strong> of $\mathsf{A}$, and its transpose is called the <strong>adjoint</strong> of $\mathsf{A}$. We wish to compute the derivative of $a$ with respect to $a_{ij}$. Let us consier the Laplace expansion of the determinant:
@@ -755,6 +850,9 @@ Here, $\text{cof }\mathsf{A}$ denotes the <strong>cofactor</strong> of $\mathsf{
 Differentiating this with respect to $a_{ij}$ and noting that <script type="math/tex">(\text{cof }\mathsf{A})_{ij}</script> does not involve $a_{ij}$, a simple calculation shows that
 <script type="math/tex; mode=display"> \frac{\partial a}{\partial a_{ij}} = (\text{cof }\mathsf{A})_{ij} = a a^{ji}. </script>
 This result is called <strong>Jacobi's formula</strong>.</p>
+<p>Applying this to the matrix whose entries are <script type="math/tex">g_{ij}(\mathsf{y})</script> we see at once that
+<script type="math/tex; mode=display">\frac{\partial g(\mathsf{y})}{\partial g_{ij}} = g(\mathsf{y})g^{ij}(\mathsf{y}).</script>
+This result is quite useful in applications.</p>
 <h2 id="gradient">Gradient</h2>
 <p>Let <script type="math/tex">\mathsf{v}:U \to TU</script> be a smooth vector field over an open subset
 <script type="math/tex">U \subseteq \mathbb{R}^3</script>. Recall from the earlier discussion that
@@ -766,53 +864,67 @@ as follows: for any <script type="math/tex">\mathsf{x} \in U</script> and
 <script type="math/tex">\mathsf{w} \in T_{\mathsf{x}}U</script>, with
 <script type="math/tex">\mathsf{y} = \mathsf{y}(\mathsf{x})</script>, <script type="math/tex; mode=display">\begin{split}
 \nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x}) &= \frac{d}{dt}\bigg\vert_{t=0} \mathsf{v}(\mathsf{x} + t\mathsf{w})\\
- &= \frac{d}{dt}\bigg\vert_{t=0} \sum \hat{v}_i(\mathsf{y} + t\hat{\mathsf{w}}) \mathsf{g}_i(\mathsf{y} + t\hat{\mathsf{w}})\\
- &= \sum \left(\partial_j \hat{v}_i(\mathsf{y}) \hat{w}_j \mathsf{g}_i(\mathsf{y}) + \hat{v}_i(\mathsf{y}) \partial_j \mathsf{g}_i(\mathsf{y})\hat{w}_j\right)\\
- &= \sum \left(\partial_j \hat{v}_i(\mathsf{y}) + \Gamma^i_{kj}(\mathsf{y})\hat{v}_k(\mathsf{y})\right)\hat{w}_j \mathsf{g}_i(\mathsf{y}).
-\end{split}</script> In the derivation above,
-<script type="math/tex">\hat{\mathsf{w}} = (\hat{w}_1, \hat{w}_2, \hat{w}_3)</script> where
-<script type="math/tex">\{\hat{w}_i\}</script> are constants such that
-<script type="math/tex">\mathsf{w} = \sum \hat{w}_i \mathsf{g}_i(\mathsf{y})</script>. We will use the following special notation to denote the components of the covariant derivative of $\mathsf{v}$:
-<script type="math/tex; mode=display">\hat{v}_{i|j}(\mathsf{y}) = \partial_j \hat{v}_i(\mathsf{y}) + \sum \Gamma^i_{kj}(\mathsf{y})\hat{v}_k(\mathsf{y}).</script>
+ &= \frac{d}{dt}\bigg\vert_{t=0} \sum \hat{v}^i(\mathsf{y} + t\hat{\mathsf{w}}) \mathsf{g}_i(\mathsf{y} + t\hat{\mathsf{w}})\\
+ &= \sum \left(\partial_j \hat{v}^i(\mathsf{y}) \hat{w}^j \mathsf{g}_i(\mathsf{y}) + \hat{v}^i(\mathsf{y}) \partial_j \mathsf{g}_i(\mathsf{y})\hat{w}^j\right)\\
+ &= \sum \left(\partial_j \hat{v}^i(\mathsf{y}) + \Gamma^i_{kj}(\mathsf{y})\hat{v}^k(\mathsf{y})\right)\hat{w}^j \mathsf{g}_i(\mathsf{y}).
+\end{split}</script>
+In the derivation above,
+<script type="math/tex">\hat{\mathsf{w}} = (\hat{w}^1, \hat{w}^2, \hat{w}^3)</script>, where
+<script type="math/tex">\{\hat{w}^i\}</script> are constants such that
+<script type="math/tex">\mathsf{w} = \sum \hat{w}^i \mathsf{g}_i(\mathsf{y})</script>. We will use the following special notation to denote the components of the covariant derivative of $\mathsf{v}$:
+<script type="math/tex; mode=display">\hat{v}^i_{|j}(\mathsf{y}) = \partial_j \hat{v}^i(\mathsf{y}) + \sum \Gamma^i_{kj}(\mathsf{y})\hat{v}^k(\mathsf{y}).</script>
 Using this, the final expression for the covariant derivative
 <script type="math/tex">\nabla_{\mathsf{w}}\mathsf{v}(\mathsf{x})</script> just derived can rewritten
 as follows:
 <script type="math/tex; mode=display">
-\sum \hat{v}_{i|j}(\mathsf{y})\hat{w}_j \mathsf{g}_i(\mathsf{y}) = 
-\left(\sum \hat{v}_{i|j}(\mathsf{y})\mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y})\right) \cdot \left(\sum \hat{w}_l \mathsf{g}_l(\mathsf{y})\right).</script>
+\sum \hat{v}^i_{|j}(\mathsf{y})\hat{w}^j \mathsf{g}_i(\mathsf{y}) = 
+\left(\sum \hat{v}^i_{|j}(\mathsf{y})\mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y})\right) \cdot \left(\sum \hat{w}^l \mathsf{g}_l(\mathsf{y})\right).</script>
 It immediately follows from this equation that the gradient of the
 vector field <script type="math/tex">\mathsf{v}</script> can be written in curvilinear coordinates as
-<script type="math/tex; mode=display">\nabla \mathsf{v}(\mathsf{x}) = \sum \hat{v}_{i|j}(\mathsf{y})\mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y}).</script>
+<script type="math/tex; mode=display">\nabla \mathsf{v}(\mathsf{x}) = \sum \hat{v}^i_{|j}(\mathsf{y})\mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y}).</script>
 In the expression above, <script type="math/tex">\mathsf{x} = \mathsf{x}(\mathsf{y})</script>.</p>
+<p>Alternatively, starting with the representation <script type="math/tex">\mathsf{v}(\mathsf{y}) = \sum \hat{v}_i(\mathsf{y})</script>, an analogous calculation yields
+<script type="math/tex; mode=display">\begin{split}
+\nabla \mathsf{v}(\mathsf{x}) &= \sum \hat{v}_{i|j}(\mathsf{y})\mathsf{g}^i(\mathsf{y})\otimes\mathsf{g}^j(\mathsf{y}),\\
+\hat{v}_{i|j}(\mathsf{y}) &= \partial_j \hat{v}_i(\mathsf{y}) - \sum \Gamma^k_{ij}(\mathsf{y})\hat{v}_k(\mathsf{y}).
+\end{split}</script>
+Note the negative sign in the second term.</p>
 <p>The foregoing calculations can be extended to tensor fields too. Rather than providing the corresponding expressions for a general
 tensor field, the special case of a second order tensor field
 <script type="math/tex">\mathsf{A}:U \to \otimes^2 TU</script> is considered here. The starting point
 is, as before, the covariant derivative of <script type="math/tex">\mathsf{A}</script> at
 <script type="math/tex">\mathsf{x} \in U</script> along <script type="math/tex">\mathsf{w} \in T_{\mathsf{x}}U</script>. This is
 computed as follows: <script type="math/tex; mode=display">\begin{split}
-\nabla_{\mathsf{w}}\mathsf{A}(\mathsf{x}) &= \frac{d}{dt}\bigg\vert_{t=0} \hat{A}_{ij}(\mathsf{y} + t\hat{\mathsf{w}}) \, \mathsf{g}_i(\mathsf{y} + t\hat{\mathsf{w}}) \otimes \mathsf{g}_j(\mathsf{y} + t\hat{\mathsf{w}})\\
- &= \sum \left(\partial_k \hat{A}_{ij}(\mathsf{y}) + \Gamma^i_{ak}(\mathsf{y})\hat{A}_{aj}(\mathsf{y}) + \Gamma^j_{bk}(\mathsf{y})\hat{A}_{ib}(\mathsf{y})\right) \hat{w}_k \, \mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}_j(\mathsf{y}).
+\nabla_{\mathsf{w}}\mathsf{A}(\mathsf{x}) &= \frac{d}{dt}\bigg\vert_{t=0} \hat{A}^{ij}(\mathsf{y} + t\hat{\mathsf{w}}) \, \mathsf{g}_i(\mathsf{y} + t\hat{\mathsf{w}}) \otimes \mathsf{g}_j(\mathsf{y} + t\hat{\mathsf{w}})\\
+ &= \sum \left(\partial_k \hat{A}^{ij}(\mathsf{y}) + \Gamma^i_{ak}(\mathsf{y})\hat{A}^{aj}(\mathsf{y}) + \Gamma^j_{bk}(\mathsf{y})\hat{A}^{ib}(\mathsf{y})\right) \hat{w}^k \, \mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}_j(\mathsf{y}).
 \end{split}</script> 
 As before, we introduce the following special notation for the components of the covariant derivative of $\mathsf{A}$:
-<script type="math/tex; mode=display">\hat{A}_{ij|k}(\mathsf{y}) = \sum \left(\partial_k \hat{A}_{ij}(\mathsf{y}) + \Gamma^i_{ak}(\mathsf{y})\hat{A}_{aj}(\mathsf{y}) + \Gamma^j_{bk}(\mathsf{y})\hat{A}_{ib}(\mathsf{y})\right).</script>
+<script type="math/tex; mode=display">\hat{A}^{ij}_{|k}(\mathsf{y}) = \sum \left(\partial_k \hat{A}^{ij}(\mathsf{y}) + \Gamma^i_{ak}(\mathsf{y})\hat{A}^{aj}(\mathsf{y}) + \Gamma^j_{bk}(\mathsf{y})\hat{A}^{ib}(\mathsf{y})\right).</script>
 The gradient of <script type="math/tex">\mathsf{A}</script> can be easily seen from the
 above calculation as
-<script type="math/tex; mode=display">\nabla \mathsf{A}(\mathsf{x}) = \sum \hat{A}_{ij|k}(\mathsf{y}) \mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}_j(\mathsf{y}) \otimes \mathsf{g}^k(\mathsf{y}).</script>
-Notice that the final term in the basis vector is a reciprocal vector.</p>
+<script type="math/tex; mode=display">\nabla \mathsf{A}(\mathsf{x}) = \sum \hat{A}^{ij}_{|k}(\mathsf{y}) \mathsf{g}_i(\mathsf{y}) \otimes \mathsf{g}_j(\mathsf{y}) \otimes \mathsf{g}^k(\mathsf{y}).</script>
+Alternatively, starting with the representation 
+<script type="math/tex; mode=display">\mathsf{A}(\mathsf{y}) = \sum \hat{A}_{ij}(\mathsf{y})\mathsf{g}^i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y}),</script>
+a similar computation yields
+<script type="math/tex; mode=display">\begin{split}
+\nabla \mathsf{A}(\mathsf{x}) &= \sum \hat{A}_{ij|k}(\mathsf{y}) \mathsf{g}^i(\mathsf{y})\otimes\mathsf{g}^j(\mathsf{y})\otimes\mathsf{g}^k(\mathsf{y}),\\
+\hat{A}_{ij|k}(\mathsf{y}) &= \sum \left(\partial_k \hat{A}_{ij}(\mathsf{y}) - \Gamma^a_{ik}(\mathsf{y})\hat{A}_{aj}(\mathsf{y}) - \Gamma^b_{jk}(\mathsf{y})A_{ib}(\mathsf{y}) \right).
+\end{split}</script>
+Similar representations can be obtained when representing $\mathsf{A}(\mathsf{x})$ using mixed components.</p>
 <h3 id="gradient-of-the-metric-tensor">Gradient of the metric tensor</h3>
-<p>As an immediate application, let us compute the covariant derivative of the metric tensor $\mathsf{g}:U \to \otimes^2 TU$. It follows from the definition of the covariant derivative that since <script type="math/tex">\mathsf{g}(\mathsf{x}) = \sum \mathsf{e}_i \otimes \mathsf{e}_i</script> does not vary as $\mathsf{x}$ varies over $U$, that
+<p>As an immediate application, let us compute the covariant derivative of the metric tensor $\mathsf{g}:U \to \otimes^2 TU$. It follows from the definition of the covariant derivative that since <script type="math/tex">\mathsf{g}(\mathsf{x}) = \sum \mathsf{e}^i \otimes \mathsf{e}_i</script> does not vary as $\mathsf{x}$ varies over $U$, that
 <script type="math/tex; mode=display">\nabla \mathsf{g}(\mathsf{x}) = \mathsf{0}. </script>
 This is equivalent to stating that $g_{ij|k}(\mathsf{y}) = 0$, for any choice of coordinate system. Working out the details, we get
-<script type="math/tex; mode=display">g_{ij,k}(\mathsf{y}) = \sum g_{lj}(\mathsf{y})\Gamma^l_{ik}(\mathsf{y}) + \sum  g_{il}(\mathsf{y})\Gamma^l_{jk}(\mathsf{y}). </script>
+<script type="math/tex; mode=display">\partial_k g_{ij}(\mathsf{y}) = \sum g_{lj}(\mathsf{y})\Gamma^l_{ik}(\mathsf{y}) + \sum  g_{il}(\mathsf{y})\Gamma^l_{jk}(\mathsf{y}). </script>
 The foregoing equation can alternatively be obtained by directly differentiating <script type="math/tex">\sum g_{ij}(\mathsf{y}) \mathsf{g}^i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y})</script> with respect to $\mathsf{y}$ and setting it to zero. A straightforward algebraic manipulation of this result yields the following useful relation:
-<script type="math/tex; mode=display">\Gamma^l_{ij}(\mathsf{y}) = \sum \frac{1}{2}g^{kl}(\mathsf{y})\left(g_{ik,j}(\mathsf{y}) + g_{kj,i}(\mathsf{y}) - g_{ij,k}(\mathsf{y})\right).</script>
+<script type="math/tex; mode=display">\Gamma^l_{ij}(\mathsf{y}) = \sum \frac{1}{2}g^{kl}(\mathsf{y})\left(\partial_j g_{ik}(\mathsf{y}) + \partial_i g_{kj}(\mathsf{y}) - \partial_k g_{ij}(\mathsf{y})\right).</script>
 Alternatively, the validity of this expression can be checked by substituting the expression for the partial derivatives of $g_{ij}(\mathsf{y})$ with respect to $\mathsf{y}$ computed earlier. </p>
 <h2 id="divergence">Divergence</h2>
 <p>The divergence of the smooth vector field <script type="math/tex">\mathsf{v}:U \to TU</script> is obtained by contracting the gradient:
-<script type="math/tex; mode=display">\nabla \cdot \mathsf{v}(\mathsf{x}) = \sum \hat{v}_{i|i}(\mathsf{y}).</script>
-Notice how the expression for divergence derived here reduce to their Cartesian forms when the Christoffel symbols are set to zero.</p>
+<script type="math/tex; mode=display">\nabla \cdot \mathsf{v}(\mathsf{x}) = \sum \hat{v}^i_{|i}(\mathsf{y}).</script>
+Notice how the expression for divergence derived here reduces to the standard Cartesian representation when the Christoffel symbols are set to zero.</p>
 <p>Similar calculations can be carried out for tensor fields. The divergence of the second order tensor field <script type="math/tex">\mathsf{A}:U \to \otimes^2 TU</script> considered in the previous is computed easily from this expression
-<script type="math/tex; mode=display">\nabla \cdot \mathsf{A}(\mathsf{x}) = \sum \hat{A}_{ij|j}(\mathsf{y}) \mathsf{g}_i(\mathsf{y})</script>
+<script type="math/tex; mode=display">\nabla \cdot \mathsf{A}(\mathsf{x}) = \sum \hat{A}^{ij}_{|j}(\mathsf{y}) \mathsf{g}_i(\mathsf{y})</script>
 The curvilinear coordinate representation of the divergence
 of a tensor field of arbitrary order over <script type="math/tex">U</script> can be computed using a
 straightforward extension of the ideas presented above.</p>
@@ -820,13 +932,13 @@ straightforward extension of the ideas presented above.</p>
 <script type="math/tex; mode=display">\sum \Gamma^j_{ij}(\mathsf{y}) = \sum \frac{1}{2}g^{kl}(\mathsf{y})\partial_i g_{kl}(\mathsf{y}).</script>
 Using Jacobi's formula for the derivatives of the determinant, we see that
 <script type="math/tex; mode=display">\begin{split}
-\partial_i g(\mathsf{y}) &= \sum \frac{\partial g(\mathsf{y})}{\partial g_{jk}}\frac{\partial g_{jk}(\mathsf{y})}{\partial y_i}\\
+\partial_i g(\mathsf{y}) &= \sum \frac{\partial g(\mathsf{y})}{\partial g_{jk}}\frac{\partial g_{jk}(\mathsf{y})}{\partial y^i}\\
  &= \sum g(\mathsf{y})g^{jk}(\mathsf{y})\partial_i g_{jk}(\mathsf{y})\\
- &= \sum 2g(\mathsf{y})\Gamma^j_{ij}(\mathsf{y}).\end{split}</script>
+ &= 2g(\mathsf{y})\sum \Gamma^j_{ij}(\mathsf{y}).\end{split}</script>
 We therefore see that
-<script type="math/tex; mode=display">\Gamma^j_{ij}(\mathsf{y}) = \frac{1}{2g(\mathsf{y})}\partial_i g(\mathsf{y}) = \frac{1}{\sqrt{g(\mathsf{y})}}\partial_i \left(\sqrt{g(\mathsf{y})}\right).</script>
+<script type="math/tex; mode=display">\sum \Gamma^j_{ij}(\mathsf{y}) = \frac{1}{2g(\mathsf{y})}\partial_i g(\mathsf{y}) = \frac{1}{\sqrt{g(\mathsf{y})}}\partial_i \left(\sqrt{g(\mathsf{y})}\right).</script>
 Using this relation, we can express the divergence of a vector field compactly as follows:
-<script type="math/tex; mode=display">\nabla\cdot\mathsf{v}(\mathsf{x}) = \sum \frac{1}{\sqrt{g(\mathsf{y})}}\partial_i \left(\sqrt{g(\mathsf{y})}\hat{v}_i(\mathsf{y})\right),</script>
+<script type="math/tex; mode=display">\nabla\cdot\mathsf{v}(\mathsf{x}) = \sum \frac{1}{\sqrt{g(\mathsf{y})}}\partial_i \left(\sqrt{g(\mathsf{y})}\hat{v}^i(\mathsf{y})\right),</script>
 as can be verified by a trite calculation.</p>
 <h2 id="curl">Curl</h2>
 <p>The curl of the vector field <script type="math/tex">\mathsf{v}:U \to TU</script> can be computed
@@ -837,7 +949,7 @@ vector field. Employing a curvilinear coordinate system
 <script type="math/tex">(U,\mathsf\phi)</script>, the vector
 <script type="math/tex">\mathsf{v}(\mathsf{x}) \times \mathsf{w} \in T_{\mathsf{x}}U</script> can be
 written as
-<script type="math/tex; mode=display">\mathsf{v}(\mathsf{x}) \times \mathsf{w} = \left(\sum \hat{v}_i(\mathsf{y}) \mathsf{g}_i(\mathsf{y})\right) \times \left(\sum \hat{w}_j \mathsf{g}_j(\mathsf{y})\right) = \sum \hat{v}_i(\mathsf{y})\hat{w}_j \mathsf{g}_i(\mathsf{y}) \times \mathsf{g}_j(\mathsf{y}),</script>
+<script type="math/tex; mode=display">\mathsf{v}(\mathsf{x}) \times \mathsf{w} = \left(\sum \hat{v}^i(\mathsf{y}) \mathsf{g}_i(\mathsf{y})\right) \times \left(\sum \hat{w}^j \mathsf{g}_j(\mathsf{y})\right) = \sum \hat{v}^i(\mathsf{y})\hat{w}^j \mathsf{g}_i(\mathsf{y}) \times \mathsf{g}_j(\mathsf{y}),</script>
 where <script type="math/tex">\mathsf{y} = \mathsf{y}(\mathsf{x})</script>. To evaluate
 <script type="math/tex">\mathsf{g}_i(\mathsf{y}) \times \mathsf{g}_j(\mathsf{y})</script>, we use the definition of the Levi-Civita tensor on <script type="math/tex">\mathbb{R}^3</script>, and the definition of the determinant, to first establish the following result:
 <script type="math/tex; mode=display">\mathsf{g}_i(\mathsf{y}) \cdot \mathsf{g}_j(\mathsf{y}) \times \mathsf{g}_k(\mathsf{y}) = \sum \epsilon_{abc} \frac{\partial x_a(\mathsf{y})}{\partial y_i}\frac{\partial x_b(\mathsf{y})}{\partial y_j}\frac{\partial x_c(\mathsf{y})}{\partial y_k} = \sqrt{g(\mathsf{y})} \, \epsilon_{ijk}.</script>
@@ -846,20 +958,20 @@ This shows at once that
 Returning to the computation of the vector
 <script type="math/tex">\mathsf{v}(\mathsf{x}) \times \mathsf{w}</script> in curvilinear coordinates, we note that
 <script type="math/tex; mode=display">\begin{split}
-\mathsf{v}(\mathsf{x}) \times \mathsf{w} &= \sum \sqrt{g(\mathsf{y})} \, \epsilon_{ijk} \hat{v}_i(\mathsf{y})\hat{w}_j(\mathsf{y}) \, \mathsf{g}^k(\mathsf{y})\\
- &= \sum \sqrt{g(\mathsf{y})} \, \epsilon_{ijk} \, g^{ka}(\mathsf{y}) \, \hat{v}_i(\mathsf{y})\hat{w}_j(\mathsf{y}) \, \mathsf{g}_a(\mathsf{y}).
+\mathsf{v}(\mathsf{x}) \times \mathsf{w} &= \sum \sqrt{g(\mathsf{y})} \, \epsilon_{ijk} \hat{v}^i(\mathsf{y})\hat{w}^j(\mathsf{y}) \, \mathsf{g}^k(\mathsf{y})\\
+ &= \sum \sqrt{g(\mathsf{y})} \, \epsilon_{ijk} \, g^{kl}(\mathsf{y}) \, \hat{v}^i(\mathsf{y})\hat{w}^j(\mathsf{y}) \, \mathsf{g}_l(\mathsf{y}).
 \end{split}</script> 
 The divergence of <script type="math/tex">\mathsf{v}(\mathsf{x}) \times \mathsf{w}</script> can now be computed in curvilinear coordinates, using the expression derived in the previous section, as 
 <script type="math/tex; mode=display">\begin{split}
-\nabla \cdot (\mathsf{v} \times \mathsf{w})(\mathsf{x}) &= \sum \frac{\epsilon_{ijk}}{\sqrt{g(\mathsf{y})}}\partial_l \left(g(\mathsf{y})g^{kl}(\mathsf{y})\hat{v}_i(\mathsf{y})w_j\right)\\
- &= \left(\sum \hat{w}_m\mathsf{g}_m(\mathsf{y})\right) \cdot \left(\sum \frac{\epsilon_{ijk}}{\sqrt{g(\mathsf{y})}}\partial_l \left(g(\mathsf{y})g^{kl}(\mathsf{y})\hat{v}_i(\mathsf{y})\right) \mathsf{g}^j(\mathsf{y})\right).
+\nabla \cdot (\mathsf{v} \times \mathsf{w})(\mathsf{x}) &= \sum \frac{\epsilon_{ijk}}{\sqrt{g(\mathsf{y})}}\partial_l \left(g(\mathsf{y})g^{kl}(\mathsf{y})\hat{v}^i(\mathsf{y})w^j\right)\\
+ &= \left(\sum \hat{w}^m\mathsf{g}_m(\mathsf{y})\right) \cdot \left(\sum \frac{\epsilon_{ijk}}{\sqrt{g(\mathsf{y})}}\partial_l \left(g(\mathsf{y})g^{kl}(\mathsf{y})\hat{v}^i(\mathsf{y})\right) \mathsf{g}^j(\mathsf{y})\right).
 \end{split}</script> 
 The curvilinear coordinate expression for the curl of the
 vector field <script type="math/tex">\mathsf{v}</script> follows at once from this calculation that
-<script type="math/tex; mode=display">\nabla \times \mathsf{v}(\mathsf{x}) = \sum \frac{\epsilon_{ijk}}{\sqrt{g(\mathsf{y})}}\partial_l \left(g(\mathsf{y})g^{kl}(\mathsf{y})\hat{v}_i(\mathsf{y})\right) \mathsf{g}^j(\mathsf{y}).</script>
+<script type="math/tex; mode=display">\nabla \times \mathsf{v}(\mathsf{x}) = \sum \frac{\epsilon_{ijk}}{\sqrt{g(\mathsf{y})}}\partial_l \left(g(\mathsf{y})g^{kl}(\mathsf{y})\hat{v}^i(\mathsf{y})\right) \mathsf{g}^j(\mathsf{y}).</script>
 Alternatively, a simpler expression is obtained by directly using the definition of divergence in terms of the covariant derivative. Skipping the lengthy algebraic details, the final expression for the curl of a vector field take the following compact form:
-<script type="math/tex; mode=display">\begin{split}\nabla \times \mathsf{v}(\mathsf{y}) &= \sum \frac{\epsilon_{lmn}}{\sqrt{g(\mathsf{y})}}g_{im}(\mathsf{y})\hat{v}_{i|l}(\mathsf{y})\mathsf{g}_n\\
- &= \sum \hat{v}_{i|j}(\mathsf{y}) \mathsf{g}^j(\mathsf{y}) \times \mathsf{g}_i(\mathsf{y}).\end{split}</script>
+<script type="math/tex; mode=display">\begin{split}\nabla \times \mathsf{v}(\mathsf{y}) &= \sum \frac{\epsilon^{lmn}}{\sqrt{g(\mathsf{y})}}g_{im}(\mathsf{y})\hat{v}^i_{|l}(\mathsf{y})\mathsf{g}_n\\
+ &= \sum \hat{v}^i_{|j}(\mathsf{y}) \mathsf{g}^j(\mathsf{y}) \times \mathsf{g}_i(\mathsf{y}).\end{split}</script>
 The curl of tensor fields of higher order is computed along the same
 lines. The final expressions are not provided here since they have
 cumbersome algebraic forms in curvilinear coordinates.</p>
@@ -868,13 +980,13 @@ cumbersome algebraic forms in curvilinear coordinates.</p>
 <script type="math/tex">U \subseteq \mathbb{R}^3</script>. Given a coordinate system
 <script type="math/tex">(U,\mathsf\phi)</script> on <script type="math/tex">\mathbb{R}^3</script>, the integral of <script type="math/tex">f</script> over
 <script type="math/tex">U</script> is defined as follows: <script type="math/tex; mode=display">\begin{split}
-\int_U f(\mathsf{x})\,dv &= \int_U f(x_1, x_2, x_3)\,dx_1 dx_2 dx_3\\
- &= \int_{\mathsf\phi(U)} (f \circ \mathsf\phi^{-1})(y_1, y_2, y_3) \, \text{det}\left(\frac{\partial \mathsf{x}}{\partial \mathsf{y}}\right) dy_1 dy_2 dy_3\\
- &= \int_{\mathsf\phi(U)} (f \circ \mathsf\phi^{-1})(y_1, y_2, y_3) \sqrt{g(\mathsf{y})} \, dy_1 dy_2 dy_3.
-\end{split}</script> In the equation above
+\int_U f(\mathsf{x})\,dv &= \int_U f(x^1, x^2, x^3)\,dx^1 dx^2 dx^3\\
+ &= \int_{\mathsf\phi(U)} (f \circ \mathsf\phi^{-1})(y^1, y^2, y^3) \, \text{det}\left(\frac{\partial \mathsf{x}}{\partial \mathsf{y}}\right) dy^1 dy^2 dy^3\\
+ &= \int_{\mathsf\phi(U)} (f \circ \mathsf\phi^{-1})(y^1, y^2, y^3) \sqrt{g(\mathsf{y})} \, dy^1 dy^2 dy^3.
+\end{split}</script> In the equation displayed above
 <script type="math/tex">\partial \mathsf{x}/\partial \mathsf{y}</script> denotes the matrix whose
 <script type="math/tex">(i,j)^{\text{th}}</script> component is
-<script type="math/tex">\partial x_i(\mathsf{y})/\partial y_j</script>. This result follows from the
+<script type="math/tex">\partial x^i(\mathsf{y})/\partial y^j</script>. This result follows from the
 change of variables formula for multiple integrals.</p>
 <h2 id="special-coordinate-systems">Special coordinate systems</h2>
 <p>...</p>

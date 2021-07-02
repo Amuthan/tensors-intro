@@ -511,19 +511,18 @@
                 
                 <p>The key ideas of tensor calculus on <script type="math/tex">\mathbb{R}^3</script> are now outlined.
 For the sake of conceptual clarity, the presentation is first carried
-out in the Cartesian coordinate setting. Finally, orthogonal curvilinear
-coordinate systems are briefly discussed.</p>
+out in the Cartesian coordinate setting. The generalization to general coordinate systems is considered in the next chapter.</p>
 <h2 id="coordinate-systems">Coordinate systems</h2>
 <p>A <strong>coordinate system</strong> on <script type="math/tex">\mathbb{R}^3</script> is an open subset
 <script type="math/tex">U \subseteq \mathbb{R}^3</script>, together with a smooth injective map
 <script type="math/tex">\mathsf\phi:\mathbb{R}^3 \to \mathbb{R}^3</script> such that
-<script type="math/tex">\mathsf\phi^{-1}:\mathsf\phi(U) \to U</script> is also smooth; such a map is called a <strong>diffeomorphism</strong>.. The map
+<script type="math/tex">\mathsf\phi^{-1}:\mathsf\phi(U) \to U</script> is also smooth; such a map is called a <strong>diffeomorphism</strong>. The map
 <script type="math/tex">\mathsf\phi</script> is called a <strong>coordinate chart</strong> and the open set <script type="math/tex">U</script>
 is called a <strong>coordinate patch</strong> on <script type="math/tex">\mathbb{R}^3</script>. Given any
 <script type="math/tex">\mathsf{x} \in U</script>, the triple of real numbers
 <script type="math/tex">\mathsf\phi(\mathsf{x}) \in \mathbb{R}^3</script> are called the
 <strong>curvilinear coordinates</strong> of <script type="math/tex">\mathsf{x}</script>. What is special
-about <script type="math/tex">\mathbb{R}^3</script> (, and this is true for <script type="math/tex">\mathbb{R}^n</script> too,) is that it admits a <em>global</em> coordinate system
+about <script type="math/tex">\mathbb{R}^3</script> (this is true for <script type="math/tex">\mathbb{R}^n</script> too) is that it admits a <em>global</em> coordinate system
 <script type="math/tex">(\mathbb{R}^3, \mathsf\iota)</script>, also called the <strong>Cartesian coordinate
 system</strong>, where <script type="math/tex">\mathsf\iota:\mathbb{R}^3 \to \mathbb{R}^3</script> is the
 identity map defined as follows: for any
@@ -566,7 +565,7 @@ of calculus to these sets.</p>
 <script type="math/tex">\mathbb{R}^3</script> that is compatible with the Cartesian coordinate system
 on <script type="math/tex">\mathbb{R}^3</script>. The curvilinear coordinates of <script type="math/tex">\mathsf{x} \in U</script>
 with respect to the coordinate system <script type="math/tex">(U,\mathsf\phi)</script> is given by
-the triple of real numbers <script type="math/tex">\mathsf{y} \in \mathbb{R}^3</script>, where
+the triple of real numbers <script type="math/tex">\mathsf{y} = (y^1, y^2, y^3) \in \mathbb{R}^3</script>, where
 <script type="math/tex; mode=display">\mathsf{y} = \mathsf\phi(\mathsf{x}).</script> The inverse map
 <script type="math/tex">\mathsf\phi^{-1}:\mathsf\phi(U) \to U</script> permits the computation of
 <script type="math/tex">\mathsf{x}</script> given <script type="math/tex">\mathsf{y}</script>:
@@ -587,10 +586,9 @@ note that the map <script type="math/tex">\mathsf\phi:U \to \mathbb{R}^3</script
 hence, its Fréchet derivative exists at each <script type="math/tex">\mathsf{x} \in U</script>. This
 implies, in particular that the determinant of the Jacobian matrix is
 non-zero:
-<script type="math/tex; mode=display">\text{det} \begin{bmatrix} \partial_1 y_1(\mathsf{x}) & \partial_2 y_1(\mathsf{x}) & \partial_3 y_1(\mathsf{x})\\ \partial_1 y_2(\mathsf{x}) & \partial_2 y_2(\mathsf{x}) & \partial_3 y_2(\mathsf{x})\\ \partial_1 y_3(\mathsf{x}) & \partial_2 y_3(\mathsf{x}) & \partial_3 y_3(\mathsf{x})\end{bmatrix} \neq 0.</script>
+<script type="math/tex; mode=display">\text{det} \begin{bmatrix} \partial_1 y^1(\mathsf{x}) & \partial_2 y^1(\mathsf{x}) & \partial_3 y^1(\mathsf{x})\\ \partial_1 y^2(\mathsf{x}) & \partial_2 y^2(\mathsf{x}) & \partial_3 y^2(\mathsf{x})\\ \partial_1 y^3(\mathsf{x}) & \partial_2 y^3(\mathsf{x}) & \partial_3 y^3(\mathsf{x})\end{bmatrix} \neq 0.</script>
 Here,
-<script type="math/tex">\mathsf{y}(\mathsf{x}) = (y_1(\mathsf{x}), y_2(\mathsf{x}), y_3(\mathsf{x}))</script>.
-A similar condition holds for the inverse map
+<script type="math/tex">\mathsf{y}(\mathsf{x}) = (y^1(\mathsf{x}), y^2(\mathsf{x}), y^3(\mathsf{x}))</script>. A similar condition holds for the inverse map
 <script type="math/tex">\mathsf{x}:\mathsf\phi(U) \to \mathbb{R}^3</script>.</p>
 <h2 id="tangent-spaces">Tangent spaces</h2>
 <p>A concept that will prove to be very useful later on is that of a
