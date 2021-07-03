@@ -353,6 +353,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#parallel-transport" class="md-nav__link">
+    Parallel transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riemann-curvature-tensor" class="md-nav__link">
+    Riemann curvature tensor
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -490,6 +504,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#parallel-transport" class="md-nav__link">
+    Parallel transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riemann-curvature-tensor" class="md-nav__link">
+    Riemann curvature tensor
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -542,7 +570,11 @@
                 
                   <h1>Curvilinear Coordinates</h1>
                 
-                <p>The notion of a general coordinate system was introduced in the previous chapter. All the coordinate computations thus far have
+                <div class="admonition warning">
+<p class="admonition-title">Note</p>
+<p>Much of what is written here is an <em>overkill</em> if the eventual goal is to just learn how to compute the expressions for divergence, curl, etc. in special orthogonal coordinate systems. The presentation below is however meant to encourage the reader to pursue a more detailed study of Riemannian geometry where many of the ideas developed here find a more elegant and natural generalization.</p>
+</div>
+<p>The notion of a general coordinate system was introduced in the previous chapter. All the coordinate computations thus far have
 been restricted to the global Cartesian coordinate system on
 <script type="math/tex">\mathbb{R}^3</script>. There are, however, many applications where the use of
 special coordinate systems significantly simplify the calculations. It
@@ -804,7 +836,13 @@ Thus the Christoffel symbols provide all the information necessary to compute ho
 appropriate generalization of the ideas discussed leads to the notion of
 a <em>connection</em> on the manifold.</p>
 </div>
-<p>One important symmetry that the Christoffel symbols possess is that $\Gamma^k_{ij}(\mathsf{y}) = \Gamma^k_{ji}(\mathsf{y})$, as can be easily verified from the expression defining the Christoffel symbols (using equality of mixed partial derivatives).</p>
+<p>It can be shown by a simple calculation that the components of the Christoffel symbols do not transform as a tensor upon change of coordinates. However, the quantity
+<script type="math/tex; mode=display">T^k_{ij}(\mathsf{y}) = \Gamma^k_{ij}(\mathsf{y}) - \Gamma^k_{ji}(\mathsf{y})</script>
+does indeed transform as a second tensor. The numbers $T^k_{ij}$ can indeed be shown to be the components of a third order tensor called the <strong>torsion</strong> tensor. For our purposes, it is sufficient to note that the torsion tensor identically vanishes since the Christoffel symbols possess the following symmetry: $\Gamma^k_{ij}(\mathsf{y}) = \Gamma^k_{ji}(\mathsf{y})$, as can be easily verified from the expression defining the Christoffel symbols (using equality of mixed partial derivatives).</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In the general theory of differentiable manifolds, it is possible to construct <em>connections</em> whose <em>torsion</em> does not vanish. </p>
+</div>
 <h2 id="metric-tensor">Metric tensor</h2>
 <p>It is convenient at this point to introduce the <strong>metric tensor</strong> <script type="math/tex">g:U \to TU \otimes TU</script>, where $U \subseteq \mathbb{R}^3$ is open, as follows: for any $x \in U$,
 <script type="math/tex; mode=display">\mathsf{g}(\mathsf{x}) = \sum \mathsf{e}^i \otimes \mathsf{e}_i.</script>
@@ -818,7 +856,7 @@ Note that this is just the identity tensor field. In terms of another coordinate
  We will also use the notation $\mathsf{g}(\mathsf{y})$ to denote $\mathsf{g}(\mathsf{y}(\mathsf{x}))$.</p>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
-<p>Technically, the metric tensor has to be defined as a tensor of the form <script type="math/tex">\mathsf{g}:U \to T^*U \otimes T^*U</script>, where <script type="math/tex">T^*U</script> is the <em>cotangent bundle</em> on $U$. Since we are dealing throughout with finite dimensional Euclidean spaces, an implicit identification of the cotangent bundle <script type="math/tex">T^*U</script> with the tangent bundle <script type="math/tex">TU</script> is made in the foregoing definition. This is not a good idea in general -- the simpler and more imprecise approach adopted here is sufficient for our purposes.</p>
+<p>Technically, the metric tensor has to be defined as a tensor of the form <script type="math/tex">\mathsf{g}:U \to T^*U \otimes T^*U</script>, where <script type="math/tex">T^*U</script> is the <em>cotangent bundle</em> on $U$. Since we are dealing throughout with finite dimensional Euclidean spaces, an implicit identification of the cotangent bundle <script type="math/tex">T^*U</script> with the tangent bundle <script type="math/tex">TU</script> is made in the foregoing definition. This is not a good idea in general - the simpler and more imprecise approach adopted here is sufficient for our purposes.</p>
 </div>
 <p>The idea behind the metric is to provide a smooth extension of the inner
 product over every tangent space. Indeed, for any <script type="math/tex">\mathsf{x} \in U</script>,
@@ -919,6 +957,27 @@ This is equivalent to stating that $g_{ij|k}(\mathsf{y}) = 0$, for any choice of
 The foregoing equation can alternatively be obtained by directly differentiating <script type="math/tex">\sum g_{ij}(\mathsf{y}) \mathsf{g}^i(\mathsf{y}) \otimes \mathsf{g}^j(\mathsf{y})</script> with respect to $\mathsf{y}$ and setting it to zero. A straightforward algebraic manipulation of this result yields the following useful relation:
 <script type="math/tex; mode=display">\Gamma^l_{ij}(\mathsf{y}) = \sum \frac{1}{2}g^{kl}(\mathsf{y})\left(\partial_j g_{ik}(\mathsf{y}) + \partial_i g_{kj}(\mathsf{y}) - \partial_k g_{ij}(\mathsf{y})\right).</script>
 Alternatively, the validity of this expression can be checked by substituting the expression for the partial derivatives of $g_{ij}(\mathsf{y})$ with respect to $\mathsf{y}$ computed earlier. </p>
+<h3 id="parallel-transport">Parallel transport</h3>
+<p>Given a curve $\mathsf{c}:I \subseteq \mathbb{R} \to U \subseteq \mathbb{R}^3$ and a vector field $\mathsf{v}:U \to TU$, we say that the vector field $\mathsf{v}$ is <strong>parallelly transported</strong> along the curve $\mathsf{c}$ if, for every $t \in I$, 
+<script type="math/tex; mode=display">\nabla_{\dot{\mathsf{c}}(t)}\mathsf{v}(\mathsf{c}(t)) = 0.</script>
+Intuitively, the idea is that the vector field is just shifted along the curve in a manner such that it is parallel to itself. In terms of a curvilinear coordinate system $(U,\phi)$ we can write the component version of the foregoing equation as
+<script type="math/tex; mode=display">\hat{v}^k_{|j}(\mathsf{c}(t))\dot{\hat{c}}^j(t) = \left(\partial_j \hat{v}^k(\mathsf{c}(t)) + v^i(\mathsf{c}(t))\Gamma^k_{ij}(\mathsf{c}(t))\right)\dot{\hat{c}}^j(t) = 0.</script>
+Here $\dot{\hat{c}}^j(t)$ refers to the components of <script type="math/tex">\dot{\mathsf{c}}(t) \in T_{\mathsf{c}(t)}U</script> with respect to the coordinate basis <script type="math/tex">\mathsf{g}_j(\mathsf{c}(t))</script>. If it is true that the vector field $\mathsf{v}$ is parallelly transported by any arbitrary curve in $U$, then we can reduce the foregoing equation to the simpler condition that for any $\mathsf{x} \in U$,
+<script type="math/tex; mode=display">\hat{v}^k_{|j}(\mathsf{x}) = 0, \quad\Leftrightarrow\quad \nabla \mathsf{v}(\mathsf{x}) = \mathsf{0}.</script>
+These ideas can be generalized to the case of a tensor field on $U$ along the same lines. Note in particular that the conclusions of the previous discussion can be equivalently rephrased as follows: the metric tensor $\mathsf{g}$ is parallelly transported by any curve in $U$.</p>
+<h3 id="riemann-curvature-tensor">Riemann curvature tensor</h3>
+<p>We introduced the notion of a covariant derivative as a generalization of the notion of a directional derivative. The question we want to ask is whether the covariant derivative <em>commutes</em> in the sense that mixed partial derivative commutes - the order in which we compute a mixed partial derivative doesn't matter. To answer this question, suppose that we are given a smooth vector field <script type="math/tex">\mathsf{v}:U \to TU</script> and two vectors $\mathsf{w}, \mathsf{z} \in T_{\mathsf{x}}U$ for some $\mathsf{x} \in U$. We want to compute the following quantity
+<script type="math/tex; mode=display">\nabla_{\mathsf{z}}\nabla_{\mathsf{w}} \mathsf{v}(\mathsf{x}) - \nabla_{\mathsf{w}}\nabla_{\mathsf{z}} \mathsf{v}(\mathsf{x}),</script>
+in order to understand the commutativity of the covariant derivative. Working in a curvilinear coordinate system $(U,\phi)$, a simple calculation shows that
+<script type="math/tex; mode=display">\nabla_{\mathsf{z}}\nabla_{\mathsf{w}} \mathsf{v}(\mathsf{x}) - \nabla_{\mathsf{w}}\nabla_{\mathsf{z}} \mathsf{v}(\mathsf{x}) = \sum (\hat{v}^i_{|jk}(\mathsf{y}) - \hat{v}^i_{|kj}(\mathsf{y}))\hat{w}^j\hat{z}^k\mathsf{g}_i(\mathsf{y}).</script>
+It is thus sufficient to study the effect of interchanging the order of second derivatives for the components of the covariant derivative. A straightforward calculations shows that
+<script type="math/tex; mode=display">\begin{split}\hat{v}^i_{|jk}(\mathsf{y}) - \hat{v}^i_{|kj}(\mathsf{y}) &= \sum R^i_{ljk}(\mathsf{y})\hat{v}^l(\mathsf{y})\\
+R^i_{ljk}(\mathsf{y}) &= \sum \left(\partial_k \Gamma^i_{jl}(\mathsf{y}) - \partial_j \Gamma^i_{kl}(\mathsf{y})\right) + \sum \left(\Gamma^i_{km}(\mathsf{y})\Gamma^m_{lj} (\mathsf{y})- \Gamma^i_{jm}(\mathsf{y})\Gamma^m_{lk}(\mathsf{y})\right).
+\end{split}</script>
+We therefore see that
+<script type="math/tex; mode=display">\nabla_{\mathsf{z}}\nabla_{\mathsf{w}} \mathsf{v}(\mathsf{x}) - \nabla_{\mathsf{w}}\nabla_{\mathsf{z}} \mathsf{v}(\mathsf{x}) = \sum R^i_{ljk}\hat{v}^l(\mathsf{y})\hat{w}^j\hat{z}^k\mathsf{g}_i(\mathsf{y}) = \mathsf{R}(\mathsf{z},\mathsf{w})\mathsf{v}(\mathsf{x}).</script>
+The tensor $\mathsf{R}$ is called the <strong>Riemann curvature tensor</strong>. It is left as a straightforward (cumbersome though!) exercise to verify that the components $R^i_{ljk}$ indeed transform appropriately upon change of coordinates.</p>
+<p>The tensorial nature of the Riemann curvature tensor implies that it is enough to evaluate it in any one particular coordinate system. Choosing the standard Cartesian coordinate system on $\mathbb{R}^3$, we see at once that $\mathbb{R} = \mathbb{0}$. The vanishing of the Riemann curvature tensor is equivalently stated as the <em>flatness</em> of the Euclidean space $\mathbb{R}^3$.</p>
 <h2 id="divergence">Divergence</h2>
 <p>The divergence of the smooth vector field <script type="math/tex">\mathsf{v}:U \to TU</script> is obtained by contracting the gradient:
 <script type="math/tex; mode=display">\nabla \cdot \mathsf{v}(\mathsf{x}) = \sum \hat{v}^i_{|i}(\mathsf{y}).</script>
