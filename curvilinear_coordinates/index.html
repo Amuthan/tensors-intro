@@ -1091,44 +1091,36 @@ change of variables formula for multiple integrals.</p>
 <h2 id="special-coordinate-systems">Special coordinate systems</h2>
 <p>We will now present results specializing the foregoing discussion to two special coordinate systems that are frequently encountered in applications. The details of the various calculations are skipped since they are consequences of a routine application of the theory developed so far to the special cases considered here.</p>
 <h3 id="cylindrical-polar-coordinates">Cylindrical polar coordinates</h3>
-<p>For problems that have a special axis of symmetry, it conventient to employ cylindrical polar coordinates. Suppose, for concreteness, that the axis of symmetry is the $x^3$-axis. The <strong>cylindrical polar coordinate system</strong> is defined as the coordinate chart $(U,\phi)$, where
-<script type="math/tex; mode=display">U = \{(\mathbb{R}^3 \setminus (0,0,z)\in\mathbb{R}^3 \,|\, z \in \mathbb{R}\},</script> 
-and the map $\phi$ is defined as $\mathsf{x} \in U \mapsto \mathsf{y} = \phi(\mathsf{x})$, where
+<p>For problems that have a special axis of symmetry, it conventient to employ cylindrical polar coordinates. Suppose, for concreteness, that the axis of symmetry is the $x^3$-axis. The <strong>cylindrical polar coordinates</strong> <script type="math/tex">(y^1, y^2, y^3)</script> are defined in terms of Cartesian coordinates <script type="math/tex">(x^1, x^2, x^3)</script> as
 <script type="math/tex; mode=display">\begin{split}
 y^1 &= \sqrt{(x^1)^2 + (x^2)^2},\\
 y^2 &= \tan^{-1} \left(\frac{x^2}{x^1}\right),\\
 y^3 &= x^3.
 \end{split}</script>
-In practice, the notations $y^1 = r$, $y^2 = \theta$ and $y^3 = z$ are used to denote the cylindrical polar coordintes. For computing the inverse map, it is convenient to introduce the open set $V \subseteq \mathbb{R}^3$, where 
-<script type="math/tex; mode=display">V = (0,\infty) \times (0,2\pi) \times \mathbb{R}.</script>
-The inverse of the cylindrical polar coordinates $\mathsf{x} = \phi^{-1}(\mathsf{y})$ then takes the form 
+In practice, the notations $y^1 = r$, $y^2 = \theta$ and $y^3 = z$ are used for cylindrical polar coordintes. It is conventional to choose the coordinates such that $r \in (0,\infty)$, $\theta \in (0,2\pi)$, and $z \in \mathbb{R}$. The inverse of this transformation takes the form 
 <script type="math/tex; mode=display">\begin{split}
 x^1 &= y^1 \cos y^2,\\
 x^2 &= y^1 \sin y^2,\\
 x^3 &= y^3.
 \end{split}</script>
-</p>
-<div class="admonition info">
-<p class="admonition-title">Remark</p>
-<p>The domains are chosen such that both $\phi:U \to \phi(U)$ and $\phi^{-1}:V \to \phi^{-1}(V)$ are diffeomorphisms.</p>
-</div>
+The domains of definition of the cylindrical coordinate system is not stated explicitly here, but can be inferred from the validity of the corresponding expressions.</p>
 <p>The coordinate tangent vectors in the context of cylindrical polar coordinates take the following form:
 <script type="math/tex; mode=display">\begin{split}
 \mathsf{g}_1(\mathsf{y}) &= \cos y^2 \mathsf{e}_1 + \sin y^2 \mathsf{e}_2 = \mathsf{e}_r(r,\theta,z),\\ 
 \mathsf{g}_2(\mathsf{y}) &= -y^1 \sin y^2 \mathsf{e}_1 + y^1 \cos y^2 \mathsf{e}_2 = r\mathsf{e}_\theta(r,\theta,z),\\
-\mathsf{g}_3(\mathsf{y}) &= \mathsf{e}_3 = \mathsf{e}_2(r,\theta,z).
+\mathsf{g}_3(\mathsf{y}) &= \mathsf{e}_3 = \mathsf{e}_z(r,\theta,z).
 \end{split}</script>
-In the equations displayed above, the more convenient orthonormal basis <script type="math/tex">(\mathsf{e}_r, \mathsf{e}_\theta, \mathsf{e}_z)</script> is also introduced.</p>
+In the equations displayed above, the more convenient orthonormal basis <script type="math/tex">(\mathsf{e}_r, \mathsf{e}_\theta, \mathsf{e}_z)</script> is also introduced. The reciprocal basis vectors are easily computed as <script type="math/tex">\mathsf{g}^1 = \mathsf{e}_r</script>, <script type="math/tex">\mathsf{g}^2 = \mathsf{e}_\theta/r</script>, and <script type="math/tex">\mathsf{g}^3 = \mathsf{e}_z</script>.</p>
 <p>Suppose now that $f:\mathbb{R}^3 \to \mathbb{R}$ is a given scalar field. The gradient of $f$, expressed in cylindrical polar coordiantes, takes the following form:
 <script type="math/tex; mode=display">
-\nabla f = \frac{\partial \phi}{\partial r}\mathsf{e}_r + \frac{1}{r}\frac{\partial \phi}{\partial \theta}\mathsf{e}_\theta + \frac{\partial \phi}{\partial z}\mathsf{e}_z.
+\nabla f = \frac{\partial f}{\partial r}\mathsf{e}_r + \frac{1}{r}\frac{\partial f}{\partial \theta}\mathsf{e}_\theta + \frac{\partial f}{\partial z}\mathsf{e}_z.
 </script>
 </p>
 <div class="admonition info">
 <p class="admonition-title">Remark</p>
 <p>In this and the next section, the arguments for the various functions will be suppressed to keep the equations readable. For instance, the foregoing equation is more properly expressed as
 <script type="math/tex; mode=display">
-\nabla f(r,\theta,z) = \frac{\partial \phi(r,\theta,z)}{\partial r}\mathsf{e}_r(r,\theta,z) + \frac{1}{r}\frac{\partial \phi(r,\theta,z)}{\partial \theta}\mathsf{e}_\theta(r,\theta,z) + \frac{\partial \phi(r,\theta,z)}{\partial z}\mathsf{e}_z(r,\theta,z).
+\nabla f(r,\theta,z) = \frac{\partial f(r,\theta,z)}{\partial r}\mathsf{e}_r(r,\theta,z) + \frac{1}{r}\frac{\partial f(r,\theta,z)}{\partial \theta}\mathsf{e}_\theta(r,\theta,z) + \frac{\partial f(r,\theta,z)}{\partial z}\mathsf{e}_z(r,\theta,z).
 </script>
 It is left to the reader to fill in these arguments in the various equations listed in this section.</p>
 </div>
@@ -1136,7 +1128,7 @@ It is left to the reader to fill in these arguments in the various equations lis
 <script type="math/tex; mode=display">
 \mathsf{v} = v_r \mathsf{e}_r + v_\theta \mathsf{e}_\theta + v_z \mathsf{e}_z.
 </script>
-Note that contravariant components of $\mathsf{v}$ (with respect to the basis <script type="math/tex">(\mathsf{g}_i)</script> are related as $v^1 = v_r$, $v^2 = v_\theta/r$ and $v^3 = v_z$. The gradient of $\mathsf{v}$ takes the following form
+Note that contravariant components of $\mathsf{v}$, with respect to the basis <script type="math/tex">(\mathsf{g}_i)</script>, are related as $v^1 = v_r$, $v^2 = v_\theta/r$, and $v^3 = v_z$. The gradient of $\mathsf{v}$ takes the following form
 <script type="math/tex; mode=display">\begin{split}
 \nabla \mathsf{v} &= \frac{\partial v_r}{\partial r} \mathsf{e}_r \otimes \mathsf{e}_r + \left(\frac{1}{r}\frac{\partial v_r}{\partial \theta} - \frac{v_\theta}{r}\right) \mathsf{e}_r \otimes \mathsf{e}_\theta + \frac{\partial v_r}{\partial z} \mathsf{e}_r \otimes \mathsf{e}_z\\
  &+ \frac{\partial v_\theta}{\partial r} \mathsf{e}_\theta \otimes \mathsf{e}_r + \left(\frac{1}{r}\frac{\partial v_\theta}{\partial \theta} + \frac{v_r}{r}\right) \mathsf{e}_\theta \otimes \mathsf{e}_\theta + \frac{\partial v_\theta}{\partial z} \mathsf{e}_\theta \otimes \mathsf{e}_z\\
@@ -1152,6 +1144,41 @@ The curl of the vector field $\mathsf{v}$ is given by
 </script>
 The corresponding expressions for tensor fields is not provided here, but can be computed analogously.</p>
 <h3 id="spherical-coordinates">Spherical coordinates</h3>
+<p>For applications with radial symmetry, it is convenient to employ spherical coordinates. The <strong>spherical coordinates</strong> <script type="math/tex">(y^1, y^2, y^3)</script> are defined in terms of Cartesian coordinates <script type="math/tex">(x^1, x^2, x^3)</script> as
+<script type="math/tex; mode=display">\begin{split}
+y^1 &= \sqrt{(x^1)^2 + (x^2)^2 + (x^3)^2},\\
+y^2 &= \cos^{-1} \left(\frac{x^3}{\sqrt{(x^1)^2 + (x^2)^2 + (x^3)^2}}\right),\\
+y^3 &= \tan^{-1} \left(\frac{x^2}{x^1}\right).
+\end{split}</script>
+In practice, the notations $y^1 = r$, $y^2 = \theta$, and $y^3 = \phi$ are used for spherical coordinates. The coordinates are chosen such that $r \in (0,\infty)$, $\theta \in (0,\pi)$, and $\phi \in (0,2\pi)$. </p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>Some authors use $\theta$ for $y^3$ and $\phi$ for $y^2$. There is also some variability as to the range of these coordinates.</p>
+</div>
+<p>The inverse of this transform takes the following form:
+<script type="math/tex; mode=display">\begin{split}
+x^1 &= y^1 \sin y^2 \cos y^3,\\
+x^2 &= y^1 \sin y^2 \sin y^3,\\
+x^3 &= y^1 \cos y^2.
+\end{split}</script>
+As in the case of cylindrical polar coordinates, the domains of definition of these transformations are chosen in a manner such that the various expressions are well defined.</p>
+<p>The coordinate tangent vectors for spherical coordinates are easily computed:
+<script type="math/tex; mode=display">\begin{split}
+\mathsf{g}_1(\mathsf{y}) &= \sin y^2 \cos y^3 \mathsf{e}_1 + \sin y^2 \sin y^3 \mathsf{e}_2 + \cos y^2 \mathsf{e}_3 = \mathsf{e}_r(r, \theta, \phi),\\
+\mathsf{g}_2(\mathsf{y}) &= y^1 \cos y^2 \cos y^3 \mathsf{e}_1 + y^1 \cos y^2 \sin y^3 \mathsf{e}_2 - y^1 \sin y^2 \mathsf{e}_3 = r\mathsf{e}_\theta(r, \theta, \phi),\\
+\mathsf{g}_3(\mathsf{y}) &= -y^1 \sin y^2 \sin y^3 \mathsf{e}_1 + y^1 \sin y^2 \cos y^2 \mathsf{e}_2 = r \sin \theta \mathsf{e}_\phi(r,\theta,\phi).
+\end{split}</script>
+The alternative, and more convenient notations <script type="math/tex">(\mathsf{e}_r, \mathsf{e}_\theta, \mathsf{e}_\phi)</script> are also introduced in the equations displayed above. The reciprocal basis is easily computed as <script type="math/tex">\mathsf{g}^1 = \mathsf{e}_r</script>, <script type="math/tex">\mathsf{g}^2 = \mathsf{e}_\theta/r</script>, and <script type="math/tex">\mathsf{g}^3 = \mathsf{e}_\phi/(r\sin \theta)</script>.</p>
+<p>If $f:\mathbb{R}^3 \to \mathbb{R}$ is a smooth scalar field, its gradient takes the following form in spherical coordinates:
+<script type="math/tex; mode=display">
+\nabla f = \frac{\partial f}{\partial r} \mathsf{e}_r + \frac{1}{r}\frac{\partial f}{\partial \theta}\mathsf{e}_\theta + \frac{1}{r\sin \theta}\frac{\partial f}{\partial \phi}\mathsf{e}_\phi.
+</script>
+As before, we suppress the arguments of the functions to enhance readability.</p>
+<p>Given a smooth vector field <script type="math/tex">\mathsf{v}:\mathbb{R}^3 \to T\mathbb{R}^3</script>, we express it in spherical coordinates as
+<script type="math/tex; mode=display">
+\mathsf{v} = v_r \mathsf{e}_r + v_\theta \mathsf{e}_\theta + v_\phi \mathsf{e}_\phi.
+</script>
+The contravariant components of <script type="math/tex">\mathsf{v}</script>, with respect to the basis <script type="math/tex">(\mathsf{g}_i)</script>, are related as $v^1 = v_r$, $v^2 = v_\theta/r$, and $v^3 = v_\phi/(r\sin \theta)$.</p>
 <p>...</p>
                 
                   
