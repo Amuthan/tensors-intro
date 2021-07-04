@@ -1111,6 +1111,33 @@ The domains of definition of the cylindrical coordinate system is not stated exp
 \mathsf{g}_3(\mathsf{y}) &= \mathsf{e}_3 = \mathsf{e}_z(r,\theta,z).
 \end{split}</script>
 In the equations displayed above, the more convenient orthonormal basis <script type="math/tex">(\mathsf{e}_r, \mathsf{e}_\theta, \mathsf{e}_z)</script> is also introduced. The reciprocal basis vectors are easily computed as <script type="math/tex">\mathsf{g}^1 = \mathsf{e}_r</script>, <script type="math/tex">\mathsf{g}^2 = \mathsf{e}_\theta/r</script>, and <script type="math/tex">\mathsf{g}^3 = \mathsf{e}_z</script>.</p>
+<p>The components of the metric tensor are given by 
+<script type="math/tex; mode=display">
+[g_{ij}] = \begin{bmatrix}
+1 & 0 & 0\\
+0 & r^2 & 0\\
+0 & 0 & 1
+\end{bmatrix}
+</script>
+The Christoffel symbols for cylindrical polar coordinates are given by
+<script type="math/tex; mode=display">
+[\Gamma^1_{ij}] = \begin{bmatrix}
+0 & 0 & 0\\
+0 & -r & 0\\
+0 & 0 & 0
+\end{bmatrix}, \;
+[\Gamma^2_{ij}] = \begin{bmatrix}
+0 & \frac{1}{r} & 0\\
+\frac{1}{r} & 0 & 0\\
+0 & 0 & 0
+\end{bmatrix},\;
+[\Gamma^3_{ij}] = \begin{bmatrix}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{bmatrix}.
+</script>
+</p>
 <p>Suppose now that $f:\mathbb{R}^3 \to \mathbb{R}$ is a given scalar field. The gradient of $f$, expressed in cylindrical polar coordiantes, takes the following form:
 <script type="math/tex; mode=display">
 \nabla f = \frac{\partial f}{\partial r}\mathsf{e}_r + \frac{1}{r}\frac{\partial f}{\partial \theta}\mathsf{e}_\theta + \frac{\partial f}{\partial z}\mathsf{e}_z.
@@ -1169,6 +1196,33 @@ As in the case of cylindrical polar coordinates, the domains of definition of th
 \mathsf{g}_3(\mathsf{y}) &= -y^1 \sin y^2 \sin y^3 \mathsf{e}_1 + y^1 \sin y^2 \cos y^2 \mathsf{e}_2 = r \sin \theta \mathsf{e}_\phi(r,\theta,\phi).
 \end{split}</script>
 The alternative, and more convenient notations <script type="math/tex">(\mathsf{e}_r, \mathsf{e}_\theta, \mathsf{e}_\phi)</script> are also introduced in the equations displayed above. The reciprocal basis is easily computed as <script type="math/tex">\mathsf{g}^1 = \mathsf{e}_r</script>, <script type="math/tex">\mathsf{g}^2 = \mathsf{e}_\theta/r</script>, and <script type="math/tex">\mathsf{g}^3 = \mathsf{e}_\phi/(r\sin \theta)</script>.</p>
+<p>The components of the metric tensor are given by 
+<script type="math/tex; mode=display">
+[g_{ij}] = \begin{bmatrix}
+1 & 0 & 0\\
+0 & r^2 & 0\\
+0 & 0 & r^2\sin^2\theta
+\end{bmatrix}
+</script>
+The Christoffel symbols for cylindrical polar coordinates are given by
+<script type="math/tex; mode=display">
+[\Gamma^1_{ij}] = \begin{bmatrix}
+0 & 0 & 0\\
+0 & -r & 0\\
+0 & 0 & -r\sin^2\theta
+\end{bmatrix}, \;
+[\Gamma^2_{ij}] = \begin{bmatrix}
+0 & \frac{1}{r} & 0\\
+\frac{1}{r} & 0 & 0\\
+0 & 0 & -\sin\theta \cos\theta
+\end{bmatrix},\;
+[\Gamma^3_{ij}] = \begin{bmatrix}
+0 & 0 & \frac{1}{r}\\
+0 & 0 & \cot\theta\\
+\frac{1}{r} & \cot\theta & 0
+\end{bmatrix}.
+</script>
+</p>
 <p>If $f:\mathbb{R}^3 \to \mathbb{R}$ is a smooth scalar field, its gradient takes the following form in spherical coordinates:
 <script type="math/tex; mode=display">
 \nabla f = \frac{\partial f}{\partial r} \mathsf{e}_r + \frac{1}{r}\frac{\partial f}{\partial \theta}\mathsf{e}_\theta + \frac{1}{r\sin \theta}\frac{\partial f}{\partial \phi}\mathsf{e}_\phi.
@@ -1178,8 +1232,21 @@ As before, we suppress the arguments of the functions to enhance readability.</p
 <script type="math/tex; mode=display">
 \mathsf{v} = v_r \mathsf{e}_r + v_\theta \mathsf{e}_\theta + v_\phi \mathsf{e}_\phi.
 </script>
-The contravariant components of <script type="math/tex">\mathsf{v}</script>, with respect to the basis <script type="math/tex">(\mathsf{g}_i)</script>, are related as $v^1 = v_r$, $v^2 = v_\theta/r$, and $v^3 = v_\phi/(r\sin \theta)$.</p>
-<p>...</p>
+The contravariant components of <script type="math/tex">\mathsf{v}</script>, with respect to the basis <script type="math/tex">(\mathsf{g}_i)</script>, are related as $v^1 = v_r$, $v^2 = v_\theta/r$, and $v^3 = v_\phi/(r\sin \theta)$. The gradident of <script type="math/tex">\mathsf{v}</script> is computed as
+<script type="math/tex; mode=display">\begin{split}
+\nabla \mathsf{v} &= \frac{\partial v_r}{\partial r} \mathsf{e}_r \otimes \mathsf{e}_r + \left(\frac{1}{r}\frac{\partial v_r}{\partial \theta} - \frac{v_\theta}{r}\right) \mathsf{e}_r \otimes \mathsf{e}_\theta + \left(\frac{1}{r\sin\theta}\frac{\partial v_r}{\partial \phi} - \frac{v_\phi}{r}\right)\mathsf{e}_r \otimes \mathsf{e}_\phi\\
+&+ \frac{\partial v_\theta}{\partial r} \mathsf{e}_\theta \otimes \mathsf{e}_r + \left(\frac{1}{r}\frac{\partial v_\theta}{\partial \theta} + \frac{v_r}{r}\right) \mathsf{e}_\theta \otimes \mathsf{e}_\theta + \left(\frac{1}{r\sin\theta}\frac{\partial v_\theta}{\partial \phi} - \frac{\cot\theta}{r}v_\phi\right)\mathsf{e}_\theta \otimes \mathsf{e}_\phi\\
+&+ \frac{\partial v_\phi}{\partial r} \mathsf{e}_\phi \otimes \mathsf{e}_r + \frac{1}{r}\frac{\partial v_\phi}{\partial \theta} \mathsf{e}_\phi \otimes \mathsf{e}_\theta + \left(\frac{1}{r\sin\theta}\frac{\partial v_\phi}{\partial \phi} + \frac{v_r}{r} + \frac{\cot\theta}{r}v_\theta\right)\mathsf{e}_\phi \otimes \mathsf{e}_\phi.
+\end{split}</script>
+The trace of the gradient immediately yields the divergence of <script type="math/tex">\mathsf{v}</script> as
+<script type="math/tex; mode=display">
+\nabla \cdot \mathsf{v} = \frac{1}{r^2}\frac{\partial}{\partial r}(r^2 v_r) + \frac{1}{r\sin \theta}\frac{\partial}{\partial \theta}(\sin \theta v_\theta) + \frac{1}{r\sin \theta}\frac{\partial v_\phi}{\partial \phi}.
+</script>
+The expression for the curl of <script type="math/tex">\mathsf{v}</script> in spherical coordinates is given by the following expression:
+<script type="math/tex; mode=display">
+\nabla \times \mathsf{v} = \frac{1}{r\sin\theta}\left(\frac{\partial}{\partial \theta}(\sin \theta v_\phi) - \frac{\partial v_\theta}{\partial \phi}\right) \mathsf{e}_r + \frac{1}{r}\left(\frac{1}{\sin \theta}\frac{\partial v_r}{\partial \phi} - \frac{\partial}{\partial r}(r v_\phi)\right) \mathsf{e}_\theta + \frac{1}{r}\left(\frac{\partial}{\partial r}(r v_\theta) - \frac{\partial v_r}{\partial \theta}\right) \mathsf{e}_\phi.
+</script>
+Similar expressions for tensors can be derived along the same lines.</p>
                 
                   
                 
