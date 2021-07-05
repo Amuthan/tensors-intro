@@ -984,10 +984,28 @@ this is that the set of all antisymmetric tensors of order <script type="math/te
 <script type="math/tex">\text{dim}(\Omega^n(V)) = 1</script>.</p>
 <div class="admonition info">
 <p class="admonition-title">Proof</p>
-<div class="admonition danger">
-<p class="admonition-title">TO DO</p>
-<p>Proof of <script type="math/tex">\text{dim}(\Omega^n(V)) = 1</script>.</p>
-</div>
+<p>Let <script type="math/tex">\mathsf{e}_1,\ldots,\mathsf{e}_n</script> be an orthonormal basis of $V$, and let $\omega \in \Omega^n(V)$ be a volume form. The component representation of the volume form $\omega$ with respect to this basis <script type="math/tex">(\mathsf{e}_1, \ldots, \mathsf{e}_n</script> is 
+<script type="math/tex; mode=display">
+\omega = \sum \omega_{i_1\ldots i_n} \mathsf{e}_{i_1} \otimes \ldots \mathsf{e}_{i_n}. 
+</script>
+It is important to note that the components <script type="math/tex">\omega_{i_1\ldots i_n}</script> are skew-symmetric. It is convenient to introduce the Levi-Civita symbol 
+<script type="math/tex; mode=display">
+\epsilon_{i_1\ldots i_n} = \begin{cases}
+1, & \{i_1, \ldots, i_n\} \text{ is an even permutation of } \{1, \ldots, n\},\\
+-1, & \{i_1, \ldots, i_n\} \text{ is an odd permutation of } \{1, \ldots, n\},\\
+0, & \text{otherwise}.
+\end{cases}
+</script>
+Using this, we see at once that
+<script type="math/tex; mode=display">\omega = \left(\sum \epsilon_{i_1\ldots i_n}\omega_{i_1\ldots i_n}\right) \mathsf{e}_1 \otimes \ldots \otimes \mathsf{e}_n.</script>
+If <script type="math/tex">\eta \in \Omega^n(V)</script> is another volume form, it admits the representation
+<script type="math/tex; mode=display">\eta = \left(\sum \epsilon_{i_1\ldots i_n}\eta_{i_1\ldots i_n}\right) \mathsf{e}_1 \otimes \ldots \otimes \mathsf{e}_n.</script>
+It follows at once that $\omega = a\eta$, where 
+<script type="math/tex; mode=display">a = \frac{\sum \epsilon_{i_1\ldots i_n}\omega_{i_1\ldots i_n}}{\sum \epsilon_{i_1\ldots i_n}\eta_{i_1\ldots i_n}}.</script>
+Note that this fraction is well defined since we work only with non-trivial volume forms. This shows that $\text{dim}(\Omega^n(V)) = 1$.</p>
+<p>It is conventional to choose the special volume form $\epsilon \in \Omega^n(V)$ such that 
+<script type="math/tex; mode=display">\epsilon(e_1, \ldots, e_n) = 1.</script>
+We thus see that the Levi-Civita symbols are just the components of the tensor $\epsilon$ with respect to the orthonormal basis <script type="math/tex">(\mathsf{e}_1, \ldots, \mathsf{e}_n)</script>. The tensor $\epsilon$ is called the <strong>Levi-Civita tensor</strong>.</p>
 </div>
 <p>Picking a particular volume form <script type="math/tex">\mathsf{\epsilon} \in \Omega^n(V)</script>,
 the set of all volume forms <script type="math/tex">\mathsf{\omega} \in \Omega^n(V)</script> such

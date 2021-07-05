@@ -1075,6 +1075,7 @@ The curl of tensor fields of higher order is computed along the same
 lines. The final expressions are not provided here since they have
 cumbersome algebraic forms in curvilinear coordinates.</p>
 <h2 id="integration">Integration</h2>
+<p>We will now briefly discuss volume integration in curvilinear coordinates. Since the key ideas behind line and surface integrals were covered in a coordinate independent fashion in the previous chapter, we will not discuss them here - it is straightforward to extend the results presented here to cover them. </p>
 <p>Suppose that <script type="math/tex">f:U \to \mathbb{R}</script> is a scalar field on an open subset
 <script type="math/tex">U \subseteq \mathbb{R}^3</script>. Given a coordinate system
 <script type="math/tex">(U,\mathsf\phi)</script> on <script type="math/tex">\mathbb{R}^3</script>, the integral of <script type="math/tex">f</script> over
@@ -1085,9 +1086,7 @@ cumbersome algebraic forms in curvilinear coordinates.</p>
 \end{split}</script> In the equation displayed above
 <script type="math/tex">\partial \mathsf{x}/\partial \mathsf{y}</script> denotes the matrix whose
 <script type="math/tex">(i,j)^{\text{th}}</script> component is
-<script type="math/tex">\partial x^i(\mathsf{y})/\partial y^j</script>. This result follows from the
-change of variables formula for multiple integrals.</p>
-<p>...</p>
+<script type="math/tex">\partial x^i(\mathsf{y})/\partial y^j</script>. This result follows from the change of variables formula for multiple integrals. </p>
 <h2 id="special-coordinate-systems">Special coordinate systems</h2>
 <p>We will now present results specializing the foregoing discussion to two special coordinate systems that are frequently encountered in applications. The details of the various calculations are skipped since they are consequences of a routine application of the theory developed so far to the special cases considered here.</p>
 <h3 id="cylindrical-polar-coordinates">Cylindrical polar coordinates</h3>
@@ -1119,7 +1118,7 @@ In the equations displayed above, the more convenient orthonormal basis <script 
 0 & 0 & 1
 \end{bmatrix}
 </script>
-The Christoffel symbols for cylindrical polar coordinates are given by
+The square root of the determinant of matrix, which is needed for volume integration, is easily computed as <script type="math/tex">\sqrt{g}(r,\theta,z) = r</script>. The Christoffel symbols for cylindrical polar coordinates are given by
 <script type="math/tex; mode=display">
 [\Gamma^1_{ij}] = \begin{bmatrix}
 0 & 0 & 0\\
@@ -1204,7 +1203,7 @@ The alternative, and more convenient notations <script type="math/tex">(\mathsf{
 0 & 0 & r^2\sin^2\theta
 \end{bmatrix}
 </script>
-The Christoffel symbols for cylindrical polar coordinates are given by
+The square root of the determinant of matrix, which is needed for volume integration, is easily computed as <script type="math/tex">\sqrt{g}(r,\theta,\phi) = r^2\sin\theta</script>. The Christoffel symbols for cylindrical polar coordinates are given by
 <script type="math/tex; mode=display">
 [\Gamma^1_{ij}] = \begin{bmatrix}
 0 & 0 & 0\\
