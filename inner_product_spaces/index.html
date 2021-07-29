@@ -1123,7 +1123,7 @@ Furthermore, the equality holds iff <script type="math/tex">\mathsf{u}</script> 
 are linearly dependent. The proof of the Cauchy-Schwarz inequality is
 quite easy: for any <script type="math/tex">\mathsf{u}, \mathsf{v} \in V</script>, and
 <script type="math/tex">a \in \mathbb{R}</script>,
-<script type="math/tex; mode=display">\lVert \mathsf{u} + a \mathsf{v} \rVert^2 \ge 0 \Rightarrow \lVert \mathsf{u} \rVert^2 + 2a \mathsf{u} \cdot \mathsf{v} + \rVert \mathsf{v} \rVert^2 \ge 0.</script>
+<script type="math/tex; mode=display">\lVert \mathsf{u} + a \mathsf{v} \rVert^2 \ge 0 \Rightarrow \lVert \mathsf{u} \rVert^2 + 2a \mathsf{u} \cdot \mathsf{v} + a^2\rVert \mathsf{v} \rVert^2 \ge 0.</script>
 Substituting
 <script type="math/tex; mode=display">a = -\frac{\mathsf{u} \cdot \mathsf{v}}{\lVert \mathsf{v} \rVert^2}</script>
 in this inequality, we get
@@ -1425,12 +1425,16 @@ see that
 <script type="math/tex; mode=display">\sum \tilde{v}_i \mathsf{g}_i = \sum v_i B_{ji} \mathsf{g}_j \quad\Rightarrow\quad \tilde{v}_i = \sum B_{ij} v_j = \sum A^{-1}_{ij} v_j.</script>
 In matrix notation, we can summarize the foregoing result as follows:
 <script type="math/tex; mode=display">\mathsf{g}_i = \sum A_{ji} \mathsf{e}_j \quad\Rightarrow\quad [\mathsf{v}]_{(\mathsf{g}_i)} = \mathsf{A}^{-1}[\mathsf{v}]_{(\mathsf{e}_i)}.</script>
-!!! info "Remark" In a more general treatment of linear algebra, the fact that
+</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>In a more general treatment of linear algebra, the fact that
 the components of a vector <script type="math/tex">\mathsf{v} \in V</script> transform in a manner
 <em>contrary</em> to that of the manner in which the basis vectors transform is
 used to call elements of <script type="math/tex">V</script> as <strong>contravariant</strong> vectors. We will not
 develop the general theory here, but make a few elementary remarks
 occasionally regarding this.</p>
+</div>
 <p>Let us now consider the special case when both <script type="math/tex">(\mathsf{e}_i)</script> and
 <script type="math/tex">(\mathsf{g}_i)</script> are orthonormal bases of <script type="math/tex">V</script>. In this case, we can
 use the fact that
