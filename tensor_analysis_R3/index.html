@@ -848,7 +848,7 @@ Cartesian coordinate representation:
 This calculation also shows that the components of the gradient of a
 vector field with respect to the Cartesian coordinate system can be
 represented in matrix form as follows:
-<script type="math/tex; mode=display">= \begin{bmatrix} \partial_1 v_1(\mathsf{x}) & \partial_2 v_1(\mathsf{x}) & \partial_3 v_1(\mathsf{x})\\ \partial_1 v_2(\mathsf{x}) & \partial_2 v_2(\mathsf{x}) & \partial_3 v_2(\mathsf{x})\\ \partial_1 v_3(\mathsf{x}) & \partial_2 v_3(\mathsf{x}) & \partial_3 v_3(\mathsf{x})\end{bmatrix}.</script>
+<script type="math/tex; mode=display">[\nabla \mathsf{v}(\mathsf{x})] = \begin{bmatrix} \partial_1 v_1(\mathsf{x}) & \partial_2 v_1(\mathsf{x}) & \partial_3 v_1(\mathsf{x})\\ \partial_1 v_2(\mathsf{x}) & \partial_2 v_2(\mathsf{x}) & \partial_3 v_2(\mathsf{x})\\ \partial_1 v_3(\mathsf{x}) & \partial_2 v_3(\mathsf{x}) & \partial_3 v_3(\mathsf{x})\end{bmatrix}.</script>
 As remarked earlier, the alternative notation
 <script type="math/tex">\text{grad }\mathsf{v}(\mathsf{x})</script> will often be used for
 <script type="math/tex">\nabla \mathsf{v}(\mathsf{x})</script>.</p>
@@ -921,7 +921,7 @@ compute the curl of a second order tensor field.</p>
 <p>Suppose that <script type="math/tex">\mathsf{v}:U \to \otimes^k TU</script> is a smooth vector field
 over an open subset <script type="math/tex">U \subseteq \mathbb{R}^3</script>. The <strong>curl</strong> of
 <script type="math/tex">\mathsf{v}</script> is defined as the smooth vector field
-<script type="math/tex">\nabla \times \mathsf{A}:U \to \otimes TU</script> such that, for any
+<script type="math/tex">\nabla \times \mathsf{v}:U \to \otimes TU</script> such that, for any
 <script type="math/tex">\mathsf{x} \in U</script>,
 <script type="math/tex; mode=display">\mathsf{w} \cdot \nabla \times \mathsf{v}(\mathsf{x}) = \nabla \cdot (\mathsf{v} \times \mathsf{w})(\mathsf{x}).</script>
 In the definition above, <script type="math/tex">\mathsf{w}:U \to TU</script> is a constant vector
